@@ -1,5 +1,6 @@
 import React from "react";
 import { Contato } from "../components/Contato";
+import { Solucoes } from "../components/Solucoes";
 import styled from "styled-components";
 
 export const Home = () =>{
@@ -9,7 +10,8 @@ export const Home = () =>{
 	`;
 	return (
 		<HomeScreen>
-			<Contato/>
+			<Solucoes/>
+			{/* <Contato/> */}
 		</HomeScreen>
 	);
 };

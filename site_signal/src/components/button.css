@@ -7,6 +7,7 @@
   filter: contrast(10);
   border: 1px solid #fff;
   overflow: hidden;
+  margin-bottom: 0px;
 }
 .s-pesoduSlice::before {
   content: "";
