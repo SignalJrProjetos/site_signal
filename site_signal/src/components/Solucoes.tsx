@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import imagemSolucoes from "../assets/manutencao.png";
 
 // Estilização dos componentes
 
@@ -26,7 +27,7 @@ const Title = styled.h1`
     text-align: center;
 `;
 
-const Button = styled.button`
+const ButtonClicked = styled.button`
     width: 267.56px;
     height: 88px;
     font-family: "Saira";
@@ -38,28 +39,55 @@ const Button = styled.button`
     transition: all 0.5s;
 `;
 
+const Button = styled.button`
+	background-image: linear-gradient(#8700A9, #980089);
+	width: 210px;
+	height: 70px;
+	font-family: "Scada";
+	font-size: 25px;
+	color: white;
+	border-radius: 50px;
+	border: white 3px solid;
+	transition: all 0.3s;
+	:hover {
+		background-image: none;
+		background-color: white;
+		color: #610C7D;
+		border: #610C7D 2px solid
+	};
+	margin-top: 5px;
+`;
+
+
 
 // Criando o componente Contato
 export const Solucoes = () => {
+	// O botão ativado por padrão é o Soluções
 	const [services, setServices] = useState<string>("Soluções");
-	const [buttonSolucoes, setButtonSolucoes] = useState("#8700A9");
-	const [buttonIdentidade, setButtonIdentidade] = useState("#8700A9");
-	const [buttonManutencao, setButtoManutencao] = useState("#8700A9");
-	// Retornando os elementos do componente
-	
-	function changeColor(button: string) {
-		const buttonName = button;
-		if (buttonName == "Soluções") {
-			setButtonSolucoes("black");
-			setButtoManutencao("#8700A9");
-			setButtonIdentidade("#8700A9");
+	const [buttonSolucoes, setButtonSolucoes] = useState<boolean>(true);
+	const [buttonIdentidade, setButtonIdentidade] = useState<boolean>(false);
+	const [buttonManutencao, setButtonManutencao] = useState<boolean>(false);
+
+	function activeButton(button: string) {	
+		switch (button) {
+		case "Soluções":
+			setButtonSolucoes(current => !current);
+			setButtonIdentidade(false);
+			setButtonManutencao(false);
 			setServices("Soluções");
-		}
-		if (buttonName == "Identidade") {
-			setButtonSolucoes("#8700A9");
-			setButtoManutencao("#8700A9");
-			setButtonIdentidade("black");
+			break;
+		case "Identidade":
+			setButtonIdentidade(current => !current);
+			setButtonSolucoes(false);
+			setButtonManutencao(false);
 			setServices("Identidade");
+			break;
+		case "Manutenção":
+			setButtonManutencao(current => !current);
+			setButtonIdentidade(false);
+			setButtonSolucoes(false);
+			setServices("Manutenção");
+			break;
 		}
 	}
 
@@ -70,9 +98,24 @@ export const Solucoes = () => {
 			);
 		}
     
+		if(services == "Manutenção") {
+			return (
+				<p>Manutenção</p>
+			);
+		}
+
 		if(services == "Soluções") {
 			return (
-				<p>Soluções</p>
+				<>
+					<img src={imagemSolucoes} alt="" />
+					<div style={{textAlign:"right", marginRight: "3%", display: "flex", flexDirection: "column", alignItems: "end" }}>
+						<div style={{width: "fit-content", borderBottom: "#610C7D 10px solid"}}>
+							<h1 style={{color: "#610C7D", fontFamily: "Scada", fontSize: "40px"}}>Soluções em TI</h1>
+						</div>
+						<p style={{width: "80%",color: "#707070", fontFamily: "Scada", fontSize: "25px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
+						<Button>Saiba mais</Button>
+					</div>
+				</>
 			);
 		}
 	}
@@ -80,14 +123,24 @@ export const Solucoes = () => {
 		<BackGround>
 			<PreTitle>O que nós fazemos</PreTitle>
 			<Title>Nossas soluções para o seu negócio</Title>
-			<div style={{"display": "flex", "justifyContent" : "space-evenly"}}>
-				<Button onClick={() => changeColor("Soluções")} style={{"backgroundColor": buttonSolucoes}}>Soluções em TI</Button>
-				<Button onClick={() => changeColor("Identidade")} style={{"backgroundColor": buttonIdentidade}}>Identidade Visual</Button>
-				<Button onClick={() => changeColor("Manutenção")} style={{"backgroundColor": buttonManutencao}}>Manutenção</Button>
+			<div style={{display: "flex", justifyContent : "space-evenly"}}>
+				<ButtonClicked
+					style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
+					onClick={() => activeButton("Soluções")}>
+					Soluções em TI
+				</ButtonClicked>
+				<ButtonClicked
+					style={{backgroundColor: buttonIdentidade ? "#8700A9" : "transparent", border: buttonIdentidade ? "none" : "#610C7D 2px solid", color: buttonIdentidade ? "white" : "black"}}
+					onClick={() => activeButton("Identidade")}>
+					Identidade Visual
+				</ButtonClicked>
+				<ButtonClicked
+					style={{backgroundColor: buttonManutencao ? "#8700A9" : "transparent", border: buttonManutencao ? "none" : "#610C7D 2px solid", color: buttonManutencao ? "white" : "black"}}
+					onClick={() => activeButton("Manutenção")}>
+					Manutenção
+				</ButtonClicked>
 			</div>                
-			{/* <button onClick={() => setServices("Identidade")}>Identidade</button>
-			<button onClick={() => setServices("Soluções")}>Soluções</button> */}
-			<div>
+			<div style={{display: "flex", marginTop: "40px"}}>
 				{changeContent()}
 			</div>
 		</BackGround>

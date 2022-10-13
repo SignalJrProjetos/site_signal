@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import imagemContato from "../assets/imagemContato.png";
+import imagemContato from "../assets/contato.png";
 // import "./button.css"; Possível ideia de um hover bacana
 import emailjs from "@emailjs/browser";
 
@@ -122,13 +122,13 @@ export const Contato = () => {
 		<BackGround>
 			<img style={{"width": 560, "height": 560, "marginTop": 30}} src={imagemContato}/>
 			<Form>
-				<h1 style={{"fontWeight": "bolder", "fontSize": 40, "fontFamily": "Saira"}}>Contato</h1>
-				<p style={{"fontWeight": "lighter", "fontSize": 20, "fontFamily": "Saira"}}>Dúvidas? Propostas? Mande sua mensagem e em breve retornamos.</p>
+				<h1 style={{fontWeight: "bolder", fontSize: 40, fontFamily: "Saira"}}>Contato</h1>
+				<p style={{fontWeight: "lighter", fontSize: 20, fontFamily: "Saira"}}>Dúvidas? Propostas? Mande sua mensagem e em breve retornamos.</p>
 				<Input value={message?.name} placeholder="Nome" onChange={event => {handleMessage(event,"name");}}/>
 				<Input value={message?.number} placeholder="Telefone" type="number" onChange={event => {handleMessage(event,"number");}}/>
 				<Input value={message?.email} placeholder="Email" type="text" onChange={event => {handleMessage(event,"email");}}/>
 				<InputMessage value={message?.message} placeholder="Mensagem" onChange={event => {handleMessage(event,"message");}}/>
-				<Button onClick={sendEmail} style={{"marginTop": 10, "height": "100px","fontFamily": "Scada"}}>Submeter</Button>
+				<Button onClick={sendEmail} style={{marginTop: 10, height: "100px", fontFamily: "Scada"}}>Submeter</Button>
 				{/* Possível ideia de um hover bacana <div className="m-btn s-pesoduSlice" data-content="Hover Me">Hover Me</div> */}  
 			</Form>
 		</BackGround>
