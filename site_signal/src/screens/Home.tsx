@@ -1,9 +1,13 @@
 import React from "react";
+import { Contato } from "../components/Contato/Contato";
+import { Solucoes } from "../components/Solucoes/Solucoes";
 
 export const Home = () =>{
+
 	return (
-		<div className="App">
-			<h1>Hello, Signal!</h1>
-		</div>
+		<>
+			<Solucoes/>
+			<Contato/>
+		</>
 	);
 };
