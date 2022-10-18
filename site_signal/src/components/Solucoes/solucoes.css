@@ -1,0 +1,100 @@
+.solucoesBackGround {
+    display: flex;
+    background-image: url("../../assets/solucoesBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.solucoesBackGround h1 {
+    color: #610C7D;
+    font-family: "Scada";
+    font-weight: bolder;
+    text-align: center;
+}
+
+.solucoesBackGround p {
+    color: #9C9C9C;
+    font-family: "Saira";
+    font-size: 23px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.solucoesContainerButtons{
+    display: flex;
+    justify-content : space-evenly;
+}
+
+#solucoesButtonClicked {
+    width: 267.56px;
+    height: 88px;
+    font-family: "Saira";
+    font-size: 25px;
+    color: white;
+    border-radius: 50px;
+    border: white 3px solid;
+    margin: 10px 10px;
+}
+
+.solucoesChangeContent{
+    display: flex;
+    margin-top: 40px;
+}
+
+.solucoesChangeContent img{
+    width: 400px;
+    height: 400px;
+}
+
+.solucoesContainerText{
+    text-align: right;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.solucoesTitle{
+    width: fit-content;
+    border-bottom: #610C7D 10px solid
+}
+
+.solucoesTitle h1{
+    color: #610C7D;
+    font-family: "Scada";
+    font-size: 40px;
+}
+
+.solucoesContainerText p{
+    width: 80%;
+    color: #707070;
+    font-family: "Scada";
+    font-size: 25px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#solucoesButton {
+	background-image: linear-gradient(#8700A9, #980089);
+	width: 210px;
+	height: 70px;
+	font-family: "Saira";
+    font-weight: lighter;
+	font-size: 25px;
+	color: white;
+	border-radius: 50px;
+	border: white 3px solid;
+	margin-top: 5px;
+}
+
+#solucoesButton:hover {
+    background-image: none;
+    background-color: white;
+    color: #610C7D;
+    border: #610C7D 2px solid
+};

@@ -1,17 +1,13 @@
 import React from "react";
-import { Contato } from "../components/Contato";
-import { Solucoes } from "../components/Solucoes";
-import styled from "styled-components";
+import { Contato } from "../components/Contato/Contato";
+import { Solucoes } from "../components/Solucoes/Solucoes";
 
 export const Home = () =>{
 
-	const HomeScreen = styled.div`
-		display: flex;
-	`;
 	return (
-		<HomeScreen>
+		<>
 			<Solucoes/>
-			{/* <Contato/> */}
-		</HomeScreen>
+			<Contato/>
+		</>
 	);
 };
