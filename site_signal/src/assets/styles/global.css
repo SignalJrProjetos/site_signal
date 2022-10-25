@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Saira');
+@import url('https://fonts.googleapis.com/css?family=Scada');
+
+* {
+    padding: 0; /*Padding: espaçamento interno*/
+    margin: 0; /*Margem: espaçamento externo*/
+    color: #9C9C9C;
+}
+
+#tsparticles {
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    z-index: -1;
+}
+
+h1 {
+    color: black
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #610C7D !important;
+    margin-right: 32px !important;
+    border-radius: 100% !important;
+}
+
+/* Botoes */
+
+.botaoTipo1 {
+    margin-right: 44px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 4px 40px 4px 40px;
+}
+
+.botaoTipo1:hover {
+    margin-right: 44px;
+    color: #8700A9;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 4px 40px 4px 40px;
+}
