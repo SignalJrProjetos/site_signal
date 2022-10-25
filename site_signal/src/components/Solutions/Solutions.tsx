@@ -1,13 +1,13 @@
 import React, {useState} from "react";
-import imagemSolucoes from "../../assets/manutencao.png";
-import imagemIdentidadeVisual from "../../assets/identidadeVisual.png";
-import imagemManutencao from "../../assets/solucoes.png";
-import "./solucoes.css";
+import imagemSolucoes from "../../assets/imgs/manutencao.png";
+import imagemIdentidadeVisual from "../../assets/imgs/identidadeVisual.png";
+import imagemManutencao from "../../assets/imgs/solucoes.png";
+import "./solutions.css";
 
 // Botar imagem de fundo
 
 // Criando o componente Contato
-export const Solucoes = () => {
+export const Solutions = () => {
 	// O botão ativado por padrão é o Soluções
 	const [services, setServices] = useState<string>("Soluções");
 	const [buttonSolucoes, setButtonSolucoes] = useState<boolean>(true);
@@ -42,12 +42,12 @@ export const Solucoes = () => {
 			return (
 				<>
 					<img src={imagemIdentidadeVisual} alt="" />
-					<div className="solucoesContainerText">
-						<div className="solucoesTitle">
+					<div className="solutionsContainerText">
+						<div className="solutionsTitle">
 							<h1>Identidade Visual</h1>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
-						<button id="solucoesButton">Saiba mais</button>
+						<button id="solutionButton">Saiba mais</button>
 					</div>
 				</>
 			);
@@ -57,12 +57,12 @@ export const Solucoes = () => {
 			return (
 				<>
 					<img src={imagemManutencao} alt="" />
-					<div className="solucoesContainerText">
-						<div className="solucoesTitle">
+					<div className="solutionsContainerText">
+						<div className="solutionsTitle">
 							<h1>Manutenção</h1>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
-						<button id="solucoesButton">Saiba mais</button>
+						<button id="solutionsButton">Saiba mais</button>
 					</div>
 				</>
 			);
@@ -72,42 +72,42 @@ export const Solucoes = () => {
 			return (
 				<>
 					<img src={imagemSolucoes} alt="" />
-					<div className="solucoesContainerText">
-						<div className="solucoesTitle">
+					<div className="solutionsContainerText">
+						<div className="solutionsTitle">
 							<h1>Soluções em TI</h1>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
-						<button id="solucoesButton">Saiba mais</button>
+						<button id="solutionsButton">Saiba mais</button>
 					</div>
 				</>
 			);
 		}
 	}
 	return (
-		<div className="solucoesBackGround">
+		<div className="solutionsBackGround">
 			<p>O que nós fazemos</p>
 			<h1>Nossas soluções para o seu negócio</h1>
-			<div className="solucoesContainerButtons">
+			<div className="solutionsContainerButtons">
 				<button
 					style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
-					id="solucoesButtonClicked"
+					id="solutionsButtonClicked"
 					onClick={() => activeButton("Soluções")}>
 					Soluções em TI
 				</button>
 				<button
 					style={{backgroundColor: buttonIdentidade ? "#8700A9" : "transparent", border: buttonIdentidade ? "none" : "#610C7D 2px solid", color: buttonIdentidade ? "white" : "black"}}
-					id="solucoesButtonClicked"
+					id="solutionsButtonClicked"
 					onClick={() => activeButton("Identidade")}>
 					Identidade Visual
 				</button>
 				<button
 					style={{backgroundColor: buttonManutencao ? "#8700A9" : "transparent", border: buttonManutencao ? "none" : "#610C7D 2px solid", color: buttonManutencao ? "white" : "black"}}
-					id="solucoesButtonClicked"
+					id="solutionsButtonClicked"
 					onClick={() => activeButton("Manutenção")}>
 					Manutenção
 				</button>
 			</div>                
-			<div className="solucoesChangeContent">
+			<div className="solutionsChangeContent">
 				{changeContent()}
 			</div>
 		</div>

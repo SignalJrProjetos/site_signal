@@ -1,22 +1,23 @@
-.solucoesBackGround {
+.solutionsBackGround {
     display: flex;
-    background-image: url("../../assets/solucoesBackground.png");
+    background-image: url("../../assets/imgs/solucoesBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    margin-top: 250px;
 }
 
-.solucoesBackGround h1 {
+.solutionsBackGround h1 {
     color: #610C7D;
     font-family: "Scada";
     font-weight: bolder;
     text-align: center;
 }
 
-.solucoesBackGround p {
+.solutionsBackGround p {
     color: #9C9C9C;
     font-family: "Saira";
     font-size: 23px;
@@ -25,12 +26,12 @@
     margin-bottom: 0px;
 }
 
-.solucoesContainerButtons{
+.solutionsContainerButtons{
     display: flex;
     justify-content : space-evenly;
 }
 
-#solucoesButtonClicked {
+#solutionsButtonClicked {
     width: 267.56px;
     height: 88px;
     font-family: "Saira";
@@ -41,17 +42,17 @@
     margin: 10px 10px;
 }
 
-.solucoesChangeContent{
+.solutionsChangeContent{
     display: flex;
     margin-top: 40px;
 }
 
-.solucoesChangeContent img{
+.solutionsChangeContent img{
     width: 400px;
     height: 400px;
 }
 
-.solucoesContainerText{
+.solutionsContainerText{
     text-align: right;
     margin-right: 3%;
     display: flex;
@@ -59,18 +60,18 @@
     align-items: end;
 }
 
-.solucoesTitle{
+.solutionsTitle{
     width: fit-content;
     border-bottom: #610C7D 10px solid
 }
 
-.solucoesTitle h1{
+.solutionsTitle h1{
     color: #610C7D;
     font-family: "Scada";
     font-size: 40px;
 }
 
-.solucoesContainerText p{
+.solutionsContainerText p{
     width: 80%;
     color: #707070;
     font-family: "Scada";
@@ -79,7 +80,7 @@
     margin-bottom: 20px;
 }
 
-#solucoesButton {
+#solutionsButton {
 	background-image: linear-gradient(#8700A9, #980089);
 	width: 210px;
 	height: 70px;
@@ -92,7 +93,7 @@
 	margin-top: 5px;
 }
 
-#solucoesButton:hover {
+#solutionsButton:hover {
     background-image: none;
     background-color: white;
     color: #610C7D;

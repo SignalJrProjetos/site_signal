@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import imagemContato from "../../assets/contato.png";
-import "./contato.css"; 
+import imagemContact from "../../assets/imgs/contato.png";
+import "./contact.css"; 
 import emailjs from "@emailjs/browser";
 
 // Tipando o objeto messagem que será enviado para o email da signal
@@ -12,7 +12,7 @@ interface Message{
 }
 		
 // Criando o componente Contato
-export const Contato = () => {
+export const Contact = () => {
 
 	// Objeto messagem
 	const [message, setMessage] = useState<Message>({
@@ -62,17 +62,17 @@ export const Contato = () => {
 	}
 	// Retornando os elementos do componente
 	return (
-		<div className="contatoBackGround">
-			{/* <div className="contatoContainer"></div> */}
-			<img id="contatoImg" src={imagemContato}/>
-			<div className="contatoForm">
+		<div className="contactBackGround">
+			{/* <div className="contactContainer"></div> */}
+			<img id="contactImg" src={imagemContact}/>
+			<div className="contactForm">
 				<h1>Contato</h1>
 				<p>Dúvidas? Propostas? Mande sua mensagem e em breve retornamos.</p>
 				<input value={message?.name} placeholder="Nome" onChange={event => {handleMessage(event,"name");}}/>
 				<input value={message?.number} placeholder="Telefone" type="number" onChange={event => {handleMessage(event,"number");}}/>
 				<input value={message?.email} placeholder="Email" type="text" onChange={event => {handleMessage(event,"email");}}/>
-				<input id="contatoInputMessage" value={message?.message} placeholder="Mensagem" onChange={event => {handleMessage(event,"message");}}/>
-				<button className="contatoButton" onClick={sendEmail}>Submeter</button> 
+				<input id="contactInputMessage" value={message?.message} placeholder="Mensagem" onChange={event => {handleMessage(event,"message");}}/>
+				<button className="contactButton" onClick={sendEmail}>Submeter</button> 
 			</div>
 		</div>
 	);

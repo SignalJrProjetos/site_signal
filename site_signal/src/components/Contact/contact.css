@@ -1,35 +1,35 @@
-.contatoBackGround {
+.contactBackGround {
     display: flex;
     width: 100%;
     background-image: linear-gradient(#8700A9, #980089);
 	justify-content: space-evenly;
 }
 
-#contatoImg {
+#contactImg {
     width: 560;
     height: 560;
     margin-top: 30;
 }
 
-.contatoForm{
+.contactForm{
     display: flex;
     flex-direction: column;
 	align-items: center;
     color: white;
 }
 
-.contatoForm h1{
+.contactForm h1{
     font-size: 40;
     font-family: "Saira";
 }
 
-.contatoForm p{
+.contactForm p{
     font-weight: lighter;
     font-size: 20;
     font-family: "Saira";
 }
 
-.contatoForm input{
+.contactForm input{
     border-radius: 30px;
 	height: 50px;
 	width: 520px;
@@ -40,20 +40,20 @@
 	font-family: "Saira";
 }
 
-.contatoForm input::placeholder {
+.contactForm input::placeholder {
 		color: #BABABA;
 		font-size: 20px;
 }
 
-.contatoForm input::-webkit-outer-spin-button, ::-webkit-inner-spin-button {
+.contactForm input::-webkit-outer-spin-button, ::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-#contatoInputMessage {
+#contactInputMessage {
 	    height: 90px;
 }
 
-.contatoButton {
+.contactButton {
 	background-image: linear-gradient(#8700A9, #980089);
 	width: 250px;
     height: 70px;
@@ -65,7 +65,7 @@
 	margin: 20px 10px;
 }
 
-.contatoButton:hover{
+.contactButton:hover{
     background-image: none;
     background-color: white;
     color: black;
