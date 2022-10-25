@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/styles/global.css";
 import { Navbar } from "../components/Navbar";
-import { Contato } from "../components/Contato";
+import { Contato } from "../components/Contato/Contato";
 import { ParticlesContainer } from "../components/ParticlesContainer";
 import { Testimonial } from "../components/Testimonial";
 import  Carousel  from "react-bootstrap/Carousel";
@@ -10,6 +10,7 @@ import bannerImg from "../assets/svg/img.home-banner.svg";
 import facebookIco from "../assets/svg/icon.facebook.svg";
 import instagramIco from "../assets/svg/icon.instagram.svg";
 import linkedinIco from "../assets/svg/icon.linkedin.svg";
+import { Solucoes } from "../components/Solucoes/Solucoes";
 
 export const Home = () =>{
 	
@@ -54,6 +55,8 @@ export const Home = () =>{
 					</div>
 				</div>
 
+				<Solucoes/>
+				<Contato/>
 				{/* Depoimentos */}
 				<div className="testimonialsContainer" style={{"marginTop":"300px"}}>
 					<div style={{"textAlign":"center", "paddingBottom": "24px"}}>
@@ -77,6 +80,7 @@ export const Home = () =>{
 						</Carousel.Item>
 					</Carousel>
 				</div>
+
 			</>
 		</div>
 	);
