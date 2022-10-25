@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/styles/global.css";
+import "../screens/home.css";
 import { Navbar } from "../components/Navbar";
 import { Contact } from "../components/Contact/Contact";
 import { ParticlesContainer } from "../components/ParticlesContainer";
@@ -11,6 +12,13 @@ import facebookIco from "../assets/svg/icon.facebook.svg";
 import instagramIco from "../assets/svg/icon.instagram.svg";
 import linkedinIco from "../assets/svg/icon.linkedin.svg";
 import { Solutions } from "../components/Solutions/Solutions";
+import aboutLogo from "../assets/imgs/logo.SignalCompacta.png";
+import UFRRJ from "../assets/imgs/logo.UFRRJPartners.png";
+import Brasil from "../assets/imgs/logo.Brasil JuniorPartners.png";
+import Rio from "../assets/imgs/logo.Rio JuniorPartners.png";
+import TOTVS from "../assets/imgs/logo.TOTVSPartners.png";
+import Americanas from "../assets/imgs/logo.AmericanasPartners.png";
+import Empower from "../assets/imgs/logo.EmpowerPartners.png";
 
 export const Home = () =>{
 	
@@ -57,6 +65,21 @@ export const Home = () =>{
 
 				<Solutions/>
 
+				{/*Sobre Nós*/}
+
+				<div className="aboutContainer">
+					
+					<img className="aboutImg"  src={aboutLogo} alt=""/>
+					<div className='aboutUsText'>
+						<div className="aboutUsTitle">
+							<h1>Sobre Nós</h1>
+						</div>
+						<h2>Lorem ipsum dolor sit amet consectetur adipiscing elit </h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat mattis vehicula. Nam semper ullamcorper sem, ut tincidunt nulla pharetra id. Duis quam quam, venenatis egetfelis vel, aliquam fringilla eros.</p>
+						<button id="aboutUsButton">Saiba mais</button>
+					</div>
+				</div>
+
 				<Contact/>
 
 				{/* Depoimentos */}
@@ -81,6 +104,40 @@ export const Home = () =>{
 							<Testimonial/>
 						</Carousel.Item>
 					</Carousel>
+				</div>
+
+				{/* Parceiros*/}
+				<div className="partnersImagesTitle">
+					<h1>Parceiros</h1>
+				</div>
+           
+				<div>
+					<ul id="partnersImagesList">
+						<li>
+							<img src={UFRRJ} alt=""/>
+						</li>
+
+						<li>
+							<img src={Brasil} alt=""/>
+						</li>
+                
+						<li>
+							<img src={Rio} alt=""/>
+						</li>
+                
+						<li>
+							<img src={TOTVS} alt=""/>
+						</li>
+               
+						<li>
+							<img src={Empower} alt=""/>
+						</li>
+                
+						<li>
+							<img src={Americanas} alt=""/>
+						</li>
+
+					</ul>
 				</div>
 
 			</>
