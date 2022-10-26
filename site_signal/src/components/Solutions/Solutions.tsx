@@ -41,13 +41,13 @@ export const Solutions = () => {
 		if(services == "Identidade") {
 			return (
 				<>
-					<img src={imagemIdentidadeVisual} alt="" />
+					<img id="solutionsImagemIdentidadeVisual" src={imagemIdentidadeVisual} alt="" />
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
-							<h1>Identidade Visual</h1>
+							<h1 className="title">Identidade Visual</h1>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
-						<button id="solutionButton">Saiba mais</button>
+						<button id="solutionsButton">Saiba mais</button>
 					</div>
 				</>
 			);
@@ -56,10 +56,10 @@ export const Solutions = () => {
 		if(services == "Manutenção") {
 			return (
 				<>
-					<img src={imagemManutencao} alt="" />
+					<img id="solutionsImagemManutencao" src={imagemManutencao} alt="" />
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
-							<h1>Manutenção</h1>
+							<h1 className="title">Manutenção</h1>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
 						<button id="solutionsButton">Saiba mais</button>
@@ -71,10 +71,10 @@ export const Solutions = () => {
 		if(services == "Soluções") {
 			return (
 				<>
-					<img src={imagemSolucoes} alt="" />
+					<img id="solutionsImagemSolucoes" src={imagemSolucoes} alt="" />
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
-							<h1>Soluções em TI</h1>
+							<h1 className="title">Soluções em TI</h1>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
 						<button id="solutionsButton">Saiba mais</button>
