@@ -1,17 +1,18 @@
 import React from "react";
 import "../assets/styles/global.css";
 import "../screens/home.css";
-import { Navbar } from "../components/Navbar/Navbar";
-import { Contact } from "../components/Contact/Contact";
 import { ParticlesContainer } from "../components/ParticlesContainer";
+import { Navbar } from "../components/Navbar/Navbar";
+import { Solutions } from "../components/Solutions/Solutions";
+import { Contact } from "../components/Contact/Contact";
 import { Testimonial } from "../components/Testimonial/Testimonial";
+import { Footer } from "../components/Footer/Footer";
 import  Carousel  from "react-bootstrap/Carousel";
-import border from "../assets/svg/border.svg";
+import border from "../assets/svg/banner.border.svg";
 import bannerImg from "../assets/svg/img.home-banner.svg";
 import facebookIco from "../assets/svg/icon.facebook.svg";
 import instagramIco from "../assets/svg/icon.instagram.svg";
 import linkedinIco from "../assets/svg/icon.linkedin.svg";
-import { Solutions } from "../components/Solutions/Solutions";
 import aboutLogo from "../assets/imgs/logo.SignalCompacta.png";
 import UFRRJ from "../assets/imgs/logo.UFRRJPartners.png";
 import Brasil from "../assets/imgs/logo.Brasil JuniorPartners.png";
@@ -20,25 +21,26 @@ import TOTVS from "../assets/imgs/logo.TOTVSPartners.png";
 import Americanas from "../assets/imgs/logo.AmericanasPartners.png";
 import Empower from "../assets/imgs/logo.EmpowerPartners.png";
 
+
 export const Home = () =>{
 	
 	return (
 		<div className="App">
-			<>
-				<ParticlesContainer/>
-				<Navbar/>
+			<ParticlesContainer/>
+			<Navbar/>
 
-				{/* Banner */}
-				<img className="bannerBorder" src={border}/>
+			{/* Banner */}
+			<img className="bannerBorder" src={border}/>
+			<div className="bannerContainer">
 				<div className="bannerTextContainer">
 					<div>
 						<h1>
-							A solução digital ideal para o seu negócio.
+								A solução digital ideal para o seu negócio.
 						</h1>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus, urna egestas convallis hendrerit, 
-							purus arcu consectetur sapien, eget molestie mi elit sed erat. Curabitur vel ullamcorper odio. Nulla ullamcorper 
-							massa sit amet aliquam elementum. Vestibulum faucibus sem sit amet quam lacinia suscipit. 
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus, urna egestas convallis hendrerit, 
+								purus arcu consectetur sapien, eget molestie mi elit sed erat. Curabitur vel ullamcorper odio. Nulla ullamcorper 
+								massa sit amet aliquam elementum. Vestibulum faucibus sem sit amet quam lacinia suscipit. 
 						</p>
 						<br></br>
 						<br></br>
@@ -59,12 +61,13 @@ export const Home = () =>{
 						<a style={{"marginLeft": "2px"}} href=""><img src={linkedinIco}/></a>
 					</div>
 				</div>
+			</div>
 
-				<Solutions/>
+			<Solutions/>
 
-				{/*Sobre Nós*/}
+			{/*Sobre Nós*/}
 
-				{/*
+			{/*
 				<div className="aboutContainer">
 					
 					<img className="aboutImg"  src={aboutLogo} alt=""/>
@@ -79,37 +82,34 @@ export const Home = () =>{
 				</div>
 	*			*/}
 
-				<div>
-					<ParticlesContainer/>
-					<Contact/>
+			<Contact/>
+
+			{/* Depoimentos */}
+			<div className="testimonialsContainer" style={{"marginTop":"48px"}}>
+				<div className="testimonialsTextContainer">
+					<h2>Depoimentos</h2>
+					<h1 className="title">O que nossos clientes falam</h1>
 				</div>
 
-				{/* Depoimentos */}
-				<div className="testimonialsContainer" style={{"marginTop":"48px"}}>
-					<div className="testimonialsTextContainer">
-						<h2>Depoimentos</h2>
-						<h1 className="title">O que nossos clientes falam</h1>
-					</div>
+				{/* Cada Carousel.Item corresponde a um componente */}
+				<Carousel>
+					<Carousel.Item>
+						<Testimonial/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<Testimonial/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<Testimonial/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<Testimonial/>
+					</Carousel.Item>
+				</Carousel>
+			</div>
 
-					{/* Cada Carousel.Item corresponde a um componente */}
-					<Carousel>
-						<Carousel.Item>
-							<Testimonial/>
-						</Carousel.Item>
-						<Carousel.Item>
-							<Testimonial/>
-						</Carousel.Item>
-						<Carousel.Item>
-							<Testimonial/>
-						</Carousel.Item>
-						<Carousel.Item>
-							<Testimonial/>
-						</Carousel.Item>
-					</Carousel>
-				</div>
-
-				{/* Parceiros*/}
-				{/*
+			{/* Parceiros*/}
+			{/*
 				<div className="partnersImagesTitle">
 					<h1>Parceiros</h1>
 				</div>
@@ -143,8 +143,7 @@ export const Home = () =>{
 					</ul>
 				</div>
 				*/}
-
-			</>
+			<Footer/>
 		</div>
 	);
 };

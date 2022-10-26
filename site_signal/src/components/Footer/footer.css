@@ -1,0 +1,79 @@
+.footerContainer {
+    padding-left: 144px;
+    padding-right: 144px;
+    background-color: #610C7D;
+    padding-bottom: 8px;
+}
+
+.footerInfo {
+    display: flex;
+    margin-top: 250px;
+    padding-top: 96px;
+    width: 100%;
+    font-family: "Saira";
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLogo {
+    width: 352px;
+    margin-right: 96px;
+    position: relative;
+    top: -48px;
+}
+
+.footerInfo h1 {
+    font-family: "Scada";
+    font-size: 32px;
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+
+
+.footerBorder {
+    width: 100%;
+    position: absolute;
+}
+
+.footerPages {
+    margin-right: 144px;
+    z-index: 1;
+}
+
+.footerPages ul, li {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 24px;
+}
+
+.footerPages a {
+    color: white;
+    text-decoration: none;
+}
+
+.footerContact * {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+
+.footerContact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footerContact img {
+    width: 28px;
+    margin-right: 16px;
+}
+
+.footerSocialMedia img {
+    margin-right: 16px;
+}
+
+.copyrightInfo {
+    font-size: 18px;
+    text-align: center;
+}

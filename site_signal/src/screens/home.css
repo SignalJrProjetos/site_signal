@@ -1,5 +1,11 @@
 /* Banner */
 
+.bannerContainer {
+    background-color: #610C7D;
+    z-index: -1;
+    height: 95%;
+}
+
 .bannerTextContainer {
     display: flex; 
     align-items: center; 
@@ -21,8 +27,8 @@
 }
 
 .bannerImg {
-    height: 816px;
-    position: relative
+    height: 800px;
+    position: relative;
 }
 
 .bannerSocialMediaContainer {

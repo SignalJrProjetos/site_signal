@@ -16,15 +16,10 @@ export const ParticlesContainer = () => {
 
 	return (
 		<Particles
-			id="tsparticles"
+			className="tsparticles"
 			init={particlesInit}
 			loaded={particlesLoaded}
 			options={{
-				background: {
-					color: {
-						value: "#610C7D",
-					},
-				},
 				fpsLimit: 60,
 				interactivity: {
 					events: {
