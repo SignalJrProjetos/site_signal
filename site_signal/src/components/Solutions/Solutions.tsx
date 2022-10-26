@@ -85,8 +85,8 @@ export const Solutions = () => {
 	}
 	return (
 		<div className="solutionsBackGround">
-			<p>O que nós fazemos</p>
-			<h1>Nossas soluções para o seu negócio</h1>
+			<h2>O que nós fazemos</h2>
+			<h1 className="title">Nossas soluções para o seu negócio</h1>
 			<div className="solutionsContainerButtons">
 				<button
 					style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
