@@ -84,8 +84,8 @@ export const Solutions = () => {
 		}
 	}
 	return (
-		<div className="solutionsBackGround">
-			<h2>O que nós fazemos</h2>
+		<div className="solutionsContainer">
+			<h2 className="subtitle">O que nós fazemos</h2>
 			<h1 className="title">Nossas soluções para o seu negócio</h1>
 			<div className="solutionsContainerButtons">
 				<button

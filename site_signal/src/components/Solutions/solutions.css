@@ -1,4 +1,4 @@
-.solutionsBackGround {
+.solutionsContainer {
     display: flex;
     background-image: url("../../assets/imgs/solucoesBackground.png");
     background-repeat: no-repeat;
@@ -7,7 +7,6 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding-top: 250px;
 }
 
 .solutionsContainerButtons{

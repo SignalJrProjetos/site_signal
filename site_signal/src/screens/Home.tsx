@@ -30,7 +30,6 @@ export const Home = () =>{
 			<Navbar/>
 
 			{/* Banner */}
-			<img className="bannerBorder" src={border}/>
 			<div className="bannerContainer">
 				<div className="bannerTextContainer">
 					<div>
@@ -62,7 +61,7 @@ export const Home = () =>{
 					</div>
 				</div>
 			</div>
-
+			<img className="bannerBorder" src={border}/>
 			<Solutions/>
 
 			{/*Sobre Nós*/}
@@ -85,8 +84,8 @@ export const Home = () =>{
 			<Contact/>
 
 			{/* Depoimentos */}
-			<div className="testimonialsContainer" style={{"marginTop":"48px"}}>
-				<div className="testimonialsTextContainer">
+			<div className="testimonialsContainer">
+				<div>
 					<h2>Depoimentos</h2>
 					<h1 className="title">O que nossos clientes falam</h1>
 				</div>

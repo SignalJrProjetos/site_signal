@@ -7,7 +7,7 @@ export const Navbar = () => {
 	return (
 		<div className="navbarContainer">
 			<>
-				<img style = {{"height": 56, "marginLeft": 44}} src={logo}/>
+				<a href=""><img style = {{"height": 56, "marginLeft": 44}} src={logo}/></a>
 			</>
 			<div style={{"display": "flex", "alignItems": "center"}}> 
 				<a href="">Serviços</a>
