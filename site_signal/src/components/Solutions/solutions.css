@@ -7,7 +7,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding-top: 250px;
+    padding: 4%;
 }
 
 .solutionsContainerButtons{
@@ -23,7 +23,7 @@
     color: white;
     border-radius: 50px;
     border: white 3px solid;
-    margin: 10px 10px;
+    margin: 40px 10px;
 }
 
 .solutionsChangeContent{
@@ -31,9 +31,17 @@
     margin-top: 40px;
 }
 
-.solutionsChangeContent img{
-    width: 400px;
-    height: 400px;
+#solutionsImagemIdentidadeVisual{
+    width: 500px;
+}
+
+#solutionsImagemManutencao{
+    width: 500px;
+}
+
+#solutionsImagemSolucoes{
+    margin-top: 5px;
+    width: 450px;
 }
 
 .solutionsContainerText{
@@ -55,6 +63,7 @@
     font-family: "Scada";
     font-size: 25px;
     text-align: right;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 

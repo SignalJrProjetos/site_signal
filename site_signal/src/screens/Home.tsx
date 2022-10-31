@@ -79,11 +79,12 @@ export const Home = () =>{
 				</div>
 	*			*/}
 
-				<div>
-					<ParticlesContainer/>
-					<Contact/>
-				</div>
+				{/* <div style={{width: "100%", height: "200px"}}>
+					<ParticlesContainer />
 
+				</div> */}
+
+				<Contact/>
 				{/* Depoimentos */}
 				<div className="testimonialsContainer" style={{"marginTop":"48px"}}>
 					<div className="testimonialsTextContainer">
