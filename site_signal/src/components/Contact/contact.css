@@ -1,0 +1,72 @@
+.contactBackGround {
+    display: flex;
+    width: 100%;
+    background-image: linear-gradient(#8700A9, #980089);
+	justify-content: space-evenly;
+}
+
+#contactImg {
+    width: 560;
+    height: 560;
+    margin-top: 30;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    color: white;
+}
+
+.contactForm h1{
+    font-size: 40;
+    font-family: "Saira";
+}
+
+.contactForm p{
+    font-weight: lighter;
+    font-size: 20;
+    font-family: "Saira";
+}
+
+.contactForm input{
+    border-radius: 30px;
+	height: 50px;
+	width: 520px;
+	outline: none;
+    border: #610C7D 3px solid;
+	padding-left: 15px;
+	margin-top: 10px;
+	font-family: "Saira";
+}
+
+.contactForm input::placeholder {
+		color: #BABABA;
+		font-size: 20px;
+}
+
+.contactForm input::-webkit-outer-spin-button, ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#contactInputMessage {
+	    height: 90px;
+}
+
+.contactButton {
+	background-image: linear-gradient(#8700A9, #980089);
+	width: 250px;
+    height: 70px;
+    font-family: "Scada";
+	font-size: 23px;
+    color: white;
+    border-radius: 30px;
+    border: white 3px solid;
+	margin: 20px 10px;
+}
+
+.contactButton:hover{
+    background-image: none;
+    background-color: white;
+    color: black;
+}

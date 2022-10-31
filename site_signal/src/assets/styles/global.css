@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Saira');
+@import url('https://fonts.googleapis.com/css?family=Scada');
+
+* {
+    padding: 0; /*Padding: espaçamento interno*/
+    margin: 0; /*Margem: espaçamento externo*/
+    color: white;
+    z-index: 1;
+}
+
+.title {
+    font-family:"Scada";
+    font-size: 48px;
+    font-weight: bold;
+    color: #610C7D;
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+h2 {
+    color: #9C9C9C;
+    font-family:"Saira";
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Estilização do container de particulas */
+.tsparticles {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+}
+
+/* Estilização do Carrosel */
+.carousel-indicators [data-bs-target] {
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #610C7D !important;
+    margin-right: 32px !important;
+    border-radius: 100% !important;
+}
+
+/* Botoes */
+
+.buttonPurple {
+    margin-right: 44px;
+    color: black;
+    text-decoration: none;
+    border: 2px solid #8700A9;
+    border-radius: 30px;
+    padding: 4px 40px 4px 40px;
+    z-index: 1;
+}
+
+.buttonPurple:hover {
+    margin-right: 44px;
+    color: white;
+    background-color: #8700A9;
+    text-decoration: none;
+    border: 2px solid #8700A9;
+    border-radius: 30px;
+    padding: 4px 40px 4px 40px;
+}
+
+.buttonWhite {
+    margin-right: 44px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 4px 40px 4px 40px;
+    z-index: 1;
+}
+
+.buttonWhite:hover {
+    margin-right: 44px;
+    color: #8700A9;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 4px 40px 4px 40px;
+}
+
+/* Text Input */
+
+/*Modifique a partir daqui */
