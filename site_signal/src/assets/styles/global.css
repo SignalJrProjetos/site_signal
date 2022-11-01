@@ -4,7 +4,6 @@
 * {
     padding: 0; /*Padding: espaçamento interno*/
     margin: 0; /*Margem: espaçamento externo*/
-    color: white;
     z-index: 1;
 }
 
@@ -71,6 +70,8 @@ h2 {
     border-radius: 30px;
     padding: 4px 40px 4px 40px;
     z-index: 1;
+    background: none;
+    font-size: 28px;
 }
 
 .buttonWhite:hover {
