@@ -47,7 +47,7 @@ export const Solutions = () => {
 							<h1>Identidade Visual</h1>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
-						<button id="solutionButton">Saiba mais</button>
+						<button id="solutionsButton">Saiba mais</button>
 					</div>
 				</>
 			);
