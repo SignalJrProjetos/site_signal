@@ -13,7 +13,7 @@ import bannerImg from "../assets/svg/img.home-banner.svg";
 import facebookIco from "../assets/svg/icon.facebook.svg";
 import instagramIco from "../assets/svg/icon.instagram.svg";
 import linkedinIco from "../assets/svg/icon.linkedin.svg";
-import aboutLogo from "../assets/imgs/logo.SignalCompacta.png";
+import aboutLogo from "../assets/svg/logo.SignalSymbolBg.svg";
 import UFRRJ from "../assets/imgs/logo.UFRRJPartners.png";
 import Brasil from "../assets/imgs/logo.Brasil JuniorPartners.png";
 import Rio from "../assets/imgs/logo.Rio JuniorPartners.png";
@@ -66,20 +66,23 @@ export const Home = () =>{
 
 			{/*Sobre Nós*/}
 
-			{/*
+			{
 				<div className="aboutContainer">
-					
-					<img className="aboutImg"  src={aboutLogo} alt=""/>
-					<div className='aboutUsText'>
-						<div className="aboutUsTitle">
-							<h1>Sobre Nós</h1>
-						</div>
-						<h2>Lorem ipsum dolor sit amet consectetur adipiscing elit </h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat mattis vehicula. Nam semper ullamcorper sem, ut tincidunt nulla pharetra id. Duis quam quam, venenatis egetfelis vel, aliquam fringilla eros.</p>
-						<button id="aboutUsButton">Saiba mais</button>
+					<div className="aboutTextContainer">
+						<h2>Sobre Nós</h2>
+						<h1 className="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, 
+							lobortis ac justo vel, auctor dictum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed 
+							nisi euismod suscipit.
+						</p>
+						<br/>
+						<a className="buttonPurple2" href="">Saiba Mais</a>
+					</div>
+					<div>
+						<img className="aboutImg" src={aboutLogo}/>
 					</div>
 				</div>
-	*			*/}
+			}
 
 			<Contact/>
 

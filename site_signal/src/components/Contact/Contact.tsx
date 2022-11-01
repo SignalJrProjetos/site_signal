@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import imagemContact from "../../assets/imgs/contato.png";
+import "../../assets/styles/global.css";
 import "./contact.css"; 
 import emailjs from "@emailjs/browser";
+import imagemContact from "../../assets/svg/img.contact.svg";
 
 // Tipando o objeto messagem que será enviado para o email da signal
 interface Message{
@@ -27,7 +28,7 @@ export const Contact = () => {
 		const value = event.target.value;
 		const object = Object.assign({}, message);
 		object[paramName as keyof Message] = value;
-		setMessage(object);                               
+		setMessage(object);                           
 	}
 
 	// Função para enviar o email
@@ -62,7 +63,7 @@ export const Contact = () => {
 	}
 	// Retornando os elementos do componente
 	return (
-		<div className="contactBackGround">
+		<div className="contactContainer">
 			{/* <div className="contactContainer"></div> */}
 			<img id="contactImg" src={imagemContact}/>
 			<div className="contactForm">
@@ -71,8 +72,10 @@ export const Contact = () => {
 				<input value={message?.name} placeholder="Nome" onChange={event => {handleMessage(event,"name");}}/>
 				<input value={message?.number} placeholder="Telefone" type="number" onChange={event => {handleMessage(event,"number");}}/>
 				<input value={message?.email} placeholder="Email" type="text" onChange={event => {handleMessage(event,"email");}}/>
-				<input id="contactInputMessage" value={message?.message} placeholder="Mensagem" onChange={event => {handleMessage(event,"message");}}/>
-				<button className="contactButton" onClick={sendEmail}>Submeter</button> 
+				<textarea value={message?.message} placeholder="Mensagem" onChange={event => {handleMessage(event,"message");}}/>
+				<br/>
+				<br/>
+				<button className="buttonWhite" onClick={sendEmail}>Submeter</button> 
 			</div>
 		</div>
 	);

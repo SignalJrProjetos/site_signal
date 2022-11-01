@@ -4,7 +4,6 @@
 * {
     padding: 0; /*Padding: espaçamento interno*/
     margin: 0; /*Margem: espaçamento externo*/
-    color: white;
     z-index: 1;
 }
 
@@ -44,43 +43,53 @@ h2 {
 /* Botoes */
 
 .buttonPurple {
-    margin-right: 44px;
-    color: black;
+    color: #8700A9;
     text-decoration: none;
     border: 2px solid #8700A9;
     border-radius: 30px;
     padding: 4px 40px 4px 40px;
     z-index: 1;
+    font-family: "Saira";
+    font-size: 28px;
 }
 
 .buttonPurple:hover {
-    margin-right: 44px;
+    color: white;
+    background-color: #8700A9;
+}
+
+.buttonPurple2 {
     color: white;
     background-color: #8700A9;
     text-decoration: none;
     border: 2px solid #8700A9;
     border-radius: 30px;
-    padding: 4px 40px 4px 40px;
+    padding: 8px 40px 8px 40px;
+    z-index: 1;
+    font-family: "Saira";
+    font-size: 28px;
+}
+
+.buttonPurple2:hover {
+    color: white;
+    background-color: #6A0085;
 }
 
 .buttonWhite {
-    margin-right: 44px;
     color: white;
     text-decoration: none;
     border: 2px solid white;
     border-radius: 30px;
-    padding: 4px 40px 4px 40px;
+    padding: 8px 40px 8px 40px;
     z-index: 1;
+    background: none;
+    font-family: "Saira";
+    font-size: 28px;
 }
 
 .buttonWhite:hover {
-    margin-right: 44px;
     color: #8700A9;
     background-color: white;
-    text-decoration: none;
-    border: 2px solid white;
-    border-radius: 30px;
-    padding: 4px 40px 4px 40px;
 }
 
 /* Text Input */
