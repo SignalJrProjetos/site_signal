@@ -6,25 +6,19 @@ import { loadFull } from "tsparticles";
 export const ParticlesContainer = () => {
 
 	const particlesInit = useCallback(async (engine: Engine) => {
-		console.log(engine);
 		await loadFull(engine);
 	}, []);
 
 	const particlesLoaded = useCallback(async (container: Container | undefined) => {
-		await console.log(container);
+		await container;
 	}, []);
 
 	return (
 		<Particles
-			id="tsparticles"
+			className="tsparticles"
 			init={particlesInit}
 			loaded={particlesLoaded}
 			options={{
-				background: {
-					color: {
-						value: "#610C7D",
-					},
-				},
 				fpsLimit: 60,
 				interactivity: {
 					events: {
@@ -74,6 +68,7 @@ export const ParticlesContainer = () => {
 							area: 800,
 						},
 						value: 60,
+						limit: 100,
 					},
 					opacity: {
 						value: 0.4,

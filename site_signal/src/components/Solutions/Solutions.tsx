@@ -17,19 +17,19 @@ export const Solutions = () => {
 	function activeButton(button: string) {	
 		switch (button) {
 		case "Soluções":
-			setButtonSolucoes(current => !current);
+			setButtonSolucoes(true);
 			setButtonIdentidade(false);
 			setButtonManutencao(false);
 			setServices("Soluções");
 			break;
 		case "Identidade":
-			setButtonIdentidade(current => !current);
+			setButtonIdentidade(true);
 			setButtonSolucoes(false);
 			setButtonManutencao(false);
 			setServices("Identidade");
 			break;
 		case "Manutenção":
-			setButtonManutencao(current => !current);
+			setButtonManutencao(true);
 			setButtonIdentidade(false);
 			setButtonSolucoes(false);
 			setServices("Manutenção");
@@ -41,13 +41,16 @@ export const Solutions = () => {
 		if(services == "Identidade") {
 			return (
 				<>
-					<img id="solutionsImagemIdentidadeVisual" src={imagemIdentidadeVisual} alt="" />
+					<img src={imagemIdentidadeVisual} alt="" />
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
-							<h1 className="title">Identidade Visual</h1>
+							<h1>Identidade Visual</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
-						<button id="solutionsButton">Saiba mais</button>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						</p>
+						<br/>
+						<button className="buttonPurple2">Saiba mais</button>
 					</div>
 				</>
 			);
@@ -56,13 +59,16 @@ export const Solutions = () => {
 		if(services == "Manutenção") {
 			return (
 				<>
-					<img id="solutionsImagemManutencao" src={imagemManutencao} alt="" />
+					<img src={imagemManutencao} alt="" />
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
-							<h1 className="title">Manutenção</h1>
+							<h1>Manutenção</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
-						<button id="solutionsButton">Saiba mais</button>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						</p>
+						<br/>
+						<button className="buttonPurple2">Saiba mais</button>
 					</div>
 				</>
 			);
@@ -71,21 +77,24 @@ export const Solutions = () => {
 		if(services == "Soluções") {
 			return (
 				<>
-					<img id="solutionsImagemSolucoes" src={imagemSolucoes} alt="" />
+					<img src={imagemSolucoes} alt="" />
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
-							<h1 className="title">Soluções em TI</h1>
+							<h1>Soluções em TI</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
-						<button id="solutionsButton">Saiba mais</button>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						</p>
+						<br/>
+						<button className="buttonPurple2">Saiba mais</button>
 					</div>
 				</>
 			);
 		}
 	}
 	return (
-		<div className="solutionsBackGround">
-			<h2>O que nós fazemos</h2>
+		<div className="solutionsContainer">
+			<h2 className="subtitle">O que nós fazemos</h2>
 			<h1 className="title">Nossas soluções para o seu negócio</h1>
 			<div className="solutionsContainerButtons">
 				<button

@@ -1,5 +1,10 @@
 /* Banner */
 
+.bannerContainer {
+    background-color: #610C7D;
+    z-index: -1;
+}
+
 .bannerTextContainer {
     display: flex; 
     align-items: center; 
@@ -21,13 +26,12 @@
 }
 
 .bannerImg {
-    height: 816px;
-    position: relative
+    height: 800px;
+    position: relative;
 }
 
 .bannerSocialMediaContainer {
     margin-right: 96px;
-    z-index: 1;
 }
 
 .bannerSocialMediaContainer p {
@@ -40,8 +44,15 @@
 
 .bannerBorder {
     width: 100%; 
-    position: absolute; 
-    margin-top: 23%;
+    position: relative;
+    margin-top: -25.5%;
+    z-index: 0;
+    -webkit-user-drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 
@@ -50,70 +61,37 @@
 .aboutContainer{
     width: 100%;
     height: 666px;
- 
+    display: flex; 
     background: #f7f7f7;
+    padding-left: 96px;
 }
-.aboutUsTitle h1{
-    color: #9C9C9C;
-    font-family: 'Saira';
-    font-weight: lighter;
-    font-size: 18px;
+
+.aboutTextContainer {
+    margin-right: 96px;
+}
+
+.aboutTextContainer h1 {
     text-align: left;
-    margin-bottom: 0px;
 }
 
-.aboutUsText h2 {
-    color: #610C7D;
-    font-family: "Scada";
-    font-weight: bolder;
+.aboutTextContainer h2 {
+    margin-top: 64px;
     text-align: left;
-    font-size: 20px;
- }
+}
 
-.aboutUsText p {
+.aboutTextContainer p {
     color: #9C9C9C;
-    font-size: 15px;
-    font-family: "Scada";
-    font-weight: bolder;
+    font-size: 24px;
+    font-family: "Saira";
 }
 
-#aboutUsButton {
-    Background-image: linear-gradient(#8700A9, #980089);
-	width: 180px;
-	height: 48px;
-	font-family: "Saira";
-    font-weight: lighter;
-	font-size: 25px;
-	color: white;
-	border-radius: 20px;
-	border: white 1px solid;
-	margin-top: 5px;
-    text-align: center;
-}
-
-#aboutUsButton:hover {
-    background-image: none;
-    background-color: white;
-    color: #610C7D;
-    border: #610C7D 2px solid
-    
-}
-
-.aboutImg{
-    width: 400px;
-    height: 400.14px;
-    text-align: right;
-    float: right;
-
+.aboutImg {
+    margin-right: 72px;
 }
 
 /* Depoimentos */
 
 .testimonialsContainer {
     margin-top: 48px;
-}
-
-.testimonialsTextContainer {
-    text-align: center;
-    padding-bottom: 24px;
+    position: relative;
 }

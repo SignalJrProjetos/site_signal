@@ -7,10 +7,13 @@
     font-family: Saira;
     font-size: 24px;
     color: white;
+    background-color: #610C7D;
+    z-index: 1;
 }
 
 .navbarContainer a {
     margin-right: 44px;
     color: white;
     text-decoration: none;
+    z-index: 1;
 }
