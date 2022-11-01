@@ -20,7 +20,7 @@
 }
 
 .contactForm h1{
-    font-size: 40;
+    font-size: 40px;
     font-family: "Saira";
     font-weight: bold;
 }
@@ -28,7 +28,7 @@
 .contactForm p{
     font-family: "Saira";
     font-weight: lighter;
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
 }
 

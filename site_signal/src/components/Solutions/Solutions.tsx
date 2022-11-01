@@ -17,19 +17,19 @@ export const Solutions = () => {
 	function activeButton(button: string) {	
 		switch (button) {
 		case "Soluções":
-			setButtonSolucoes(current => !current);
+			setButtonSolucoes(true);
 			setButtonIdentidade(false);
 			setButtonManutencao(false);
 			setServices("Soluções");
 			break;
 		case "Identidade":
-			setButtonIdentidade(current => !current);
+			setButtonIdentidade(true);
 			setButtonSolucoes(false);
 			setButtonManutencao(false);
 			setServices("Identidade");
 			break;
 		case "Manutenção":
-			setButtonManutencao(current => !current);
+			setButtonManutencao(true);
 			setButtonIdentidade(false);
 			setButtonSolucoes(false);
 			setServices("Manutenção");
@@ -46,7 +46,9 @@ export const Solutions = () => {
 						<div className="solutionsTitle">
 							<h1>Identidade Visual</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						</p>
 						<button id="solutionsButton">Saiba mais</button>
 					</div>
 				</>
@@ -61,7 +63,9 @@ export const Solutions = () => {
 						<div className="solutionsTitle">
 							<h1>Manutenção</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						</p>
 						<button id="solutionsButton">Saiba mais</button>
 					</div>
 				</>
@@ -76,7 +80,9 @@ export const Solutions = () => {
 						<div className="solutionsTitle">
 							<h1>Soluções em TI</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						</p>
 						<button id="solutionsButton">Saiba mais</button>
 					</div>
 				</>
