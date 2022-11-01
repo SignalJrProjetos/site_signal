@@ -9,6 +9,8 @@
     width: 100%;
     margin-top: -392px;
     padding-top: 244px;
+    padding-left: 72px;
+    padding-right: 72px;
 }
 
 .solutionsContainerButtons{
@@ -65,23 +67,3 @@
     text-align: right;
     margin-bottom: 20px;
 }
-
-#solutionsButton {
-	background-image: linear-gradient(#8700A9, #980089);
-	width: 210px;
-	height: 70px;
-	font-family: "Saira";
-    font-weight: lighter;
-	font-size: 25px;
-	color: white;
-	border-radius: 50px;
-	border: white 3px solid;
-	margin-top: 5px;
-}
-
-#solutionsButton:hover {
-    background-image: none;
-    background-color: white;
-    color: #610C7D;
-    border: #610C7D 2px solid
-};

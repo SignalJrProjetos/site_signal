@@ -49,7 +49,8 @@ export const Solutions = () => {
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
 						</p>
-						<button id="solutionsButton">Saiba mais</button>
+						<br/>
+						<button className="buttonPurple2">Saiba mais</button>
 					</div>
 				</>
 			);
@@ -66,7 +67,8 @@ export const Solutions = () => {
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
 						</p>
-						<button id="solutionsButton">Saiba mais</button>
+						<br/>
+						<button className="buttonPurple2">Saiba mais</button>
 					</div>
 				</>
 			);
@@ -83,7 +85,8 @@ export const Solutions = () => {
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
 						</p>
-						<button id="solutionsButton">Saiba mais</button>
+						<br/>
+						<button className="buttonPurple2">Saiba mais</button>
 					</div>
 				</>
 			);
