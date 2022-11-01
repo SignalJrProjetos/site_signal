@@ -7,6 +7,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    padding: 2%;
 }
 
 .solutionsContainerButtons{
@@ -31,8 +32,8 @@
 }
 
 .solutionsChangeContent img{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    margin-left: 3%;
 }
 
 .solutionsContainerText{
@@ -45,7 +46,14 @@
 
 .solutionsTitle{
     width: fit-content;
-    border-bottom: #610C7D 10px solid
+    border-bottom: #610C7D 8px solid;
+    margin-bottom: 20px;
+}
+
+.solutionsTitle h1{
+    font-family: "Scada";
+    font-weight: bolder;
+    color: #610C7D;
 }
 
 .solutionsContainerText p{
