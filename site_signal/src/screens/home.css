@@ -95,3 +95,25 @@
     margin-top: 48px;
     position: relative;
 }
+
+/* Parceiros */
+
+.partnersContainer {
+    position: relative;
+}
+
+.partnersImagesOne {
+    width: auto;
+    text-align: center;
+    margin-right: auto;
+}
+
+.partnersImagesTwo {
+    width: auto;
+    text-align: center;
+   
+}
+
+.partnerImg {
+    margin-right: 48px;
+}

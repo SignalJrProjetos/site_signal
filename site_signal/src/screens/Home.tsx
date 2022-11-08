@@ -111,40 +111,24 @@ export const Home = () =>{
 			</div>
 
 			{/* Parceiros*/}
-			{/*
-				<div className="partnersImagesTitle">
-					<h1>Parceiros</h1>
+	
+			<div className="partnersContainer">
+				<div>
+					<h1 className="title">Parceiros</h1>
 				</div>
            
-				<div>
-					<ul id="partnersImagesList">
-						<li>
-							<img src={UFRRJ} alt=""/>
-						</li>
-
-						<li>
-							<img src={Brasil} alt=""/>
-						</li>
-                
-						<li>
-							<img src={Rio} alt=""/>
-						</li>
-                
-						<li>
-							<img src={TOTVS} alt=""/>
-						</li>
-               
-						<li>
-							<img src={Empower} alt=""/>
-						</li>
-                
-						<li>
-							<img src={Americanas} alt=""/>
-						</li>
-
-					</ul>
+				<div className="partnersImagesOne">
+					<img className="partnerImg" src={UFRRJ} alt=""/>
+					<img className="partnerImg" src={Brasil} alt=""/>
+					<img className="partnerImg" src={Rio} alt=""/>
+					<img className="partnerImg" src={TOTVS} alt=""/>
 				</div>
-				*/}
+
+				<div className="partnersImagesTwo">
+					<img className="partnerImg" src={Empower} alt=""/>
+					<img className="partnerImg" src={Americanas} alt=""/>
+				</div>
+			</div>
 			<Footer/>
 		</div>
 	);
