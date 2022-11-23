@@ -27,63 +27,6 @@ export const Home = () =>{
 	return (
 		<div className="App">
 			<ParticlesContainer/>
-			<Navbar/>
-
-			{/* Banner */}
-			<div className="bannerContainer">
-				<div className="bannerTextContainer">
-					<div>
-						<h1>
-								A solução digital ideal para o seu negócio.
-						</h1>
-						<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus, urna egestas convallis hendrerit, 
-								purus arcu consectetur sapien, eget molestie mi elit sed erat. Curabitur vel ullamcorper odio. Nulla ullamcorper 
-								massa sit amet aliquam elementum. Vestibulum faucibus sem sit amet quam lacinia suscipit. 
-						</p>
-						<br></br>
-						<br></br>
-						<a className="buttonWhite" style={{"fontFamily": "Saira", "fontSize": "28px", "position": "relative"}} href="">Saiba Mais</a>
-					</div>
-					<div>
-						<img className="bannerImg" src={bannerImg}/>
-					</div>
-					<div className="bannerSocialMediaContainer">
-						<p>SIGA-NOS</p>
-						<br></br>
-						<a style={{"marginLeft": "4px"}} href=""><img src={facebookIco}/></a>
-						<br></br>
-						<br></br>
-						<a style={{"marginLeft": "2px"}} href=""><img src={instagramIco}/></a>
-						<br></br>
-						<br></br>
-						<a style={{"marginLeft": "2px"}} href=""><img src={linkedinIco}/></a>
-					</div>
-				</div>
-			</div>
-			<img className="bannerBorder" src={border}/>
-			<Solutions/>
-
-			{/*Sobre Nós*/}
-
-			{
-				<div className="aboutContainer">
-					<div className="aboutTextContainer">
-						<h2>Sobre Nós</h2>
-						<h1 className="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, 
-							lobortis ac justo vel, auctor dictum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed 
-							nisi euismod suscipit.
-						</p>
-						<br/>
-						<a className="buttonPurple2" href="">Saiba Mais</a>
-					</div>
-					<div>
-						<img className="aboutImg" src={aboutLogo}/>
-					</div>
-				</div>
-			}
-
 			<Contact/>
 
 			{/* Depoimentos */}
