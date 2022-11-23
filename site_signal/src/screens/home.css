@@ -1,40 +1,40 @@
-/* Banner */
+/* Header */
 
-.bannerContainer {
+.headerContainer {
     background-color: #610C7D;
     z-index: -1;
 }
 
-.bannerTextContainer {
+.headerTextContainer {
     display: flex; 
     align-items: center; 
-    margin-left: 96px;
+    margin-left: 5%;
 }
 
-.bannerTextContainer h1 {
+.headerTextContainer h1 {
     color: white;
     font-family: "Scada";
     font-size: 72px; 
     font-weight: bold;
 }
 
-.bannerTextContainer p {
+.headerTextContainer p {
     margin-top: 20px;
     color: white;
     font-family: "Saira";
     font-size: 28px;
 }
 
-.bannerImg {
+#headerImg {
     height: 800px;
     position: relative;
 }
 
-.bannerSocialMediaContainer {
+.headerSocialMediaContainer {
     margin-right: 96px;
 }
 
-.bannerSocialMediaContainer p {
+.headerSocialMediaContainer p {
     font-family: "Saira"; 
     font-size: 26px;
     font-weight: bold;
@@ -42,7 +42,7 @@
     color: white;
 }
 
-.bannerBorder {
+.headerBorder {
     width: 100%; 
     position: relative;
     margin-top: -25.5%;
@@ -53,6 +53,35 @@
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+/* Responsividade: Header Mobile */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .headerTextContainer {
+        padding-top: 5%;
+    }
+
+    .headerTextContainer h1 {
+        font-size: 28px;
+    }
+
+    .headerTextContainer p {
+        font-size: 16px;
+    }
+
+    .headerButton {
+        margin-bottom: 10%;
+    }
+
+    #headerImg {
+        display: none;
+    }
+
+    .headerSocialMediaContainer {
+        display: none;
+    }
 }
 
 

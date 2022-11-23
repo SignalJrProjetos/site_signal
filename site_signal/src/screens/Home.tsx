@@ -8,8 +8,8 @@ import { Contact } from "../components/Contact/Contact";
 import { Testimonial } from "../components/Testimonial/Testimonial";
 import { Footer } from "../components/Footer/Footer";
 import  Carousel  from "react-bootstrap/Carousel";
-import border from "../assets/svg/banner.border.svg";
-import bannerImg from "../assets/svg/img.home-banner.svg";
+import border from "../assets/svg/header.border.svg";
+import headerImg from "../assets/svg/img.home-header.svg";
 import facebookIco from "../assets/svg/icon.facebook.svg";
 import instagramIco from "../assets/svg/icon.instagram.svg";
 import linkedinIco from "../assets/svg/icon.linkedin.svg";
@@ -29,9 +29,9 @@ export const Home = () =>{
 			<ParticlesContainer/>
 			<Navbar/>
 
-			{/* Banner */}
-			<div className="bannerContainer">
-				<div className="bannerTextContainer">
+			{/* Header */}
+			<div className="headerContainer">
+				<div className="headerTextContainer">
 					<div>
 						<h1>
 								A solução digital ideal para o seu negócio.
@@ -41,14 +41,14 @@ export const Home = () =>{
 								purus arcu consectetur sapien, eget molestie mi elit sed erat. Curabitur vel ullamcorper odio. Nulla ullamcorper 
 								massa sit amet aliquam elementum. Vestibulum faucibus sem sit amet quam lacinia suscipit. 
 						</p>
-						<br></br>
-						<br></br>
-						<a className="buttonWhite" style={{"fontFamily": "Saira", "fontSize": "28px", "position": "relative"}} href="">Saiba Mais</a>
+						<div className="headerButton" style={{"marginTop":"8%"}}>
+							<a className="buttonWhite" href="">Saiba Mais</a>
+						</div>
 					</div>
 					<div>
-						<img className="bannerImg" src={bannerImg}/>
+						<img id="headerImg" src={headerImg}/>
 					</div>
-					<div className="bannerSocialMediaContainer">
+					<div className="headerSocialMediaContainer">
 						<p>SIGA-NOS</p>
 						<br></br>
 						<a style={{"marginLeft": "4px"}} href=""><img src={facebookIco}/></a>
@@ -61,7 +61,7 @@ export const Home = () =>{
 					</div>
 				</div>
 			</div>
-			<img className="bannerBorder" src={border}/>
+			<img className="headerBorder" src={border}/>
 			<Solutions/>
 
 			{/*Sobre Nós*/}
@@ -69,7 +69,7 @@ export const Home = () =>{
 			{
 				<div className="aboutContainer">
 					<div className="aboutTextContainer">
-						<h2>Sobre Nós</h2>
+						<h2 className="subtitle">Sobre Nós</h2>
 						<h1 className="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, 
 							lobortis ac justo vel, auctor dictum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed 
@@ -89,7 +89,7 @@ export const Home = () =>{
 			{/* Depoimentos */}
 			<div className="testimonialsContainer">
 				<div>
-					<h2>Depoimentos</h2>
+					<h2 className="subtitle">Depoimentos</h2>
 					<h1 className="title">O que nossos clientes falam</h1>
 				</div>
 

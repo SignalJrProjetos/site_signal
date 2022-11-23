@@ -7,8 +7,8 @@ import quoteIco from "../../assets/svg/icon.quote.svg";
 export const Testimonial = () => {
 	return(
 		<div className="testimonialCard">
-			<img style={{"alignSelf": "flex-start"}} src={quoteIco}/>
-			<div>
+			<img className= "quotationMark" style={{"alignSelf": "flex-start"}} src={quoteIco}/>
+			<div className="testimonialAvatar">
 				<img src={avatar} />
 			</div>
 
@@ -20,7 +20,7 @@ export const Testimonial = () => {
                     Morbi faucibus sit amet velit et faucibus. Proin risus quam, vestibulum fringilla finibus at, fringilla in nulla. Fusce eget molestie erat.
 				</p>
 			</div>
-			<img style={{"alignSelf": "flex-end", "transform": "rotate(-180deg)"}} src={quoteIco}/>
+			<img className= "quotationMark" style={{"alignSelf": "flex-end", "transform": "rotate(-180deg)"}} src={quoteIco}/>
 		</div>   
 	);
 };
