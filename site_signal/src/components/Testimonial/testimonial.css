@@ -1,8 +1,5 @@
 .testimonialCard {
-    margin-top: 5px;
-    margin-bottom: 80px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 5px 10% 80px 10%;
     padding: 24px 24px;
     align-items: center;
     display: flex;
@@ -29,4 +26,45 @@
     color: #707070;
     font-weight: lighter;
     margin-top: 16px;
+}
+
+/* Responsividade: Mobile */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .testimonialCard {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .testimonialAvatar {
+        align-self: flex-start;
+    }
+
+    .testimonialAvatar img {
+        position: absolute;
+        margin-left: 16px;
+        height: 64px;
+    }
+
+    .testimonialCard h1 {
+        font-size: 24px;
+        margin-left: 72px;
+    }
+
+    .testimonialCard p:first-of-type {
+        font-size: 16px;
+        margin-left: 72px;
+    }
+
+    .testimonialCard p {
+       font-size: 16px;
+       margin-top: 0%;
+    }
+
+    .quotationMark {
+        display: none;
+    }
+
+
 }

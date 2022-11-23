@@ -5,15 +5,28 @@ import logo from "../../assets/imgs/logo.SignalExtensaBranca.png";
 
 export const Navbar = () => {
 	return (
-		<div className="navbarContainer">
+		<nav role="navigation" className="navbarContainer">
 			<>
-				<a href=""><img style = {{"height": 56, "marginLeft": 44}} src={logo}/></a>
+				<a href=""><img id="navbarLogo" src={logo}/></a>
 			</>
-			<div style={{"display": "flex", "alignItems": "center"}}> 
+			<div className="navbarMenu" style={{"display": "flex", "alignItems": "center"}}> 
 				<a href="">Serviços</a>
 				<a href="">Equipe</a>
 				<a className="buttonWhite" href="">Contato</a>
+
+				<div id="menuToggle">
+					<input type="checkbox"/>
+					<span/>
+					<span/>
+					<span/>
+					<ul id="menu">
+						<li><a href="">Início</a></li>
+						<li><a href="">Serviços</a></li>
+						<li><a href="">Equipe</a></li>
+					</ul>
+				</div>
+
 			</div>
-		</div>
+		</nav>
 	);
 };
