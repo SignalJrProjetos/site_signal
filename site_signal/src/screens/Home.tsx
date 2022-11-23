@@ -121,7 +121,6 @@ export const Home = () =>{
 						<li>
 							<img src={UFRRJ} alt=""/>
 						</li>
-
 						<li>
 							<img src={Brasil} alt=""/>
 						</li>
@@ -141,7 +140,6 @@ export const Home = () =>{
 						<li>
 							<img src={Americanas} alt=""/>
 						</li>
-
 					</ul>
 				</div>
 				*/}
