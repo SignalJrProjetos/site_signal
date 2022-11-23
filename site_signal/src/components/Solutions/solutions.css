@@ -36,6 +36,7 @@
 
 .solutionsChangeContent img{
     width: 500px;
+    height: 500px;
     margin-left: 3%;
 }
 
@@ -66,4 +67,116 @@
     font-size: 25px;
     text-align: right;
     margin-bottom: 20px;
+}
+
+.solutionsContainerMobile{
+    display: none;
+}
+
+/* Responsividade */
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+@media (max-width: 399px) {
+    #solutionsSolucoes{
+        background-color: white;
+    }
+    #solutionsIdentidadeMobile {
+        background-color: #610C7D;
+    }
+    #solutionsManutencaoMobile{
+        background-color: white;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 550px) {
+    #solutionsSolucoes{
+        background-image: url("../../assets/imgs/solutionsBackground400px.png");
+    }
+    #solutionsIdentidadeMobile{
+        background-image: url("../../assets/imgs/identidadeBackground400px.png");
+    }
+    #solutionsManutencaoMobile{
+        background-image: url("../../assets/imgs/manutencaoBackground400px.png");
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
+    #solutionsSolucoes{
+        background-image: url("../../assets/imgs/solutionsBackground550px.png");
+    }
+    #solutionsIdentidadeMobile{
+        background-image: url("../../assets/imgs/identidadeBackground550px.png");
+    }
+    #solutionsManutencaoMobile{
+        background-image: url("../../assets/imgs/manutencaoBackground550px.png");
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .solutionsContainer h2{
+        font-size: 20px;
+    }
+    .solutionsContainer h1{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .solutionsContainer{
+        margin-top: 30px;
+        padding: 15px;
+        text-align: center;
+    }    
+    .solutionsContainerButtons{
+        display: none;
+    }
+    .solutionsChangeContent{
+        display: none;
+    }
+    .solutionsContainerMobile{
+        display: flex;
+        flex-direction: column;
+    }
+    .solutionsCardMobile {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+        box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.4);
+        text-align: left;
+        padding: 20px;
+        margin-top: 20px;
+        font-family: "Scada";
+        color: #707070;
+    }
+    .solutionsCardMobile img{
+        width: 16% ;
+    }
+    .solutionsTitleMobile {
+        width: fit-content;
+        color: #610C7D;
+        border-bottom: #610C7D 7px solid;
+        border-color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .solutionsCardMobile p{
+        font-size: 19px;
+    }
+} 
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .solutionsContainer{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #solutionsButtonClicked {
+        font-size: 22px;
+    }
+    .solutionsChangeContent img{
+        width: 400px;
+        height: 400px;
+    }
 }

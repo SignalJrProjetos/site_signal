@@ -28,6 +28,65 @@ export const Home = () =>{
 		<div className="App">
 			<ParticlesContainer/>
 			<Contact/>
+
+			{/* Depoimentos */}
+			<div className="testimonialsContainer">
+				<div>
+					<h2>Depoimentos</h2>
+					<h1 className="title">O que nossos clientes falam</h1>
+				</div>
+
+				{/* Cada Carousel.Item corresponde a um componente */}
+				<Carousel>
+					<Carousel.Item>
+						<Testimonial/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<Testimonial/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<Testimonial/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<Testimonial/>
+					</Carousel.Item>
+				</Carousel>
+			</div>
+
+			{/* Parceiros*/}
+			{/*
+				<div className="partnersImagesTitle">
+					<h1>Parceiros</h1>
+				</div>
+           
+				<div>
+					<ul id="partnersImagesList">
+						<li>
+							<img src={UFRRJ} alt=""/>
+						</li>
+						<li>
+							<img src={Brasil} alt=""/>
+						</li>
+                
+						<li>
+							<img src={Rio} alt=""/>
+						</li>
+                
+						<li>
+							<img src={TOTVS} alt=""/>
+						</li>
+               
+						<li>
+							<img src={Empower} alt=""/>
+						</li>
+                
+						<li>
+							<img src={Americanas} alt=""/>
+						</li>
+					</ul>
+				</div>
+				*/}
+			<Footer/>
 		</div>
 	);
 };
