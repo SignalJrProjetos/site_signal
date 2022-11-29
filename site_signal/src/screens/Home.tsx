@@ -66,7 +66,7 @@ export const Home = () =>{
 
 			{/*Sobre Nós*/}
 
-			{
+			{/*
 				<div className="aboutContainer">
 					<div className="aboutTextContainer">
 						<h2 className="subtitle">Sobre Nós</h2>
@@ -82,7 +82,7 @@ export const Home = () =>{
 						<img className="aboutImg" src={aboutLogo}/>
 					</div>
 				</div>
-			}
+			*/}
 
 			<Contact/>
 

@@ -2,7 +2,7 @@
 
 .headerContainer {
     background-color: #610C7D;
-    z-index: -1;
+    z-index: -2;
 }
 
 .headerTextContainer {
@@ -31,7 +31,7 @@
 }
 
 .headerSocialMediaContainer {
-    margin-right: 96px;
+    margin-right: 5%;
 }
 
 .headerSocialMediaContainer p {
@@ -55,7 +55,7 @@
     -ms-user-select: none;
 }
 
-/* Responsividade: Header Mobile */
+/* Responsividade - Header */
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
@@ -84,6 +84,80 @@
     }
 }
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .headerContainer {
+        padding: 5%;
+    }
+    
+    .headerContainer h1 {
+        font-size: 64px;
+    }
+
+    .headerContainer p {
+        font-size: 24px;
+        margin-right: 5%;
+    }
+
+    #headerImg {
+        display: none;
+    }
+
+    .headerSocialMediaContainer {
+        margin-right: 2%;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .headerContainer {
+        padding: 5%;
+    }
+
+    .headerContainer h1 {
+        font-size: 64px;
+    }
+
+    .headerContainer p {
+        font-size: 24px;
+        margin-right: 5%;
+    }
+
+    #headerImg {
+        display: none;
+    }
+
+    .headerSocialMediaContainer {
+        margin-right: 2%;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+    .headerContainer {
+        padding: 3%;
+    }
+
+    .headerContainer h1 {
+        font-size: 64px;
+    }
+
+    .headerContainer p {
+        font-size: 24px;
+        margin-right: 5%;
+    }
+
+    #headerImg {
+        height: 520px;
+    }
+
+    .headerSocialMediaContainer {
+        margin-right: 2%;
+    }
+
+}
 
 /* Sobre Nós */
 

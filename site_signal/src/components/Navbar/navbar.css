@@ -8,7 +8,6 @@
     font-size: 24px;
     color: white;
     background-color: #610C7D;
-    z-index: 1;
 }
 
 #navbarLogo {
@@ -20,7 +19,6 @@
     margin-right: 44px;
     color: white;
     text-decoration: none;
-    z-index: 1;
 }
 
 #navbarButton {
@@ -32,6 +30,9 @@
 
 #menuToggle {
     display: none;
+    z-index: 2;
+    flex-direction: column;
+    position: relative;
     margin-top: 20px;
     margin-right: 18px;
     -webkit-user-select: none;
@@ -42,6 +43,8 @@
     display: flex;
     width: 40px;
     height: 32px;
+    top: -12px;
+    right: 0px;
     position: absolute;
     cursor: pointer;
     opacity: 0;
@@ -88,9 +91,10 @@
 
 #menu {
     position: absolute;
-    margin-top: -60px;
-    width: 480px;
-    border: 2px solid red;
+    margin-top: -40px;
+    right: -16px;
+    width: 384px;
+    height: 915px;
     background-color: #610C7D;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
@@ -98,20 +102,58 @@
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
+#navLogoMobile {
+    display: block;
+    width: 144px;
+    margin: 25% auto 10% auto;
+}
+
 #menu li {
-  padding: 10px 0;
-  transition-delay: 2s;
-  color: white;
+    padding: 10px 0;
+    transition-delay: 2s;
+    color: white;
+    align-items: center;
 }
 
-#menuToggle input:checked ~ ul{
+#menu li img {
+    margin-right: 16px;
+    height: 24px;
+}
+
+#menu li a {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+#menu li img:last-child {
+    float: right;
+    padding-top: 12px;
+}
+
+#menu h3 {
+    font-family: Scada;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 18px;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    padding-left: 10%;
+}
+
+#menuToggle input:checked ~ div{
   transform: none;
+  box-shadow: 0 0 0 80px rgba(0, 0, 0, 0.7);
 }
 
-/* Responsividade */
+/* Responsividade: Mobile */
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-
+    
     #navbarLogo {
         height: 40px;
     }
@@ -121,7 +163,20 @@
     }
 
     #menuToggle {
-        display: inline;
+        display: flex;
     }
     
+}
+
+/* Responsividade: Tablets */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    #navbarLogo {
+        height: 48px;
+    }
+
+    .navbarContainer a {
+        font-size: 20px;
+    }
 }
