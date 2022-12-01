@@ -33,7 +33,6 @@
     z-index: 2;
     flex-direction: column;
     position: relative;
-    margin-top: 20px;
     margin-right: 18px;
     -webkit-user-select: none;
     user-select: none;
@@ -152,11 +151,7 @@
 
 /* Responsividade: Mobile */
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    
-    #navbarLogo {
-        height: 40px;
-    }
+@media screen and (min-width: 320px) and (max-width: 768px) {
 
     .navbarMenu a {
         display: none;
@@ -165,18 +160,12 @@
     #menuToggle {
         display: flex;
     }
-    
-}
-
-/* Responsividade: Tablets */
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
 
     #navbarLogo {
-        height: 48px;
+        height: 40px;
     }
 
-    .navbarContainer a {
-        font-size: 20px;
-    }
+    #menuToggle input:checked ~ div{
+        box-shadow: 0 0 0 480px rgba(0, 0, 0, 0.7);
+      }      
 }

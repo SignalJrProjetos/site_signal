@@ -103,8 +103,12 @@
         display: none;
     }
 
+    #headerImg {
+        display: none;
+    }
+
     .headerSocialMediaContainer {
-        margin-right: 2%;
+        display: none;
     }
 
 }
