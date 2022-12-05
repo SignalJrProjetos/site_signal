@@ -132,3 +132,29 @@
     }
 
 }
+
+/* Responsividade: Laptops */
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+    .footerLogo {
+        width: 250px;
+        margin-right: 64px;
+    }
+
+    .footerPages {
+        margin-right: 72px;
+    }
+
+    .footerInfo h1 {
+        font-size: 28px;
+    }
+
+    .footerInfo p, a {
+        font-size: 18px;
+    }
+
+    .footerBorder {
+        margin-bottom: -560px;
+    }
+}
