@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/site_signal/static/css/main.4ec5d579.css",
+    "main.js": "/site_signal/static/js/main.95b9962c.js",
+    "static/media/manutencao.png": "/site_signal/static/media/manutencao.4bdc0977046e1f96cce1.png",
+    "static/media/solucoes.png": "/site_signal/static/media/solucoes.df9f5590ed7fe97bc412.png",
+    "static/media/identidadeVisual.png": "/site_signal/static/media/identidadeVisual.1493d96acceaf88e2d88.png",
+    "static/media/img.contact.svg": "/site_signal/static/media/img.contact.5e955eefeb721046673bffac80aec710.svg",
+    "static/media/manutencaoBackground550px.png": "/site_signal/static/media/manutencaoBackground550px.805e0a7e09cc2565ec15.png",
+    "static/media/avatar.png": "/site_signal/static/media/avatar.4412bdda829756b13adb.png",
+    "static/media/solucoesBackground.png": "/site_signal/static/media/solucoesBackground.245030a68ca7bbcb63ac.png",
+    "static/media/solutionsBackground550px.png": "/site_signal/static/media/solutionsBackground550px.1a1f630b550514899e00.png",
+    "static/media/manutencaoBackground400px.png": "/site_signal/static/media/manutencaoBackground400px.6215bdf3dc75afda27c7.png",
+    "static/media/identidadeBackground550px.png": "/site_signal/static/media/identidadeBackground550px.b88bbdb6c5826cfc63d2.png",
+    "static/media/solutionsBackground400px.png": "/site_signal/static/media/solutionsBackground400px.d0c130c37e9e8d4d5036.png",
+    "static/media/logo.SignalCompactaBranca.png": "/site_signal/static/media/logo.SignalCompactaBranca.6546e4f486cbe46f2ced.png",
+    "static/media/img.home-header.svg": "/site_signal/static/media/img.home-header.8a1d1b87d84f94fbc1b16d48491be3f1.svg",
+    "static/media/identidadeBackground400px.png": "/site_signal/static/media/identidadeBackground400px.1e3348a2087afcacb321.png",
+    "static/media/logo.SignalExtensaBranca.png": "/site_signal/static/media/logo.SignalExtensaBranca.d6d2e66ce3f975802596.png",
+    "static/media/icon.quote.svg": "/site_signal/static/media/icon.quote.07e41dda976b44b1949154d05edf8e6a.svg",
+    "static/media/icon.services.svg": "/site_signal/static/media/icon.services.db4994c9a67a4d3edfaebee35483010b.svg",
+    "static/media/icon.team.svg": "/site_signal/static/media/icon.team.3da865178a639bb4a9c58d90a08f3420.svg",
+    "static/media/identidadeMobile.svg": "/site_signal/static/media/identidadeMobile.1f30307060bf2cc73b1ccfe92dfb1f52.svg",
+    "static/media/manutencaoMobile.svg": "/site_signal/static/media/manutencaoMobile.35864d0fb8db8c89eb2ee57fcbb2fe7f.svg",
+    "static/media/icon.instagram.svg": "/site_signal/static/media/icon.instagram.d16e410739b07909e50d06eace1c12ee.svg",
+    "static/media/icon.facebook.svg": "/site_signal/static/media/icon.facebook.b3088b80e49c5f20dec2c1ad130c1d1c.svg",
+    "static/media/icon.location.svg": "/site_signal/static/media/icon.location.b8058d3269942e8fb780f72d5f434795.svg",
+    "static/media/icon.linkedin.svg": "/site_signal/static/media/icon.linkedin.186e0f818acb79746b5c8955a615b2a9.svg",
+    "static/media/solutionsMobile.svg": "/site_signal/static/media/solutionsMobile.0f1bae1083162ad9ef416daabaac2f6a.svg",
+    "static/media/icon.arrow.svg": "/site_signal/static/media/icon.arrow.c190820b29d8504732cd0888db258878.svg",
+    "static/media/icon.home.svg": "/site_signal/static/media/icon.home.cad96d6cfe3fce03272e5d0b050f15fb.svg",
+    "static/media/icon.email.svg": "/site_signal/static/media/icon.email.69a33ece4300207774e3d6211fc45155.svg",
+    "static/media/footer.border.svg": "/site_signal/static/media/footer.border.5bdc1c5c00394c2917559d93713efe9b.svg",
+    "static/media/header.border.svg": "/site_signal/static/media/header.border.987c6b5da9c773f8d5dd116f97d7f561.svg",
+    "index.html": "/site_signal/index.html",
+    "main.4ec5d579.css.map": "/site_signal/static/css/main.4ec5d579.css.map",
+    "main.95b9962c.js.map": "/site_signal/static/js/main.95b9962c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ec5d579.css",
+    "static/js/main.95b9962c.js"
+  ]
+}
