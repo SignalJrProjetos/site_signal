@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import imagemSolucoes from "../../assets/imgs/manutencao.png";
-import imagemIdentidadeVisual from "../../assets/imgs/identidadeVisual.png";
+import imagemSolucoes from "../../assets/svg/img.solutionsSolucoesTI.svg";
+import imagemIdentidadeVisual from "../../assets/svg/img.solutionsIdVisual.svg";
 import imagemManutencao from "../../assets/svg/img.solutionsManutencao.svg";
 import solucoesMobile from "../../assets/svg/icon.solutionsSolucoesTI.svg";
 import identidadeVisualMobile from "../../assets/svg/icon.solutionsIdVisual.svg";

@@ -16,11 +16,12 @@
     padding-bottom: 24px;
 }
 
-h2 {
+.subtitle {
     color: #9C9C9C;
     font-family:"Saira";
     font-size: 32px;
     text-align: center;
+    font-weight: lighter;
 }
 
 /* Estilização do container de particulas */
