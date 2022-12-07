@@ -11,14 +11,11 @@ import Border from "../../assets/svg/footer.border.svg";
 
 export const Footer = () => {
 	return(
-		<>
+		<footer>
 			<img className="footerBorder" src={Border} />
 			<div className="footerContainer">
 				<div className="footerInfo">
-					<div>
-						<img className="footerLogo" src={Logo} />
-					</div>
-
+					<img className="footerLogo" src={Logo} />
 					<div className="footerPages">
 						<h1>Mais Informações</h1>
 						<ul>
@@ -38,17 +35,17 @@ export const Footer = () => {
 							<img src={EmailIcon} />
 							<a href="mailto:marketing@signaljr.com.br">marketing@signaljr.com.br</a>
 						</div>
-						<div className="footerSocialMedia">
+						<div>
 							<a href=""><img src={FacebookIcon}/></a>
 							<a href=""><img src={InstagramIcon}/></a>
 							<a href=""><img src={LinkedInIcon}/></a>
 						</div>
 					</div>
 				</div>
-				<div className="copyrightInfo">
-					<p><b>©Signal Jr</b> 2022. All Rights Reserved.</p>
+				<div id="copyright">
+					<p><b>©Signal Jr</b> 2022. Todos os direitos reservados.</p>
 				</div>
 			</div>
-		</>
+		</footer>
 	);
 };
