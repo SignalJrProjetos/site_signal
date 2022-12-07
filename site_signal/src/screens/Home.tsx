@@ -117,13 +117,17 @@ export const Home = () =>{
 					<h1 className="title">Parceiros</h1>
 				</div>
            
-				<div className="partnersImages">
-					<img className="partnerImg" id="UFRRJ" src={UFRRJ} alt=""/>
-					<img className="partnerImg" id="Brasil" src={Brasil} alt=""/>
-					<img className="partnerImg" id="Rio" src={Rio} alt=""/>
-					<img className="partnerImg" id="TOTVS" src={TOTVS} alt=""/>
-					<img className="partnerImg" id="Empower" src={Empower} alt=""/>
-					<img className="partnerImg" id="Americanas" src={Americanas} alt=""/>
+				<div className="partnersLogo">
+					<div>
+						<img id="ufrrjMark" src={UFRRJ} alt=""/>
+						<img id="brasilJrMark" src={Brasil} alt=""/>
+						<img id="rioJrMark" src={Rio} alt=""/>
+						<img id="totvsMark" src={TOTVS} alt=""/>
+					</div>
+					<div>
+						<img id="empowerMark" src={Empower} alt=""/>
+						<img id="americanasMark" src={Americanas} alt=""/>
+					</div>
 				</div>
 			</div>	
 			<Footer/>
