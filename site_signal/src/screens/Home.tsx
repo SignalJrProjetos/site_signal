@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/global.css";
-import "../screens/home.css";
+import "../screens/css/home.css";
 import { ParticlesContainer } from "../components/ParticlesContainer";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Solutions } from "../components/Solutions/Solutions";
@@ -8,18 +8,18 @@ import { Contact } from "../components/Contact/Contact";
 import { Testimonial } from "../components/Testimonial/Testimonial";
 import { Footer } from "../components/Footer/Footer";
 import  Carousel  from "react-bootstrap/Carousel";
-import border from "../assets/svg/banner.border.svg";
-import bannerImg from "../assets/svg/img.home-banner.svg";
+import border from "../assets/svg/header.border.svg";
+import headerImg from "../assets/svg/img.home-header.svg";
 import facebookIco from "../assets/svg/icon.facebook.svg";
 import instagramIco from "../assets/svg/icon.instagram.svg";
 import linkedinIco from "../assets/svg/icon.linkedin.svg";
 import aboutLogo from "../assets/svg/logo.SignalSymbolBg.svg";
-import UFRRJ from "../assets/imgs/logo.UFRRJPartners.png";
-import Brasil from "../assets/imgs/logo.Brasil JuniorPartners.png";
-import Rio from "../assets/imgs/logo.Rio JuniorPartners.png";
-import TOTVS from "../assets/imgs/logo.TOTVSPartners.png";
-import Americanas from "../assets/imgs/logo.AmericanasPartners.png";
-import Empower from "../assets/imgs/logo.EmpowerPartners.png";
+import UFRRJ from "../assets/svg/logo.UFRRJPartners.svg";
+import Brasil from "../assets/svg/logo.Brasil JuniorPartners.svg";
+import Rio from "../assets/svg/logo.Rio JuniorPartners.svg";
+import TOTVS from "../assets/svg/logo.TOTVSPartners.svg";
+import Americanas from "../assets/svg/logo.AmericanasPartners.svg";
+import Empower from "../assets/svg/logo.EmpowerPartners.svg";
 
 
 export const Home = () =>{
@@ -29,9 +29,9 @@ export const Home = () =>{
 			<ParticlesContainer/>
 			<Navbar/>
 
-			{/* Banner */}
-			<div className="bannerContainer">
-				<div className="bannerTextContainer">
+			{/* Header */}
+			<div className="headerContainer">
+				<div className="headerTextContainer">
 					<div>
 						<h1>
 								A solução digital ideal para o seu negócio.
@@ -41,14 +41,14 @@ export const Home = () =>{
 								purus arcu consectetur sapien, eget molestie mi elit sed erat. Curabitur vel ullamcorper odio. Nulla ullamcorper 
 								massa sit amet aliquam elementum. Vestibulum faucibus sem sit amet quam lacinia suscipit. 
 						</p>
-						<br></br>
-						<br></br>
-						<a className="buttonWhite" style={{"fontFamily": "Saira", "fontSize": "28px", "position": "relative"}} href="">Saiba Mais</a>
+						<div className="headerButton" style={{"marginTop":"8%"}}>
+							<a className="buttonWhite" href="">Saiba Mais</a>
+						</div>
 					</div>
 					<div>
-						<img className="bannerImg" src={bannerImg}/>
+						<img id="headerImg" src={headerImg}/>
 					</div>
-					<div className="bannerSocialMediaContainer">
+					<div className="headerSocialMediaContainer">
 						<p>SIGA-NOS</p>
 						<br></br>
 						<a style={{"marginLeft": "4px"}} href=""><img src={facebookIco}/></a>
@@ -61,15 +61,15 @@ export const Home = () =>{
 					</div>
 				</div>
 			</div>
-			<img className="bannerBorder" src={border}/>
+			<img className="headerBorder" src={border}/>
 			<Solutions/>
 
 			{/*Sobre Nós*/}
 
-			{
+			{/*
 				<div className="aboutContainer">
 					<div className="aboutTextContainer">
-						<h2>Sobre Nós</h2>
+						<h2 className="subtitle">Sobre Nós</h2>
 						<h1 className="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, 
 							lobortis ac justo vel, auctor dictum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed 
@@ -82,14 +82,14 @@ export const Home = () =>{
 						<img className="aboutImg" src={aboutLogo}/>
 					</div>
 				</div>
-			}
+			*/}
 
 			<Contact/>
 
 			{/* Depoimentos */}
 			<div className="testimonialsContainer">
 				<div>
-					<h2>Depoimentos</h2>
+					<h2 className="subtitle">Depoimentos</h2>
 					<h1 className="title">O que nossos clientes falam</h1>
 				</div>
 
@@ -111,40 +111,21 @@ export const Home = () =>{
 			</div>
 
 			{/* Parceiros*/}
-			{/*
-				<div className="partnersImagesTitle">
-					<h1>Parceiros</h1>
+	
+			<div className="partnersContainer">
+				<div>
+					<h1 className="title">Parceiros</h1>
 				</div>
            
-				<div>
-					<ul id="partnersImagesList">
-						<li>
-							<img src={UFRRJ} alt=""/>
-						</li>
-
-						<li>
-							<img src={Brasil} alt=""/>
-						</li>
-                
-						<li>
-							<img src={Rio} alt=""/>
-						</li>
-                
-						<li>
-							<img src={TOTVS} alt=""/>
-						</li>
-               
-						<li>
-							<img src={Empower} alt=""/>
-						</li>
-                
-						<li>
-							<img src={Americanas} alt=""/>
-						</li>
-
-					</ul>
+				<div className="partnersImages">
+					<img className="partnerImg" id="UFRRJ" src={UFRRJ} alt=""/>
+					<img className="partnerImg" id="Brasil" src={Brasil} alt=""/>
+					<img className="partnerImg" id="Rio" src={Rio} alt=""/>
+					<img className="partnerImg" id="TOTVS" src={TOTVS} alt=""/>
+					<img className="partnerImg" id="Empower" src={Empower} alt=""/>
+					<img className="partnerImg" id="Americanas" src={Americanas} alt=""/>
 				</div>
-				*/}
+			</div>	
 			<Footer/>
 		</div>
 	);

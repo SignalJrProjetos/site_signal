@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import imagemSolucoes from "../../assets/imgs/manutencao.png";
 import imagemIdentidadeVisual from "../../assets/imgs/identidadeVisual.png";
 import imagemManutencao from "../../assets/imgs/solucoes.png";
+import solucoesMobile from "../../assets/svg/solutionsMobile.svg";
+import identidadeVisualMobile from "../../assets/svg/identidadeMobile.svg";
+import manutencaoMobile from "../../assets/svg/manutencaoMobile.svg";
+
 import "./solutions.css";
 
 // Botar imagem de fundo
@@ -96,6 +100,32 @@ export const Solutions = () => {
 		<div className="solutionsContainer">
 			<h2 className="subtitle">O que nós fazemos</h2>
 			<h1 className="title">Nossas soluções para o seu negócio</h1>
+			
+			{/* Container para responsividade  */}
+
+			<div className="solutionsContainerMobile">
+
+				<div id="solutionsSolucoes" className="solutionsCardMobile">
+					<img src={solucoesMobile} alt=""/>
+					<div className="solutionsTitleMobile"><h1>Soluções em TI</h1></div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
+				</div>
+
+			
+				<div id="solutionsIdentidadeMobile" className="solutionsCardMobile">
+					<img src={identidadeVisualMobile} alt=""/>
+					<div style={{borderColor: "white"}} className="solutionsTitleMobile"><h1 style={{color: "white"}}>Identidade Visual</h1></div>
+					<p style={{color: "white"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
+				</div>
+
+				<div id="solutionsManutencaoMobile" className="solutionsCardMobile">
+					<img src={manutencaoMobile} alt=""/>
+					<div className="solutionsTitleMobile"><h1>Manutenção</h1></div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
+				</div>
+
+			</div>
+			{/* Container para Desktop  */}
 			<div className="solutionsContainerButtons">
 				<button
 					style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}

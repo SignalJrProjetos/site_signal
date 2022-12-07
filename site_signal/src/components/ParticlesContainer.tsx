@@ -68,7 +68,7 @@ export const ParticlesContainer = () => {
 							area: 800,
 						},
 						value: 60,
-						limit: 100,
+						limit: 60,
 					},
 					opacity: {
 						value: 0.4,

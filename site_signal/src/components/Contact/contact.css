@@ -36,7 +36,7 @@
 .contactForm input{
     border-radius: 18px;
 	height: 50px;
-	width: 540px;
+	width: 90%;
 	outline: none;
     border: #610C7D 3px solid;
 	padding-left: 15px;
@@ -46,15 +46,15 @@
 }
 
 .contactForm input::placeholder {
-		color: #BABABA;
-		font-size: 20px;
+    color: #BABABA;
+    font-size: 20px;
 }
 
 .contactForm textarea {
     border-radius: 18px;
     padding-top: 16px;
 	height: 120px;
-	width: 540px;
+	width: 90%;
 	outline: none;
     border: #610C7D 3px solid;
 	padding-left: 15px;
@@ -75,4 +75,33 @@
 
 #contactInputMessage {
 	    height: 90px;
+}
+
+/* Responsividade */
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+@media (max-width: 768px) {
+    #contactImg{
+        display: none;
+    }
+    .contactForm p{
+        padding: 1% 5%;
+    }
+    .buttonWhite{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .contactForm{
+        margin-right: 2%;
+    }
+    #contactImg{
+        width: 50%;
+    }
 }
