@@ -14,12 +14,12 @@ import facebookIco from "../assets/svg/icon.facebook.svg";
 import instagramIco from "../assets/svg/icon.instagram.svg";
 import linkedinIco from "../assets/svg/icon.linkedin.svg";
 import aboutLogo from "../assets/svg/logo.SignalSymbolBg.svg";
-import UFRRJ from "../assets/imgs/logo.UFRRJPartners.png";
-import Brasil from "../assets/imgs/logo.Brasil JuniorPartners.png";
-import Rio from "../assets/imgs/logo.Rio JuniorPartners.png";
-import TOTVS from "../assets/imgs/logo.TOTVSPartners.png";
-import Americanas from "../assets/imgs/logo.AmericanasPartners.png";
-import Empower from "../assets/imgs/logo.EmpowerPartners.png";
+import UFRRJ from "../assets/svg/logo.UFRRJPartners.svg";
+import Brasil from "../assets/svg/logo.Brasil JuniorPartners.svg";
+import Rio from "../assets/svg/logo.Rio JuniorPartners.svg";
+import TOTVS from "../assets/svg/logo.TOTVSPartners.svg";
+import Americanas from "../assets/svg/logo.AmericanasPartners.svg";
+import Empower from "../assets/svg/logo.EmpowerPartners.svg";
 
 
 export const Home = () =>{
@@ -111,38 +111,21 @@ export const Home = () =>{
 			</div>
 
 			{/* Parceiros*/}
-			{/*
-				<div className="partnersImagesTitle">
-					<h1>Parceiros</h1>
+	
+			<div className="partnersContainer">
+				<div>
+					<h1 className="title">Parceiros</h1>
 				</div>
            
-				<div>
-					<ul id="partnersImagesList">
-						<li>
-							<img src={UFRRJ} alt=""/>
-						</li>
-						<li>
-							<img src={Brasil} alt=""/>
-						</li>
-                
-						<li>
-							<img src={Rio} alt=""/>
-						</li>
-                
-						<li>
-							<img src={TOTVS} alt=""/>
-						</li>
-               
-						<li>
-							<img src={Empower} alt=""/>
-						</li>
-                
-						<li>
-							<img src={Americanas} alt=""/>
-						</li>
-					</ul>
+				<div className="partnersImages">
+					<img className="partnerImg" id="UFRRJ" src={UFRRJ} alt=""/>
+					<img className="partnerImg" id="Brasil" src={Brasil} alt=""/>
+					<img className="partnerImg" id="Rio" src={Rio} alt=""/>
+					<img className="partnerImg" id="TOTVS" src={TOTVS} alt=""/>
+					<img className="partnerImg" id="Empower" src={Empower} alt=""/>
+					<img className="partnerImg" id="Americanas" src={Americanas} alt=""/>
 				</div>
-				*/}
+			</div>	
 			<Footer/>
 		</div>
 	);

@@ -202,3 +202,65 @@
     margin-top: 48px;
     position: relative;
 }
+
+/* Parceiros */
+
+.partnersContainer {
+    position: relative;
+}
+
+.partnersImagesOne {
+    width: auto;
+    text-align: center;
+    margin-right: auto;
+}
+
+.partnersImagesTwo {
+    width: auto;
+    text-align: center;
+   
+}
+
+.partnerImg {
+    margin-right: 48px;
+}
+
+/* Responsividade */
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
+
+    .partnersImages {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        padding: 5%;
+    }
+    
+    .partnerImg {
+        width: 25%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    #TOTVS {
+        margin-top: 6%;
+        width: 25%;
+    }
+
+    #Empower {
+        margin-top: 6%;
+        width: 28%;
+    }
+
+    #Americanas {
+        margin-top: 6%;
+        width: 35%;
+    }
+} 
