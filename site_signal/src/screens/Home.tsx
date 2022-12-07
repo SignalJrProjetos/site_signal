@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/global.css";
-import "../screens/home.css";
+import "../screens/css/home.css";
 import { ParticlesContainer } from "../components/ParticlesContainer";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Solutions } from "../components/Solutions/Solutions";

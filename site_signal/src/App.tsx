@@ -1,6 +1,7 @@
 import React from "react";
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./screens/Home";
+import { Team } from "./screens/Team";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const App = () =>{
@@ -8,6 +9,7 @@ export const App = () =>{
 		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Routes>
 				<Route path="/" element={<Home/>}/>
+				<Route path="/time" element={<Team/>}/>
 			</Routes>
 		</BrowserRouter>
 	);
