@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export const App = () =>{
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Routes>
 				<Route path="/" element={<Home/>}/>
 			</Routes>

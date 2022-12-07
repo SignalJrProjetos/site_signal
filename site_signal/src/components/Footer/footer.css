@@ -1,8 +1,6 @@
 .footerContainer {
-    padding-left: 144px;
-    padding-right: 144px;
+    padding: 0 144px 8px 144px;
     background-color: #610C7D;
-    padding-bottom: 8px;
     color: white;
 }
 
@@ -30,7 +28,6 @@
     margin-bottom: 24px;
     font-weight: bold;
 }
-
 
 .footerBorder {
     width: 100%;
@@ -61,11 +58,13 @@
 }
 
 .footerContact * {
-    display: flex;
-    align-items: center;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 }
 
+.footerContact div:not(:last-child) {
+    display: flex;
+    align-items: center;
+}
 
 .footerContact a {
     color: white;
@@ -77,11 +76,85 @@
     margin-right: 16px;
 }
 
-.footerSocialMedia img {
-    margin-right: 16px;
-}
-
-.copyrightInfo {
+#copyright {
     font-size: 18px;
     text-align: center;
+}
+
+/* Responsividade: Mobile */
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    .footerContainer {
+        padding: 0 48px 0 48px;
+    }
+
+    .footerInfo {
+        display: block;
+        text-align: center;
+    }
+
+    .footerLogo {
+        width: 124px;
+        margin-right: 0px;
+    }
+
+    .footerPages {
+        display: none;
+    }
+
+    .footerContact p, a {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .footerContact div:not(:last-child) {
+        justify-content: center;
+    }
+
+    .footerContact div:last-child { /*Redes Sociais do Footer */
+        text-align: center;
+        margin: 10px 16px 10px 0;
+    }
+
+    .footerContact div:last-child img { /*Redes Sociais do Footer */
+        width: 40px;
+        margin: 16px;
+    }
+
+    .footerBorder {
+        margin-bottom: -550px;
+    }
+
+    #copyright {
+        font-size: 16px;
+        padding-bottom: 8px;
+    }
+
+}
+
+/* Responsividade: Laptops */
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+    .footerLogo {
+        width: 250px;
+        margin-right: 64px;
+    }
+
+    .footerPages {
+        margin-right: 72px;
+    }
+
+    .footerInfo h1 {
+        font-size: 28px;
+    }
+
+    .footerInfo p, a {
+        font-size: 18px;
+    }
+
+    .footerBorder {
+        margin-bottom: -560px;
+    }
 }
