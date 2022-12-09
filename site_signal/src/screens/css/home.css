@@ -188,22 +188,23 @@
 
 .aboutContainer{
     width: 100%;
-    height: 666px;
     display: flex; 
     background: #f7f7f7;
     padding-left: 96px;
+    text-align: left;
 }
 
 .aboutTextContainer {
     margin-right: 96px;
-}
-
-.aboutTextContainer h1 {
-    text-align: left;
+    margin-bottom: 100px;
 }
 
 .aboutTextContainer h2 {
+    text-align: left;
     margin-top: 64px;
+}
+
+.aboutTextContainer h1 {
     text-align: left;
 }
 
@@ -216,6 +217,77 @@
 .aboutImg {
     margin-right: 72px;
 }
+
+#aboutDesktopImg{
+    display: flex;
+    justify-content: center;
+}
+
+#aboutMobileImg{
+    display: none;
+}
+
+/** Laptops: Large Screen **/
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .aboutImg {
+        margin-right: 0px;
+    }
+
+    .aboutContainer{
+       text-align: center;
+       justify-content: center;
+    }
+
+    .aboutTextContainer h1 {
+        text-align: center;
+    }
+
+    .aboutTextContainer h2 {
+        text-align: center;
+    }
+
+    #aboutMobileImg{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #aboutMobileImg img{
+        width: 60%;
+    }
+    
+    #aboutDesktopImg{
+        display: none;
+    }
+
+    .aboutTextContainer{
+        margin-bottom: 100px;
+    }
+
+    .buttonPurple2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1460px) {
+
+    .aboutTextContainer h1 {
+        font-size: 40px;
+    }
+
+    .aboutTextContainer h2 {
+        font-size: 30px;
+    }
+    
+    .aboutTextContainer p {
+        font-size: 22px;
+    }
+    
+    .aboutImg {
+        width: 120%;
+    }
+}
+
 
 
 /* Depoimentos */
