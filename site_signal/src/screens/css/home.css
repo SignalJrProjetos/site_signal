@@ -3,6 +3,7 @@
 .headerContainer {
     background-color: #610C7D;
     z-index: -2;
+    margin-top: 80px;
 }
 
 .headerTextContainer {
@@ -201,7 +202,7 @@
 
 .aboutTextContainer h2 {
     text-align: left;
-    margin-top: 64px;
+    margin-top: 40px;
 }
 
 .aboutTextContainer h1 {
@@ -227,7 +228,6 @@
     display: none;
 }
 
-/** Laptops: Large Screen **/
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .aboutImg {
@@ -236,14 +236,21 @@
 
     .aboutContainer{
        text-align: center;
+       padding: 0px;
        justify-content: center;
     }
 
+    .aboutTextContainer p {
+        font-size: 20px;
+    }
+
     .aboutTextContainer h1 {
+        font-size: 30px;
         text-align: center;
     }
 
     .aboutTextContainer h2 {
+        font-size: 25px;
         text-align: center;
     }
 
@@ -253,7 +260,7 @@
     }
     
     #aboutMobileImg img{
-        width: 60%;
+        width: 50%;
     }
     
     #aboutDesktopImg{
@@ -261,6 +268,8 @@
     }
 
     .aboutTextContainer{
+        padding: 10%;
+        margin-right: 0px;
         margin-bottom: 100px;
     }
 
@@ -269,8 +278,9 @@
     }
 }
 
-@media (max-width: 1460px) {
+/** Laptops: Large Screen **/
 
+@media screen and (min-width: 769px) and (max-width: 2800px) {
     .aboutTextContainer h1 {
         font-size: 40px;
     }
@@ -287,7 +297,6 @@
         width: 120%;
     }
 }
-
 
 
 /* Depoimentos */

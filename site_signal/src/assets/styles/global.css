@@ -7,6 +7,10 @@
     z-index: 1;
 }
 
+.App {
+    overflow-x: hidden;
+}
+
 .title {
     font-family:"Scada";
     font-size: 48px;

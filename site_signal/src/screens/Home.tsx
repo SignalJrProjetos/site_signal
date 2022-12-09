@@ -23,7 +23,7 @@ import Empower from "../assets/svg/logo.EmpowerPartners.svg";
 
 
 export const Home = () =>{
-	
+
 	return (
 		<div className="App">
 			<ParticlesContainer/>

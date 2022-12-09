@@ -8,6 +8,8 @@
     font-size: 24px;
     color: white;
     background-color: #610C7D;
+    position: fixed;
+    z-index: 2;
 }
 
 #navbarLogo {
