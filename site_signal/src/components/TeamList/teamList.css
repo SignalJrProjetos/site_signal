@@ -1,0 +1,73 @@
+.teamListContainer {
+    padding-right: 10%;
+    padding-left: 10%;
+    background-repeat: no-repeat;
+}
+
+.teamBg {
+    position: absolute;
+    z-index: -1;
+}
+
+.teamListContainer h1 {
+    margin-bottom: 48px;
+}
+
+.memberCard {
+    height: 256px;
+    width: 256px;
+    background-size: cover;
+    margin-right: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.memberCard:hover {
+    box-shadow: inset 0 0 0 1000px rgba(135, 0, 169, 0.7);
+}
+
+.memberInfo {
+    text-align: center;
+    color: white;
+    display: none;
+    font-family: Scada;
+}
+
+.memberInfo h3 {
+    font-weight: bold;
+}
+
+.memberInfo p {
+    font-family: Saira;
+    font-weight: lighter;
+}
+
+.memberSocialMedia {
+    display: none;
+    text-align: center;
+
+}
+
+.memberSocialMedia img {
+    margin-right: 16px;
+    width: 28px;
+}
+
+.memberCard:hover .memberInfo {
+    display: block;
+}
+
+.memberCard:hover .memberSocialMedia {
+    display: block;
+}
+
+#subscription {
+    display: flex;
+    justify-content: end;
+    margin-top: 144px;
+    padding-bottom: 124px;
+    margin-bottom: -18%;
+}
+
