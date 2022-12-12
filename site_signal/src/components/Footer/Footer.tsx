@@ -29,7 +29,7 @@ export const Footer = () => {
 						<h1>Vamos Conversar</h1>
 						<div>
 							<img src={LocationIcon} />
-							<p>UFRRJ, Km 07, Zona Rural, BR-465, Seropédica - RJ</p>
+							<p>UFRRJ, Seropédica - RJ</p>
 						</div>
 						<div>
 							<img src={EmailIcon} />

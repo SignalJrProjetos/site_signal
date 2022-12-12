@@ -17,7 +17,7 @@
 
 .footerLogo {
     width: 352px;
-    margin-right: 96px;
+    margin-right: 296px;
     position: relative;
     top: -48px;
 }
@@ -44,6 +44,7 @@
 .footerPages {
     margin-right: 144px;
     z-index: 1;
+    display: none;
 }
 
 .footerPages ul, li {

@@ -155,7 +155,7 @@
 }
 
 /** Laptops: Large Screen **/
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
+@media screen and (min-width: 1025px) and (max-width: 1600px) {
 
     .headerContainer {
         padding: 3%;
