@@ -26,6 +26,26 @@ export const Home = () =>{
 	
 	return (
 		<div className="App">
+
+			{/*Sobre Nós*/}
+
+			
+			<div className="aboutContainer">
+				<div className="aboutTextContainer">
+					<h2 className="subtitle">Sobre Nós</h2>
+					<h1 className="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, 
+							lobortis ac justo vel, auctor dictum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed 
+							nisi euismod suscipit.
+					</p>
+					<br/>
+					<a className="buttonPurple2" href="">Saiba Mais</a>
+				</div>
+				<div>
+					<img className="aboutImg" src={aboutLogo}/>
+				</div>
+			</div>
+
 			
 
 			{/* Parceiros*/}
