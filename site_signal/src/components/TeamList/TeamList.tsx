@@ -6,7 +6,7 @@ import githubIco from "../../assets/svg/icon.github.svg";
 import instagramIco from "../../assets/svg/icon.instagram.svg";
 import teamBackground from "../../assets/svg/bg.team.svg";
 
-const GET_MEMBERS_QUERY = gql`
+const GET_MEMBERS_QUERY = gql` #Query para recuperar dados dos membros da API GraphCMS
     query TeamMembers {
         teamMembers {
             githubURL
@@ -36,8 +36,8 @@ interface GetTeamQueryResponse {
 
 export const TeamList = () => {
 
+	{/*Função para utilizar os dados vindos da API */}
 	const { data } = useQuery<{ teamMembers: GetTeamQueryResponse[] }>(GET_MEMBERS_QUERY);
-	console.log(data);
 
 	return (
 		<div className="teamListContainer" style={{"backgroundImage":`url(${teamBackground})`}}>
@@ -47,14 +47,16 @@ export const TeamList = () => {
                 vestibulum elit sed, aliquet mi.
 			</h1>
 
-			<div style={{"display": "flex"}}>
+			<div >
 				{data?.teamMembers.map(teamMembers => {
 					return(
 						<div className="memberCard" style={{"backgroundImage" : `url(${teamMembers.avatar.url})`}} key={teamMembers.id}>
+							
 							<div className="memberInfo">
 								<h3>{teamMembers.name}</h3>
 								<p>{teamMembers.role}</p>
 							</div>
+
 							<div className="memberSocialMedia">
                                 
 								{/* Somente exibe as redes sociais se elas estiverem cadastradas */}
