@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/site_signal/static/css/main.d0d22903.css",
-    "main.js": "/site_signal/static/js/main.e0dbc696.js",
+    "main.css": "/site_signal/static/css/main.a3e7fa7a.css",
+    "main.js": "/site_signal/static/js/main.4c219326.js",
     "static/media/img.solutionsManutencao.svg": "/site_signal/static/media/img.solutionsManutencao.0061b598b8f21c29212772d7e7f970ec.svg",
     "static/media/img.solutionsIdVisual.svg": "/site_signal/static/media/img.solutionsIdVisual.946c8d1e51e08a7bc4dcb1356c74b4de.svg",
     "static/media/logo.SignalSymbolBg.svg": "/site_signal/static/media/logo.SignalSymbolBg.a65934e87daf3256b169a2201c93d88b.svg",
@@ -10,6 +10,7 @@
     "static/media/avatar.png": "/site_signal/static/media/avatar.4412bdda829756b13adb.png",
     "static/media/logo.UFRRJPartners.svg": "/site_signal/static/media/logo.UFRRJPartners.f93bddf4967397234e428d0ce1c96092.svg",
     "static/media/solucoesBackground.png": "/site_signal/static/media/solucoesBackground.245030a68ca7bbcb63ac.png",
+    "static/media/developingBackground.png": "/site_signal/static/media/developingBackground.3b816795859e53205af7.png",
     "static/media/logo.SignalCompactaBranca.png": "/site_signal/static/media/logo.SignalCompactaBranca.6546e4f486cbe46f2ced.png",
     "static/media/logo.RioJuniorPartners.svg": "/site_signal/static/media/logo.RioJuniorPartners.3564db5c7719d8dc2b68355ba15314c1.svg",
     "static/media/img.home-header.svg": "/site_signal/static/media/img.home-header.8a1d1b87d84f94fbc1b16d48491be3f1.svg",
@@ -34,11 +35,11 @@
     "static/media/footer.border.svg": "/site_signal/static/media/footer.border.5bdc1c5c00394c2917559d93713efe9b.svg",
     "static/media/header.border.svg": "/site_signal/static/media/header.border.987c6b5da9c773f8d5dd116f97d7f561.svg",
     "index.html": "/site_signal/index.html",
-    "main.d0d22903.css.map": "/site_signal/static/css/main.d0d22903.css.map",
-    "main.e0dbc696.js.map": "/site_signal/static/js/main.e0dbc696.js.map"
+    "main.a3e7fa7a.css.map": "/site_signal/static/css/main.a3e7fa7a.css.map",
+    "main.4c219326.js.map": "/site_signal/static/js/main.4c219326.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0d22903.css",
-    "static/js/main.e0dbc696.js"
+    "static/css/main.a3e7fa7a.css",
+    "static/js/main.4c219326.js"
   ]
 }
