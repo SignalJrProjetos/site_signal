@@ -63,7 +63,7 @@ export const Contact = () => {
 	}
 	// Retornando os elementos do componente
 	return (
-		<div className="contactContainer">
+		<div id="contactContainer" className="contactContainer">
 			{/* <div className="contactContainer"></div> */}
 			<img id="contactImg" src={imagemContact}/>
 			<div className="contactForm">

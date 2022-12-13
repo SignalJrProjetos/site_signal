@@ -18,9 +18,9 @@ export const Navbar = () => {
 				<a href=""><img id="navbarLogo" src={logo}/></a>
 			</>
 			<div className="navbarMenu" style={{"display": "flex", "alignItems": "center"}}> 
-				<a href="">Serviços</a>
-				<a href="">Equipe</a>
-				<a className="buttonWhite" href="">Contato</a>
+				<a href={process.env.PUBLIC_URL}>Serviços</a>
+				<a href={process.env.PUBLIC_URL + "/developing"} >Equipe</a>
+				<a className="buttonWhite" href="#contactContainer">Contato</a>
 			</div>
 
 			<div id="menuToggle">
@@ -31,15 +31,15 @@ export const Navbar = () => {
 				<div id="menu">
 					<img id="navLogoMobile" src={logoMobile} />
 					<ul>
-						<li><a href=""> <img src={homeIco}/> Início <img src={arrowIco}/> </a></li>
-						<li><a href=""> <img src={servicesIco}/> Serviços <img src={arrowIco}/> </a></li>
-						<li><a href=""> <img src={teamIco}/> Equipe <img src={arrowIco}/></a></li>
+						<li><a href={process.env.PUBLIC_URL}> <img src={homeIco}/> Início <img src={arrowIco}/> </a></li>
+						<li><a href={process.env.PUBLIC_URL}> <img src={servicesIco}/> Serviços <img src={arrowIco}/> </a></li>
+						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img src={teamIco}/> Equipe <img src={arrowIco}/></a></li>
 					</ul>
 					<h3>Vamos Conversar!</h3>
 					<div className="socialMedia">
-						<a href=""><img src={facebookIco}/></a>
-						<a href=""><img src={instagramIco}/></a>
-						<a href=""><img src={linkedinIco}/></a>
+						<a href="https://www.facebook.com/Signal.Jr.ufrrj"><img src={facebookIco}/></a>
+						<a href="https://www.instagram.com/signal_jr/"><img src={instagramIco}/></a>
+						<a href="https://www.linkedin.com/company/signal-jr/mycompany/"><img src={linkedinIco}/></a>
 					</div>
 				</div>
 			</div>

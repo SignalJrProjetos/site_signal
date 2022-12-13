@@ -36,9 +36,9 @@ export const Footer = () => {
 							<a href="mailto:marketing@signaljr.com.br">marketing@signaljr.com.br</a>
 						</div>
 						<div>
-							<a href=""><img src={FacebookIcon}/></a>
-							<a href=""><img src={InstagramIcon}/></a>
-							<a href=""><img src={LinkedInIcon}/></a>
+							<a href="https://www.facebook.com/Signal.Jr.ufrrj"><img src={FacebookIcon}/></a>
+							<a href="https://www.instagram.com/signal_jr/"><img src={InstagramIcon}/></a>
+							<a href="https://www.linkedin.com/company/signal-jr/mycompany/"><img src={LinkedInIcon}/></a>
 						</div>
 					</div>
 				</div>

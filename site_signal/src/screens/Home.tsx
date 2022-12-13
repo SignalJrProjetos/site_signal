@@ -41,9 +41,10 @@ export const Home = () =>{
 								purus arcu consectetur sapien, eget molestie mi elit sed erat. Curabitur vel ullamcorper odio. Nulla ullamcorper 
 								massa sit amet aliquam elementum. Vestibulum faucibus sem sit amet quam lacinia suscipit. 
 						</p>
+						{/* Botão a ser ativado posteriormente
 						<div className="headerButton" style={{"marginTop":"8%"}}>
 							<a className="buttonWhite" href="">Saiba Mais</a>
-						</div>
+						</div> */}
 					</div>
 					<div>
 						<img id="headerImg" src={headerImg}/>
@@ -51,13 +52,13 @@ export const Home = () =>{
 					<div className="headerSocialMediaContainer">
 						<p>SIGA-NOS</p>
 						<br></br>
-						<a style={{"marginLeft": "4px"}} href=""><img src={facebookIco}/></a>
+						<a style={{"marginLeft": "4px"}} href="https://www.facebook.com/Signal.Jr.ufrrj"><img src={facebookIco}/></a>
 						<br></br>
 						<br></br>
-						<a style={{"marginLeft": "2px"}} href=""><img src={instagramIco}/></a>
+						<a style={{"marginLeft": "2px"}} href="https://www.instagram.com/signal_jr/"><img src={instagramIco}/></a>
 						<br></br>
 						<br></br>
-						<a style={{"marginLeft": "2px"}} href=""><img src={linkedinIco}/></a>
+						<a style={{"marginLeft": "2px"}} href="https://www.linkedin.com/company/signal-jr/mycompany/"><img src={linkedinIco}/></a>
 					</div>
 				</div>
 			</div>
@@ -81,7 +82,7 @@ export const Home = () =>{
 							nisi euismod suscipit.
 					</p>
 					<br/>
-					<a className="buttonPurple2" href="">Saiba Mais</a>
+					<a className="buttonPurple2" href={process.env.PUBLIC_URL + "/developing"}>Saiba Mais</a>
 				</div>
 				<div id="aboutDesktopImg">
 					<img className="aboutImg" src={aboutLogo}/>
