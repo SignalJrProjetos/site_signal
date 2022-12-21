@@ -72,7 +72,7 @@ export const Home = () =>{
 			{/*Sobre Nós*/}
 
 			
-			<div id="aboutContainer">
+			<div className="aboutContainer">
 				<div className="aboutTextContainer">
 
 					<div id="aboutMobileImg">
@@ -93,7 +93,7 @@ export const Home = () =>{
 					<a className="buttonPurple2" href={process.env.PUBLIC_URL + "/developing"}>Saiba Mais</a>
 				</div>
 				<div id="aboutDesktopImg">
-					<img className="aboutImg" src={aboutLogo}/>
+					<img src={aboutLogo}/>
 				</div>
 			</div>
 			

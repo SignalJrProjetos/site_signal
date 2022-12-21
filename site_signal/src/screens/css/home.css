@@ -1,5 +1,14 @@
 /* Header */
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .headerContainer {
     background-color: #610C7D;
     z-index: -2;
@@ -24,6 +33,12 @@
     color: white;
     font-family: "Saira";
     font-size: 28px;
+}
+
+.headerTextContainer h1, .headerTextContainer p, .headerTextContainer a {
+    animation: fadeInAnimation ease-in 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 #headerImg {
@@ -187,12 +202,14 @@
 
 /* Sobre Nós */
 
-#aboutContainer{
+.aboutContainer{
+    position: relative;
     width: 100%;
     display: flex; 
     background: #f7f7f7;
-    padding-left: 96px;
+    padding-left: 144px;
     text-align: left;
+    align-items: center;
 }
 
 .aboutTextContainer {
@@ -215,13 +232,14 @@
     font-family: "Saira";
 }
 
-.aboutImg {
-    margin-right: 72px;
-}
-
 #aboutDesktopImg{
     display: flex;
     justify-content: center;
+}
+
+#aboutDesktopImg img {
+    width: 680px;
+    margin-right: 96px;
 }
 
 #aboutMobileImg{
@@ -232,7 +250,7 @@
 
 /** Mobile **/
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 1200px) {
     .aboutImg {
         margin-right: 0px;
     }
@@ -241,6 +259,12 @@
        text-align: center;
        padding: 0px;
        justify-content: center;
+    }
+
+    .aboutTextContainer{
+        padding: 10%;
+        margin-right: 0px;
+        margin-bottom: 0px;
     }
 
     .aboutTextContainer p {
@@ -270,12 +294,6 @@
         display: none;
     }
 
-    .aboutTextContainer{
-        padding: 10%;
-        margin-right: 0px;
-        margin-bottom: 100px;
-    }
-
     .buttonPurple2{
         font-size: 20px;
     }
@@ -283,7 +301,7 @@
 
 /** Laptops: Large Screen **/
 
-@media screen and (min-width: 769px) and (max-width: 2800px) {
+@media screen and (min-width: 1200px) and (max-width: 2800px) {
     .aboutTextContainer h1 {
         font-size: 40px;
     }
@@ -296,9 +314,6 @@
         font-size: 22px;
     }
     
-    .aboutImg {
-        width: 120%;
-    }
 }
 
 
