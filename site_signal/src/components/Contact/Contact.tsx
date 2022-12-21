@@ -45,7 +45,7 @@ export const Contact = () => {
 			};
 		
 			// Passamos 4 parametros no metodo send (service_id, template_id, parametros da mensagem que foi configurada no template, public_key)
-			emailjs.send("service_k6mztxj", "template_bgrfwqa", templateParms , "7uN9BAm-ze4ihfO32")
+			emailjs.send("service_4jw04wx", "template_bgrfwqa", templateParms , "7uN9BAm-ze4ihfO32")
 				.then((response) => {
 					alert("Email enviado");
 					console.log("Email enviado", response.status, response.text);
