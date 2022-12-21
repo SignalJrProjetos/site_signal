@@ -5,6 +5,7 @@ import linkedinIco from "../../assets/svg/icon.linkedin.svg";
 import githubIco from "../../assets/svg/icon.github.svg";
 import instagramIco from "../../assets/svg/icon.instagram.svg";
 import teamBackground from "../../assets/svg/bg.team.svg";
+import arrowIco from "../../assets/svg/icon.arrow.svg";
 
 const GET_MEMBERS_QUERY = gql` #Query para recuperar dados dos membros da API GraphCMS
     query TeamMembers {
@@ -61,19 +62,19 @@ export const TeamList = () => {
                                 
 								{/* Somente exibe as redes sociais se elas estiverem cadastradas */}
 								{ teamMembers.linkedInURL ? (
-									<a href={teamMembers.linkedInURL}><img src={linkedinIco}></img></a>
+									<a href={teamMembers.linkedInURL}><img className="linkedinIcon" src={linkedinIco}></img></a>
 								):
 									(<span style={{"display":"none"}} />)
 								}
 
 								{ teamMembers.githubURL ? (
-									<a href={teamMembers.githubURL}><img src={githubIco}></img></a>
+									<a href={teamMembers.githubURL}><img className="githubIcon" src={githubIco}></img></a>
 								):  
 									(<span style={{"display":"none"}} />)
 								}
 
 								{ teamMembers.instagramURL ? (
-									<a href={teamMembers.instagramURL}><img src={instagramIco}></img></a>
+									<a href={teamMembers.instagramURL}><img className="instagramIcon" src={instagramIco}></img></a>
 								) : 
 									(<span style={{"display":"none"}} />)
 								}
@@ -84,7 +85,7 @@ export const TeamList = () => {
 				})}
 			</div>
 			<div id="subscription">
-				<a href="" className="buttonPurple2">Se Inscrever</a>
+				<a href="" className="buttonPurple2">Se Inscrever <img src={arrowIco} /></a>
 			</div>
 		</div>
 	);
