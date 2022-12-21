@@ -187,7 +187,7 @@
 
 /* Sobre Nós */
 
-.aboutContainer{
+#aboutContainer{
     width: 100%;
     display: flex; 
     background: #f7f7f7;

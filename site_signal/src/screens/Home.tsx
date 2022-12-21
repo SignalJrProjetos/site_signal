@@ -20,6 +20,9 @@ import Rio from "../assets/svg/logo.RioJuniorPartners.svg";
 import TOTVS from "../assets/svg/logo.TOTVSPartners.svg";
 import Americanas from "../assets/svg/logo.AmericanasPartners.svg";
 import Empower from "../assets/svg/logo.EmpowerPartners.svg";
+import engealiLogo from "../assets/imgs/logo.engeali.png";
+import cantoGeralLogo from "../assets/imgs/logo.cantogeral.png";
+
 
 
 export const Home = () =>{
@@ -34,17 +37,18 @@ export const Home = () =>{
 				<div className="headerTextContainer">
 					<div>
 						<h1>
-								A solução digital ideal para o seu negócio.
+							A consultoria em TI ideal para o crescimento do seu negócio
 						</h1>
 						<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus, urna egestas convallis hendrerit, 
-								purus arcu consectetur sapien, eget molestie mi elit sed erat. Curabitur vel ullamcorper odio. Nulla ullamcorper 
-								massa sit amet aliquam elementum. Vestibulum faucibus sem sit amet quam lacinia suscipit. 
+							Oferecemos soluções personalizadas para o desenvolvimento digital do negócio. 
 						</p>
-						{/* Botão a ser ativado posteriormente
-						<div className="headerButton" style={{"marginTop":"8%"}}>
-							<a className="buttonWhite" href="">Saiba Mais</a>
-						</div> */}
+						<b/>
+						<p>
+							Como podemos te ajudar?
+						</p>
+						<div className="headerButton" style={{"marginTop":"5%"}}>
+							<a className="buttonWhite" href="#aboutContainer">Saiba Mais</a>
+						</div>
 					</div>
 					<div>
 						<img id="headerImg" src={headerImg}/>
@@ -68,7 +72,7 @@ export const Home = () =>{
 			{/*Sobre Nós*/}
 
 			
-			<div className="aboutContainer">
+			<div id="aboutContainer">
 				<div className="aboutTextContainer">
 
 					<div id="aboutMobileImg">
@@ -77,9 +81,13 @@ export const Home = () =>{
 
 					<h2 className="subtitle">Sobre Nós</h2>
 					<h1 className="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, 
-							lobortis ac justo vel, auctor dictum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed 
-							nisi euismod suscipit.
+					<p>
+						Somos a Signal Jr, a única Empresa Júnior de Tecnologia da Informação inovadora do Rio de Janeiro.
+
+						Criada no ano de 2015, a Signal Jr. tem o objetivo de trazer a experiência empreendedora dentro da nossa formação acadêmica. 
+						Formada por uma equipe multidisciplinar, que valoriza sua diversidade nas perspectivas da EJ e na tomada de decisão, além de 
+						dinamizar os processos através de qualificações distintas e diferentes bagagens. Quem faz parte da Signal Jr. carrega consigo 
+						5 valores em comum, que nos norteiam enquanto EJ: Protagonismo, Querência, Resiliência, Level Up e Conexão.
 					</p>
 					<br/>
 					<a className="buttonPurple2" href={process.env.PUBLIC_URL + "/developing"}>Saiba Mais</a>
@@ -102,16 +110,20 @@ export const Home = () =>{
 				{/* Cada Carousel.Item corresponde a um componente */}
 				<Carousel>
 					<Carousel.Item>
-						<Testimonial/>
+						<Testimonial
+							image = {engealiLogo}
+							authorName = "Glória"
+							role = "Diretora de Comunicação da Engeali"
+							text = "No projeto, o desempenho da equipe foi excepcional, assim como a qualidade do resultado entregue! A equipe envolvida no projeto foi muito receptiva e atenciosa para esclarecer todas as dúvidas. As expectativas quanto aos resultados foram superadas e ficamos muito felizes em realizar esse projeto com a Signal Jr.!"
+						/>
 					</Carousel.Item>
 					<Carousel.Item>
-						<Testimonial/>
-					</Carousel.Item>
-					<Carousel.Item>
-						<Testimonial/>
-					</Carousel.Item>
-					<Carousel.Item>
-						<Testimonial/>
+						<Testimonial
+							image = {cantoGeralLogo}
+							authorName = "Pollyana"
+							role = "Dona do Canto Geral"
+							text = "Durante todas as fases de execução do nosso site, a equipe da Signal se mostrou muito competente e prestativa. Sempre muito dispostos a atender nossas demandas mais específicas, oferecendo soluções viáveis e o mais práticas possíveis. O serviço prestado é excelente. Recomendamos fortemente."
+						/>
 					</Carousel.Item>
 				</Carousel>
 			</div>
@@ -125,14 +137,14 @@ export const Home = () =>{
            
 				<div className="partnersLogo">
 					<div>
-						<img id="ufrrjMark" src={UFRRJ} alt=""/>
-						<img id="brasilJrMark" src={Brasil} alt=""/>
-						<img id="rioJrMark" src={Rio} alt=""/>
-						<img id="totvsMark" src={TOTVS} alt=""/>
+						<img id="ufrrjMark" src={UFRRJ} alt="https://portal.ufrrj.br/"/>
+						<img id="brasilJrMark" src={Brasil} alt="https://brasiljunior.org.br/"/>
+						<img id="rioJrMark" src={Rio} alt="https://riojunior.com.br/"/>
+						<img id="totvsMark" src={TOTVS} alt="https://www.totvs.com/"/>
 					</div>
 					<div>
-						<img id="empowerMark" src={Empower} alt=""/>
-						<img id="americanasMark" src={Americanas} alt=""/>
+						<img id="empowerMark" src={Empower} alt="https://empower.vision/"/>
+						<img id="americanasMark" src={Americanas} alt="https://www.americanas.com.br"/>
 					</div>
 				</div>
 			</div>	

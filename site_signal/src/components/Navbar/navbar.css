@@ -160,7 +160,7 @@
     }
 
     #menuToggle {
-        display: flex;
+        display: none;
     }
 
     #navbarLogo {

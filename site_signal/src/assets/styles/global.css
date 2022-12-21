@@ -92,8 +92,14 @@
     font-size: 28px;
 }
 
+.buttonWhite img {
+    width: 20px;
+    margin-left: 4px;
+}
+
 .buttonWhite:hover {
     color: #8700A9;
+    fill: #8700A9;
     background-color: white;
 }
 
