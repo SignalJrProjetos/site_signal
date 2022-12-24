@@ -14,6 +14,10 @@
     align-items: center;
     justify-content: center;
 }
+.footerInfo a:hover {
+    color: white;
+    opacity: 0.8;
+}
 
 .footerLogo {
     width: 352px;
@@ -104,7 +108,7 @@
         display: none;
     }
 
-    .footerContact p, a {
+    .footerContact p, .footerContact a {
         font-size: 16px;
         text-align: left;
     }
@@ -157,7 +161,7 @@
         font-size: 28px;
     }
 
-    .footerInfo p, a {
+    .footerInfo p, .footerContact a {
         font-size: 18px;
     }
 

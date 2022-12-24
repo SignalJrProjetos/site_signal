@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/global.css";
 import "./testimonial.css";
 import quoteIco from "../../assets/svg/icon.quote.svg";
 

@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/global.css";
 import "./footer.css";
 import Logo from "../../assets/imgs/logo.SignalCompactaBranca.png";
 import LocationIcon from "../../assets/svg/icon.location.svg";

@@ -23,6 +23,11 @@
     text-decoration: none;
 }
 
+.navbarContainer a:hover:not(:last-child) {
+    color: white;
+    opacity: 0.8;
+}
+
 #navbarButton {
     margin-right: 24px;
     display: none;
@@ -154,10 +159,6 @@
 /* Responsividade: Mobile */
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-
-    .navbarMenu a {
-        display: none;
-    }
 
     #menuToggle {
         display: none;

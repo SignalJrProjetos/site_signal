@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import "../../assets/styles/global.css";
 import "./navbar.css";
 import logo from "../../assets/imgs/logo.SignalExtensaBranca.png";
 import logoMobile from "../../assets/imgs/logo.SignalCompactaBranca.png";
