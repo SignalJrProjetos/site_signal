@@ -16,7 +16,7 @@ export const Navbar = () => {
 			<>
 				<a href=""><img id="navbarLogo" src={logo}/></a>
 			</>
-			<div className="navbarMenu" style={{"display": "flex", "alignItems": "center"}}> 
+			<div id="navbarMenu" style={{"display": "flex", "alignItems": "center"}}> 
 				<a href={process.env.PUBLIC_URL}>Serviços</a>
 				<a href={process.env.PUBLIC_URL + "/developing"} >Equipe</a>
 				<a className="buttonWhite" href="#contactContainer">Contato</a>
