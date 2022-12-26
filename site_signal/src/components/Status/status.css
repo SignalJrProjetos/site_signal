@@ -1,3 +1,7 @@
+.statusContainer {
+    margin: 5% 0;
+}
+
 .statusContainer h1 {
     text-align: center;
     color: #8700A9;
