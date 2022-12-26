@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import imagemSolucoes from "../../assets/imgs/manutencao.png";
-import imagemIdentidadeVisual from "../../assets/imgs/identidadeVisual.png";
-import imagemManutencao from "../../assets/imgs/solucoes.png";
-import solucoesMobile from "../../assets/svg/solutionsMobile.svg";
-import identidadeVisualMobile from "../../assets/svg/identidadeMobile.svg";
-import manutencaoMobile from "../../assets/svg/manutencaoMobile.svg";
+import imagemSolucoes from "../../assets/svg/img.solutionsSolucoesTI.svg";
+import imagemIdentidadeVisual from "../../assets/svg/img.solutionsIdVisual.svg";
+import imagemManutencao from "../../assets/svg/img.solutionsManutencao.svg";
+import solucoesMobile from "../../assets/svg/icon.solutionsSolucoesTI.svg";
+import identidadeVisualMobile from "../../assets/svg/icon.solutionsIdVisual.svg";
+import manutencaoMobile from "../../assets/svg/icon.solutionsManutencao.svg";
 
 import "./solutions.css";
 
@@ -102,11 +102,11 @@ export const Solutions = () => {
 			<h1 className="title">Nossas soluções para o seu negócio</h1>
 			
 			{/* Container para responsividade  */}
-
 			<div className="solutionsContainerMobile">
 
 				<div id="solutionsSolucoes" className="solutionsCardMobile">
 					<img src={solucoesMobile} alt=""/>
+					<img src={imagemSolucoes} />
 					<div className="solutionsTitleMobile"><h1>Soluções em TI</h1></div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
 				</div>
@@ -114,12 +114,14 @@ export const Solutions = () => {
 			
 				<div id="solutionsIdentidadeMobile" className="solutionsCardMobile">
 					<img src={identidadeVisualMobile} alt=""/>
-					<div style={{borderColor: "white"}} className="solutionsTitleMobile"><h1 style={{color: "white"}}>Identidade Visual</h1></div>
-					<p style={{color: "white"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
+					<img src={imagemIdentidadeVisual} />
+					<div className="solutionsTitleMobile"><h1>Identidade Visual</h1></div>
+					<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
 				</div>
 
 				<div id="solutionsManutencaoMobile" className="solutionsCardMobile">
 					<img src={manutencaoMobile} alt=""/>
+					<img src={imagemManutencao} />
 					<div className="solutionsTitleMobile"><h1>Manutenção</h1></div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
 				</div>

@@ -15,8 +15,8 @@ import instagramIco from "../assets/svg/icon.instagram.svg";
 import linkedinIco from "../assets/svg/icon.linkedin.svg";
 import aboutLogo from "../assets/svg/logo.SignalSymbolBg.svg";
 import UFRRJ from "../assets/svg/logo.UFRRJPartners.svg";
-import Brasil from "../assets/svg/logo.Brasil JuniorPartners.svg";
-import Rio from "../assets/svg/logo.Rio JuniorPartners.svg";
+import Brasil from "../assets/svg/logo.BrasilJuniorPartners.svg";
+import Rio from "../assets/svg/logo.RioJuniorPartners.svg";
 import TOTVS from "../assets/svg/logo.TOTVSPartners.svg";
 import Americanas from "../assets/svg/logo.AmericanasPartners.svg";
 import Empower from "../assets/svg/logo.EmpowerPartners.svg";
@@ -66,23 +66,28 @@ export const Home = () =>{
 
 			{/*Sobre Nós*/}
 
-			{/*
-				<div className="aboutContainer">
-					<div className="aboutTextContainer">
-						<h2 className="subtitle">Sobre Nós</h2>
-						<h1 className="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, 
-							lobortis ac justo vel, auctor dictum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed 
-							nisi euismod suscipit.
-						</p>
-						<br/>
-						<a className="buttonPurple2" href="">Saiba Mais</a>
-					</div>
-					<div>
+			
+			<div className="aboutContainer">
+				<div className="aboutTextContainer">
+
+					<div id="aboutMobileImg">
 						<img className="aboutImg" src={aboutLogo}/>
 					</div>
+
+					<h2 className="subtitle">Sobre Nós</h2>
+					<h1 className="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, 
+							lobortis ac justo vel, auctor dictum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed 
+							nisi euismod suscipit.
+					</p>
+					<br/>
+					<a className="buttonPurple2" href="">Saiba Mais</a>
 				</div>
-			*/}
+				<div id="aboutDesktopImg">
+					<img className="aboutImg" src={aboutLogo}/>
+				</div>
+			</div>
+			
 
 			<Contact/>
 
@@ -117,13 +122,17 @@ export const Home = () =>{
 					<h1 className="title">Parceiros</h1>
 				</div>
            
-				<div className="partnersImages">
-					<img className="partnerImg" id="UFRRJ" src={UFRRJ} alt=""/>
-					<img className="partnerImg" id="Brasil" src={Brasil} alt=""/>
-					<img className="partnerImg" id="Rio" src={Rio} alt=""/>
-					<img className="partnerImg" id="TOTVS" src={TOTVS} alt=""/>
-					<img className="partnerImg" id="Empower" src={Empower} alt=""/>
-					<img className="partnerImg" id="Americanas" src={Americanas} alt=""/>
+				<div className="partnersLogo">
+					<div>
+						<img id="ufrrjMark" src={UFRRJ} alt=""/>
+						<img id="brasilJrMark" src={Brasil} alt=""/>
+						<img id="rioJrMark" src={Rio} alt=""/>
+						<img id="totvsMark" src={TOTVS} alt=""/>
+					</div>
+					<div>
+						<img id="empowerMark" src={Empower} alt=""/>
+						<img id="americanasMark" src={Americanas} alt=""/>
+					</div>
 				</div>
 			</div>	
 			<Footer/>

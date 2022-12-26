@@ -166,6 +166,6 @@
     }
 
     #menuToggle input:checked ~ div{
-        box-shadow: 0 0 0 480px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.7);
       }      
 }
