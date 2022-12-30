@@ -51,13 +51,13 @@ export const Home = () =>{
 					<div className="headerSocialMediaContainer">
 						<p>SIGA-NOS</p>
 						<br></br>
-						<a style={{"marginLeft": "4px"}} href=""><img src={facebookIco}/></a>
+						<a href=""><img src={facebookIco}/></a>
 						<br></br>
 						<br></br>
-						<a style={{"marginLeft": "2px"}} href=""><img src={instagramIco}/></a>
+						<a href=""><img src={instagramIco}/></a>
 						<br></br>
 						<br></br>
-						<a style={{"marginLeft": "2px"}} href=""><img src={linkedinIco}/></a>
+						<a href=""><img src={linkedinIco}/></a>
 					</div>
 				</div>
 			</div>

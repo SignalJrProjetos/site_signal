@@ -1,0 +1,52 @@
+.hdrContainer {
+    background-color: #610C7D;
+    height: 720px;
+    z-index: -2;
+    display: flex;
+}
+
+.hdrTextContainer h1 {
+    color: white;
+    font-family: "Scada";
+    font-size: 72px; 
+    font-weight: bold;
+    margin: 0 10% 0 10%;
+    padding-top: 108px;
+    text-align: center;
+}
+
+.hdrTextContainer p {
+    margin: 32px 10% 0 10%;
+    color: white;
+    font-family: "Saira";
+    font-size: 28px;
+    text-align: center;
+}
+
+.hdrSocialMediaContainer {
+    margin: 7.5% 5% 0 0;
+    text-align: center;   
+}
+
+.hdrSocialMediaContainer p {
+    font-family: "Saira"; 
+    font-size: 26px;
+    font-weight: bold;
+    writing-mode:vertical-rl;
+    color: white;
+    margin-bottom: 90%;
+}
+
+.hdrBorder {
+    width: 100%; 
+    position: relative;
+    margin-top: -25.6%;
+    z-index: 0;
+    -webkit-user-drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}   
