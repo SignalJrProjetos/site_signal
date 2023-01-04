@@ -1,11 +1,11 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
 import "./teamList.css";
-import linkedinIco from "../../assets/svg/icon.linkedin.svg";
-import githubIco from "../../assets/svg/icon.github.svg";
-import instagramIco from "../../assets/svg/icon.instagram.svg";
-import teamBackground from "../../assets/svg/bg.team.svg";
-import arrowIco from "../../assets/svg/icon.arrow.svg";
+import linkedinIco from "../../../assets/svg/icon.linkedin.svg";
+import githubIco from "../../../assets/svg/icon.github.svg";
+import instagramIco from "../../../assets/svg/icon.instagram.svg";
+import teamBackground from "../../../assets/svg/bg.team.svg";
+import arrowIco from "../../../assets/svg/icon.arrow.svg";
 
 const GET_MEMBERS_QUERY = gql` #Query para recuperar dados dos membros da API GraphCMS
     query TeamMembers {

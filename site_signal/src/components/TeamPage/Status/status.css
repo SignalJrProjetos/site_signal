@@ -1,5 +1,6 @@
 .statusContainer {
     margin: 5% 0;
+    position: relative;
 }
 
 .statusContainer h1 {

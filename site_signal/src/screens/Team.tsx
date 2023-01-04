@@ -3,10 +3,11 @@ import "../screens/css/team.css";
 import { ParticlesContainer } from "../components/ParticlesContainer";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Header } from "../components/Header/Header";
-import { Status } from "../components/Status/Status";
-import { AboutMEJ } from "../components/AboutMEJ/AboutMEJ";
-import { CoreValues } from "../components/CoreValues/CoreValues";
-import { TeamList } from "../components/TeamList/TeamList";
+import { AboutUs } from "../components/TeamPage/AboutUs/AboutUs";
+import { Status } from "../components/TeamPage/Status/Status";
+import { AboutMEJ } from "../components/TeamPage/AboutMEJ/AboutMEJ";
+import { CoreValues } from "../components/TeamPage/CoreValues/CoreValues";
+import { TeamList } from "../components/TeamPage/TeamList/TeamList";
 import { Footer } from "../components/Footer/Footer";
 
 export const Team = () =>{
@@ -18,6 +19,7 @@ export const Team = () =>{
 				title="Conheça a Signal Júnior e dê o próximo passo com seu negócio"
 				text="Conheça um pouco mais sobre a nossa empresa, o que é o Movimento Empresa Júnior e nossos talentosos membros."
 			/>
+			<AboutUs/>
 			<Status/>
 			<AboutMEJ/>
 			<CoreValues/>

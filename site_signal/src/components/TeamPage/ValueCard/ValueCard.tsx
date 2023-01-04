@@ -1,6 +1,6 @@
 import React from "react";
 import "./value-card.css";
-import valueImg from "../../assets/svg/img.value-template.svg";
+import valueImg from "../../../assets/svg/img.value-template.svg";
 
 export const ValueCard = (props: { valueName: string; valueDesc: string}) => {
 	return (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./about-mej.css";
-import AboutMEJLogo from "../../assets/svg/logo.brjunior-riojunior.svg";
+import AboutMEJLogo from "../../../assets/svg/logo.brjunior-riojunior.svg";
 
 export const AboutMEJ = () => {
 	return (
