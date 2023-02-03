@@ -8,8 +8,8 @@ export const App = () =>{
 	return (
 		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Routes>
-				<Route path="/" element={<Home/>}/>
-				<Route path="/time" element={<Team/>}/>
+				{/* <Route path="/" element={<Home/>}/> */}
+				<Route path="/" element={<Team/>}/>
 			</Routes>
 		</BrowserRouter>
 	);
