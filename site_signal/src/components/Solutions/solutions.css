@@ -1,3 +1,12 @@
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .solutionsContainer {
     display: flex;
     background-image: url("../../assets/imgs/solucoesBackground.png");
@@ -153,7 +162,7 @@
 }
 
 /** Laptops **/
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1600px) {
     .solutionsContainer{
         padding-left: 0px;
         padding-right: 0px;
@@ -161,7 +170,7 @@
     }
 
     .solutionsContainer h2 {
-        margin-top: -72px;
+        margin-top: -80px;
     }
 
     #solutionsButtonClicked {

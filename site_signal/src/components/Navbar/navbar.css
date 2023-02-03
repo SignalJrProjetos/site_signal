@@ -8,6 +8,8 @@
     font-size: 24px;
     color: white;
     background-color: #610C7D;
+    position: fixed;
+    z-index: 2;
 }
 
 #navbarLogo {
@@ -19,6 +21,11 @@
     margin-right: 44px;
     color: white;
     text-decoration: none;
+}
+
+.navbarContainer a:hover:not(:last-child) {
+    color: white;
+    opacity: 0.8;
 }
 
 #navbarButton {
@@ -153,12 +160,12 @@
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
-    .navbarMenu a {
-        display: none;
-    }
-
     #menuToggle {
-        display: flex;
+        display: block;
+    }
+    
+    #navbarMenu a {
+        display: none;
     }
 
     #navbarLogo {
