@@ -17,7 +17,7 @@ export const Navbar = () => {
 				<a href=""><img id="navbarLogo" src={logo}/></a>
 			</>
 			<div id="navbarMenu" style={{"display": "flex", "alignItems": "center"}}> 
-				<a href={process.env.PUBLIC_URL}>Serviços</a>
+				<a href={process.env.PUBLIC_URL + "/developing"} >Serviços</a>
 				<a href={process.env.PUBLIC_URL + "/developing"} >Equipe</a>
 				<a className="buttonWhite" href="#contactContainer">Contato</a>
 			</div>
@@ -30,8 +30,8 @@ export const Navbar = () => {
 				<div id="menu">
 					<img id="navLogoMobile" src={logoMobile} />
 					<ul>
-						<li><a href={process.env.PUBLIC_URL}> <img src={homeIco}/> Início <img src={arrowIco}/> </a></li>
-						<li><a href={process.env.PUBLIC_URL}> <img src={servicesIco}/> Serviços <img src={arrowIco}/> </a></li>
+						<li><a href=""> <img src={homeIco}/> Início <img src={arrowIco}/> </a></li>
+						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img src={servicesIco}/> Serviços <img src={arrowIco}/> </a></li>
 						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img src={teamIco}/> Equipe <img src={arrowIco}/></a></li>
 					</ul>
 					<h3>Vamos Conversar!</h3>
