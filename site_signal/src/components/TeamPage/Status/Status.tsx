@@ -11,21 +11,25 @@ export const Status = () => {
 		<div className="statusContainer">
 			<h1><span>Nossos Números</span></h1>
 			<div className="statusNumbers">
-				<div className="productsContainer">
-					<img src={productsIco}/>
-					<p><span>50</span> Produtos Lançados</p>
+				<div className="statusRow">
+					<div className="productsContainer">
+						<img src={productsIco}/>
+						<p><span>50</span> <br /> Produtos Lançados</p>
+					</div>
+					<div className="satisfactionContainer">
+						<img src={satisfactionIco}/>
+						<p><span>50</span> <br />Clientes Satisfeitos</p>
+					</div>
 				</div>
-				<div className="satisfactionContainer">
-					<img src={satisfactionIco}/>
-					<p><span>50</span> Clientes Satisfeitos</p>
-				</div>
-				<div className="teamContainer">
-					<img src={teamIco}/>
-					<p><span>20</span> Membros</p>
-				</div>
-				<div className="evolutionContainer">
-					<img src={evolutionIco}/>
-					<p><span>Nv. X</span> Empresa Inovadora</p>
+				<div className="statusRow">
+					<div className="teamContainer">
+						<img src={teamIco}/>
+						<p><span>20</span> <br />Membros</p>
+					</div>
+					<div className="evolutionContainer" id="evolutionContainer">
+						<img src={evolutionIco}/>
+						<p><span>Nv. X</span> <br />Empresa Inovadora</p>
+					</div>
 				</div>
 			</div>
 		</div>
