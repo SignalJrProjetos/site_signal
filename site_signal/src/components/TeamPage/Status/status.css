@@ -46,6 +46,10 @@
     font-size: 24px;
 }
 
+.statusRow{
+    display: flex;
+}
+
 /* Correções de alinhamento */
 
 .productsContainer img {
@@ -54,4 +58,31 @@
 
 .evolutionContainer img {
     margin-bottom: 20px;
+}
+
+@media (max-width: 1025px){
+    .statusRow{
+        display: block;
+    }
+}
+
+@media (max-width: 825px){
+    #evolutionContainer{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 580px){
+    .statusNumbers {
+        margin: 0 4%;
+    }
+    .statusNumbers img{
+        width: 80px;
+    }
+    .statusNumbers span {
+        font-size: 30px;
+    }
+    .statusNumbers p{
+        font-size:20px;
+    }
 }
