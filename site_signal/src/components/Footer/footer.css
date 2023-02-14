@@ -31,6 +31,7 @@
 
 .footerBorder {
     width: 100%;
+
     position: relative;
     margin-bottom: -580px;
     -webkit-user-drag: none;  
@@ -133,6 +134,12 @@
 
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .footerBorder {
+        margin-bottom: -540px;
+    }
+}
+
 /* Responsividade: Laptops */
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
@@ -156,5 +163,14 @@
 
     .footerBorder {
         margin-bottom: -560px;
+    }
+}
+
+/* Responsividade: Ultrawide */
+
+@media screen and (min-width: 2400px) {
+
+    .footerBorder {
+        margin-bottom: -580px;
     }
 }

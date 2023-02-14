@@ -32,6 +32,7 @@
 
 .headerSocialMediaContainer {
     margin-right: 5%;
+    text-align: center;
 }
 
 .headerSocialMediaContainer p {
@@ -57,6 +58,7 @@
 
 /* Responsividade - Header */
 
+/** Mobile **/
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
     .headerTextContainer {
@@ -82,8 +84,13 @@
     .headerSocialMediaContainer {
         display: none;
     }
+
+    .headerBorder {
+        margin-top: -26%;
+    }
 }
 
+/** Tablets **/
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
     .headerContainer {
@@ -111,8 +118,13 @@
         display: none;
     }
 
+    .headerBorder {
+        margin-top: -25.6%;
+    }
+
 }
 
+/** Laptops **/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
     .headerContainer {
@@ -136,8 +148,13 @@
         margin-right: 2%;
     }
 
+    .headerBorder {
+        margin-top: -25.6%;
+    }
+
 }
 
+/** Laptops: Large Screen **/
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
 
     .headerContainer {
@@ -161,28 +178,34 @@
         margin-right: 2%;
     }
 
+    .headerBorder {
+        margin-top: -25.6%;
+    }
+
 }
+
 
 /* Sobre Nós */
 
 .aboutContainer{
     width: 100%;
-    height: 666px;
     display: flex; 
     background: #f7f7f7;
     padding-left: 96px;
+    text-align: left;
 }
 
 .aboutTextContainer {
     margin-right: 96px;
-}
-
-.aboutTextContainer h1 {
-    text-align: left;
+    margin-bottom: 100px;
 }
 
 .aboutTextContainer h2 {
+    text-align: left;
     margin-top: 64px;
+}
+
+.aboutTextContainer h1 {
     text-align: left;
 }
 
@@ -195,6 +218,78 @@
 .aboutImg {
     margin-right: 72px;
 }
+
+#aboutDesktopImg{
+    display: flex;
+    justify-content: center;
+}
+
+#aboutMobileImg{
+    display: none;
+}
+
+/** Laptops: Large Screen **/
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .aboutImg {
+        margin-right: 0px;
+    }
+
+    .aboutContainer{
+       text-align: center;
+       justify-content: center;
+    }
+
+    .aboutTextContainer h1 {
+        text-align: center;
+    }
+
+    .aboutTextContainer h2 {
+        text-align: center;
+    }
+
+    #aboutMobileImg{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #aboutMobileImg img{
+        width: 60%;
+    }
+    
+    #aboutDesktopImg{
+        display: none;
+    }
+
+    .aboutTextContainer{
+        margin-bottom: 100px;
+    }
+
+    .buttonPurple2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1460px) {
+
+    .aboutTextContainer h1 {
+        font-size: 40px;
+    }
+
+    .aboutTextContainer h2 {
+        font-size: 30px;
+    }
+    
+    .aboutTextContainer p {
+        font-size: 22px;
+    }
+    
+    .aboutImg {
+        width: 120%;
+    }
+}
+
+
 
 /* Depoimentos */
 
@@ -209,58 +304,101 @@
     position: relative;
 }
 
-.partnersImagesOne {
-    width: auto;
+.partnersContainer h1 {
+    margin-top: 32px;
+}
+
+.partnersLogo div {
     text-align: center;
-    margin-right: auto;
 }
 
-.partnersImagesTwo {
-    width: auto;
-    text-align: center;
-   
+.partnersLogo img {
+    width: 180px;
+    margin-right: 72px;
+    margin-bottom: 32px;
 }
 
-.partnerImg {
-    margin-right: 48px;
+#brasilJrMark {
+    width: 240px;
 }
 
-/* Responsividade */
+#totvsMark {
+    width: 360px;
+    margin-right: 0;
+}
 
-/* 320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV */
+.partnersLogo div:last-child img {
+    width: 480px;
+}
 
-@media screen and (min-width: 551px) and (max-width: 768px) {
+#americanasMark {
+    margin-right: 0;
+}
 
-    .partnersImages {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-        padding: 5%;
+/* Responsividade - Parceiros */
+
+/** Mobile **/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .partnersContainer {
+        margin-bottom: -204px;
+    }
+
+    .partnersLogo img {
+        width: 56px;
+        margin-right: 32px;
+    }
+
+    #brasilJrMark {
+        width: 72px;
+    }
+
+    #totvsMark {
+        width: 92px;
     }
     
-    .partnerImg {
-        width: 25%;
-        margin-right: 2%;
-        margin-left: 2%;
+    .partnersLogo div:last-child img {
+        width: 180px;
     }
 
-    #TOTVS {
-        margin-top: 6%;
-        width: 25%;
+}
+
+/** Tablets **/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .partnersContainer {
+        margin-bottom: -172px;
     }
 
-    #Empower {
-        margin-top: 6%;
-        width: 28%;
+    .partnersLogo img {
+        width: 124px;
+        margin-right: 32px;
     }
 
-    #Americanas {
-        margin-top: 6%;
-        width: 35%;
+    #brasilJrMark {
+        width: 156px;
     }
-} 
+
+    #totvsMark {
+        width: 180px;
+    }
+    
+    .partnersLogo div:last-child img {
+        width: 320px;
+    }
+    
+}
+
+/** Laptops **/
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+    .partnersContainer {
+        margin-bottom: -108px;
+    }
+    
+    .partnersLogo img {
+        width: 124px;
+        margin-right: 32px;
+    }
+
+}
