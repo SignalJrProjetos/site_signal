@@ -4,6 +4,9 @@ import "./teamList.css";
 import linkedinIco from "../../../assets/svg/icon.linkedin.svg";
 import githubIco from "../../../assets/svg/icon.github.svg";
 import instagramIco from "../../../assets/svg/icon.instagram.svg";
+import linkedinAltIco from "../../../assets/svg/icon.linkedin-purple.svg";
+import githubAltIco from "../../../assets/svg/icon.github-purple.svg";
+import instagramAltIco from "../../../assets/svg/icon.instagram-purple.svg";
 import teamBackground from "../../../assets/svg/bg.team.svg";
 import arrowIco from "../../../assets/svg/icon.arrow.svg";
 
@@ -48,39 +51,79 @@ export const TeamList = () => {
                 vestibulum elit sed, aliquet mi.
 			</h1>
 
-			<div >
+			<div className="listContainer">
 				{data?.teamMembers.map(teamMembers => {
 					return(
-						<div className="memberCard" style={{"backgroundImage" : `url(${teamMembers.avatar.url})`}} key={teamMembers.id}>
+						<>
+							{console.log(teamMembers.avatar.url)}
+							<div className="memberCard" style={{"backgroundImage" : `url(${teamMembers.avatar.url})`}} key={teamMembers.id}>
 							
-							<div className="memberInfo">
-								<h3>{teamMembers.name}</h3>
-								<p>{teamMembers.role}</p>
-							</div>
+								<div className="memberInfo">
+									<h3>{teamMembers.name}</h3>
+									<p>{teamMembers.role}</p>
+								</div>
 
-							<div className="memberSocialMedia">
+								<div className="memberSocialMedia">
                                 
-								{/* Somente exibe as redes sociais se elas estiverem cadastradas */}
-								{ teamMembers.linkedInURL ? (
-									<a href={teamMembers.linkedInURL}><img className="linkedinIcon" src={linkedinIco}></img></a>
-								):
-									(<span style={{"display":"none"}} />)
-								}
+									{/* Somente exibe as redes sociais se elas estiverem cadastradas */}
+									{ teamMembers.linkedInURL ? (
+										<a href={teamMembers.linkedInURL}><img className="linkedinIcon" src={linkedinIco}></img></a>
+									):
+										(<span style={{"display":"none"}} />)
+									}
 
-								{ teamMembers.githubURL ? (
-									<a href={teamMembers.githubURL}><img className="githubIcon" src={githubIco}></img></a>
-								):  
-									(<span style={{"display":"none"}} />)
-								}
+									{ teamMembers.githubURL ? (
+										<a href={teamMembers.githubURL}><img className="githubIcon" src={githubIco}></img></a>
+									):  
+										(<span style={{"display":"none"}} />)
+									}
 
-								{ teamMembers.instagramURL ? (
-									<a href={teamMembers.instagramURL}><img className="instagramIcon" src={instagramIco}></img></a>
-								) : 
-									(<span style={{"display":"none"}} />)
-								}
+									{ teamMembers.instagramURL ? (
+										<a href={teamMembers.instagramURL}><img className="instagramIcon" src={instagramIco}></img></a>
+									) : 
+										(<span style={{"display":"none"}} />)
+									}
 
+								</div>
 							</div>
-						</div>
+
+							{/* Versão para dispositivos móveis */}
+							<div className="memberList">
+								<div className="memberListAvatar">
+									<img src={teamMembers.avatar.url}></img>
+								</div>
+
+								<div className="memberListInfoContainer">
+									<h3>{teamMembers.name}</h3>
+									<div className="memberListInfo">
+										<div>
+											<p>{teamMembers.role}</p>
+										</div>
+
+										<div className="memberListSocialMedia">
+											{/* Somente exibe as redes sociais se elas estiverem cadastradas */}
+											{ teamMembers.linkedInURL ? (
+												<a href={teamMembers.linkedInURL}><img className="linkedinIcon" src={linkedinAltIco}></img></a>
+											):
+												(<span style={{"display":"none"}} />)
+											}
+
+											{ teamMembers.githubURL ? (
+												<a href={teamMembers.githubURL}><img className="githubIcon" src={githubAltIco}></img></a>
+											):  
+												(<span style={{"display":"none"}} />)
+											}
+
+											{ teamMembers.instagramURL ? (
+												<a href={teamMembers.instagramURL}><img className="instagramIcon" src={instagramAltIco}></img></a>
+											) : 
+												(<span style={{"display":"none"}} />)
+											}
+										</div>
+									</div>
+								</div>
+							</div>
+						</>
 					);
 				})}
 			</div>

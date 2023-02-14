@@ -35,6 +35,7 @@
 
 .footerBorder {
     width: 100%;
+
     position: relative;
     margin-bottom: -580px;
     -webkit-user-drag: none;  
