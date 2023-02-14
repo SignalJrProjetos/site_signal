@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import imagemSolucoes from "../../assets/svg/img.solutionsSolucoesTI.svg";
 import imagemIdentidadeVisual from "../../assets/svg/img.solutionsIdVisual.svg";
-import imagemManutencao from "../../assets/svg/img.solutionsManutencao.svg";
+import imagemConsultoria from "../../assets/svg/img.solutionsConsultoria.svg";
 import solucoesMobile from "../../assets/svg/icon.solutionsSolucoesTI.svg";
 import identidadeVisualMobile from "../../assets/svg/icon.solutionsIdVisual.svg";
-import manutencaoMobile from "../../assets/svg/icon.solutionsManutencao.svg";
+import consultoriaMobile from "../../assets/svg/icon.solutionsConsultoria.svg";
 
 import "./solutions.css";
 
@@ -16,27 +16,27 @@ export const Solutions = () => {
 	const [services, setServices] = useState<string>("Soluções");
 	const [buttonSolucoes, setButtonSolucoes] = useState<boolean>(true);
 	const [buttonIdentidade, setButtonIdentidade] = useState<boolean>(false);
-	const [buttonManutencao, setButtonManutencao] = useState<boolean>(false);
+	const [buttonconsultoria, setButtonconsultoria] = useState<boolean>(false);
 
 	function activeButton(button: string) {	
 		switch (button) {
 		case "Soluções":
 			setButtonSolucoes(true);
 			setButtonIdentidade(false);
-			setButtonManutencao(false);
+			setButtonconsultoria(false);
 			setServices("Soluções");
 			break;
 		case "Identidade":
 			setButtonIdentidade(true);
 			setButtonSolucoes(false);
-			setButtonManutencao(false);
+			setButtonconsultoria(false);
 			setServices("Identidade");
 			break;
-		case "Manutenção":
-			setButtonManutencao(true);
+		case "Consultoria":
+			setButtonconsultoria(true);
 			setButtonIdentidade(false);
 			setButtonSolucoes(false);
-			setServices("Manutenção");
+			setServices("Consultoria");
 			break;
 		}
 	}
@@ -50,29 +50,29 @@ export const Solutions = () => {
 						<div className="solutionsTitle">
 							<h1>Identidade Visual</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						<p>De uma cara nova para sua Marca com nosso serviço de identidade Visual, partindo da Criação do logotipo da marca, 
+							versões adaptadas e aplicações, desenvolvidos com o que seu negócio quer mostrar ao mundo.
 						</p>
 						<br/>
-						<button className="buttonPurple2">Saiba mais</button>
+						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
 					</div>
 				</>
 			);
 		}
     
-		if(services == "Manutenção") {
+		if(services == "Consultoria") {
 			return (
 				<>
-					<img src={imagemManutencao} alt="" />
+					<img src={imagemConsultoria} alt="" />
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
-							<h1>Manutenção</h1>
+							<h1>Consultoria em TI</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						<p>Partindo de uma etapa de levantamento de requisitos, elaboramos e desenvolvemos softwares personalizados 
+							para seu negócio evoluir, incluindo aplicações web, desktop e apps.
 						</p>
 						<br/>
-						<button className="buttonPurple2">Saiba mais</button>
+						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
 					</div>
 				</>
 			);
@@ -84,13 +84,13 @@ export const Solutions = () => {
 					<img src={imagemSolucoes} alt="" />
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
-							<h1>Soluções em TI</h1>
+							<h1>Desenvolvimento de Site</h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut erat sed nisi euismod suscipit. Suspendisse diam magna, lobortis ac justo vel, auctor dictum magna.
+						<p>Consiga mais clientes através de um website moderno, organizado e intuitivo, todo responsivo, com alto desempenho e 
+							otimizado para mecanismos de busca, desenvolvido com as práticas mais modernas de tecnologia.
 						</p>
 						<br/>
-						<button className="buttonPurple2">Saiba mais</button>
+						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
 					</div>
 				</>
 			);
@@ -108,7 +108,10 @@ export const Solutions = () => {
 					<img src={solucoesMobile} alt=""/>
 					<img src={imagemSolucoes} />
 					<div className="solutionsTitleMobile"><h1>Soluções em TI</h1></div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
+					<p>
+						Consiga mais clientes através de um website moderno, organizado e intuitivo, todo responsivo, com alto desempenho e 
+						otimizado para mecanismos de busca, desenvolvido com as práticas mais modernas de tecnologia.
+					</p>
 				</div>
 
 			
@@ -116,14 +119,20 @@ export const Solutions = () => {
 					<img src={identidadeVisualMobile} alt=""/>
 					<img src={imagemIdentidadeVisual} />
 					<div className="solutionsTitleMobile"><h1>Identidade Visual</h1></div>
-					<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
+					<p >
+						De uma cara nova para sua Marca com nosso serviço de identidade Visual, partindo da Criação do logotipo da marca, 
+						versões adaptadas e aplicações, desenvolvidos com o que seu negócio quer mostrar ao mundo.
+					</p>
 				</div>
 
-				<div id="solutionsManutencaoMobile" className="solutionsCardMobile">
-					<img src={manutencaoMobile} alt=""/>
-					<img src={imagemManutencao} />
-					<div className="solutionsTitleMobile"><h1>Manutenção</h1></div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt accumsan dui id condimentum. Morbi tempus velit ac erat blandit, et ullamcorper massa consectetur.</p>
+				<div id="solutionsConsultoriaMobile" className="solutionsCardMobile">
+					<img src={consultoriaMobile} alt=""/>
+					<img src={imagemConsultoria} />
+					<div className="solutionsTitleMobile"><h1>Consultoria</h1></div>
+					<p>
+						Partindo de uma etapa de levantamento de requisitos, elaboramos e desenvolvemos softwares personalizados para seu negócio 
+						evoluir, incluindo aplicações web, desktop e apps.
+					</p>
 				</div>
 
 			</div>
@@ -133,7 +142,7 @@ export const Solutions = () => {
 					style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
 					id="solutionsButtonClicked"
 					onClick={() => activeButton("Soluções")}>
-					Soluções em TI
+					Criação de Sites
 				</button>
 				<button
 					style={{backgroundColor: buttonIdentidade ? "#8700A9" : "transparent", border: buttonIdentidade ? "none" : "#610C7D 2px solid", color: buttonIdentidade ? "white" : "black"}}
@@ -142,10 +151,10 @@ export const Solutions = () => {
 					Identidade Visual
 				</button>
 				<button
-					style={{backgroundColor: buttonManutencao ? "#8700A9" : "transparent", border: buttonManutencao ? "none" : "#610C7D 2px solid", color: buttonManutencao ? "white" : "black"}}
+					style={{backgroundColor: buttonconsultoria ? "#8700A9" : "transparent", border: buttonconsultoria ? "none" : "#610C7D 2px solid", color: buttonconsultoria ? "white" : "black"}}
 					id="solutionsButtonClicked"
-					onClick={() => activeButton("Manutenção")}>
-					Manutenção
+					onClick={() => activeButton("Consultoria")}>
+					Consultoria em TI
 				</button>
 			</div>                
 			<div className="solutionsChangeContent">

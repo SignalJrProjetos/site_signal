@@ -1,14 +1,75 @@
 .aboutUsContainer {
-    position: relative;
     display: flex;
     text-align: left;
     color: #9C9C9C;
     margin-top: -15%;
-    padding: 128px 96px 0 96px;
+    padding: 5%;
     font-size: 24px;
     align-items: center;
 }
 
-.aboutUsContainer div:last-of-type {
-    margin: 0 128px;
+.aboutContent{  
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+
+.aboutUsTitleImg{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.aboutUsTitleImg img{
+    display: none;
+}
+
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+@media (max-width: 768px) {
+    .aboutUsTitleImg img{
+        display: flex;  
+        width: 100px;
+        margin-right: 4%; 
+    }
+    .aboutUsImg{
+       display: none;
+    }
+    .aboutContent h1{
+        margin-top: -100px;
+        margin-bottom: 5%;
+    }
+    .aboutContent p{
+        font-size: 20px;  
+    }    
+}
+
+@media (max-width: 480px) {
+    .aboutContent h1{
+        font-size: 30px;  
+    }    
+    .aboutContent h2{
+        font-size: 25px;  
+    }
+    .aboutUsTitleImg img{
+        width: 70px;
+    }
+    .aboutContent h1{
+        margin-top: -65px;
+    }
+}
+
+@media (max-width: 320px) {
+    .aboutUsTitleImg img{
+        display: none;
+    }
+    .aboutContent h1{
+        margin-top: 0px;
+    }
 }

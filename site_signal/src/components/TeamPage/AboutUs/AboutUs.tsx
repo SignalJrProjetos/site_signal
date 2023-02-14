@@ -5,8 +5,11 @@ import LogoSignal from "../../../assets/svg/logo.SignalSymbol.svg";
 export const AboutUs = () => {
 	return(
 		<div className="aboutUsContainer">
-			<div>
-				<h2 className="subtitle">Sobre Nós</h2>
+			<div className="aboutContent">
+				<div className="aboutUsTitleImg">
+					<h2 className="subtitle">Sobre Nós</h2> 
+					<img src={LogoSignal}/>
+				</div>
 				<h1 className="title">A Signal Jr.</h1>
 				<p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod aliquam felis, vel tincidunt turpis congue sed. 
@@ -18,10 +21,9 @@ export const AboutUs = () => {
                     viverra lorem. In hac habitasse platea dictumst.
 				</p>
 			</div>
-
-			<div>
-				<img src={LogoSignal} />
+			<div className="aboutUsImg">
+				<img src={LogoSignal}/>
 			</div>
 		</div>
-	);
+	);	
 };

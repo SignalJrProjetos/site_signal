@@ -5,7 +5,7 @@ import AboutMEJLogo from "../../../assets/svg/logo.brjunior-riojunior.svg";
 export const AboutMEJ = () => {
 	return (
 		<div className="aboutMEJContainer">
-			<div>
+			<div className="aboutMEJImg">
 				<img src={AboutMEJLogo} />
 			</div>
 
