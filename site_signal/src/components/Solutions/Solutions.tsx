@@ -45,7 +45,7 @@ export const Solutions = () => {
 		if(services == "Identidade") {
 			return (
 				<>
-					<img src={imagemIdentidadeVisual} alt="" />
+					<img alt="Imagem identidade visual" src={imagemIdentidadeVisual}/>
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
 							<h1>Identidade Visual</h1>
@@ -63,7 +63,7 @@ export const Solutions = () => {
 		if(services == "Consultoria") {
 			return (
 				<>
-					<img src={imagemConsultoria} alt="" />
+					<img alt="Imagem consultoria em TI" src={imagemConsultoria}/>
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
 							<h1>Consultoria em TI</h1>
@@ -81,7 +81,7 @@ export const Solutions = () => {
 		if(services == "Soluções") {
 			return (
 				<>
-					<img src={imagemSolucoes} alt="" />
+					<img alt="Imagem criação de sites" src={imagemSolucoes}/>
 					<div className="solutionsContainerText">
 						<div className="solutionsTitle">
 							<h1>Desenvolvimento de Site</h1>
@@ -105,9 +105,9 @@ export const Solutions = () => {
 			<div className="solutionsContainerMobile">
 
 				<div id="solutionsSolucoes" className="solutionsCardMobile">
-					<img src={solucoesMobile} alt=""/>
-					<img src={imagemSolucoes} />
-					<div className="solutionsTitleMobile"><h1>Soluções em TI</h1></div>
+					<img alt="Imagem mobile criação de sites" src={solucoesMobile}/>
+					<img alt="Imagem background criação de sites" src={imagemSolucoes} />
+					<div className="solutionsTitleMobile"><h1>Criação de sites</h1></div>
 					<p>
 						Consiga mais clientes através de um website moderno, organizado e intuitivo, todo responsivo, com alto desempenho e 
 						otimizado para mecanismos de busca, desenvolvido com as práticas mais modernas de tecnologia.
@@ -116,8 +116,8 @@ export const Solutions = () => {
 
 			
 				<div id="solutionsIdentidadeMobile" className="solutionsCardMobile">
-					<img src={identidadeVisualMobile} alt=""/>
-					<img src={imagemIdentidadeVisual} />
+					<img alt="Imagem mobile identidade visual" src={identidadeVisualMobile}/>
+					<img alt="Imagem background criação de sites" src={imagemIdentidadeVisual} />
 					<div className="solutionsTitleMobile"><h1>Identidade Visual</h1></div>
 					<p >
 						De uma cara nova para sua Marca com nosso serviço de identidade Visual, partindo da Criação do logotipo da marca, 
@@ -126,8 +126,8 @@ export const Solutions = () => {
 				</div>
 
 				<div id="solutionsConsultoriaMobile" className="solutionsCardMobile">
-					<img src={consultoriaMobile} alt=""/>
-					<img src={imagemConsultoria} />
+					<img alt="Imagem mobile consultoria em TI" src={consultoriaMobile}/>
+					<img alt="Imagem background consultoria em TI" src={imagemConsultoria} />
 					<div className="solutionsTitleMobile"><h1>Consultoria</h1></div>
 					<p>
 						Partindo de uma etapa de levantamento de requisitos, elaboramos e desenvolvemos softwares personalizados para seu negócio 

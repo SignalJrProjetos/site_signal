@@ -46,7 +46,7 @@
 
 /** Mobile **/
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 1023px) {
     .aboutImg {
         margin-right: 0px;
     }
@@ -83,7 +83,7 @@
     }
     
     #aboutMobileImg img{
-        width: 50%;
+        width: 36%;
     }
     
     #aboutDesktopImg{
@@ -97,7 +97,7 @@
 
 /** Laptops: Large Screen **/
 
-@media screen and (min-width: 769px) and (max-width: 1366px) {
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
     .aboutTextContainer h1 {
         font-size: 40px;
     }
@@ -111,7 +111,7 @@
     }
 
     #aboutDesktopImg img {
-        width: 300px;
+        width: 200px;
     }
     
 }

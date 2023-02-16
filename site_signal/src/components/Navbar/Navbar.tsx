@@ -14,7 +14,7 @@ export const Navbar = () => {
 	return (
 		<nav role="navigation" className="navbarContainer">
 			<>
-				<a href=""><img id="navbarLogo" src={logo}/></a>
+				<a href=""><img alt="Logo SignalJR" id="navbarLogo" src={logo}/></a>
 			</>
 			<div id="navbarMenu" style={{"display": "flex", "alignItems": "center"}}> 
 				<a href={process.env.PUBLIC_URL + "/developing"} >Serviços</a>
@@ -28,17 +28,17 @@ export const Navbar = () => {
 				<span/>
 				<span/>
 				<div id="menu">
-					<img id="navLogoMobile" src={logoMobile} />
+					<img alt="Imagem para abrir o menu mobile" id="navLogoMobile" src={logoMobile} />
 					<ul>
-						<li><a href=""> <img src={homeIco}/> Início <img src={arrowIco}/> </a></li>
-						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img src={servicesIco}/> Serviços <img src={arrowIco}/> </a></li>
-						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img src={teamIco}/> Equipe <img src={arrowIco}/></a></li>
+						<li><a href=""> <img alt="Icone inicio" src={homeIco}/> Início <img alt="Icone seta" src={arrowIco}/> </a></li>
+						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img alt="Icone serviços" src={servicesIco}/> Serviços <img alt="Icone seta" src={arrowIco}/> </a></li>
+						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img alt="Icone equipe" src={teamIco}/> Equipe <img alt="Icone seta" src={arrowIco}/></a></li>
 					</ul>
 					<h3>Vamos Conversar!</h3>
 					<div className="socialMedia">
-						<a href="https://www.facebook.com/Signal.Jr.ufrrj"><img src={facebookIco}/></a>
-						<a href="https://www.instagram.com/signal_jr/"><img src={instagramIco}/></a>
-						<a href="https://www.linkedin.com/company/signal-jr/mycompany/"><img src={linkedinIco}/></a>
+						<a href="https://www.facebook.com/Signal.Jr.ufrrj"><img alt="Icone facebook" src={facebookIco}/></a>
+						<a href="https://www.instagram.com/signal_jr/"><img alt="Icone instagram" src={instagramIco}/></a>
+						<a href="https://www.linkedin.com/company/signal-jr/mycompany/"><img alt="Icone linkedin" src={linkedinIco}/></a>
 					</div>
 				</div>
 			</div>

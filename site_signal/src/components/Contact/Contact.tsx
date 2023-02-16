@@ -66,7 +66,7 @@ export const Contact = () => {
 	return (
 		<div id="contactContainer" className="contactContainer">
 			{/* <div className="contactContainer"></div> */}
-			<img id="contactImg" src={imagemContact}/>
+			<img alt="Imagem ilustrativa de contato com o cliente" id="contactImg" src={imagemContact}/>
 			<div className="contactForm">
 				<h1>Contato</h1>
 				<p>Dúvidas? Propostas? Mande sua mensagem e em breve retornamos.</p>

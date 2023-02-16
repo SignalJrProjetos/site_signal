@@ -17,14 +17,14 @@ export const Partners = () => {
            
 			<div className="partnersLogo">
 				<div>
-					<a href="https://portal.ufrrj.br/"><img id="ufrrjMark" src={UFRRJ} alt=""/></a>
-					<a href="https://brasiljunior.org.br/"><img id="brasilJrMark" src={Brasil} alt=""/></a>
-					<a href="https://riojunior.com.br/"><img id="rioJrMark" src={Rio} alt=""/></a>
-					<a href="https://www.totvs.com/"><img id="totvsMark" src={TOTVS} alt=""/></a>
+					<a href="https://portal.ufrrj.br/"><img alt="Logo UFRRJ" id="ufrrjMark" src={UFRRJ}/></a>
+					<a href="https://brasiljunior.org.br/"><img alt="Logo brasil junior" id="brasilJrMark" src={Brasil}/></a>
+					<a href="https://riojunior.com.br/"><img alt="Logo rio junior" id="rioJrMark" src={Rio}/></a>
+					<a href="https://www.totvs.com/"><img alt="Logo TOTVS" id="totvsMark" src={TOTVS}/></a>
 				</div>
 				<div>
-					<a href="https://empower.vision/"><img id="empowerMark" src={Empower} alt=""/></a>
-					<a href="https://carreiras.americanas.com/"><img id="americanasMark" src={Americanas} alt=""/></a>
+					<a href="https://empower.vision/"><img alt="Logo empower" id="empowerMark" src={Empower}/></a>
+					<a href="https://carreiras.americanas.com/"><img alt="Logo americanas" id="americanasMark" src={Americanas}/></a>
 				</div>
 			</div>
 		</div>	
