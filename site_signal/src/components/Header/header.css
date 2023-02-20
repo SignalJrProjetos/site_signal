@@ -5,22 +5,23 @@
     display: flex;
 }
 
-.hdrTextContainer h1 {
-    color: white;
-    font-family: "Scada";
-    font-size: 72px; 
-    font-weight: bold;
+.hdrTextContainer {
     margin: 0 10% 0 10%;
-    padding-top: 108px;
+    color: white;
     text-align: center;
 }
 
+.hdrTextContainer h1 {
+    font-family: "Scada";
+    font-size: 72px; 
+    font-weight: bold;
+    padding-top: 108px;
+}
+
 .hdrTextContainer p {
-    margin: 32px 10% 0 10%;
-    color: white;
+    margin-top: 32px;
     font-family: "Saira";
     font-size: 28px;
-    text-align: center;
 }
 
 .hdrSocialMediaContainer {
@@ -49,4 +50,79 @@
     -webkit-user-select: none;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-}   
+}  
+
+/** Mobile **/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .hdrContainer {
+        height: 352px;
+    }
+
+    .hdrTextContainer {
+        margin: 0 5%;
+    }
+
+    .hdrTextContainer h1 {
+        text-align: left;
+        padding-top: 24px;
+        font-size: 28px;
+    }
+
+    .hdrTextContainer p {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .hdrSocialMediaContainer {
+        display: none;
+    }
+}
+
+/** Tablets **/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .hdrContainer {
+        height: 640px;
+    }
+
+    .hdrTextContainer h1 {
+        text-align: left;
+        padding-top: 24px;
+        font-size: 64px;
+    }
+
+    .hdrTextContainer p {
+        text-align: left;
+        font-size: 24px;
+    }
+
+    .hdrSocialMediaContainer {
+        display: none;
+    }
+
+}
+
+/** Laptops **/
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+    .hdrContainer {
+        height: 720px;
+    }
+
+    .hdrTextContainer {
+        margin: 0 5%;
+    }
+
+    .hdrTextContainer h1 {
+        font-size: 64px;
+    }
+
+    .hdrTextContainer p {
+        font-size: 24px;
+    }
+
+    .hdrSocialMediaContainer {
+        padding-top: 5%;
+    }
+}
