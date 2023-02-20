@@ -1,17 +1,16 @@
 import React from "react";
-import "./about-mej.css";
-import AboutMEJLogo from "../../assets/svg/logo.brjunior-riojunior.svg";
+import "./about-us.css";
+import LogoSignal from "../../../assets/svg/logo.SignalSymbol.svg";
 
-export const AboutMEJ = () => {
-	return (
-		<div className="aboutMEJContainer">
-			<div>
-				<img src={AboutMEJLogo} />
-			</div>
-
-			<div>
-				<h2 className="subtitle">Sobre o MEJ</h2>
-				<h1 className="title">Movimento Empresa Júnior</h1>
+export const AboutUs = () => {
+	return(
+		<div className="aboutUsContainer">
+			<div className="aboutContent">
+				<div className="aboutUsTitleImg">
+					<h2 className="subtitle">Sobre Nós</h2> 
+					<img src={LogoSignal}/>
+				</div>
+				<h1 className="title">A Signal Jr.</h1>
 				<p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod aliquam felis, vel tincidunt turpis congue sed. 
                     Vestibulum vel mauris ligula. Maecenas lobortis aliquet velit nec semper. Ut pharetra sem ex, non malesuada tellus 
@@ -22,7 +21,9 @@ export const AboutMEJ = () => {
                     viverra lorem. In hac habitasse platea dictumst.
 				</p>
 			</div>
+			<div className="aboutUsImg">
+				<img src={LogoSignal}/>
+			</div>
 		</div>
-
-	);
+	);	
 };

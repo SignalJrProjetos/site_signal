@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/global.css";
 import "./footer.css";
 import Logo from "../../assets/imgs/logo.SignalCompactaBranca.png";
 import LocationIcon from "../../assets/svg/icon.location.svg";
@@ -29,16 +28,16 @@ export const Footer = () => {
 						<h1>Vamos Conversar</h1>
 						<div>
 							<img src={LocationIcon} />
-							<p>UFRRJ, Km 07, Zona Rural, BR-465, Seropédica - RJ</p>
+							<p>UFRRJ, Seropédica - RJ</p>
 						</div>
 						<div>
 							<img src={EmailIcon} />
 							<a href="mailto:marketing@signaljr.com.br">marketing@signaljr.com.br</a>
 						</div>
 						<div>
-							<a href=""><img src={FacebookIcon}/></a>
-							<a href=""><img src={InstagramIcon}/></a>
-							<a href=""><img src={LinkedInIcon}/></a>
+							<a href="https://www.facebook.com/Signal.Jr.ufrrj"><img src={FacebookIcon}/></a>
+							<a href="https://www.instagram.com/signal_jr/"><img src={InstagramIcon}/></a>
+							<a href="https://www.linkedin.com/company/signal-jr/mycompany/"><img src={LinkedInIcon}/></a>
 						</div>
 					</div>
 				</div>
