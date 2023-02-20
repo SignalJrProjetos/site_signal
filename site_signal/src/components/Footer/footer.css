@@ -14,10 +14,14 @@
     align-items: center;
     justify-content: center;
 }
+.footerInfo a:hover {
+    color: white;
+    opacity: 0.8;
+}
 
 .footerLogo {
     width: 352px;
-    margin-right: 96px;
+    margin-right: 296px;
     position: relative;
     top: -48px;
 }
@@ -31,6 +35,7 @@
 
 .footerBorder {
     width: 100%;
+
     position: relative;
     margin-bottom: -580px;
     -webkit-user-drag: none;  
@@ -44,6 +49,7 @@
 .footerPages {
     margin-right: 144px;
     z-index: 1;
+    display: none;
 }
 
 .footerPages ul, li {
@@ -103,7 +109,7 @@
         display: none;
     }
 
-    .footerContact p, a {
+    .footerContact p, .footerContact a {
         font-size: 16px;
         text-align: left;
     }
@@ -167,9 +173,23 @@
 
 /* Responsividade: Ultrawide */
 
-@media screen and (min-width: 2400px) {
+@media screen and (min-width: 1920px) and (max-width: 2100px) {
 
     .footerBorder {
-        margin-bottom: -580px;
+        margin-bottom: -610px;
+    }
+}
+
+@media screen and (min-width: 2101px) and (max-width: 2300px) {
+
+    .footerBorder {
+        margin-bottom: -650px;
+    }
+}
+
+@media screen and (min-width: 2301px) and (max-width: 2600px) {
+
+    .footerBorder {
+        margin-bottom: -690px;
     }
 }

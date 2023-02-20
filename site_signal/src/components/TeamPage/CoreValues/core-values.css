@@ -1,0 +1,30 @@
+.sectionBorder img {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    margin-top: -20%;
+    margin-bottom: -25%;
+    -webkit-user-drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+.coreValuesContainer {
+    position: relative;
+    background-color: #F6F6F6;
+    background-image: url("../../../assets/svg/img.core-values-bg.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.valueCardsContainer {
+    display: flex;
+    margin-top: 32px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+    justify-content: center;
+}
