@@ -10,15 +10,9 @@ export const AboutUs = () => {
 					<h2 className="subtitle">Sobre Nós</h2> 
 					<img src={LogoSignal}/>
 				</div>
-				<h1 className="title">A Signal Jr.</h1>
+				<h1 className="title">Conheça a Signal Júnior</h1>
 				<p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod aliquam felis, vel tincidunt turpis congue sed. 
-                    Vestibulum vel mauris ligula. Maecenas lobortis aliquet velit nec semper. Ut pharetra sem ex, non malesuada tellus 
-                    efficitur sit amet. Vivamus congue elit vel sem lobortis ultricies. Vivamus commodo mattis urna in rutrum. Suspendisse 
-                    luctus sem vitae ipsum vehicula feugiat. Maecenas id leo at nisi ultrices pharetra a vitae dui. Aliquam in iaculis nisl. 
-                    Integer venenatis rutrum orci, in venenatis nunc. Mauris laoreet aliquam magna, eu hendrerit ipsum facilisis pulvinar. 
-                    Aliquam porttitor orci auctor risus auctor, eget lobortis nisi gravida. Sed tortor tortor, faucibus ac mauris et, pulvinar 
-                    viverra lorem. In hac habitasse platea dictumst.
+				Somos uma equipe de estudantes apaixonados pela tecnologia da informação e o impacto que ela causa no mundo atualmente, dedicados a fornecer soluções inovadoras que tornam a gestão de sua empresa mais eficiente e efetiva. Nós acreditamos que a tecnologia pode ser a chave para o sucesso de seu negócio, e estamos comprometidos em oferecer o melhor suporte e assistência possíveis para garantir o sucesso de nossos clientes. Conheça nossa equipe, nossos serviços e veja como podemos ajudá-lo a alcançar seus objetivos empresariais. Juntos, vamos dar o próximo passo!
 				</p>
 			</div>
 			<div className="aboutUsImg">

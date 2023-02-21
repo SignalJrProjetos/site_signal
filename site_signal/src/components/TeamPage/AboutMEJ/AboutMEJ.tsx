@@ -11,15 +11,11 @@ export const AboutMEJ = () => {
 
 			<div>
 				<h2 className="subtitle">Sobre o MEJ</h2>
-				<h1 className="title">Movimento Empresa Júnior</h1>
+				<h1 className="title">Desenvolvendo Líderes do Futuro: Conheça o Movimento Empresa Júnior</h1>
 				<p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod aliquam felis, vel tincidunt turpis congue sed. 
-                    Vestibulum vel mauris ligula. Maecenas lobortis aliquet velit nec semper. Ut pharetra sem ex, non malesuada tellus 
-                    efficitur sit amet. Vivamus congue elit vel sem lobortis ultricies. Vivamus commodo mattis urna in rutrum. Suspendisse 
-                    luctus sem vitae ipsum vehicula feugiat. Maecenas id leo at nisi ultrices pharetra a vitae dui. Aliquam in iaculis nisl. 
-                    Integer venenatis rutrum orci, in venenatis nunc. Mauris laoreet aliquam magna, eu hendrerit ipsum facilisis pulvinar. 
-                    Aliquam porttitor orci auctor risus auctor, eget lobortis nisi gravida. Sed tortor tortor, faucibus ac mauris et, pulvinar 
-                    viverra lorem. In hac habitasse platea dictumst.
+					O Movimento Empresa Júnior é uma iniciativa de jovens universitários que buscam desenvolver habilidades empreendedoras e empresariais em um ambiente seguro e acolhedor. Com o objetivo de oferecer aos estudantes a oportunidade de colocar em prática o que aprendem em sala de aula, o Movimento Empresa Júnior permite que nós, estudantes de graduação, formemos uma empresa e desenvolvamos projetos reais, tendo a chance de experimentar a gestão de um negócio de forma prática e segura.
+					Além de desenvolver habilidades empreendedoras, o Movimento Empresa Júnior também permite que os jovens ampliem seu network, construam relacionamentos com outros estudantes e profissionais do mercado e adquiram conhecimentos valiosos sobre o funcionamento de uma empresa.
+					O Movimento Empresa Júnior é uma iniciativa reconhecida e apoiada por universidades, empresas e instituições de ensino de todo o país, e tem como objetivo formar jovens líderes capacitados e prontos para enfrentar os desafios do mercado de trabalho.
 				</p>
 			</div>
 		</div>

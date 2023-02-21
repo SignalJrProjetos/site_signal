@@ -14,21 +14,21 @@ export const Status = () => {
 				<div className="statusRow">
 					<div className="productsContainer">
 						<img src={productsIco}/>
-						<p><span>50</span> <br /> Produtos Lançados</p>
+						<p><span>X</span> <br /> Produtos Lançados</p>
 					</div>
 					<div className="satisfactionContainer">
 						<img src={satisfactionIco}/>
-						<p><span>50</span> <br />Clientes Satisfeitos</p>
+						<p><span>30</span> <br />Clientes Satisfeitos</p>
 					</div>
 				</div>
 				<div className="statusRow">
 					<div className="teamContainer">
 						<img src={teamIco}/>
-						<p><span>20</span> <br />Membros</p>
+						<p><span>150</span> <br />Membros</p>
 					</div>
 					<div className="evolutionContainer" id="evolutionContainer">
 						<img src={evolutionIco}/>
-						<p><span>Nv. X</span> <br />Empresa Inovadora</p>
+						<p><span>2022</span> <br />EJ Inovadora</p>
 					</div>
 				</div>
 			</div>

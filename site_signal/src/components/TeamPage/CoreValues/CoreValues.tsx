@@ -63,7 +63,7 @@ export const CoreValues = () => {
 
 	return (
 		<div className="coreValuesContainer">
-			<h2 className="subtitle">Nossos Valores</h2>
+			<h2 className="subtitle">Valores que Guiam a Signal Jr</h2>
 			<h1 className="title">Acreditamos que é através destes valores que podemos oferecer soluções de qualidade aos nossos clientes e contribuir para o crescimento e desenvolvimento dos membros que passam por aqui</h1>
 
 			{/*Versão para Desktop */}
@@ -90,13 +90,13 @@ export const CoreValues = () => {
 					valueIcon="" 
 					//valueImage = "" 
 					valueName = "Level Up"
-					valueDesc = "O crescimento pessoal e profissional de nossos membros é fundamental para o sucesso da empresa. Por isso, valorizamos a evolução constante de cada um, oferecemos oportunidades para que possam desenvolver novas habilidades e aprender cada vez mais."
+					valueDesc = "O crescimento pessoal e profissional de nossos membros é fundamental para o sucesso da empresa. Por isso, valorizamos a evolução constante de cada um, oferecemos oportunidades para que possam desenvolver novas habilidades e aprender cada vez mais. "
 				/>
 				<ValueCard
 					valueIcon=""
 					//valueImage = ""  
 					valueName = "Conexão"
-					valueDesc = "O crescimento pessoal e profissional de nossos membros é fundamental para o sucesso da empresa. Por isso, valorizamos a evolução constante de cada um, oferecemos oportunidades para que possam desenvolver novas habilidades e aprender cada vez mais." 
+					valueDesc = "A conexão e o trabalho em equipe são elementos chave entre nossos membros e estimulamos a colaboração e o compartilhamento de ideias e importante para a construção de relacionamentos fortes com a garantia de uma comunicação clara e eficiente." 
 				/>
 			</div>
 
