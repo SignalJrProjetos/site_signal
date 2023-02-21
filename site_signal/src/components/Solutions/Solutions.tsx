@@ -98,8 +98,8 @@ export const Solutions = () => {
 	}
 	return (
 		<div className="solutionsContainer">
-			<h2 className="subtitle">O que nós fazemos</h2>
-			<h1 className="title">Nossas soluções para o seu negócio</h1>
+			<h2 className="subtitle" style={{"textAlign":"center"}}>O que nós fazemos</h2>
+			<h1 className="title" style={{"textAlign":"center"}}>Nossas soluções para o seu negócio</h1>
 			
 			{/* Container para responsividade  */}
 			<div className="solutionsContainerMobile">

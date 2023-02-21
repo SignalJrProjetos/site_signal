@@ -18,8 +18,8 @@ export const Partners = () => {
 			<div className="partnersLogo">
 				<div>
 					<a href="https://portal.ufrrj.br/"><img alt="Logo UFRRJ" id="ufrrjMark" src={UFRRJ}/></a>
-					<a href="https://brasiljunior.org.br/"><img alt="Logo brasil junior" id="brasilJrMark" src={Brasil}/></a>
-					<a href="https://riojunior.com.br/"><img alt="Logo rio junior" id="rioJrMark" src={Rio}/></a>
+					<a href="https://brasiljunior.org.br/"><img alt="Logo Brasil Júnior" id="brasilJrMark" src={Brasil}/></a>
+					<a href="https://riojunior.com.br/"><img alt="Logo Rio Júnior" id="rioJrMark" src={Rio}/></a>
 					<a href="https://www.totvs.com/"><img alt="Logo TOTVS" id="totvsMark" src={TOTVS}/></a>
 				</div>
 				<div>

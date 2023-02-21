@@ -27,17 +27,17 @@ export const Footer = () => {
 					<div className="footerContact">
 						<h1>Vamos Conversar</h1>
 						<div>
-							<img alt="Icone localização" src={LocationIcon} />
+							<img alt="Icone Localização" src={LocationIcon} />
 							<p>UFRRJ, Seropédica - RJ</p>
 						</div>
 						<div>
-							<img alt="Icone email" src={EmailIcon} />
+							<img alt="Icone E-mail" src={EmailIcon} />
 							<a href="mailto:marketing@signaljr.com.br">marketing@signaljr.com.br</a>
 						</div>
 						<div>
-							<a href="https://www.facebook.com/Signal.Jr.ufrrj"><img alt="Icone facebook" src={FacebookIcon}/></a>
-							<a href="https://www.instagram.com/signal_jr/"><img alt="Icone instagram" src={InstagramIcon}/></a>
-							<a href="https://www.linkedin.com/company/signal-jr/mycompany/"><img alt="Icone linkedin" src={LinkedInIcon}/></a>
+							<a href="https://www.facebook.com/Signal.Jr.ufrrj"><img alt="Icone Facebook" src={FacebookIcon}/></a>
+							<a href="https://www.instagram.com/signal_jr/"><img alt="Icone Instagram" src={InstagramIcon}/></a>
+							<a href="https://www.linkedin.com/company/signal-jr/mycompany/"><img alt="Icone LinkedIn" src={LinkedInIcon}/></a>
 						</div>
 					</div>
 				</div>
