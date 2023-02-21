@@ -27,3 +27,4 @@ export const ValueCard = (props: {valueIcon:string; valueName: string; valueDesc
 		</>
 	);
 };
+
