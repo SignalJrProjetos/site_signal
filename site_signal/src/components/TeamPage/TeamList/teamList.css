@@ -159,6 +159,7 @@
 
     .teamListContainer h1 {
         margin-bottom: 16px;
+        font-size: 18px;
     }
 
     .listContainer {
@@ -198,7 +199,7 @@
     }
 
     .teamListContainer h1 {
-        font-size: 40px;
+        font-size: 25px;
     }
 
     .memberListAvatar img {
@@ -231,7 +232,13 @@
 
 /** Responsividade: Laptops **/
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+    .teamListContainer h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1061px) and (max-width: 1200px) {
 
     .memberCard {
         width: 172px;

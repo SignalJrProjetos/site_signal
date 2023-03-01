@@ -3,10 +3,15 @@
     text-align: left;
     color: #9C9C9C;
     margin-top: -15%;
-    padding: 5%;
+    padding: 5% 5% 5% 0%;
     font-size: 24px;
     align-items: center;
 }
+
+.aboutUsContainer p{
+    padding-left: 5%;
+}
+
 
 .aboutContent{  
     display: flex;
@@ -35,41 +40,46 @@
 @media (max-width: 768px) {
     .aboutUsTitleImg img{
         display: flex;  
-        width: 100px;
-        margin-right: 4%; 
+        width: 80px;
+        margin-right: 2%; 
     }
     .aboutUsImg{
        display: none;
     }
     .aboutContent h1{
-        margin-top: -100px;
+        margin-top: -90px;
         margin-bottom: 5%;
     }
     .aboutContent p{
+        margin-top: -18px;
         font-size: 20px;  
     }    
 }
 
-@media (max-width: 480px) {
+@media (max-width: 568px) {
     .aboutContent h1{
         font-size: 30px;  
+        margin-top: -65px;
     }    
     .aboutContent h2{
         font-size: 25px;  
     }
     .aboutUsTitleImg img{
-        width: 70px;
-    }
-    .aboutContent h1{
-        margin-top: -65px;
+        width: 60px;
     }
 }
 
-@media (max-width: 320px) {
-    .aboutUsTitleImg img{
-        display: none;
-    }
+@media (max-width: 475px) {
     .aboutContent h1{
-        margin-top: 0px;
+        font-size: 26px;
+        width: 95%;  
+    }    
+    .aboutContent h2{
+        margin-bottom: 70px;
+        font-size: 25px;  
+    }
+    .aboutUsTitleImg img{
+        margin-right: -2%;
+        width: 40px;
     }
 }
