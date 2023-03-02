@@ -54,7 +54,6 @@ export const TeamList = () => {
 				{data?.teamMembers.map(teamMembers => {
 					return(
 						<>
-							{console.log(teamMembers.avatar.url)}
 							<div className="memberCard" style={{"backgroundImage" : `url(${teamMembers.avatar.url})`}} key={teamMembers.id}>
 							
 								<div className="memberInfo">
