@@ -198,3 +198,9 @@
 /* Text Input */
 
 /*Modifique a partir daqui */
+
+
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
