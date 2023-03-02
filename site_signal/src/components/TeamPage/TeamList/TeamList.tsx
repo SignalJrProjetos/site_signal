@@ -45,17 +45,15 @@ export const TeamList = () => {
 
 	return (
 		<div className="teamListContainer" style={{"backgroundImage":`url(${teamBackground})`}}>
-			<h2 className="subtitle">Equipe</h2>
+			<h2 className="subtitle">Conheça  os impulsores do sucesso da Signal Jr</h2>
 			<h1 className="title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et eros consectetur, 
-                vestibulum elit sed, aliquet mi.
+			Cada um deles traz consigo habilidades únicas e valiosas, e juntos formamos uma equipe forte e capaz de superar desafios e alcançar grandes resultados.
 			</h1>
 
 			<div className="listContainer">
 				{data?.teamMembers.map(teamMembers => {
 					return(
 						<>
-							{console.log(teamMembers.avatar.url)}
 							<div className="memberCard" style={{"backgroundImage" : `url(${teamMembers.avatar.url})`}} key={teamMembers.id}>
 							
 								<div className="memberInfo">

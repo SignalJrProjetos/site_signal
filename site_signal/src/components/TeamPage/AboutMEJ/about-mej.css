@@ -3,11 +3,74 @@
     display: flex;
     text-align: right;
     color: #9C9C9C;
-    padding: 0 96px 96px 128px;
+    padding: 5% 5% 5% 0%;
     font-size: 24px;
     align-items: center;
 }
 
+.aboutMEJContainer p{
+    padding-left: 5%;
+}
+
 .aboutMEJContainer div:first-of-type {
     margin-right: 96px;
+}
+.aboutMEJImg img{
+    width: 380px;
+    margin-left: 25%;
+}
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+/* deixei o max-width como 1350px,ao invés de 1200px, pois o tamanho da imagem já atrapalha o texto a partir dessa rolução*/
+@media screen and (min-width: 1025px) and (max-width: 1350px){
+    .aboutMEJImg img{
+        width: 200px;    
+    }
+}
+
+@media (max-width: 1024px) {
+    .aboutMEJImg{
+        display: none;    
+    }
+    .aboutMEJContainer{
+        text-align: left;
+    }
+}
+
+@media (max-width: 769px) {
+    .aboutMEJImg{
+        display: none;    
+    }
+    .aboutMEJContainer{
+        text-align: left;
+    }
+    .aboutMEJContainer p{
+        font-size: 20px;  
+    }   
+    .aboutMEJContainer h1{
+        font-size: 30px;  
+    }
+    .aboutMEJContainer h2{
+        font-size: 25px;  
+    }      
+}
+
+@media (max-width: 430px) {
+    .aboutMEJContainer h1{
+        font-size: 25px;  
+    }
+    .aboutMEJContainer h2{
+        font-size: 23px;  
+    }      
+}
+
+@media (max-width: 360px) {
+    .aboutMEJContainer h1{
+        font-size: 21px;  
+    }      
 }

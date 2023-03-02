@@ -15,6 +15,16 @@
     margin-bottom: 48px;
 }
 
+.listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.listContainer::-webkit-scrollbar {
+    display: none;
+}
+
 /* Desktop */
 
 .memberCard {
@@ -24,9 +34,8 @@
     margin: 0 20px 40px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-self: flex-end;
     border-radius: 15px;
-    float: left;
     transition: transform 0.5s;
 }
 
@@ -135,12 +144,9 @@
     margin: 0px 10px 12px 10px;
 }
 
-.listContainer::-webkit-scrollbar {
-    display: none;
-}
+/* Responsividade */
 
-/* Responsividade: Mobile */
-
+/** Mobile **/
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
     .memberCard {
@@ -159,9 +165,11 @@
 
     .teamListContainer h1 {
         margin-bottom: 16px;
+        /* font-size: 18px; */
     }
 
     .listContainer {
+        display: block;
         height: 516px;
         overflow: auto;
     }
@@ -179,8 +187,7 @@
 
 }
 
-/** Responsividade: Tablets **/
-
+/** Tablets **/
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
     .memberCard {
@@ -197,9 +204,9 @@
         background-size: 0;
     }
 
-    .teamListContainer h1 {
-        font-size: 40px;
-    }
+    /* .teamListContainer h1 {
+        font-size: 25px;
+    } */
 
     .memberListAvatar img {
         width: 72px;
@@ -223,15 +230,21 @@
     }
 
     .listContainer {
+        display: block;
         height: 516px;
         overflow: auto;
     }
 
 }
 
-/** Responsividade: Laptops **/
+/** Laptops **/
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+    /* .teamListContainer h1 {
+        font-size: 30px;
+    } */
+}
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 1061px) and (max-width: 1366px) {
 
     .memberCard {
         width: 172px;
