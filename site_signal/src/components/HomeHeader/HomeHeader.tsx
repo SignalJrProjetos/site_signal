@@ -28,22 +28,22 @@ export const HomeHeader = () => {
 						</div>
 					</div>
 					<div>
-						<img id="headerImg" src={headerImg}/>
+						<img alt="Imagem ilustrativa banner" id="headerImg" src={headerImg}/>
 					</div>
 					<div className="headerSocialMediaContainer">
 						<p>SIGA-NOS</p>
 						<br></br>
-						<a style={{"marginLeft": "4px"}} href="https://www.facebook.com/Signal.Jr.ufrrj"><img src={facebookIco}/></a>
+						<a style={{"marginLeft": "4px"}} href="https://www.facebook.com/Signal.Jr.ufrrj"><img alt="Icone facebook" src={facebookIco}/></a>
 						<br></br>
 						<br></br>
-						<a style={{"marginLeft": "2px"}} href="https://www.instagram.com/signal_jr/"><img src={instagramIco}/></a>
+						<a style={{"marginLeft": "2px"}} href="https://www.instagram.com/signal_jr/"><img alt="Icone instagram" src={instagramIco}/></a>
 						<br></br>
 						<br></br>
-						<a style={{"marginLeft": "2px"}} href="https://www.linkedin.com/company/signal-jr/mycompany/"><img src={linkedinIco}/></a>
+						<a style={{"marginLeft": "2px"}} href="https://www.linkedin.com/company/signal-jr/mycompany/"><img alt="Icone instagram" src={linkedinIco}/></a>
 					</div>
 				</div>
 			</div>
-			<img className="headerBorder" src={border}/>
+			<img alt="Borda arredondada Cabeçalho" className="headerBorder" src={border}/>
 		</>
 	);
 };

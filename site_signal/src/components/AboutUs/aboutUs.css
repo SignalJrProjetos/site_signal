@@ -16,10 +16,12 @@
 .aboutTextContainer h2 {
     text-align: left;
     margin-top: 40px;
+    padding-left: 0px;
 }
 
 .aboutTextContainer h1 {
     text-align: left;
+    padding-left: 0px;
 }
 
 .aboutTextContainer p {
@@ -46,7 +48,13 @@
 
 /** Mobile **/
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+
+    .aboutTextContainer h1, .aboutTextContainer h2 {
+        padding-left: 0px;
+        text-align: center;
+    }
+
     .aboutImg {
         margin-right: 0px;
     }
@@ -67,23 +75,13 @@
         font-size: 20px;
     }
 
-    .aboutTextContainer h1 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .aboutTextContainer h2 {
-        font-size: 25px;
-        text-align: center;
-    }
-
     #aboutMobileImg{
         display: flex;
         justify-content: center;
     }
     
     #aboutMobileImg img{
-        width: 50%;
+        width: 36%;
     }
     
     #aboutDesktopImg{
@@ -97,13 +95,10 @@
 
 /** Laptops: Large Screen **/
 
-@media screen and (min-width: 769px) and (max-width: 1366px) {
-    .aboutTextContainer h1 {
-        font-size: 40px;
-    }
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
 
-    .aboutTextContainer h2 {
-        font-size: 30px;
+    .aboutTextContainer h1, .aboutTextContainer h2 {
+        padding-left: 0px;
     }
     
     .aboutTextContainer p {
@@ -111,7 +106,7 @@
     }
 
     #aboutDesktopImg img {
-        width: 300px;
+        width: 200px;
     }
     
 }

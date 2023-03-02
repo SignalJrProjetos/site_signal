@@ -82,6 +82,15 @@
     margin-right: 16px;
 }
 
+.footerContact img:hover {
+    transform: scale(1.3);
+    transition: transform 0.5s;
+}
+
+.footerContact a:hover{
+    opacity: 1;
+}
+
 #copyright {
     font-size: 18px;
     text-align: center;
@@ -169,6 +178,7 @@
     .footerBorder {
         margin-bottom: -560px;
     }
+
 }
 
 /* Responsividade: Ultrawide */

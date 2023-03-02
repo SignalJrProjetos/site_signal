@@ -10,7 +10,7 @@ export const AboutUs = () => {
 			<div className="aboutTextContainer">
 
 				<div id="aboutMobileImg">
-					<img className="aboutImg" src={aboutLogo}/>
+					<img alt="Logo SignalJr" className="aboutImg" src={aboutLogo}/>
 				</div>
 
 				<h2 className="subtitle">Somos a Signal Jr</h2>
@@ -25,7 +25,7 @@ export const AboutUs = () => {
 				<a className="buttonPurple2" href={process.env.PUBLIC_URL + "/developing"}>Saiba Mais</a>
 			</div>
 			<div id="aboutDesktopImg">
-				<img src={aboutLogo}/>
+				<img alt="Logo SignalJr" src={aboutLogo}/>
 			</div>
 		</div>
 	);

@@ -29,8 +29,8 @@ export const Home = () =>{
 			{/* Depoimentos */}
 			<div className="testimonialsContainer">
 				<div>
-					<h2 className="subtitle">Depoimentos</h2>
-					<h1 className="title">O que nossos clientes falam</h1>
+					<h2 className="subtitle" style={{"textAlign":"center"}}>Depoimentos</h2>
+					<h1 className="title" style={{"textAlign":"center"}}>O que nossos clientes falam</h1>
 				</div>
 
 				{/* Cada Carousel.Item corresponde a um componente */}
