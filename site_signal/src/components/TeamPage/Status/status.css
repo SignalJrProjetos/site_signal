@@ -18,7 +18,6 @@
 
 .statusNumbers {
     display: flex;
-    justify-content: center;
     align-content: center;
     border: 6px solid #8700A9;
     border-radius: 30px;
@@ -48,6 +47,8 @@
 
 .statusRow{
     display: flex;
+    width: 50%;
+    justify-content: space-around;
 }
 
 /* Correções de alinhamento */
@@ -77,7 +78,7 @@
         margin: 0 4%;
     }
     .statusNumbers img{
-        width: 80px;
+        width: 70px;
     }
     .statusNumbers span {
         font-size: 30px;

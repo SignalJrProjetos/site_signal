@@ -104,23 +104,23 @@ export const CoreValues = () => {
 			<div className="valueCardsContainerMobile">
 				<div className="valueCardsSelection">
 					<div>
-						<button onClick={() => activeValue("Protagonismo")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Protagonismo" ? "#8700A9" : "white"}} onClick={() => activeValue("Protagonismo")}><img src={icon}></img></button>
 						<p>Protagonismo</p>
 					</div>
 					<div>
-						<button onClick={() => activeValue("Querência")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Querência" ? "#8700A9" : "white"}} onClick={() => activeValue("Querência")}><img src={icon}></img></button>
 						<p>Querência</p>
 					</div>
 					<div>
-						<button onClick={() => activeValue("Resiliência")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Resiliência" ? "#8700A9" : "white"}} onClick={() => activeValue("Resiliência")}><img src={icon}></img></button>
 						<p>Resiliência</p>
 					</div>
 					<div>
-						<button onClick={() => activeValue("Level Up")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Level Up" ? "#8700A9" : "white"}} onClick={() => activeValue("Level Up")}><img src={icon}></img></button>
 						<p>Level Up</p>
 					</div>
 					<div>
-						<button onClick={() => activeValue("Conexão")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Conexão" ? "#8700A9" : "white"}} onClick={() => activeValue("Conexão")}><img src={icon}></img></button>
 						<p>Conexão</p>
 					</div>
 				</div>
