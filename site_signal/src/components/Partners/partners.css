@@ -1,0 +1,116 @@
+.partnersContainer {
+    position: relative;
+}
+
+.partnersContainer h1 {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.partnersLogo div {
+    text-align: center;
+}
+
+.partnersLogo img {
+    width: 180px;
+    margin-right: 72px;
+    margin-bottom: 32px;
+}
+
+#brasilJrMark {
+    width: 240px;
+}
+
+#totvsMark {
+    width: 360px;
+    margin-right: 0;
+}
+
+.partnersLogo div:last-child img {
+    width: 480px;
+}
+
+#americanasMark {
+    margin-right: 0;
+}
+
+/* Responsividade - Parceiros */
+
+/** Mobile **/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .partnersContainer {
+        margin-bottom: -204px;
+    }
+
+    .partnersLogo{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .partnersLogo img {
+        width: 56px;
+        margin-right: 32px;
+    }
+
+    #brasilJrMark {
+        width: 72px;
+    }
+
+    #totvsMark {
+        width: 92px;
+    }
+    
+    .partnersLogo div:last-child img {
+        width: 180px;
+    }
+
+}
+
+/** Tablets **/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .partnersContainer {
+        margin-bottom: -172px;
+    }
+
+    .partnersLogo img {
+        width: 124px;
+        margin-right: 32px;
+    }
+
+    #uffrjMark {
+        width: 96px;
+    }
+
+    #brasilJrMark {
+        width: 128px;
+    }
+
+    #rioJrMark {
+        width: 96px;
+    }
+
+    #totvsMark {
+        width: 140px;
+    }
+    
+    .partnersLogo div:last-child img {
+        width: 240px;
+    }
+    
+}
+
+/** Laptops **/
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+    .partnersContainer {
+        margin-bottom: -108px;
+    }
+    
+    .partnersLogo img {
+        width: 124px;
+        margin-right: 32px;
+    }
+
+}

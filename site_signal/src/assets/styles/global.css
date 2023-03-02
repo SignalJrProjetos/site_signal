@@ -7,12 +7,16 @@
     z-index: 1;
 }
 
+.App {
+    overflow-x: hidden;
+}
+
 .title {
     font-family:"Scada";
     font-size: 48px;
     font-weight: bold;
     color: #610C7D;
-    padding-bottom: 24px;
+    padding: 0 5% 24px 5%;
 }
 
 .subtitle {
@@ -20,6 +24,39 @@
     font-family:"Saira";
     font-size: 32px;
     font-weight: lighter;
+    padding: 0 5% 0 5%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 26px;
+    }
 }
 
 /* Estilização do container de particulas */
@@ -91,8 +128,14 @@
     font-size: 28px;
 }
 
+.buttonWhite img {
+    width: 20px;
+    margin-left: 4px;
+}
+
 .buttonWhite:hover {
     color: #8700A9;
+    fill: #8700A9;
     background-color: white;
 }
 
@@ -113,6 +156,51 @@
     }
 }
 
+/* Cards */
+
+.cardMobile {
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.4);
+    height: 336px;
+    background-color: white;
+    border-radius: 30px;
+    text-align: left;
+    margin: 32px 16px 40px 16px;
+    padding: 20px;
+    font-family: "Scada";
+    color: #707070;
+}
+
+.cardMobile h1 {
+    width: fit-content;
+    color: #610C7D;
+    border-bottom: #610C7D 7px solid;
+    margin: 20px 0;
+    font-weight: bolder;
+}
+
+.cardMobile p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.cardMobile img {
+    width: 56px;
+}
+
+.cardMobile img:last-of-type{
+    width: 50%;
+    position: absolute;
+    margin-left: 25%;
+    z-index: 0;
+    opacity: 0.2;
+}
+
 /* Text Input */
 
 /*Modifique a partir daqui */
+
+
+
+input[type=number] {
+    -moz-appearance:textfield;
+}

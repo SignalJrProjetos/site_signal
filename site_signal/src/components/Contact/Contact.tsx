@@ -3,6 +3,7 @@ import "../../assets/styles/global.css";
 import "./contact.css"; 
 import emailjs from "@emailjs/browser";
 import imagemContact from "../../assets/svg/img.contact.svg";
+import inputUserIco from "../../assets/svg/icon.input.user.svg";
 
 // Tipando o objeto messagem que será enviado para o email da signal
 interface Message{
@@ -45,7 +46,7 @@ export const Contact = () => {
 			};
 		
 			// Passamos 4 parametros no metodo send (service_id, template_id, parametros da mensagem que foi configurada no template, public_key)
-			emailjs.send("service_k6mztxj", "template_bgrfwqa", templateParms , "7uN9BAm-ze4ihfO32")
+			emailjs.send("service_4jw04wx", "template_bgrfwqa", templateParms , "7uN9BAm-ze4ihfO32")
 				.then((response) => {
 					alert("Email enviado");
 					console.log("Email enviado", response.status, response.text);
@@ -63,9 +64,9 @@ export const Contact = () => {
 	}
 	// Retornando os elementos do componente
 	return (
-		<div className="contactContainer">
+		<div id="contactContainer" className="contactContainer">
 			{/* <div className="contactContainer"></div> */}
-			<img id="contactImg" src={imagemContact}/>
+			<img alt="Imagem ilustrativa de contato com o cliente" id="contactImg" src={imagemContact}/>
 			<div className="contactForm">
 				<h1>Contato</h1>
 				<p>Dúvidas? Propostas? Mande sua mensagem e em breve retornamos.</p>
