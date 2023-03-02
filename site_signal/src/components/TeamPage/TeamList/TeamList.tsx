@@ -45,9 +45,9 @@ export const TeamList = () => {
 
 	return (
 		<div className="teamListContainer" style={{"backgroundImage":`url(${teamBackground})`}}>
-			<h2 className="subtitle">Conheça  os maiores impulsores do sucesso da Signal Jr</h2>
+			<h2 className="subtitle">Conheça  os impulsores do sucesso da Signal Jr</h2>
 			<h1 className="title">
-			Cada um deles traz consigo habilidades únicas e valiosas, e juntos formamos uma equipe forte e capaz de superar desafios e alcançar grandes resultados. Estamos orgulhosos de apresentar nossa equipe talentosa, formada por profissionais dedicados e comprometidos com o sucesso da empresa.
+			Cada um deles traz consigo habilidades únicas e valiosas, e juntos formamos uma equipe forte e capaz de superar desafios e alcançar grandes resultados.
 			</h1>
 
 			<div className="listContainer">
