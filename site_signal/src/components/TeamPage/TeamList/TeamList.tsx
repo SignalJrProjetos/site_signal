@@ -7,21 +7,23 @@ import instagramIco from "../../../assets/svg/icon.instagram.svg";
 import linkedinAltIco from "../../../assets/svg/icon.linkedin-purple.svg";
 import githubAltIco from "../../../assets/svg/icon.github-purple.svg";
 import instagramAltIco from "../../../assets/svg/icon.instagram-purple.svg";
+import emailIcon from "../../../assets/svg/icon.email.svg";
 import teamBackground from "../../../assets/svg/bg.team.svg";
 import arrowIco from "../../../assets/svg/icon.arrow.svg";
 
 const GET_MEMBERS_QUERY = gql` #Query para recuperar dados dos membros da API GraphCMS
     query TeamMembers {
-        teamMembers {
-            githubURL
-            id
-            instagramURL
-            linkedInURL
-            name
-            role
-            avatar {
-                url
-            }
+        teamMembers (first: 100) {
+			id
+			instagramURL
+			linkedInURL
+			eMail
+			githubURL
+			name
+			role
+			avatar {
+			  url
+			}
         }
     }
 `;
@@ -29,6 +31,7 @@ const GET_MEMBERS_QUERY = gql` #Query para recuperar dados dos membros da API Gr
 interface GetTeamQueryResponse {
     id: string;
     name: string;
+	eMail: string;
     role: string;
     linkedInURL: string;
     githubURL: string;
@@ -42,8 +45,9 @@ export const TeamList = () => {
 
 	{/*Função para utilizar os dados vindos da API */}
 	const { data } = useQuery<{ teamMembers: GetTeamQueryResponse[] }>(GET_MEMBERS_QUERY);
-
+	console.log(data);
 	return (
+
 		<div className="teamListContainer" style={{"backgroundImage":`url(${teamBackground})`}}>
 			<h2 className="subtitle">Conheça  os impulsores do sucesso da Signal Jr</h2>
 			<h1 className="title">
@@ -82,6 +86,11 @@ export const TeamList = () => {
 										(<span style={{"display":"none"}} />)
 									}
 
+									{ teamMembers.eMail ? (
+										<a href={"mailto:" + teamMembers.eMail}><img className="emailIcon" src={emailIcon}></img></a>
+									) : 
+										(<span style={{"display":"none"}} />)
+									}
 								</div>
 							</div>
 
@@ -114,6 +123,12 @@ export const TeamList = () => {
 
 											{ teamMembers.instagramURL ? (
 												<a href={teamMembers.instagramURL}><img className="instagramIcon" src={instagramAltIco}></img></a>
+											) : 
+												(<span style={{"display":"none"}} />)
+											}
+
+											{ teamMembers.eMail ? (
+												<a href={"mailto:" + teamMembers.eMail}><img className="emailIcon" src={emailIcon}></img></a>
 											) : 
 												(<span style={{"display":"none"}} />)
 											}

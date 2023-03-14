@@ -77,6 +77,12 @@
 .linkedinIcon {
     width: 28px;
 }
+
+.emailIcon{
+    width: 28px;
+    color: #610C7D
+}
+
 .githubIcon {
     width: 24px;
 }
