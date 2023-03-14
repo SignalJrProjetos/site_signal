@@ -20,6 +20,11 @@
     display: none;
 }
 
+.valueCardsCarousel {
+    display: none;
+    position: relative;
+}
+
 .valueCardsSelection {
     display: flex;
     justify-content: center;
@@ -61,12 +66,21 @@
 }
 
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
 
     .coreValuesContainer {
         padding-bottom: 16px;
         background-position: top left 50px;
         background-size: 110%;
+    }
+
+    .valueCardsSelection button {
+        margin: 0 12px;
+    }
+
+    .valueCardsSelection p {
+        font-size: 12px;
+        font-weight: lighter;
     }
 
     .valueCardsContainer {
@@ -80,15 +94,14 @@
 }
 
 /* Tablets */
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
 
-    .valueCardsSelection button {
-        margin: 0 18px;
+    .valueCardsContainer {
+        display: none;
     }
 
-    .valueCardsSelection p {
-        font-size: 16px;
-        font-weight: lighter;
+    .valueCardsCarousel {
+        display: block;
     }
 
 }
@@ -97,9 +110,11 @@
 @media screen and (min-width: 769px) and (max-width: 1366px) {
 
     .valueCardsContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: none;
+    }
+
+    .valueCardsCarousel {
+        display: block;
     }
 
 }

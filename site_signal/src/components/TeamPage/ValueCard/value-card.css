@@ -51,58 +51,89 @@
     display: none;
 }
 
+/* Itens do Carrossel */
+
+.valueItem { 
+    display: none;
+    flex-direction: row;
+    width: 90%;
+    height: 520px;
+    margin: 0 0 96px 5%;
+    align-items: center;
+}
+
+.valueItem img {
+    position: relative;
+    width: 440px;
+}
+
+.valueItem h3 {
+    width: fit-content;
+    font-size: 40px;
+    margin-top: 16px;
+    border-bottom: 7px solid #610C7D;
+    text-align: left;
+}
+
+.valueItem p {
+    text-align: left;
+    font-size: 24px;
+}
+
 /* Responsividade */
 
-/** Mobile & Tablets **/
-@media screen and (min-width: 320px) and (max-width: 768px) {
+/** Mobile**/
+@media screen and (min-width: 320px) and (max-width: 480px) {
 
     .valueCard {
+        display: none;
+    }
+
+    .valueItem { 
         display: none;
     }
 
     .cardMobile {
         display: flex;
     }
+
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .valueItem {
+        display: flex;
+        height: 420px;
+    }
+
+    .valueItem img {
+        width: 280px;
+    }
+    
+    .valueItem h3 {
+        font-size: 32px;
+    }
+    
+    .valueItem p {
+        font-size: 20px;
+    }
+
+    .valueCard {
+        display: none;
+    }
+
+}
+
 
 /** Laptops **/
 @media screen and (min-width: 769px) and (max-width: 1366px) {
     
-    .valueCard {
+    .valueItem {
         display: flex;
-        flex-direction: row-reverse;
-        width: 80%;
-        height: 280px;
-        margin: 32px 0;
-        align-items: center;
-        border-radius: 4px;
-        box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.4);
     }
 
-    .valueCard:first-child {
-        margin-top: 0px;
-    }
-
-    .valueCard:hover {
-        transform: scale(1.05);
-    }
-
-    .valueCard img {
-        width: 240px;
-    }
-
-    .valueCard h3 {
-        width: fit-content;
-        margin-top: 16px;
-        margin-left: 24px;
-        border-bottom: 7px solid #610C7D;
-        text-align: left;
-    }
-
-    .valueCard p {
-        margin-left: 24px;
-        text-align: left;
-        font-size: 20px;
+    .valueCard {
+        display: none;
     }
 
 }

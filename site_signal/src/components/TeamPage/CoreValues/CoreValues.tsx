@@ -12,6 +12,7 @@ import valueImg2 from "../../../assets/svg/card.valores.querencia.svg";
 import valueImg3 from "../../../assets/svg/card.valores.resiliencia.svg";
 import valueImg4 from "../../../assets/svg/card.valores.levelUp.svg";
 import valueImg5 from "../../../assets/svg/card.valores.conexao.svg";
+import Carousel  from "react-bootstrap/Carousel";
 
 export const CoreValues = () => {
 	const [valueIco, setValueIco] = useState<string>(valueIcon);
@@ -104,6 +105,53 @@ export const CoreValues = () => {
 					valueDesc = "A conexão e o trabalho em equipe são elementos chave entre nossos membros e estimulamos a colaboração e o compartilhamento de ideias e importante para a construção de relacionamentos fortes com a garantia de uma comunicação clara e eficiente." 
 				/>
 			</div>
+
+			{/*Versão Carrossel */}
+			<div className="valueCardsCarousel">
+				<Carousel>
+					<Carousel.Item>
+						<ValueCard
+							valueIcon=""
+							valueImg = {valueImg1}  
+							valueName = "Protagonismo"
+							valueDesc = "Entendemos que cada membro de nossa equipe é único e possui habilidades e talentos importantes a serem compartilhados. Por isso, valorizamos o protagonismo de cada um e acreditamos que juntos somos mais fortes."
+						/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<ValueCard
+							valueIcon=""
+							valueImg = {valueImg2}  
+							valueName = "Querência"
+							valueDesc = "A dedicação de cada membro é fundamental para garantir a qualidade de nosso trabalho e para que possamos superar desafios e alcançar novos patamares."
+						/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<ValueCard
+							valueIcon=""
+							valueImg = {valueImg3}  
+							valueName = "Resiliência"
+							valueDesc = "Resiliência é fundamental para que possamos enfrentar e superar desafios de forma eficiente, mantendo sempre o foco em nossos objetivos. Acreditamos que juntos somos capazes de superar qualquer obstáculo."
+						/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<ValueCard
+							valueIcon=""
+							valueImg = {valueImg4}  
+							valueName = "Level Up"
+							valueDesc = "O crescimento pessoal e profissional de nossos membros é fundamental para o sucesso da empresa. Por isso, valorizamos a evolução constante de cada um, oferecemos oportunidades para que possam desenvolver novas habilidades e aprender cada vez mais. "
+						/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<ValueCard
+							valueIcon=""
+							valueImg = {valueImg5}  
+							valueName = "Conexão"
+							valueDesc = "A conexão e o trabalho em equipe são elementos chave entre nossos membros e estimulamos a colaboração e o compartilhamento de ideias e importante para a construção de relacionamentos fortes com a garantia de uma comunicação clara e eficiente." 
+						/>
+					</Carousel.Item>
+				</Carousel>
+			</div>
+
 
 			{/*Versão para Mobile */}
 			<div className="valueCardsContainerMobile">
