@@ -52,6 +52,15 @@
 /* Responsividade */
 
 /* Mobile & Tablets */
+
+@media screen and (min-width: 320px) and (max-width: 400px) {
+    .valueCardsSelection button {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
     .coreValuesContainer {
