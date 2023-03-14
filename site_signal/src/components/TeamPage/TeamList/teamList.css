@@ -95,6 +95,7 @@
 
 #subscription {
     display: flex;
+    position: relative;
     justify-content: end;
     position: initial;
     margin-top: 144px;
@@ -158,14 +159,12 @@
     }
 
     .teamListContainer {
-        padding-left: 7%;
-        padding-right: 0;
+        padding: 0 0 280px 7%;
         background-size: 0;
     }
 
     .teamListContainer h1 {
         margin-bottom: 16px;
-        /* font-size: 18px; */
     }
 
     .listContainer {
@@ -202,11 +201,8 @@
         padding-left: 7%;
         padding-right: 0;
         background-size: 0;
+        padding-bottom: 320px;
     }
-
-    /* .teamListContainer h1 {
-        font-size: 25px;
-    } */
 
     .memberListAvatar img {
         width: 72px;
@@ -229,6 +225,10 @@
         margin-bottom: -39%;
     }
 
+    #subscription a {
+        font-size: 20px;
+    }
+
     .listContainer {
         display: block;
         height: 516px;
@@ -237,14 +237,12 @@
 
 }
 
-/** Laptops **/
+/** Laptops: Large Screen **/
 @media screen and (min-width: 769px) and (max-width: 1060px) {
-    /* .teamListContainer h1 {
-        font-size: 30px;
-    } */
-}
-
-@media screen and (min-width: 1061px) and (max-width: 1366px) {
+    .teamListContainer {
+        margin-bottom: -280px;
+        padding-bottom: 360px;
+    }
 
     .memberCard {
         width: 172px;
@@ -255,7 +253,37 @@
         display: flex;
         justify-content: end;
         position: initial;
-        margin-top: 144px;
+        margin-top: 56px;
+        padding-bottom: 200px;
+        padding-right: 2%;
+        margin-bottom: -50%;
+        clear: both;
+    }
+
+    #subscription a {
+        font-size: 24px;
+    }
+    
+}
+
+
+@media screen and (min-width: 1061px) and (max-width: 1366px) {
+
+    .teamListContainer {
+        margin-bottom: -240px;
+        padding-bottom: 440px;
+    }
+
+    .memberCard {
+        width: 172px;
+        height: 172px;
+    }
+
+    #subscription {
+        display: flex;
+        justify-content: end;
+        position: initial;
+        margin-top: 56px;
         padding-bottom: 200px;
         padding-right: 2%;
         margin-bottom: -50%;

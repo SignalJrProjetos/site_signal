@@ -39,9 +39,8 @@ footer{
 
 .footerBorder {
     width: 100%;
-
     position: relative;
-    margin-bottom: -580px;
+    margin-bottom: -604px;
     -webkit-user-drag: none;  
     user-select: none;
     -moz-user-select: none;
@@ -142,7 +141,7 @@ footer{
     }
 
     .footerBorder {
-        margin-bottom: -550px;
+        margin-bottom: -560px;
     }
 
     #copyright {
@@ -154,13 +153,17 @@ footer{
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .footerBorder {
-        margin-bottom: -540px;
+        margin-bottom: -550px;
     }
 }
 
 /* Responsividade: Laptops */
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+
+    footer {
+        margin-top: -320px;
+    }
 
     .footerLogo {
         width: 250px;
@@ -180,9 +183,37 @@ footer{
     }
 
     .footerBorder {
-        margin-bottom: -560px;
+        margin-bottom: -656px;
     }
 
+}
+
+@media screen and (min-width: 1061px) and (max-width: 1366px) {
+
+    footer {
+        margin-top: -280px;
+    }
+
+    .footerLogo {
+        width: 250px;
+        margin-right: 64px;
+    }
+
+    .footerPages {
+        margin-right: 72px;
+    }
+
+    .footerInfo h1 {
+        font-size: 28px;
+    }
+
+    .footerInfo p, .infoInfo a {
+        font-size: 18px;
+    }
+
+    .footerBorder {
+        margin-bottom: -576px;
+    }
 }
 
 /* Responsividade: Ultrawide */

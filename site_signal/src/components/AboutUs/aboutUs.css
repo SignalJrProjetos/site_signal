@@ -65,6 +65,10 @@
        justify-content: center;
     }
 
+    .aboutTextContainer a {
+        font-size: 20px;
+    }
+
     .aboutTextContainer{
         padding: 10%;
         margin-right: 0px;
@@ -86,10 +90,6 @@
     
     #aboutDesktopImg{
         display: none;
-    }
-
-    .buttonPurple2{
-        font-size: 20px;
     }
 }
 
