@@ -14,7 +14,7 @@ import arrowIco from "../../../assets/svg/icon.arrow.svg";
 
 const GET_MEMBERS_QUERY = gql` #Query para recuperar dados dos membros da API GraphCMS
     query TeamMembers {
-        teamMembers (first: 100) {
+        teamMembers (first: 100, orderBy: rolePriority_ASC) {
 			id
 			instagramURL
 			linkedInURL
@@ -22,6 +22,7 @@ const GET_MEMBERS_QUERY = gql` #Query para recuperar dados dos membros da API Gr
 			githubURL
 			name
 			role
+			rolePriority
 			avatar {
 			  url
 			}
@@ -34,6 +35,7 @@ interface GetTeamQueryResponse {
     name: string;
 	eMail: string;
     role: string;
+	rolePriority: number;
     linkedInURL: string;
     githubURL: string;
     instagramURL: string;
