@@ -1,7 +1,3 @@
-footer{
-    margin-top: -280px;
-}
-
 .footerContainer {
     padding: 0 144px 8px 144px;
     background-color: #610C7D;
@@ -161,10 +157,6 @@ footer{
 
 @media screen and (min-width: 769px) and (max-width: 1060px) {
 
-    footer {
-        margin-top: -320px;
-    }
-
     .footerLogo {
         width: 250px;
         margin-right: 64px;
@@ -183,16 +175,12 @@ footer{
     }
 
     .footerBorder {
-        margin-bottom: -656px;
+        margin-bottom: -576px;
     }
 
 }
 
 @media screen and (min-width: 1061px) and (max-width: 1366px) {
-
-    footer {
-        margin-top: -280px;
-    }
 
     .footerLogo {
         width: 250px;

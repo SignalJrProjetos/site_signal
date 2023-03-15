@@ -1,5 +1,6 @@
 .teamListContainer {
     position: relative;
+    margin-bottom: -280px;
     padding: 32px 10% 10% 10%;
     background-repeat: no-repeat;
     background-color: #F6F6F6;
@@ -253,9 +254,10 @@
 
 /** Laptops: Large Screen **/
 @media screen and (min-width: 769px) and (max-width: 1060px) {
+
     .teamListContainer {
         margin-bottom: -280px;
-        padding-bottom: 360px;
+        padding-bottom: 380px;
     }
 
     .memberCard {
@@ -284,7 +286,7 @@
 @media screen and (min-width: 1061px) and (max-width: 1366px) {
 
     .teamListContainer {
-        margin-bottom: -240px;
+        margin-bottom: -280px;
         padding-bottom: 440px;
     }
 
@@ -297,10 +299,10 @@
         display: flex;
         justify-content: end;
         position: initial;
-        margin-top: 56px;
+        margin-top: 32px;
         padding-bottom: 200px;
         padding-right: 2%;
-        margin-bottom: -50%;
+        margin-bottom: -42%;
         clear: both;
     }
 }
