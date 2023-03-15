@@ -226,6 +226,13 @@
     opacity: 0.2;
 }
 
+@media screen and (min-width: 320px) and (max-width: 380px) {
+
+    .cardMobile {
+        height: 420px;
+    }
+}
+
 /* Text Input */
 
 /*Modifique a partir daqui */
