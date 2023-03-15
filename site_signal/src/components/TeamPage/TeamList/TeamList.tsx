@@ -4,10 +4,11 @@ import "./teamList.css";
 import linkedinIco from "../../../assets/svg/icon.linkedin.svg";
 import githubIco from "../../../assets/svg/icon.github.svg";
 import instagramIco from "../../../assets/svg/icon.instagram.svg";
+import emailIco from "../../../assets/svg/icon.email.svg";
 import linkedinAltIco from "../../../assets/svg/icon.linkedin-purple.svg";
 import githubAltIco from "../../../assets/svg/icon.github-purple.svg";
 import instagramAltIco from "../../../assets/svg/icon.instagram-purple.svg";
-import emailIcon from "../../../assets/svg/icon.email.svg";
+import emailAltIco from "../../../assets/svg/icon.email-purple.svg";
 import teamBackground from "../../../assets/svg/bg.team.svg";
 import arrowIco from "../../../assets/svg/icon.arrow.svg";
 
@@ -87,7 +88,7 @@ export const TeamList = () => {
 									}
 
 									{ teamMembers.eMail ? (
-										<a href={"mailto:" + teamMembers.eMail}><img className="emailIcon" src={emailIcon}></img></a>
+										<a href={"mailto:" + teamMembers.eMail}><img className="emailIcon" src={emailIco}></img></a>
 									) : 
 										(<span style={{"display":"none"}} />)
 									}
@@ -128,7 +129,7 @@ export const TeamList = () => {
 											}
 
 											{ teamMembers.eMail ? (
-												<a href={"mailto:" + teamMembers.eMail}><img className="emailIcon" src={emailIcon}></img></a>
+												<a href={"mailto:" + teamMembers.eMail}><img className="emailIcon" src={emailAltIco}></img></a>
 											) : 
 												(<span style={{"display":"none"}} />)
 											}

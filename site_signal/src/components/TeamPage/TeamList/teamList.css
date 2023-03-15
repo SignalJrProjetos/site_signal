@@ -53,13 +53,14 @@
 }
 
 .memberInfo h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .memberInfo p {
     font-family: Saira;
     font-weight: lighter;
+    font-size: 14px;
 }
 
 .memberSocialMedia {
@@ -70,24 +71,24 @@
 }
 
 .memberSocialMedia img {
-    margin: 0 8px;
+    margin: 0 10px;
 }
 
 /* Correção de diferença de tamanho */
 .linkedinIcon {
-    width: 28px;
+    width: 24px;
 }
 
 .emailIcon{
-    width: 28px;
+    width: 24px;
     color: #610C7D
 }
 
 .githubIcon {
-    width: 24px;
+    width: 22px;
 }
 .instagramIcon {
-    width: 26px;
+    width: 23px;
 }
 /* --------------------------------- */
 
@@ -135,7 +136,7 @@
 .memberList p {
     font-family: "Saira";
     font-weight: lighter;
-    font-size: 13px
+    font-size: 16px
 }
 
 .memberListInfoContainer {
