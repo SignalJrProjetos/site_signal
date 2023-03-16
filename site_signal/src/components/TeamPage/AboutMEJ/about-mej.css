@@ -8,6 +8,14 @@
     align-items: center;
 }
 
+.aboutMEJContainer h1 {
+    padding-right: 0;
+}
+
+.aboutMEJContainer h2 {
+    padding-right: 0;
+}
+
 .aboutMEJContainer p{
     padding-left: 5%;
 }

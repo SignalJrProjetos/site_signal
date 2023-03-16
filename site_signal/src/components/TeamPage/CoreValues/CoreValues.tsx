@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 import "./core-values.css";
 import { ValueCard } from "../ValueCard/ValueCard";
-import icon from "../../../assets/imgs/icon.png";
-import valueIcon from "../../../assets/svg/icon.solutionsIdVisual.svg";
-import valueIcon2 from "../../../assets/svg/icon.solutionsConsultoria.svg";
-import valueIcon3 from "../../../assets/svg/icon.solutionsIdVisual.svg";
-import valueIcon4 from "../../../assets/svg/icon.solutionsConsultoria.svg";
-import valueIcon5 from "../../../assets/svg/icon.solutionsIdVisual.svg";
+import icon from "../../../assets/svg/icon.protagonism.svg";
+import icon2 from "../../../assets/svg/icon.want.svg";
+import icon3 from "../../../assets/svg/icon.resilience.svg";
+import icon4 from "../../../assets/svg/icon.levelup.svg";
+import icon5 from "../../../assets/svg/icon.connection.svg";
 import valueImg1 from "../../../assets/svg/card.valores.protagonismo.svg";
 import valueImg2 from "../../../assets/svg/card.valores.querencia.svg";
 import valueImg3 from "../../../assets/svg/card.valores.resiliencia.svg";
@@ -15,7 +14,7 @@ import valueImg5 from "../../../assets/svg/card.valores.conexao.svg";
 import Carousel  from "react-bootstrap/Carousel";
 
 export const CoreValues = () => {
-	const [valueIco, setValueIco] = useState<string>(valueIcon);
+	const [valueIco, setValueIco] = useState<string>(icon);
 	const [valueImg, setValueImg] = useState<string>(valueImg1);
 	const [value, setValue] = useState<string>("Protagonismo");
 	const [valueText, setValueText] = useState<string>("Entendemos que cada membro de nossa equipe é único e possui habilidades e talentos importantes a serem compartilhados. Por isso, valorizamos o protagonismo de cada um e acreditamos que juntos somos mais fortes.");
@@ -31,35 +30,35 @@ export const CoreValues = () => {
 
 		switch(value) {
 		case("Protagonismo"):
-			setValueIco(valueIcon);
+			setValueIco(icon);
 			setValueImg(valueImg1);
 			setValue(value);
 			setValueText("Entendemos que cada membro de nossa equipe é único e possui habilidades e talentos importantes a serem compartilhados. Por isso, valorizamos o protagonismo de cada um e acreditamos que juntos somos mais fortes.");
 			break;
 
 		case("Querência"):
-			setValueIco(valueIcon2);
+			setValueIco(icon2);
 			setValueImg(valueImg2);
 			setValue(value);
 			setValueText("A dedicação de cada membro é fundamental para garantir a qualidade de nosso trabalho e para que possamos superar desafios e alcançar novos patamares.");
 			break;
 		
 		case("Resiliência"):
-			setValueIco(valueIcon3);
+			setValueIco(icon3);
 			setValueImg(valueImg3);
 			setValue(value);
 			setValueText("Resiliência é fundamental para que possamos enfrentar e superar desafios de forma eficiente, mantendo sempre o foco em nossos objetivos. Acreditamos que juntos somos capazes de superar qualquer obstáculo.");
 			break;
 
 		case("Level Up"):
-			setValueIco(valueIcon4);
+			setValueIco(icon4);
 			setValueImg(valueImg4);
 			setValue(value);
 			setValueText("O crescimento pessoal e profissional de nossos membros é fundamental para o sucesso da empresa. Por isso, valorizamos a evolução constante de cada um, oferecemos oportunidades para que possam desenvolver novas habilidades e aprender cada vez mais.");
 			break;
 		
 		case("Conexão"):
-			setValueIco(valueIcon5);
+			setValueIco(icon5);
 			setValueImg(valueImg5);
 			setValue(value);
 			setValueText("A conexão e o trabalho em equipe são elementos chave entre nossos membros e estimulamos a colaboração e o compartilhamento de ideias e importante para a construção de relacionamentos fortes com a garantia de uma comunicação clara e eficiente.");
@@ -70,7 +69,7 @@ export const CoreValues = () => {
 	return (
 		<div className="coreValuesContainer">
 			<h2 className="subtitle">Valores que Guiam a Signal Jr</h2>
-			<h1 className="title">Acreditamos que é através destes valores que podemos oferecer soluções de qualidade aos nossos clientes e contribuir para o crescimento e desenvolvimento dos membros que passam por aqui</h1>
+			<h1 className="title">Acreditamos que é através destes valores que podemos oferecer soluções de qualidade aos nossos clientes e contribuir para o crescimento e desenvolvimento dos membros que passam por aqui.</h1>
 
 			{/*Versão para Desktop */}
 			<div className="valueCardsContainer">
@@ -161,19 +160,19 @@ export const CoreValues = () => {
 						<p>Protagonismo</p>
 					</div>
 					<div>
-						<button style={{backgroundColor: value == "Querência" ? "#8700A9" : "white"}} onClick={() => activeValue("Querência")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Querência" ? "#8700A9" : "white"}} onClick={() => activeValue("Querência")}><img src={icon2}></img></button>
 						<p>Querência</p>
 					</div>
 					<div>
-						<button style={{backgroundColor: value == "Resiliência" ? "#8700A9" : "white"}} onClick={() => activeValue("Resiliência")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Resiliência" ? "#8700A9" : "white"}} onClick={() => activeValue("Resiliência")}><img src={icon3}></img></button>
 						<p>Resiliência</p>
 					</div>
 					<div>
-						<button style={{backgroundColor: value == "Level Up" ? "#8700A9" : "white"}} onClick={() => activeValue("Level Up")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Level Up" ? "#8700A9" : "white"}} onClick={() => activeValue("Level Up")}><img src={icon4}></img></button>
 						<p>Level Up</p>
 					</div>
 					<div>
-						<button style={{backgroundColor: value == "Conexão" ? "#8700A9" : "white"}} onClick={() => activeValue("Conexão")}><img src={icon}></img></button>
+						<button style={{backgroundColor: value == "Conexão" ? "#8700A9" : "white"}} onClick={() => activeValue("Conexão")}><img src={icon5}></img></button>
 						<p>Conexão</p>
 					</div>
 				</div>

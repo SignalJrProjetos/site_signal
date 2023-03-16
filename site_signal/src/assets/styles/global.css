@@ -118,7 +118,7 @@
     padding: 4px 40px 4px 40px;
     z-index: 2;
     font-family: "Saira";
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .buttonPurple:hover {
@@ -135,7 +135,7 @@
     padding: 8px 40px 8px 40px;
     z-index: 2;
     font-family: "Saira";
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .buttonPurple2:hover {
@@ -157,7 +157,7 @@
     z-index: 2;
     background: none;
     font-family: "Saira";
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .buttonWhite img {
