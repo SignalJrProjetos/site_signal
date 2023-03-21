@@ -1,16 +1,18 @@
 import React from "react";
-import { Navbar }from "../components/Navbar/Navbar";
-import { Header } from "../components/Header/Header";
+import { SolutionsAlt } from "../components/SolutionsAlt/SolutionsAlt";
+import { Footer } from "../components/Footer/Footer";
+import { Contact } from "../components/Contact/Contact";
+import contactImgService from "../assets/svg/Img.contact-service.svg";
 
 export const Services = () => {
-    
 	return(
 		<>
-			<Navbar/>
-			<Header
-				title="Descubra como podemos alavancar seu negócio"
-				text="Impulsionando seu sucesso com a tecnologia com processos sejam eficientes, maduros e alinhados aos padrões de excelência que você merece."
+			<SolutionsAlt/>
+			<Contact
+				imagem={ contactImgService }
+				style={{"marginBottom": "-275px"}}
 			/>
+			<Footer/>
 		</>
 	);
 };
