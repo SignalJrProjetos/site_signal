@@ -31,6 +31,11 @@
     margin-top: -35%;
     margin-left: -25%;
     opacity: 20%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 /* Timeline */
@@ -166,8 +171,29 @@
     transform: translateY(-50px);
 }
 
-/* Detalhamento dos Processos */
+/** Versão Mobile **/
+.timelineMobile {
+    display: none;
+}
 
+.processLine {
+    overflow: auto;
+    width: 1px;
+    border: 1px dashed #9C9C9C;
+    margin-left: 7%;
+}
+
+.processLine::after {
+    position: absolute;
+    content: "";
+    left: 4.5%;
+    border: 12px solid #8700A9;
+    outline: 1px dashed #9C9C9C;
+    outline-offset: 12px;
+    border-radius: 50%;
+}
+
+/* Detalhamento dos Processos */
 .processInfoContainer {
     margin: 24px 10%;
 }
@@ -187,4 +213,41 @@
     font-family: "Saira";
     font-size: 24px;
     font-weight: lighter;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    
+    .timelineContainer {
+        display: none
+    }
+
+    .processContainer > h1:first-of-type {
+        display: none;
+    }
+
+    .processContainer > h2:first-of-type {
+        margin-bottom: 24px;
+    }
+
+    .timelineMobile {
+        display: block;
+    }
+
+    .background {
+        display: none;
+    }
+
+    .processInfoContainer {
+        margin: 0 10%;
+    }
+
+    .processInfoContainer h1 {
+        text-align: left;
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    .processInfoContainer p {
+        font-size: 16px;
+    }
 }
