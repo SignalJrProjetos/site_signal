@@ -9,7 +9,7 @@
 
 .solutionsContainer {
     display: flex;
-    background-image: url("../../assets/imgs/solucoesBackground.png");
+    background-image: url("../../../assets/imgs/solucoesBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 

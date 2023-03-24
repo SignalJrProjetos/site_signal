@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import "../../assets/styles/global.css";
+import "../../../assets/styles/global.css";
 import "./contact.css"; 
 import emailjs from "@emailjs/browser";
-import imagemContact from "../../assets/svg/img.contact.svg";
-import inputUserIco from "../../assets/svg/icon.input.user.svg";
+import imagemContact from "../../../assets/svg/img.contact.svg";
+import inputUserIco from "../../../assets/svg/icon.input.user.svg";
 
 // Tipando o objeto messagem que será enviado para o email da signal
 interface Message{

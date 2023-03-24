@@ -1,14 +1,14 @@
 import React from "react";
 import "../screens/css/team.css";
-import { ParticlesContainer } from "../components/ParticlesContainer";
-import { Navbar } from "../components/Navbar/Navbar";
-import { Header } from "../components/Header/Header";
+import { ParticlesContainer } from "../components/HomePage/ParticlesContainer";
+import { Navbar } from "../components/HomePage/Navbar/Navbar";
+import { Header } from "../components/HomePage/Header/Header";
 import { AboutUs } from "../components/TeamPage/AboutUs/AboutUs";
 import { Status } from "../components/TeamPage/Status/Status";
 import { AboutMEJ } from "../components/TeamPage/AboutMEJ/AboutMEJ";
 import { CoreValues } from "../components/TeamPage/CoreValues/CoreValues";
 import { TeamList } from "../components/TeamPage/TeamList/TeamList";
-import { Footer } from "../components/Footer/Footer";
+import { Footer } from "../components/HomePage/Footer/Footer";
 
 export const Team = () =>{
 	return (

@@ -1,17 +1,17 @@
 import React from "react";
 import "./footer.css";
-import Logo from "../../assets/imgs/logo.SignalCompactaBranca.png";
-import LocationIcon from "../../assets/svg/icon.location.svg";
-import EmailIcon from "../../assets/svg/icon.email.svg";
-import FacebookIcon from "../../assets/svg/icon.facebook.svg";
-import InstagramIcon from "../../assets/svg/icon.instagram.svg";
-import LinkedInIcon from "../../assets/svg/icon.linkedin.svg";
-import Border from "../../assets/svg/footer.border.svg";
+import Logo from "../../../assets/imgs/logo.SignalCompactaBranca.png";
+import LocationIcon from "../../../assets/svg/icon.location.svg";
+import EmailIcon from "../../../assets/svg/icon.email.svg";
+import FacebookIcon from "../../../assets/svg/icon.facebook.svg";
+import InstagramIcon from "../../../assets/svg/icon.instagram.svg";
+import LinkedInIcon from "../../../assets/svg/icon.linkedin.svg";
+import Border from "../../../assets/svg/footer.border.svg";
 
 export const Footer = () => {
 	return(
 		<footer>
-			<img alt="Bordar arredondada do rodapé" className="footerBorder" src={Border} />
+			<img alt="Borda arredondada do rodapé" className="footerBorder" src={Border} />
 			<div className="footerContainer">
 				<div className="footerInfo">
 					<img alt="Logo SignalJr" className="footerLogo" src={Logo} />

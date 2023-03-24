@@ -1,5 +1,6 @@
 .partnersContainer {
     position: relative;
+    margin-bottom: -48px;
 }
 
 .partnersContainer h1 {
@@ -12,22 +13,21 @@
 }
 
 .partnersLogo img {
-    width: 180px;
-    margin-right: 72px;
-    margin-bottom: 32px;
+    width: 160px;
+    margin: 0 40px 32px 40px;
 }
 
 #brasilJrMark {
-    width: 240px;
+    width: 220px;
 }
 
 #totvsMark {
-    width: 360px;
+    width: 320px;
     margin-right: 0;
 }
 
 .partnersLogo div:last-child img {
-    width: 480px;
+    width: 440px;
 }
 
 #americanasMark {
@@ -71,25 +71,18 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
     .partnersContainer {
-        margin-bottom: -172px;
+        margin-bottom: -140px;
     }
 
     .partnersLogo img {
-        width: 124px;
-        margin-right: 32px;
-    }
-
-    #uffrjMark {
-        width: 96px;
+        width: 72px;
+        margin: 0 24px;
     }
 
     #brasilJrMark {
-        width: 128px;
-    }
-
-    #rioJrMark {
         width: 96px;
     }
+
 
     #totvsMark {
         width: 140px;
@@ -102,7 +95,32 @@
 }
 
 /** Laptops **/
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+
+    .partnersContainer {
+        margin-bottom: -108px;
+    }
+    
+    .partnersLogo img {
+        width: 140px;
+        margin: 0 32px;
+    }
+
+    #brasilJrMark {
+        width: 160px;
+    }
+
+    #totvsMark {
+        width: 196px;
+    }
+
+    .partnersLogo div:last-child img {
+        width: 320px;
+    }
+
+}
+
+@media screen and (min-width: 1061px) and (max-width: 1366px) {
 
     .partnersContainer {
         margin-bottom: -108px;

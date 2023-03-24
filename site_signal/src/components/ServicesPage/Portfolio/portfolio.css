@@ -1,0 +1,46 @@
+.portfolioContainer{
+    background-color: #F6F6F6;
+    padding: 5% 5% 5% 0%;
+}
+
+.portfolioDeckCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolioCard{
+    background-size: cover;
+    width: 500px;
+    height: 240px;
+    border-radius: 10px;
+    margin: 10px 10px 10px 25px;
+}
+
+.portfolioCard a{
+    width: 100%;
+    text-decoration: none;
+}
+
+.portfolioCardContent{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(135, 0, 169, 0.6);
+    color: white;
+}
+
+.portfolioCardContent h2{
+    font-family: "Scada";
+    font-weight: bolder;
+}
+
+.portfolioCardContent p{
+    font-family: "Saira";
+    font-weight: lighter;
+}
+
+

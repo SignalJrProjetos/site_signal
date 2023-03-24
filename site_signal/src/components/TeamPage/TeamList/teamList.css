@@ -1,6 +1,7 @@
 .teamListContainer {
     position: relative;
-    padding: 32px 10% 0 10%;
+    margin-bottom: -280px;
+    padding: 32px 10% 10% 10%;
     background-repeat: no-repeat;
     background-color: #F6F6F6;
     text-align: center;
@@ -53,13 +54,14 @@
 }
 
 .memberInfo h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .memberInfo p {
     font-family: Saira;
     font-weight: lighter;
+    font-size: 14px;
 }
 
 .memberSocialMedia {
@@ -70,18 +72,24 @@
 }
 
 .memberSocialMedia img {
-    margin: 0 8px;
+    margin: 0 10px;
 }
 
 /* Correção de diferença de tamanho */
 .linkedinIcon {
-    width: 28px;
-}
-.githubIcon {
     width: 24px;
 }
+
+.emailIcon{
+    width: 24px;
+    color: #610C7D
+}
+
+.githubIcon {
+    width: 22px;
+}
 .instagramIcon {
-    width: 26px;
+    width: 23px;
 }
 /* --------------------------------- */
 
@@ -95,9 +103,10 @@
 
 #subscription {
     display: flex;
+    position: relative;
     justify-content: end;
     position: initial;
-    margin-top: 144px;
+    margin-top: 72px;
     padding-bottom: 240px;
     margin-bottom: -18%;
     clear: both;
@@ -128,6 +137,7 @@
 .memberList p {
     font-family: "Saira";
     font-weight: lighter;
+    font-size: 16px
 }
 
 .memberListInfoContainer {
@@ -140,8 +150,14 @@
     justify-content: space-between;
 }
 
+.memberListSocialMedia{
+    display: flex;
+    margin-right: 8px;
+}
+
+
 .memberListSocialMedia img {
-    margin: 0px 10px 12px 10px;
+    margin: 0px 5px 10px 5px;
 }
 
 /* Responsividade */
@@ -158,14 +174,12 @@
     }
 
     .teamListContainer {
-        padding-left: 7%;
-        padding-right: 0;
+        padding: 0 0 280px 7%;
         background-size: 0;
     }
 
     .teamListContainer h1 {
         margin-bottom: 16px;
-        /* font-size: 18px; */
     }
 
     .listContainer {
@@ -202,11 +216,8 @@
         padding-left: 7%;
         padding-right: 0;
         background-size: 0;
+        padding-bottom: 320px;
     }
-
-    /* .teamListContainer h1 {
-        font-size: 25px;
-    } */
 
     .memberListAvatar img {
         width: 72px;
@@ -229,6 +240,10 @@
         margin-bottom: -39%;
     }
 
+    #subscription a {
+        font-size: 20px;
+    }
+
     .listContainer {
         display: block;
         height: 516px;
@@ -237,14 +252,13 @@
 
 }
 
-/** Laptops **/
+/** Laptops: Large Screen **/
 @media screen and (min-width: 769px) and (max-width: 1060px) {
-    /* .teamListContainer h1 {
-        font-size: 30px;
-    } */
-}
 
-@media screen and (min-width: 1061px) and (max-width: 1366px) {
+    .teamListContainer {
+        margin-bottom: -280px;
+        padding-bottom: 380px;
+    }
 
     .memberCard {
         width: 172px;
@@ -255,10 +269,40 @@
         display: flex;
         justify-content: end;
         position: initial;
-        margin-top: 144px;
+        margin-top: 56px;
         padding-bottom: 200px;
         padding-right: 2%;
         margin-bottom: -50%;
+        clear: both;
+    }
+
+    #subscription a {
+        font-size: 24px;
+    }
+    
+}
+
+
+@media screen and (min-width: 1061px) and (max-width: 1366px) {
+
+    .teamListContainer {
+        margin-bottom: -280px;
+        padding-bottom: 440px;
+    }
+
+    .memberCard {
+        width: 172px;
+        height: 172px;
+    }
+
+    #subscription {
+        display: flex;
+        justify-content: end;
+        position: initial;
+        margin-top: 32px;
+        padding-bottom: 200px;
+        padding-right: 2%;
+        margin-bottom: -42%;
         clear: both;
     }
 }

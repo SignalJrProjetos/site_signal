@@ -5,16 +5,16 @@ import { Team } from "./screens/Team";
 import { Developing } from "./screens/Developing";
 import { Services } from "./screens/Services";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Project } from "./components/ProjectPage/Project";
 
 export const App = () =>{
 	return (
 		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Routes>
 				<Route path="/" element={<Home/>}/>
-				<Route path="/time" element={<Team/>}/>
+				<Route path="/equipe" element={<Team/>}/>
 				<Route path="/developing" element={<Developing/>}/>
-				<Route path="/servicos" element={<Services/>}/>
+				<Route path="/servicos/projetos/:slug" element={<Project/>}/>
 			</Routes>
 		</BrowserRouter>
 	);
