@@ -1,0 +1,40 @@
+.serviceContainer {
+    margin-top: -100px;
+}
+.containerButton {
+    display: flex;
+    flex-direction: column;
+    justify-content : space-evenly;
+    gap: 30px;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+#solutionsButtonClicked {
+    
+    width: 267.56px;
+    height: 88px;
+    font-family: "Saira";
+    font-size: 25px;
+    color: white;
+    border-radius: 50px;
+    border: white 3px solid;
+    margin: 10px 10px;
+    align-items: center;
+}
+.serviceChangeContent {
+    display: flex;
+}
+.serviceChangeContent img {
+    position: absolute;
+    width: 600px;
+    margin: -530px 0px 0px 760px;
+    opacity: 0.2;
+}
+.serviceChangeContent p{
+    width: 50%;
+    color: #707070;
+    font-family: "Scada";
+    font-size: 25px;
+    text-align: right;
+    margin: -370px 0px 200px 580px;
+}

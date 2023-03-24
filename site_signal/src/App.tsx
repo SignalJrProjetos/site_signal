@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./screens/Home";
 import { Team } from "./screens/Team";
 import { Developing } from "./screens/Developing";
+import { Services } from "./screens/Services";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Project } from "./components/ProjectPage/Project";
 

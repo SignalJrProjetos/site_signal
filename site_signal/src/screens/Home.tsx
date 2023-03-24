@@ -13,7 +13,7 @@ import { Footer } from "../components/HomePage/Footer/Footer";
 import Carousel  from "react-bootstrap/Carousel";
 import engealiLogo from "../assets/imgs/logo.engeali.png";
 import cantoGeralLogo from "../assets/imgs/logo.cantogeral.png";
-
+import contactImage from "../assets/svg/img.contact.svg";
 
 export const Home = () =>{
 
@@ -24,7 +24,7 @@ export const Home = () =>{
 			<HomeHeader/>
 			<Solutions/>
 			<AboutUs/>
-			<Contact/>
+			<Contact imagem= {contactImage} />
 
 			{/* Depoimentos */}
 			<div className="testimonialsContainer">
