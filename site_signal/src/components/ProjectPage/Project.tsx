@@ -5,6 +5,7 @@ import { gql, useQuery } from "@apollo/client";
 export const Project = () => {
 
 	// const { data } = useQuery
+	// Inserir query que está no hygraph
 	const { slug } = useParams<{ slug: string }>();
 
 	return (

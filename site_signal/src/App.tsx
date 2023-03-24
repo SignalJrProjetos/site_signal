@@ -13,8 +13,9 @@ export const App = () =>{
 			<Routes>
 				<Route path="/" element={<Home/>}/>
 				<Route path="/equipe" element={<Team/>}/>
-				<Route path="/developing" element={<Developing/>}/>
+				<Route path="/servicos" element={<Services/>}/>
 				<Route path="/servicos/projetos/:slug" element={<Project/>}/>
+				<Route path="/developing" element={<Developing/>}/>
 			</Routes>
 		</BrowserRouter>
 	);
