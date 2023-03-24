@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import imagemSolucoes from "../../assets/svg/img.solutionsSolucoesTI.svg";
-import imagemIdentidadeVisual from "../../assets/svg/img.solutionsIdVisual.svg";
-import imagemConsultoria from "../../assets/svg/img.solutionsConsultoria.svg";
-import solucoesMobile from "../../assets/svg/icon.solutionsSolucoesTI.svg";
-import identidadeVisualMobile from "../../assets/svg/icon.solutionsIdVisual.svg";
-import consultoriaMobile from "../../assets/svg/icon.solutionsConsultoria.svg";
+import imagemSolucoes from "../../../assets/svg/img.solutionsSolucoesTI.svg";
+import imagemIdentidadeVisual from "../../../assets/svg/img.solutionsIdVisual.svg";
+import imagemConsultoria from "../../../assets/svg/img.solutionsConsultoria.svg";
+import solucoesMobile from "../../../assets/svg/icon.solutionsSolucoesTI.svg";
+import identidadeVisualMobile from "../../../assets/svg/icon.solutionsIdVisual.svg";
+import consultoriaMobile from "../../../assets/svg/icon.solutionsConsultoria.svg";
 
 import "./solutions.css";
 

@@ -4,6 +4,7 @@ import { Home } from "./screens/Home";
 import { Team } from "./screens/Team";
 import { Developing } from "./screens/Developing";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Project } from "./components/ProjectPage/Project";
 
 export const App = () =>{
 	return (
@@ -12,6 +13,7 @@ export const App = () =>{
 				<Route path="/" element={<Home/>}/>
 				<Route path="/equipe" element={<Team/>}/>
 				<Route path="/developing" element={<Developing/>}/>
+				<Route path="/servicos/projetos/:slug" element={<Project/>}/>
 			</Routes>
 		</BrowserRouter>
 	);

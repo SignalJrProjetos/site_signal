@@ -1,10 +1,10 @@
 import React from "react";
 import "./homeHeader.css";
-import border from "../../assets/svg/header.border.svg";
-import headerImg from "../../assets/svg/img.home-header.svg";
-import facebookIco from "../../assets/svg/icon.facebook.svg";
-import instagramIco from "../../assets/svg/icon.instagram.svg";
-import linkedinIco from "../../assets/svg/icon.linkedin.svg";
+import border from "../../../assets/svg/header.border.svg";
+import headerImg from "../../../assets/svg/img.home-header.svg";
+import facebookIco from "../../../assets/svg/icon.facebook.svg";
+import instagramIco from "../../../assets/svg/icon.instagram.svg";
+import linkedinIco from "../../../assets/svg/icon.linkedin.svg";
 
 export const HomeHeader = () => {
     

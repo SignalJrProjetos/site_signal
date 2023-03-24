@@ -1,6 +1,6 @@
 import React from "react";
 import "./testimonial.css";
-import quoteIco from "../../assets/svg/icon.quote.svg";
+import quoteIco from "../../../assets/svg/icon.quote.svg";
 
 export const Testimonial = (props: { image: string | undefined; authorName: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; role: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; text: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
 	return(

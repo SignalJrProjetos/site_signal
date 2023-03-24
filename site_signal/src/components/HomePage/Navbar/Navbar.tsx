@@ -1,14 +1,14 @@
 import React, { Fragment } from "react";
 import "./navbar.css";
-import logo from "../../assets/imgs/logo.SignalExtensaBranca.png";
-import logoMobile from "../../assets/imgs/logo.SignalCompactaBranca.png";
-import homeIco from "../../assets/svg/icon.home.svg";
-import servicesIco from "../../assets/svg/icon.services.svg";
-import teamIco from "../../assets/svg/icon.team.svg";
-import arrowIco from "../../assets/svg/icon.arrow.svg";
-import facebookIco from "../../assets/svg/icon.facebook.svg";
-import instagramIco from "../../assets/svg/icon.instagram.svg";
-import linkedinIco from "../../assets/svg/icon.linkedin.svg";
+import logo from "../../../assets/imgs/logo.SignalExtensaBranca.png";
+import logoMobile from "../../../assets/imgs/logo.SignalCompactaBranca.png";
+import homeIco from "../../../assets/svg/icon.home.svg";
+import servicesIco from "../../../assets/svg/icon.services.svg";
+import teamIco from "../../../assets/svg/icon.team.svg";
+import arrowIco from "../../../assets/svg/icon.arrow.svg";
+import facebookIco from "../../../assets/svg/icon.facebook.svg";
+import instagramIco from "../../../assets/svg/icon.instagram.svg";
+import linkedinIco from "../../../assets/svg/icon.linkedin.svg";
 
 export const Navbar = () => {
 	return (
