@@ -1,6 +1,8 @@
 import React, {useState} from "react";
+import Carousel  from "react-bootstrap/Carousel";
 import { gql, useQuery } from "@apollo/client";
 import "./portfolio.css";
+import arrowIco from "../../../assets/svg/icon.arrow.svg";
 
 const GET_PORTFOLIO_QUERY = gql` #Query para recuperar dados dos projetos da API GraphCMS
     query GET_PORTFOLIO_QUERY {
@@ -30,8 +32,8 @@ interface GetPortfolioQueryResponse {
 
 interface CardProps {
     id: string;
-    projectName: string;
-	serviceType: string;
+    projectName?: string;
+	serviceType?: string;
     slug: string;
 	image: string;
 	isHovering: boolean;
@@ -68,6 +70,9 @@ export const Portfolio = () => {
 	return (
 		<div className="portfolioContainer">
 			<h1 className="title">Portfolio</h1>
+
+			{/* Versão desktop */}
+
 			<div className="portfolioDeckCard">
 				{data?.portfolios.map(portfolio => {
 					return(
@@ -82,6 +87,31 @@ export const Portfolio = () => {
 						/>
 					);
 				})}
+			</div>
+
+			{/* Versão mobile */}
+
+			<div className="potfolioCarousel">
+				<Carousel className="porfolioCarouselContainer">
+					{data?.portfolios.map(portfolioM => {
+						return(
+							<Carousel.Item className="porfolioCarouselItem" key={portfolioM.id}>
+								<Card
+									key={portfolioM.id}
+									id={portfolioM.id}
+									slug={portfolioM.slug}
+									image={portfolioM.projectThumb.url}
+									isHovering= {true}
+								/>
+								<h2>{portfolioM.projectName}</h2>
+								<h3>{portfolioM.serviceType}</h3>
+								<div className="portfolioLink">
+									<a  href={`/servicos/projetos/${portfolioM.slug}`} className="buttonPurple2">Saiba mais <img src={arrowIco} /></a>
+								</div>
+							</Carousel.Item>
+						);
+					})}
+				</Carousel>
 			</div>
 		</div>
 	);

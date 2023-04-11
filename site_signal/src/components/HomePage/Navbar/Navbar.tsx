@@ -30,9 +30,9 @@ export const Navbar = () => {
 				<div id="menu">
 					<img alt="Imagem para abrir o menu mobile" id="navLogoMobile" src={logoMobile} />
 					<ul>
-						<li><a href={process.env.PUBLIC_URL + "/"}> <img alt="Icone inicio" src={homeIco}/> Início <img alt="Icone seta" src={arrowIco}/> </a></li>
-						<li><a href={process.env.PUBLIC_URL + "/servicos"}> <img alt="Icone serviços" src={servicesIco}/> Serviços <img alt="Icone seta" src={arrowIco}/> </a></li>
-						<li><a href={process.env.PUBLIC_URL + "/equipe"}> <img alt="Icone equipe" src={teamIco}/> Equipe <img alt="Icone seta" src={arrowIco}/></a></li>
+						<li><a id="menuOptionsLink" href={process.env.PUBLIC_URL + "/"}> <img alt="Icone inicio" src={homeIco}/> Início <img alt="Icone seta" src={arrowIco}/> </a></li>
+						<li><a id="menuOptionsLink" href={process.env.PUBLIC_URL + "/servicos"}> <img alt="Icone serviços" src={servicesIco}/> Serviços <img alt="Icone seta" src={arrowIco}/> </a></li>
+						<li><a id="menuOptionsLink" href={process.env.PUBLIC_URL + "/equipe"}> <img alt="Icone equipe" src={teamIco}/> Equipe <img alt="Icone seta" src={arrowIco}/></a></li>
 					</ul>
 					<h3>Vamos Conversar!</h3>
 					<div className="socialMedia">

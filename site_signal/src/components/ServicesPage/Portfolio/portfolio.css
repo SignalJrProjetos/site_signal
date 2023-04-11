@@ -1,6 +1,7 @@
 .portfolioContainer{
     background-color: #F6F6F6;
-    padding: 5% 5% 5% 0%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .portfolioDeckCard{
@@ -43,4 +44,211 @@
     font-weight: lighter;
 }
 
+.potfolioCarousel{
+    display: none;
+}
 
+/** Mobile e Tablets **/
+
+@media screen and (min-width: 320px) and (max-width: 340px) {
+    .porfolioCarouselItem{
+        margin-left: 8%;
+    }
+    
+    .portfolioCard{
+        width: 280px;
+        height: 160px;
+        margin: 0px;
+    }
+    
+    .portfolioLink{
+        margin-top: -13%;
+        margin-right: 10%;
+    }
+
+    .portfolioLink a{
+        font-size: 15px;
+    }
+    
+    .potfolioCarousel h3{
+        font-size: 18px;
+    }
+    .portfolioLink{
+        display: flex;
+        justify-content: end!important;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 341px) and (max-width: 380px) {
+    .porfolioCarouselItem{
+        margin-left: 8%;
+    }
+
+    .portfolioCard{
+        width: 300px;
+        height: 160px;
+        margin: 0px;
+    }
+
+    .portfolioLink{
+        margin-top: -13%;
+        margin-right: 10%;
+    }
+
+    .portfolioLink a{
+        font-size: 15px;
+    }
+    
+    .portfolioLink{
+        display: flex;
+        justify-content: end!important;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 381px) and (max-width: 480px) {
+    
+    .porfolioCarouselItem{
+        margin-left: 12%;
+    }
+
+    .portfolioCard{
+        width: 320px;
+        height: 180px;
+        margin: 0px;
+    }
+
+    .portfolioLink{
+        margin-top: -9%;
+        margin-right: 15%;
+    }
+
+    .portfolioLink a{
+        font-size: 15px;
+    }
+    
+    .portfolioLink{
+        display: flex;
+        justify-content: end!important;
+        margin-top: 5%;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 569px) {
+
+    .porfolioCarouselItem{
+        margin-left: 10%;
+    }
+
+    
+    .portfolioLink{
+        margin-top: -9%;
+        margin-right: 15%;
+    }
+
+    .portfolioLink a{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 570px) and (max-width: 699px) {
+
+    .porfolioCarouselItem{
+        margin-left: 18%;
+    }
+
+    .portfolioLink{
+        margin-top: -6%;
+        margin-right: 20%;
+    }
+
+    .portfolioLink a{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 768px) {
+
+    .porfolioCarouselItem{
+        margin-left: 25%;
+    }
+
+    .portfolioLink{
+        margin-top: -6%;
+        margin-right: 30%;
+    }
+
+    .portfolioLink a{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .portfolioCard{
+        width: 400px;
+        height: 260px;
+        margin: 0px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .portfolioDeckCard{
+        display: none;
+    }
+
+    .potfolioCarousel{
+        display: flex;
+    }
+
+    .porfolioCarouselContainer{
+        width: 100%;
+    }
+
+    .portfolioContainer h1{
+        text-align: center;    
+    }
+
+    .potfolioCarousel h2{
+        padding-top: 30px;
+        font-family:"Scada";
+        font-weight: bold;
+        color: #610C7D;
+        width: 90%;
+    }
+
+    .potfolioCarousel h3{
+        padding-top: 10px;
+        font-family:"Scada";
+        color: #707070;
+    }
+
+    .carousel-indicators{
+        margin-left: 5%!important;
+        margin-right: 0%!important;
+    }
+
+    .porfolioCarouselItem{
+        margin-bottom: 75px;
+    }
+
+    .portfolioLink{
+        display: flex;
+        justify-content: end;
+        position: initial;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1185px) {
+    .portfolioCard{
+        width: 330px;
+        height: 180px;
+        margin: 5px 5px 5px 25px;
+    }
+    
+}

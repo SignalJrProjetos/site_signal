@@ -108,6 +108,10 @@
     border-radius: 100% !important;
 }
 
+.carousel-control-next {
+    display: none!important;
+}
+
 /* Botoes */
 
 .buttonPurple {
