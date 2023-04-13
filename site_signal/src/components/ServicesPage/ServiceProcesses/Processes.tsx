@@ -4,14 +4,23 @@ import processesBg from "../../../assets/svg/bg.process-animate.svg";
 
 export const Processes = (props: any) => {
 
-	const[title, setTitle] = useState<string>(props.stepByStep[0].substring(0, props.stepByStep[0].indexOf(":")));
-	const[text, setText] = useState<string>(props.stepByStep[0].substring(props.stepByStep[0].indexOf(":") + 1, props.stepByStep[0].length));
+	const[title, setTitle] = useState<string>("");
+	const[text, setText] = useState<string>("");
 	
 	//Estado responsável por controlar qual botão foi clicado. [default(0) = primeiro botão]
 	const[active, setActive] = useState<number>(0);
 
 	//Estado responsável por controlar a exibição de textos após cliques em botões [default(true) = estado ativo]
 	const[showText, setShowText] = useState<boolean>(true);
+
+	//Define os valores default para os estados abaixo com base na requisição
+	useEffect(() => {
+		if (props) {
+			setTitle(props.stepByStep[0].substring(0, props.stepByStep[0].indexOf(":")));
+			setText(props.stepByStep[0].substring(props.stepByStep[0].indexOf(":") + 1, props.stepByStep[0].length));
+			setActive(0);
+		}
+	}, [props]);
 
 	//Verifica se title foi alterado. Se true, ativa um temporizador para definir setShowText para false
 	useEffect(() => {
@@ -31,7 +40,7 @@ export const Processes = (props: any) => {
 	return (
 		<div className="processContainer">
 
-			<img src={processesBg} className="background"/>
+			<img src={processesBg} className="processesBackground"/>
 
 			<h2 style={{"textAlign":"center"}} className="subtitle">Etapas do Serviço</h2>
 			<h1 style={{"textAlign":"center"}} className="title">Clique nos botões abaixo para saber mais sobre cada uma das etapas do serviço.</h1>
@@ -66,9 +75,8 @@ export const Processes = (props: any) => {
 						</div>
 
 					))}
-
-				
 				</div>
+				
 				<div className="processInfoContainer">
 					<h1 className={showText ? "textFadeIn" : ""}>{title}</h1>
 					<p className={showText ? "textFadeIn" : ""}>{text}</p>

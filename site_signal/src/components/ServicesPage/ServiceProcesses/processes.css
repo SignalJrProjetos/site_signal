@@ -18,18 +18,18 @@
 
 .processContainer {
     position: relative;
-    margin: 48px 0;
+    margin-top: 96px;
     background-repeat: no-repeat;
     background-size: 50%;
 
 }
 
-.background {
+.processesBackground {
     position: absolute;
     z-index: -2;
-    scale: 0.5;
-    margin-top: -35%;
-    margin-left: -25%;
+    scale: 0.35;
+    margin-top: -40%;
+    margin-left: -35%;
     opacity: 20%;
     -webkit-user-select: none;
     -khtml-user-select: none;

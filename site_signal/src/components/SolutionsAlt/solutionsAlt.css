@@ -1,0 +1,67 @@
+/* Animações */
+
+.textFadeIn {
+    opacity: 1;
+    animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/* CSS */
+
+.solutions1Container {
+   margin-top: -240px;
+   position: relative;
+}
+
+.solutionsContentContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    animation: fade-in 2s;
+}
+
+.solutionsButtonsContainer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+.solutionsTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.solutionsTextContainer h1{
+    width: fit-content;
+    font-family: "Scada";
+    font-weight: bolder;
+    color: #610C7D;
+    border-bottom: 10px solid #610C7D;
+    margin-bottom: 24px;
+}
+
+.solutionsTextContainer p{
+    color: #707070;
+    font-family: "Saira";
+    font-size: 24px;
+    text-align: right;
+}
+
+.solutionBackground {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    top: 2%;
+    left: 60%;
+    width: 720px;
+}
