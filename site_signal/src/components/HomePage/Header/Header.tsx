@@ -6,14 +6,24 @@ import facebookIco from "../../../assets/svg/icon.facebook.svg";
 import instagramIco from "../../../assets/svg/icon.instagram.svg";
 import linkedinIco from "../../../assets/svg/icon.linkedin.svg";
 
-export const Header = (props: { title: string, text: string }) => {
+
+interface Props{
+	title: string | undefined;
+	text: string | undefined;
+	date?: string;
+}
+
+
+
+export const Header:React.FC<Props> = ({ title, text, date }) => {
 
 	return(
 		<>
 			<div className="hdrContainer">
 				<div className="hdrTextContainer">
-					<h1>{props.title}</h1>
-					<p>{props.text}</p>
+					<h1>{title}</h1>
+					<p>{text}</p>
+					{date ? <p>Data: {date}</p> : <></>}
 				</div>
 				<div className="hdrSocialMediaContainer">
 					<p>SIGA-NOS</p>

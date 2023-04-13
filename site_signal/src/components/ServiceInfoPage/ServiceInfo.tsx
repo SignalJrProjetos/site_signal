@@ -1,6 +1,11 @@
 import React, {useState} from "react";
 import { useParams } from "react-router-dom";
 import { gql, useQuery } from "@apollo/client";
+import { ParticlesContainer } from "../HomePage/ParticlesContainer";
+import { Header } from "../HomePage/Header/Header";
+import { Navbar } from "../HomePage/Navbar/Navbar";
+import { Testimonial } from "../HomePage/Testimonial/Testimonial";
+import { Footer } from "../HomePage/Footer/Footer";
 
 
 // Imprimir na tela (separadamente) todos os dados que pegamos 
@@ -77,17 +82,24 @@ export const ServiceInfo = () => {
 		}
 	});
 
-	console.log(data?.portfolio.date);	
-	return (
+	const { portfolio } = data || {}; // Pegando o objeto porfolio e atribuindo a uma constante 
 
-		<div>
-			<p>Data: {data?.portfolio.date}</p>
-			<p>Nome do projeto: {data?.portfolio.projectName}</p>
-			<p>id: {data?.portfolio.id}</p>
-			<p>Link: {data?.portfolio.link}</p>
-			<p>Descrição do projeto: {data?.portfolio.projectDescription}</p>
-			<p>Tipo de serviço: {data?.portfolio.serviceType}</p>
-			<p>Nome do cliente: {data?.portfolio.client.name}</p>
-		</div>
+	return (
+		<>
+			<ParticlesContainer/>
+			<Navbar/>
+			<Header 
+				title={portfolio?.projectName}
+				text={portfolio?.serviceType}
+				date={portfolio?.date}
+			/>
+			<Testimonial
+				image={portfolio?.client.avatar.url}
+				authorName={portfolio?.client.name}
+				role={portfolio?.client.role}
+				text={portfolio?.projectTestimony}
+			/>
+			<Footer/>
+		</>
 	);
 };
