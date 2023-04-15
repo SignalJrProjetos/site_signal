@@ -14,6 +14,9 @@ const GET_SOLUTIONS_QUERY = gql`
             solutionSummary
             solutionDescription
             solutionSteps
+			solutionIcon {
+      			url
+			}
 			solutionImage {
       			url
    			}
@@ -28,6 +31,9 @@ interface GetSolutionsQueryResponse {
     solutionSummary: string;
     solutionDescription: string;
     solutionSteps: string[];
+	solutionIcon: {
+		url: string;
+	}
 	solutionImage: {
 		url: string;
 	}
@@ -42,11 +48,10 @@ export const Solutions = () => {
 	const[description, setDescription] = useState<string | undefined>("");
 	const[image, setImage] = useState<string | undefined>("");
 	const[steps, setSteps] = useState<string[] | undefined>([""]);
-	const[active, setActive] = useState<string>("");
+	const[tag, setTag] = useState<string>("");
 	const[showText, setShowText] = useState<boolean>(true);
 
 	const { pathname } = useLocation();
-	console.log("Teste: " + pathname);
 
 	//Define os valores default para os estados abaixo com base na requisição
 	useEffect(() => {
@@ -56,7 +61,7 @@ export const Solutions = () => {
 			setDescription(data?.solutions[0].solutionDescription);
 			setImage(data?.solutions[0].solutionImage.url);
 			setSteps(data?.solutions[0].solutionSteps);
-			setActive(data?.solutions[0].solutionTag);
+			setTag(data?.solutions[0].solutionTag);
 		}
 	}, [data]);
 
@@ -78,7 +83,7 @@ export const Solutions = () => {
 			setDescription(info?.solutionDescription); //Atualiza o valor de description (descrição do serviço)
 			setImage(info?.solutionImage.url); //Atualiza o valor de image (imagem associada ao serviço)
 			setSteps(info?.solutionSteps); //Atualiza o valor de steps (array de strings das etapas do serviço)
-			setActive(serviceType); //Atualiza o valor de serviceType (tag de identificação do serviço)
+			setTag(serviceType); //Atualiza o valor de serviceType (tag de identificação do serviço)
 			setShowText(true);
 		
 		} else {
@@ -101,13 +106,14 @@ export const Solutions = () => {
 					<h2 className="subtitle" style={{"textAlign":"center"}}>O que nós fazemos</h2>
 					<h1 className="title" style={{"textAlign":"center"}}>Nossas soluções para o seu negócio</h1>
 
+					{/* Versão Destkop */}
 					<div className="solutionsContentContainer">
 
 						<div className="solutionsButtonsContainer">
 							{data?.solutions.map(solutions => {
 								return(
 									<button 
-										className={ solutions?.solutionTag == active ? "buttonPurple2" : "buttonPurple"}
+										className={ solutions?.solutionTag == tag ? "buttonPurple2" : "buttonPurple"}
 										style={{"margin":"24px 24px", "width": "300px", "padding": "18px 0", "borderRadius":"48px"}}
 										key={solutions.id}
 										onClick={() => activeButton(solutions.solutionTag)}> {/*Ao clicar, envia o valor do parâmetro solutionTag para a função activeButton */}
@@ -130,6 +136,25 @@ export const Solutions = () => {
 						</div>
 
 					</div>
+
+					{/* Versão Mobile */}
+					<div className="solutionsCardContainer">
+						{data?.solutions.map(solutions => {
+							return(
+								<div key={solutions.id} className={`cardMobile ${solutions.solutionTag === tag ? "active" : ""}`} onClick={() => activeButton(solutions.solutionTag)}>
+									<div>
+										<img src={solutions.solutionIcon.url}></img>
+										<h1>{solutions.solutionName}</h1>
+									</div>
+									<p>{solutions.solutionSummary}</p>
+									<br></br>
+									<a className={`buttonGradient2 ${solutions.solutionTag === tag ? "active" : ""}`} style={{"fontSize":"18px"}} href={process.env.PUBLIC_URL + "/services"}>Saiba Mais</a>
+									<img className="solutionBackground" src={solutions.solutionImage.url}></img>
+								</div>
+							);
+						})}
+					</div>
+
 				</div>
 
 				:
@@ -145,7 +170,7 @@ export const Solutions = () => {
 								{data?.solutions.map(solutions => {
 									return(
 										<button 
-											className={ solutions?.solutionTag == active ? "buttonPurple2" : "buttonPurple"}
+											className={ solutions?.solutionTag == tag ? "buttonPurple2" : "buttonPurple"}
 											style={{"margin":"24px 0", "width": "300px", "padding": "18px 0", "borderRadius":"48px"}}
 											key={solutions.id}
 											onClick={() => activeButton(solutions.solutionTag)}> {/*Ao clicar, envia o valor do parâmetro solutionTag para a função activeButton */}

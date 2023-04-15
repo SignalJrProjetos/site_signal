@@ -24,14 +24,14 @@ export const ValueCard = (props: {valueIcon:string; valueImg:string; valueName: 
 
 
 			{/*Versão Mobile */}
-			<div className="cardMobile">
-				<div>
-					<img src={props.valueIcon} />
-					<img src={props.valueImg}/>
+			<div className="valueCardMobile">
+				<div className="cardMobile">
 					<div>
+						<img src={props.valueIcon} />
 						<h1>{props.valueName}</h1>
 					</div>
 					<p>{props.valueDesc}</p>
+					<img src={props.valueImg}/>
 				</div>
 			</div>
 		</>

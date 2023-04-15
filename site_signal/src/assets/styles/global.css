@@ -187,6 +187,45 @@
     transition: scale 0.5s;
 }
 
+.buttonGradient2 {
+    color: #8700A9;
+    position: relative;
+    text-decoration: none;
+    padding: 8px 40px 4px 40px;
+    z-index: 2;
+    font-family: "Saira";
+    font-size: 24px;
+}
+
+.buttonGradient2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 3px;
+    background: linear-gradient(180deg, #8700A9 0%, #980089 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.buttonGradient2:hover {
+    color: #8700A9;
+}
+
+.buttonGradient2.active {
+    border-radius: 50px;
+    background-color: white;
+}
+
+.buttonGradient2.active::after {
+    background: white;
+}
+
+.buttonGradient2.active:hover {
+    color: #8700A9;
+}
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
     .title {
@@ -207,8 +246,10 @@
 /* Cards */
 
 .cardMobile {
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.4);
-    height: 360px;
+    position: relative;
     background-color: white;
     border-radius: 30px;
     text-align: left;
@@ -216,6 +257,7 @@
     padding: 20px;
     font-family: "Scada";
     color: #707070;
+    overflow: hidden;
 }
 
 .cardMobile h1 {
@@ -224,29 +266,52 @@
     border-bottom: #610C7D 7px solid;
     margin: 20px 0;
     font-weight: bolder;
+    z-index: 1;
 }
 
 .cardMobile p {
     font-size: 18px;
+    z-index: 1;
 }
 
-.cardMobile img {
-    width: 56px;
+.cardMobile div:first-child {
+    display: flex;
+    align-items: center;
 }
 
-.cardMobile img:last-of-type{
+.cardMobile div:first-child img {
+    border: 3px solid #8700A9;
+    padding: 4px;
+    height: 48px;
+    width: 48px;
+    margin-right: 16px;
+}
+
+.cardMobile img:last-child {
     width: 50%;
     position: absolute;
     margin-left: 25%;
     z-index: 0;
-    opacity: 0.2;
+    opacity: 0.25;
 }
 
-@media screen and (min-width: 320px) and (max-width: 380px) {
+.cardMobile a:last-of-type {
+    align-self: flex-end;
+}
 
-    .cardMobile {
-        height: 420px;
-    }
+.cardMobile.active img:first-child {
+    border: white;
+    box-shadow: 0 0 0 4px transparent, 0 0 0 400px #8700A9;
+    transition: box-shadow 0.7s ease-out;
+}
+
+.cardMobile.active h1 {
+   color: white;
+   border-color: white;
+}
+
+.cardMobile.active p {
+    color: white;
 }
 
 /* Text Input */

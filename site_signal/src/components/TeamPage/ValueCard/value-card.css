@@ -47,8 +47,8 @@
     color: white;
 }
 
-.cardMobile {
-    display: none;
+.valueIcon {
+    margin-right: 16px;
 }
 
 /* Itens do Carrossel */
@@ -81,6 +81,10 @@
     font-size: 24px;
 }
 
+.valueCardMobile {
+    display: none;
+}
+
 /* Responsividade */
 
 /** Mobile**/
@@ -94,7 +98,7 @@
         display: none;
     }
 
-    .cardMobile {
+    .valueCardMobile {
         display: flex;
     }
 
@@ -123,6 +127,10 @@
         display: none;
     }
 
+    .valueCardMobile {
+        display: none;
+    }
+
 }
 
 
@@ -134,6 +142,10 @@
     }
 
     .valueCard {
+        display: none;
+    }
+
+    .valueCardMobile {
         display: none;
     }
 
