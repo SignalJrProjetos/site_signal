@@ -6,6 +6,9 @@ import { Header } from "../HomePage/Header/Header";
 import { Navbar } from "../HomePage/Navbar/Navbar";
 import { Testimonial } from "../HomePage/Testimonial/Testimonial";
 import { Footer } from "../HomePage/Footer/Footer";
+import quoteIco from "../../assets/svg/icon.quote.svg";
+import "./serviceInfo.css";
+
 
 // Query para pegar informações do projeto
 const GET_PROJECT_BY_SLUG_QUERY = gql`
@@ -139,15 +142,34 @@ export const ServiceInfo = () => {
 				text={portfolio?.serviceType}
 				date={portfolio?.date}
 			/>
-			<Testimonial
-				image={portfolio?.client.avatar.url}
-				authorName={portfolio?.client.name}
-				role={portfolio?.client.role}
-				text={portfolio?.projectTestimony}
-			/>
+			<div className="serviceInfoContainer">
+				<div className="serviceInfoText">
+					<h2>Sobre o cliente</h2>
+					<p>{portfolio?.client.clientDescription}</p>
+					<h2>Sobre o Projeto</h2>
+					<p>{portfolio?.projectDescription}</p>
+					<a className="buttonPurple2" href={portfolio?.link}>Versao ao Vivo</a>
+				</div>
+				<div>
 
-			{/* Galeria de imagem */}
-			<ProjectImages images={images}/>
+					{/* Galeria de imagem */}
+					<ProjectImages images={images}/>
+					<div className="serviceInfoCard">
+						<img className= "quotationMark" style={{"alignSelf": "flex-start", "transform": "rotate(0deg)"}} src={quoteIco}/>
+						<div className="serviceCardAvatar">
+							<img src={portfolio?.client.avatar.url} alt=""/>
+						</div>
+						<div>
+							<h2>{portfolio?.client.name}</h2>
+							<h3>{portfolio?.client.role}</h3>
+							<p>{portfolio?.projectTestimony}</p>
+						</div>
+						<img className= "quotationMark" style={{"alignSelf": "flex-end", "transform": "rotate(180deg)"}} src={quoteIco}/>
+					</div>
+				</div>
+			</div>
+
+
 			<Footer/>
 		</>
 	);

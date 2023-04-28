@@ -1,0 +1,48 @@
+.serviceInfoContainer {
+     padding: 3%;
+     
+}
+.serviceInfoContainer{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+.serviceInfoText h2 {
+    font-family: 'saira';
+    color: #9C9C9C;
+    font-size: 32px;
+}
+.serviceInfoText p {
+    font-family: 'scada';
+    margin-bottom: 72px;
+    color: #707070;
+    font-size: 24px;
+}
+.serviceInfoCard {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.serviceInfoCard h2 {
+    font-family: 'scada';
+    font-size: 48px;
+    color: #424242;
+    margin-bottom: 0px;
+    width: 500px;
+}
+.serviceInfoCard p {
+    font-family: 'scada';
+    font-size: 24px;
+    color: #707070;
+}
+.serviceInfoCard h3{
+    font-family: 'scada';
+    font-size: 1.1rem;
+    color: #424242;
+    
+}
+.serviceCardAvatar img{
+    border-radius: 50%;
+    width: 200px;
+    
+}
