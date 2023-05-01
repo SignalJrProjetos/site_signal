@@ -139,6 +139,8 @@ export const ServiceInfo = () => {
 		{ url: portfolio?.projectImage2?.url || "" }
 	];
 
+	const serviceHeaderStyle: string[] = ["serviceInfoHeader","serviceInfoHeaderContainer","serviceInfoHeaderP"];
+
 	return (
 		<>
 			<ParticlesContainer/>
@@ -147,6 +149,7 @@ export const ServiceInfo = () => {
 				title={portfolio?.projectName}
 				text={portfolio?.serviceType}
 				date={portfolio?.date}
+				style={serviceHeaderStyle}
 			/>
 			<div className="serviceInfoContainer">
 				<div className="serviceInfoText">
