@@ -4,7 +4,6 @@ import { gql, useQuery } from "@apollo/client";
 import { ParticlesContainer } from "../HomePage/ParticlesContainer";
 import { Header } from "../HomePage/Header/Header";
 import { Navbar } from "../HomePage/Navbar/Navbar";
-import { Testimonial } from "../HomePage/Testimonial/Testimonial";
 import { Footer } from "../HomePage/Footer/Footer";
 import quoteIco from "../../assets/svg/icon.quote.svg";
 import "./serviceInfo.css";
@@ -78,7 +77,8 @@ interface Image {
 	url: string;
 }
 
-const ProjectImages:React.FC<{images: Image[]}> = ( {images}) => {
+// Componente galeria
+const ProjectImages:React.FC<{images: Image[]}> = ( {images} ) => {
 
 	const [clickedImage, setClickedImage] = useState<string>("");
 
@@ -94,22 +94,29 @@ const ProjectImages:React.FC<{images: Image[]}> = ( {images}) => {
 		setClickedImage(url);
 	}
 
+	const filteredImages = images.filter((image) => image.url !== clickedImage);
+
 	return (
 		<div style={{position: "relative"}}>
-			{images.map((image, key) => (
-				<div key={key}>
-					{image.url !== "" ? ( // Verificando se é uma imagem válida, caso não seja a imagem não vai aparecer
-						<img
-							src={image.url}
-							style={{
-								width: clickedImage === image.url ? "360px" : "230px",
-								height: clickedImage === image.url ? "210px" : "120px"
-							}}
-							onClick={() => handleClick(image.url)}
-						/>
-					) : null}
-				</div>
-			))}
+			<div className="serviceInfoThumb">
+				<img src={clickedImage}></img>
+			</div>
+			<div className="serviceInfoImagesOptions">
+				{filteredImages.map((image, key) => (
+					<div key={key}>
+						{image.url !== "" ? (
+							<img
+								src={image.url}
+								style={{
+									width: "360px",
+									height: "210px",
+								}}
+								onClick={() => handleClick(image.url)}
+							/>
+						) : null}
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };
@@ -125,7 +132,6 @@ export const ServiceInfo = () => {
 	});
 
 	const { portfolio } = data || {}; // Pegando o objeto porfolio e atribuindo a uma constante 
-
 
 	const images: Image[] = [ 	// Criando array com objetos do tipo  Image
 		{ url: portfolio?.projectThumb.url || "" },
