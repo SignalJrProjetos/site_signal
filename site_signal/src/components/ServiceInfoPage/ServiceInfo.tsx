@@ -97,7 +97,7 @@ const ProjectImages:React.FC<{images: Image[]}> = ( {images} ) => {
 	const filteredImages = images.filter((image) => image.url !== clickedImage);
 
 	return (
-		<div style={{position: "relative"}}>
+		<div className="serviceInfoImagesContainer">
 			<div className="serviceInfoThumb">
 				<img src={clickedImage}></img>
 			</div>
@@ -154,7 +154,7 @@ export const ServiceInfo = () => {
 					<p>{portfolio?.client.clientDescription}</p>
 					<h2>Sobre o Projeto</h2>
 					<p>{portfolio?.projectDescription}</p>
-					<a className="buttonPurple2" href={portfolio?.link}>Versao ao Vivo</a>
+					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link}>Versão ao Vivo &gt;</a>
 				</div>
 				<div>
 
