@@ -11,21 +11,22 @@ interface Props{
 	title: string | undefined;
 	text: string | undefined;
 	date?: string;
+	style?: string[];
 }
 
 
 
-export const Header:React.FC<Props> = ({ title, text, date }) => {
+export const Header:React.FC<Props> = ({ title, text, date, style }) => {
 
 	return(
 		<>
-			<div className="hdrContainer">
+			<div id={style?.[1]} className="hdrContainer">
 				<div className="hdrTextContainer">
 					<h1>{title}</h1>
-					<p>{text}</p>
-					{date ? <p>Data: {date}</p> : <></>}
+					<p id={style?.[2]}>{text}</p>
+					{date ? <p id={style?.[2]}>Data: {date}</p> : <></>}
 				</div>
-				<div className="hdrSocialMediaContainer">
+				<div id={style?.[0]} className="hdrSocialMediaContainer">
 					<p>SIGA-NOS</p>
 					<a href=""><img src={facebookIco}/></a>
 					<br></br>
