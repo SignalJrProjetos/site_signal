@@ -103,14 +103,10 @@ const ProjectImages:React.FC<{images: Image[]}> = ( {images} ) => {
 			</div>
 			<div className="serviceInfoImagesOptions">
 				{filteredImages.map((image, key) => (
-					<div key={key}>
+					<div  className="serviceInfoImages" key={key}>
 						{image.url !== "" ? (
 							<img
 								src={image.url}
-								style={{
-									width: "200px",
-									height: "100px",
-								}}
 								onClick={() => handleClick(image.url)}
 							/>
 						) : null}
@@ -152,6 +148,9 @@ export const ServiceInfo = () => {
 				style={serviceHeaderStyle}
 			/>
 			<div className="serviceInfoContainer">
+				<div className="projectImagesMobile">
+					<ProjectImages images={images}/>
+				</div>
 				<div className="serviceInfoText">
 					<h2 className="subtitle" style={{paddingLeft:"0px"}}>Sobre o cliente</h2>
 					<p>{portfolio?.client.clientDescription}</p>
@@ -159,11 +158,10 @@ export const ServiceInfo = () => {
 					<p>{portfolio?.projectDescription}</p>
 					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link}>Versão ao Vivo &gt;</a>
 				</div>
-				<div>
-
-					{/* Galeria de imagem */}
-					<ProjectImages images={images}/>
-					<h2 className="subtitle" id="depoimentoInfoText" style={{textAlign: "center", marginBottom: "30px"}}>Depoimento</h2>
+				<div className="projectImagesDiv">
+					<div className="projectImagesDesktop">
+						<ProjectImages images={images}/>
+					</div>
 					<div className="serviceInfoCard">
 						<img className= "quotationMark" style={{"alignSelf": "flex-start", "transform": "rotate(0deg)"}} src={quoteIco}/>
 						<div className="serviceCardAvatar">
