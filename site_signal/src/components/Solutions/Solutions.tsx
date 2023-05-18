@@ -164,6 +164,25 @@ export const Solutions = () => {
 						<h2 className="subtitle">O que nós fazemos</h2>
 						<h1 className="title">Nossas soluções para o seu negócio</h1>
 
+						{/* Versão Mobile */}
+						<div className="solutionsServicesMobile">
+							<div style={{"display":"flex", "justifyContent":"center", "marginBottom": "32px"}}>
+								{data?.solutions.map(solutions => {
+									return(
+										<button 
+											className={`solutionButton ${solutions.solutionTag === tag ? "active" : ""}`}
+											key={solutions.id}
+											onClick={() => activeButton(solutions.solutionTag)}>
+											<img src={solutions.solutionIcon.url}></img>
+											{solutions.solutionName}
+										</button>
+									);
+								})}
+							</div>
+							<p>{description}</p>
+						</div>
+
+						{/* Versão Desktop */}
 						<div className="solutionsContentAltContainer">	
 
 							<div className="solutionsButtonsAltContainer">
@@ -171,7 +190,7 @@ export const Solutions = () => {
 									return(
 										<button 
 											className={ solutions?.solutionTag == tag ? "buttonPurple2" : "buttonPurple"}
-											style={{"margin":"24px 0", "width": "300px", "padding": "18px 0", "borderRadius":"48px"}}
+											style={{"margin":"24px", "width": "300px", "padding": "18px 0", "borderRadius":"48px"}}
 											key={solutions.id}
 											onClick={() => activeButton(solutions.solutionTag)}> {/*Ao clicar, envia o valor do parâmetro solutionTag para a função activeButton */}
 											{solutions.solutionName}
@@ -190,6 +209,7 @@ export const Solutions = () => {
 						</div>
 					</div>
 					<Processes stepByStep={steps}/>
+
 				</>	
 			};
 		</>

@@ -28,6 +28,11 @@
    position: relative;
 }
 
+.solutionsServicesMobile {
+    display: none;
+    margin-bottom: -64px;
+}
+
 /* HomePage */
 .solutionsContentContainer {
     align-items: center;
@@ -35,7 +40,7 @@
     animation: fade-in 2s;
 }
 
- /* Service */
+ /* Services */
 .solutionsContentAltContainer {
     display: flex;
     align-items: center;
@@ -56,6 +61,41 @@
     margin-right: 10%;
 }
 
+.solutionButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 106px;
+    height: 106px;
+    margin: 0 12px;
+    align-items: center;
+    justify-items: center;
+    background-color: #FFF;
+    border: 2px solid #8700A9;
+    border-radius: 20px;
+    color: #8700A9;
+    font-family: 'Scada';
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.solutionButton.active {
+    color: #FFF;
+}
+
+.solutionButton.active img {
+    box-shadow: 0 0 0 4px transparent, 0 0 0 200px #8700A9;
+    transition: box-shadow 2s ease-out;
+}
+
+.solutionButton img {
+    margin: 4px;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #8700A9;
+}
+
 /* Common */
 .solutionsTextContainer {
     display: flex;
@@ -66,6 +106,7 @@
 
 .solutionsTextContainer h1{
     width: fit-content;
+    text-align: right;
     font-family: "Scada";
     font-weight: bolder;
     color: #610C7D;
@@ -78,6 +119,13 @@
     font-family: "Saira";
     font-size: 24px;
     text-align: right;
+}
+
+.solutionsServicesMobile p {
+    font-family: 'Saira';
+    font-size: 16px;
+    color: #707070;
+    margin: 0 5%;
 }
 
 /* HomePage */
@@ -112,11 +160,30 @@
 /** Responsividade **/
 
 /* Mobile */
+
+@media screen and (min-width: 320px) and (max-width: 370px) {
+
+    .solutionButton {
+        width: 88px;
+        height: 88px;
+        font-size: 12px;
+        margin: 0 8px;
+    }
+
+    .solutionButton img{
+        padding: 6px;
+    }
+}
+
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
     .solutionsContainer {
         margin-top: -24px;
-        position: relative;
+     }
+
+     .solutionsAltContainer {
+        margin-top: -24px;
      }
 
      .solutionsBackground {
@@ -130,12 +197,94 @@
         display: none;
     }
 
+    .solutionsContentAltContainer {
+        display: none;
+    }
+
+    .solutionsServicesMobile {
+        display: block;
+    }
+
     .solutionsCardContainer {
         display: block;
     }
 
     .solutionBackground {
-        top: 20%;
-        left: 20%;
+       display: none;
     }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .solutionsContainer {
+        margin-top: -40px;
+     }
+
+    .solutionsAltContainer {
+        margin-top: -24px;
+    }
+
+    .solutionsContentContainer {
+        display: none;
+    }
+
+    .solutionsContentAltContainer {
+        display: none;
+    }
+
+    .solutionsServicesMobile {
+        display: block;
+    }
+
+    .solutionButton {
+        flex-direction: row;
+        height: 72px;
+        width: 220px;
+        margin: 0 3%;
+        border-radius: 40px;
+    }
+
+    .solutionButton img {
+        margin-right: 0 12px;
+    }
+
+    .solutionButton.active img {
+        transition: box-shadow 0.7s ease-out;
+    }
+    
+    .solutionsCardContainer {
+        display: block;
+    }
+
+    .solutionsServicesMobile p {
+        font-family: 'Saira';
+        font-size: 18px;
+        color: #707070;
+        margin: 0 5%;
+    }
+    
+    .solutionBackground {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+
+    .solutionsContainer {
+        margin-top: -48px;
+    }
+
+    .solutionsAltContainer {
+        margin-top: -48px;
+    }
+
+    .solutionsContentAltContainer {
+        flex-direction: column;
+    }
+
+    .solutionsButtonsAltContainer {
+        flex-direction: row;
+    }
+
 }

@@ -301,7 +301,7 @@
 
 .cardMobile.active img:first-child {
     border: white;
-    box-shadow: 0 0 0 4px transparent, 0 0 0 400px #8700A9;
+    box-shadow: 0 0 0 4px transparent, 0 0 0 800px #8700A9;
     transition: box-shadow 0.7s ease-out;
 }
 
