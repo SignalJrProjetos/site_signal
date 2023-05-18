@@ -108,8 +108,8 @@ const ProjectImages:React.FC<{images: Image[]}> = ( {images} ) => {
 							<img
 								src={image.url}
 								style={{
-									width: "360px",
-									height: "210px",
+									width: "200px",
+									height: "100px",
 								}}
 								onClick={() => handleClick(image.url)}
 							/>
@@ -153,9 +153,9 @@ export const ServiceInfo = () => {
 			/>
 			<div className="serviceInfoContainer">
 				<div className="serviceInfoText">
-					<h2>Sobre o cliente</h2>
+					<h2 className="subtitle" style={{paddingLeft:"0px"}}>Sobre o cliente</h2>
 					<p>{portfolio?.client.clientDescription}</p>
-					<h2>Sobre o Projeto</h2>
+					<h2 className="subtitle" style={{paddingLeft:"0px"}}>Sobre o Projeto</h2>
 					<p>{portfolio?.projectDescription}</p>
 					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link}>Versão ao Vivo &gt;</a>
 				</div>
@@ -163,6 +163,7 @@ export const ServiceInfo = () => {
 
 					{/* Galeria de imagem */}
 					<ProjectImages images={images}/>
+					<h2 className="subtitle" id="depoimentoInfoText" style={{textAlign: "center", marginBottom: "30px"}}>Depoimento</h2>
 					<div className="serviceInfoCard">
 						<img className= "quotationMark" style={{"alignSelf": "flex-start", "transform": "rotate(0deg)"}} src={quoteIco}/>
 						<div className="serviceCardAvatar">

@@ -1,6 +1,5 @@
 .serviceInfoContainer {
-     padding: 3%;
-     
+   padding: 3%;
 }
 .serviceInfoContainer{
     display: flex;
@@ -18,20 +17,26 @@
     color: #707070;
     font-size: 24px;
 }
+#depoimentoInfoText{
+    display: none;
+}
 .serviceInfoCard {
     display: flex;
     align-items: center;
     gap: 30px;
+    padding-right: 20px;
 }
 .serviceInfoCard h2 {
     font-family: 'scada';
+    font-weight: bold;
     font-size: 48px;
     color: #424242;
     margin-bottom: 0px;
     width: 500px;
 }
 .serviceInfoCard p {
-    font-family: 'scada';
+    font-family: 'saira';
+    font-weight: lighter;
     font-size: 24px;
     color: #707070;
 }
@@ -49,8 +54,8 @@
 /* Galeria */
 
 .serviceInfoThumb {
-    width: 900px;
-    height: 500px;
+    width: 660px;
+    height: 400px;
     display: flex;
     justify-content: center;
 }
@@ -90,7 +95,10 @@
 /* @media screen and (min-width: 320px) and (max-width: 768px){
     
 } */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .serviceInfoContainer {
+        padding: 3% 0% 3% 3%;
+     }
     .serviceInfoContainer{
         display: flex;
         flex-direction: column;
@@ -115,17 +123,23 @@
         font-size: 15px;
         padding: 10px 20px 10px 20px;
     }
+    #depoimentoInfoText{
+        display: block;
+    }
     .serviceInfoCard {
         display: flex;
         align-items: start;
         gap: 10px;
-       border-radius: 10px;
+        border-radius: 10px;
         padding: 10px;
         box-shadow: 0px 2px 6px 0px #00000040;
+
+        
 
     }
     .serviceInfoCard h2 {
         font-family: 'scada';
+        font-weight: bold;
         font-size: 28px;
         color: #424242;
         margin-bottom: 0px;
@@ -133,8 +147,9 @@
         width: 0px;
     }
     .serviceInfoCard p {
-        font-family: 'scada';
-        font-size: 13px;
+        font-family: 'saira';
+        font-weight: lighter;
+        font-size: 16px;
         color: #707070;
         margin-top: 30px;
         margin-left: -88px ;
@@ -150,8 +165,94 @@
         width: 78px;    
         
     }
-    .serviceInfoImagesContainer {
-        display: none;
-    }
     
+    
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .serviceInfoContainer {
+        padding: 3%;
+     }
+     .serviceInfoContainer{
+         display: flex;
+         width: 100%;
+         gap: 50px;
+     }
+     .serviceInfoText h2 {
+         font-family: 'saira';
+         color: #9C9C9C;
+         font-size: 26px;
+         
+     }
+     .serviceInfoText p {
+         font-family: 'scada';
+         margin-bottom: 72px;
+         color: #707070;
+         font-size: 16px;
+     }
+     #depoimentoInfoText{
+         display: none;
+     }
+     .serviceInfoCard {
+         display: flex;
+         align-items: center;
+         gap: 30px;
+         padding-right: 20px;
+        
+     }
+     .serviceInfoCard h2 {
+         font-family: 'scada';
+         font-weight: bold;
+         font-size: 24px;
+         color: #424242;
+         margin-bottom: 0px;
+         width: 500px;
+     }
+     .serviceInfoCard p {
+         font-family: 'saira';
+         font-weight: lighter;
+         font-size: 18px;
+         color: #707070;
+     }
+     .serviceInfoCard h3{
+         font-family: 'scada';
+         font-size: 16px;
+         color: #424242;
+         
+     }
+    
+     .serviceCardAvatar img{
+         border-radius: 50%;
+         width: 100px;    
+     }
+     
+     /* Galeria */
+     
+     .serviceInfoThumb {
+         width: 500px;
+         height: 300px;
+         display: flex;
+         justify-content: center;
+     }
+     
+     .serviceInfoThumb img{
+         width: 100%;
+         box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7), 0px 20px 30px rgba(0, 0, 0, 0.3), 0px 10px 50px rgba(0, 0, 0, 0.2);
+         border-radius: 30px;
+         background: #FFFFFF;
+     }
+     
+     .serviceInfoImagesOptions{
+         display: flex;
+         margin-top: 40px;
+         margin-bottom: 120px;
+     }
+     
+     .serviceInfoImagesOptions img{
+         margin-right: 40px;
+         border-radius: 30px;
+     
+     }
+     .serviceInfoImagesContainer {
+         position: "relative"
+     }
 }
