@@ -103,14 +103,10 @@ const ProjectImages:React.FC<{images: Image[]}> = ( {images} ) => {
 			</div>
 			<div className="serviceInfoImagesOptions">
 				{filteredImages.map((image, key) => (
-					<div key={key}>
+					<div  className="serviceInfoImages" key={key}>
 						{image.url !== "" ? (
 							<img
 								src={image.url}
-								style={{
-									width: "360px",
-									height: "210px",
-								}}
 								onClick={() => handleClick(image.url)}
 							/>
 						) : null}
@@ -149,6 +145,9 @@ export const ServiceInfo = () => {
 				date={portfolio?.date}
 			/>
 			<div className="serviceInfoContainer">
+				<div className="projectImagesMobile">
+					<ProjectImages images={images}/>
+				</div>
 				<div className="serviceInfoText">
 					<h2>Sobre o cliente</h2>
 					<p>{portfolio?.client.clientDescription}</p>
@@ -156,10 +155,10 @@ export const ServiceInfo = () => {
 					<p>{portfolio?.projectDescription}</p>
 					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link}>Versão ao Vivo &gt;</a>
 				</div>
-				<div>
-
-					{/* Galeria de imagem */}
-					<ProjectImages images={images}/>
+				<div className="projectImagesDiv">
+					<div className="projectImagesDesktop">
+						<ProjectImages images={images}/>
+					</div>
 					<div className="serviceInfoCard">
 						<img className= "quotationMark" style={{"alignSelf": "flex-start", "transform": "rotate(0deg)"}} src={quoteIco}/>
 						<div className="serviceCardAvatar">
