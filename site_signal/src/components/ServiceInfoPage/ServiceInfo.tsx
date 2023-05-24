@@ -162,8 +162,8 @@ export const ServiceInfo = () => {
 					<div className="projectImagesDesktop">
 						<ProjectImages images={images}/>
 					</div>
+					<img className= "quotationMark" style={{"transform": "rotate(0deg)"}} src={quoteIco}/>
 					<div className="serviceInfoCard">
-						<img className= "quotationMark" style={{"alignSelf": "flex-start", "transform": "rotate(0deg)"}} src={quoteIco}/>
 						<div className="serviceCardAvatar">
 							<img src={portfolio?.client.avatar.url} alt=""/>
 						</div>
@@ -172,12 +172,10 @@ export const ServiceInfo = () => {
 							<h3>{portfolio?.client.role}</h3>
 							<p>{portfolio?.projectTestimony}</p>
 						</div>
-						<img className= "quotationMark" style={{"alignSelf": "flex-end", "transform": "rotate(180deg)"}} src={quoteIco}/>
 					</div>
+					<img className= "quotationMark" style={{"float": "right", "transform": "rotate(180deg)"}} src={quoteIco}/>
 				</div>
 			</div>
-
-
 			<Footer/>
 		</>
 	);

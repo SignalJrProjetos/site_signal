@@ -17,6 +17,14 @@
     color: #707070;
     font-size: 24px;
 }
+
+.serviceInfoText{
+    width: 50%;
+}
+
+.projectImagesDiv{
+    width: 50%;
+}
 #depoimentoInfoText{
     display: none;
 }
@@ -33,7 +41,6 @@
     font-size: 48px;
     color: #424242;
     margin-bottom: 0px;
-    width: 500px;
 }
 .serviceInfoCard p {
     font-family: 'saira';
@@ -106,8 +113,13 @@
     }
 
     .serviceInfoText{
+        width: 100%;
         padding: 5%;
     }
+    .projectImagesDiv{
+        width: 100%;
+    }
+
     .serviceInfoText h2 {
         font-family: 'saira';
         color: #9C9C9C;
@@ -294,14 +306,21 @@
 }
 
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
-    .projectImagesDiv{
-        width: 40%;
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .serviceCardAvatar img {
+        border-radius: 50%;
+        width: 150px;
     }
 
+    .serviceInfoCard {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        text-align: center;
+        padding-right: 0px;
+      }
+
     .serviceInfoThumb img{
-        width: 100%;
         height: 190px;
     }
 
