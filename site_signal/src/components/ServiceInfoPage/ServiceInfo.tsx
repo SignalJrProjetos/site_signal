@@ -97,20 +97,16 @@ const ProjectImages:React.FC<{images: Image[]}> = ( {images} ) => {
 	const filteredImages = images.filter((image) => image.url !== clickedImage);
 
 	return (
-		<div style={{position: "relative"}}>
+		<div className="serviceInfoImagesContainer">
 			<div className="serviceInfoThumb">
 				<img src={clickedImage}></img>
 			</div>
 			<div className="serviceInfoImagesOptions">
 				{filteredImages.map((image, key) => (
-					<div key={key}>
+					<div  className="serviceInfoImages" key={key}>
 						{image.url !== "" ? (
 							<img
 								src={image.url}
-								style={{
-									width: "360px",
-									height: "210px",
-								}}
 								onClick={() => handleClick(image.url)}
 							/>
 						) : null}
@@ -152,19 +148,22 @@ export const ServiceInfo = () => {
 				style={serviceHeaderStyle}
 			/>
 			<div className="serviceInfoContainer">
-				<div className="serviceInfoText">
-					<h2>Sobre o cliente</h2>
-					<p>{portfolio?.client.clientDescription}</p>
-					<h2>Sobre o Projeto</h2>
-					<p>{portfolio?.projectDescription}</p>
-					<a className="buttonPurple2" href={portfolio?.link}>Versao ao Vivo</a>
-				</div>
-				<div>
-
-					{/* Galeria de imagem */}
+				<div className="projectImagesMobile">
 					<ProjectImages images={images}/>
+				</div>
+				<div className="serviceInfoText">
+					<h2 className="subtitle" style={{paddingLeft:"0px"}}>Sobre o cliente</h2>
+					<p className="content">{portfolio?.client.clientDescription}</p>
+					<h2 className="subtitle" style={{paddingLeft:"0px"}}>Sobre o Projeto</h2>
+					<p className="content">{portfolio?.projectDescription}</p>
+					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link}>Versão ao Vivo &gt;</a>
+				</div>
+				<div className="projectImagesDiv">
+					<div className="projectImagesDesktop">
+						<ProjectImages images={images}/>
+					</div>
+					<img className= "quotationMark" style={{"transform": "rotate(0deg)"}} src={quoteIco}/>
 					<div className="serviceInfoCard">
-						<img className= "quotationMark" style={{"alignSelf": "flex-start", "transform": "rotate(0deg)"}} src={quoteIco}/>
 						<div className="serviceCardAvatar">
 							<img src={portfolio?.client.avatar.url} alt=""/>
 						</div>
@@ -173,12 +172,10 @@ export const ServiceInfo = () => {
 							<h3>{portfolio?.client.role}</h3>
 							<p>{portfolio?.projectTestimony}</p>
 						</div>
-						<img className= "quotationMark" style={{"alignSelf": "flex-end", "transform": "rotate(180deg)"}} src={quoteIco}/>
 					</div>
+					<img className= "quotationMark" style={{"float": "right", "transform": "rotate(180deg)"}} src={quoteIco}/>
 				</div>
 			</div>
-
-
 			<Footer/>
 		</>
 	);
