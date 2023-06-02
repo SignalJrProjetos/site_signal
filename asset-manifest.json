@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/site_signal/static/css/main.13855e1b.css",
-    "main.js": "/site_signal/static/js/main.3ea9b95d.js",
+    "main.js": "/site_signal/static/js/main.031a2c7f.js",
     "static/media/img.solutionsConsultoria.svg": "/site_signal/static/media/img.solutionsConsultoria.ff38055a4dcf983013d7c193454f9aa4.svg",
     "static/media/img.solutionsIdVisual.svg": "/site_signal/static/media/img.solutionsIdVisual.7e460295540067aa5b9d1345e9511c64.svg",
     "static/media/logo.SignalSymbolBg.svg": "/site_signal/static/media/logo.SignalSymbolBg.633467946ecbfc69faa82acce309fab9.svg",
@@ -61,10 +61,10 @@
     "static/media/icon.github-purple.svg": "/site_signal/static/media/icon.github-purple.7f08c6416a33dedb6056a638dbb44f95.svg",
     "static/media/icon.github.svg": "/site_signal/static/media/icon.github.a0be9946398be67655d4812949f98161.svg",
     "main.13855e1b.css.map": "/site_signal/static/css/main.13855e1b.css.map",
-    "main.3ea9b95d.js.map": "/site_signal/static/js/main.3ea9b95d.js.map"
+    "main.031a2c7f.js.map": "/site_signal/static/js/main.031a2c7f.js.map"
   },
   "entrypoints": [
     "static/css/main.13855e1b.css",
-    "static/js/main.3ea9b95d.js"
+    "static/js/main.031a2c7f.js"
   ]
 }
