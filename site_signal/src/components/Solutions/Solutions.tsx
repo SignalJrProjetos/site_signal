@@ -103,8 +103,8 @@ export const Solutions = () => {
 				
 				<div className="solutionsContainer">
 					<img className="solutionsBackground" src={solutionsBg}></img>
-					<h2 className="subtitle" style={{"textAlign":"center"}}>O que nós fazemos</h2>
-					<h1 className="title" style={{"textAlign":"center"}}>Nossas soluções para o seu negócio</h1>
+					<h2 className="subtitle" style={{textAlign:"center"}}>O que nós fazemos</h2>
+					<h1 className="title" style={{textAlign:"center"}}>Nossas soluções para o seu negócio</h1>
 
 					{/* Versão Destkop */}
 					<div className="solutionsContentContainer">
@@ -130,7 +130,7 @@ export const Solutions = () => {
 
 							<div className="solutionsTextContainer">
 								<h1 className={showText ? "textFadeIn" : ""}>{service}</h1>
-								<p className={showText ? "textFadeIn" : ""}>{summary}</p>
+								<p className={`content ${showText ? "textFadeIn" : ""}`}>{summary}</p>
 								<a className={`buttonGradient ${showText ? "textFadeIn" : ""}`} href={process.env.PUBLIC_URL + "/services"}>Saiba Mais</a>
 							</div>
 						</div>
@@ -166,7 +166,7 @@ export const Solutions = () => {
 
 						{/* Versão Mobile */}
 						<div className="solutionsServicesMobile">
-							<div style={{"display":"flex", "justifyContent":"center", "marginBottom": "32px"}}>
+							<div style={{display:"flex", justifyContent:"center", marginBottom: "32px"}}>
 								{data?.solutions.map(solutions => {
 									return(
 										<button 
@@ -179,7 +179,7 @@ export const Solutions = () => {
 									);
 								})}
 							</div>
-							<p>{description}</p>
+							<p className="content">{description}</p>
 						</div>
 
 						{/* Versão Desktop */}
@@ -190,7 +190,7 @@ export const Solutions = () => {
 									return(
 										<button 
 											className={ solutions?.solutionTag == tag ? "buttonPurple2" : "buttonPurple"}
-											style={{"margin":"24px", "width": "300px", "padding": "18px 0", "borderRadius":"48px"}}
+											style={{margin:"20px 2%", width: "256px", borderRadius:"48px"}}
 											key={solutions.id}
 											onClick={() => activeButton(solutions.solutionTag)}> {/*Ao clicar, envia o valor do parâmetro solutionTag para a função activeButton */}
 											{solutions.solutionName}
@@ -201,7 +201,7 @@ export const Solutions = () => {
 			
 							<div className="solutionsTextContainer">
 								<h1 className={showText ? "textFadeIn" : ""}>{service}</h1>
-								<p className={showText ? "textFadeIn" : ""}>{description}</p>
+								<p className={`content ${showText ? "textFadeIn" : ""}`} style={{lineHeight: "40px", fontSize: "20px", fontFamily:"Saira"}}>{description}</p>
 							</div>
 						</div>
 						<div className={showText ? "textFadeIn" : ""}>

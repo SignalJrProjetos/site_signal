@@ -79,7 +79,7 @@ export const Processes = (props: any) => {
 				
 				<div className="processInfoContainer">
 					<h1 className={showText ? "textFadeIn" : ""}>{title}</h1>
-					<p className={showText ? "textFadeIn" : ""}>{text}</p>
+					<p className={`content ${showText ? "textFadeIn" : ""}`}>{text}</p>
 				</div>
 			</div>
 
@@ -87,15 +87,13 @@ export const Processes = (props: any) => {
 			<div className="timelineMobile">
 				{props.stepByStep.map((step: string) => (
 					// eslint-disable-next-line react/jsx-key
-					<div style={{"display":"flex", "marginBottom": "12px"}}>
+					<div style={{display:"flex", marginBottom: "12px"}}>
 
 						<div className="processLine"></div>
-
 						<div className="processInfoContainer">
 							<h1 className={showText ? "textFadeIn" : ""}>{step.substring(0, step.indexOf(":"))}</h1>
-							<p className={showText ? "textFadeIn" : ""}>{step.substring(step.indexOf(":") + 1, step.length)}</p>
+							<p className={`content ${showText ? "textFadeIn" : ""}`}>{step.substring(step.indexOf(":") + 1, step.length)}</p>
 						</div>
-
 					</div>
 				))}
 			</div>

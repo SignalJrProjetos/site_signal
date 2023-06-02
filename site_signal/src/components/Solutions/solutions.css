@@ -57,8 +57,9 @@
 /* Service */
 .solutionsButtonsAltContainer{
     display: flex;
+    justify-items: center;
     flex-direction: column;
-    margin-right: 10%;
+    margin-right: 5%;
 }
 
 .solutionButton {
@@ -115,16 +116,10 @@
 }
 
 .solutionsTextContainer p{
-    color: #707070;
-    font-family: "Saira";
-    font-size: 24px;
     text-align: right;
 }
 
 .solutionsServicesMobile p {
-    font-family: 'Saira';
-    font-size: 16px;
-    color: #707070;
     margin: 0 5%;
 }
 
@@ -149,7 +144,7 @@
     z-index: -1;
     opacity: 0.2;
     top: 2%;
-    left: 60%;
+    right: 1%;
     width: 720px;
 }
 
@@ -220,6 +215,10 @@
         margin-top: -40px;
      }
 
+    .solutionsCardContainer {
+        display: block;
+    }
+
     .solutionsAltContainer {
         margin-top: -24px;
     }
@@ -237,30 +236,10 @@
     }
 
     .solutionButton {
-        flex-direction: row;
-        height: 72px;
-        width: 220px;
-        margin: 0 3%;
-        border-radius: 40px;
-    }
-
-    .solutionButton img {
-        margin-right: 0 12px;
-    }
-
-    .solutionButton.active img {
-        transition: box-shadow 0.7s ease-out;
-    }
-    
-    .solutionsCardContainer {
-        display: block;
-    }
-
-    .solutionsServicesMobile p {
-        font-family: 'Saira';
-        font-size: 18px;
-        color: #707070;
+        height: 116px;
+        width: 116px;
         margin: 0 5%;
+        font-size: 16px;
     }
     
     .solutionBackground {
@@ -269,7 +248,7 @@
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1366px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
     .solutionsContainer {
         margin-top: -48px;
@@ -285,6 +264,15 @@
 
     .solutionsButtonsAltContainer {
         flex-direction: row;
+        margin-bottom: 24px;
+        margin-right: 0;
     }
 
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    
+    .solutionsAltContainer {
+        margin-top: -96px;
+    }
 }

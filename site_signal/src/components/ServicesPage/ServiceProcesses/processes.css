@@ -1,24 +1,6 @@
-/* Animações */
-
-.textFadeIn {
-    opacity: 1;
-    animation: fade-in 2s;
-}
-
-@keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-/* CSS */
-
 .processContainer {
     position: relative;
-    margin-top: 96px;
+    margin-top: 48px;
     background-repeat: no-repeat;
     background-size: 50%;
 
@@ -95,6 +77,7 @@
     font-size: 64px;
     font-family: 'Saira';
     font-weight: bold;
+    justify-content: space-between;
     margin: 0 24px;
 }
 
@@ -209,13 +192,15 @@
 
 .processInfoContainer p {
     text-align: justify;
-    color: #9C9C9C;
-    font-family: "Saira";
-    font-size: 24px;
     font-weight: lighter;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .processContainer {
+        margin-top: 96px;
+        margin-bottom: -240px;
+    }
     
     .timelineContainer {
         display: none
@@ -254,6 +239,11 @@
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
+    .processContainer {
+        margin-top: 96px;
+        margin-bottom: -240px;
+    }
+
     .timelineContainer {
         display: none
     }
@@ -261,4 +251,28 @@
     .timelineMobile {
         display: block;
     }
+
+    .processInfoContainer h1 {
+        text-align: left;
+        font-size: 32px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .processContainer {
+        margin-top: 96px;
+        margin-bottom: -180px;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+
+    .processContainer {
+        margin-top: 96px;
+        margin-bottom: -144px;
+    }
+
 }
