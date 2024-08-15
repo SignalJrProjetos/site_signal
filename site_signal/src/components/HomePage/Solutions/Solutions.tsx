@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useLocation } from "react-router-dom";
 import imagemSolucoes from "../../../assets/svg/img.solutionsSolucoesTI.svg";
 import imagemIdentidadeVisual from "../../../assets/svg/img.solutionsIdVisual.svg";
 import imagemConsultoria from "../../../assets/svg/img.solutionsConsultoria.svg";
@@ -12,6 +13,12 @@ import "./solutions.css";
 
 // Criando o componente Contato
 export const Solutions = () => {
+	//Saber qual a rota estamos usando no react-router
+	const location = useLocation();
+	const style: React.CSSProperties = {
+		flexDirection: (location.pathname == "/servicos") ? "column" : "row",
+	};
+
 	// O botão ativado por padrão é o Soluções
 	const [services, setServices] = useState<string>("Soluções");
 	const [buttonSolucoes, setButtonSolucoes] = useState<boolean>(true);
@@ -137,7 +144,7 @@ export const Solutions = () => {
 
 			</div>
 			{/* Container para Desktop  */}
-			<div className="solutionsContainerButtons">
+			<div className="solutionsContainerButtons" style={style}>
 				<button
 					style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
 					id="solutionsButtonClicked"

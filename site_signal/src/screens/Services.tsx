@@ -6,6 +6,7 @@ import { Portfolio } from "../components/ServicesPage/Portfolio/Porfolio";
 import { ParticlesContainer } from "../components/HomePage/ParticlesContainer";
 import { Header } from "../components/HomePage/Header/Header";
 import { Navbar } from "../components/HomePage/Navbar/Navbar";
+import { Solutions } from "../components/HomePage/Solutions/Solutions";
 
 export const Services = () => {
 	return(
@@ -15,6 +16,7 @@ export const Services = () => {
 			<Header 
 				title="Descubra como podemos alavancar seu negócio"
 				text="Conheça nossos principais serviços e nossas etapas de projeto para entregarmos a nossa solução até suas mãos"/>
+			<Solutions />
 			<Portfolio/>
 			<Contact
 				imagem={ contactImgService }
