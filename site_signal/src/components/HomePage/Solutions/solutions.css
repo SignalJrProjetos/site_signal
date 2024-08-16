@@ -83,6 +83,10 @@
     display: none;
 }
 
+.flexDirection{
+    flex-direction: column;
+}
+
 /* Responsividade */
 
 /* 320px — 480px: Mobile devices

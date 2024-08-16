@@ -14,10 +14,8 @@ import "./solutions.css";
 // Criando o componente Contato
 export const Solutions = () => {
 	//Saber qual a rota estamos usando no react-router
+	//Dependendo da rota o flexDirection das soluções muda
 	const location = useLocation();
-	const style: React.CSSProperties = {
-		flexDirection: (location.pathname == "/servicos") ? "column" : "row",
-	};
 
 	// O botão ativado por padrão é o Soluções
 	const [services, setServices] = useState<string>("Soluções");
@@ -144,7 +142,7 @@ export const Solutions = () => {
 
 			</div>
 			{/* Container para Desktop  */}
-			<div className="solutionsContainerButtons" style={style}>
+			<div className={(location.pathname == "/servicos") ? " solutionsContainerButtons flexDirection" : "solutionsContainerButtons"} > 
 				<button
 					style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
 					id="solutionsButtonClicked"
