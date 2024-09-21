@@ -37,10 +37,11 @@ interface CardProps {
     slug: string;
 	image: string;
 	isHovering: boolean;
+	link: string;
 }
 
 
-const Card: React.FC<CardProps> = ({ id, projectName, serviceType, slug, image}) => {
+const Card: React.FC<CardProps> = ({ id, projectName, serviceType, slug, image, link}) => {
 
 	const [hovering, setHovering] = useState(false);
 
@@ -53,7 +54,7 @@ const Card: React.FC<CardProps> = ({ id, projectName, serviceType, slug, image})
 	};
 	return (
 		<div className="portfolioCard" key={id} style={{backgroundImage: `url(${image})`}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-			<a href={`/servicos/projetos/${slug}`} >
+			<a href={link} target="_blank" rel="noreferrer">
 				{hovering &&
 				<div className="portfolioCardContent">
 					<h2>{projectName}</h2>
@@ -84,6 +85,7 @@ export const Portfolio = () => {
 							slug={portfolio.slug}
 							image={portfolio.projectThumb.url}
 							isHovering= {true}
+							link={portfolio.link}
 						/>
 					);
 				})}
@@ -102,6 +104,7 @@ export const Portfolio = () => {
 									slug={portfolioM.slug}
 									image={portfolioM.projectThumb.url}
 									isHovering= {true}
+									link={portfolioM.link}
 								/>
 								<h2>{portfolioM.projectName}</h2>
 								<h3>{portfolioM.serviceType}</h3>

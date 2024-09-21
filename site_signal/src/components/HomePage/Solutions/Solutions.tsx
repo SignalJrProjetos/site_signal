@@ -46,18 +46,30 @@ export const Solutions = () => {
 		}
 	}
 
-	function changeContent() {
+	function changeContent(isServicesPage: boolean) {
 		if(services == "Identidade") {
 			return (
 				<>
-					<img alt="Imagem identidade visual" src={imagemIdentidadeVisual}/>
-					<div className="solutionsContainerText">
-						<div className="solutionsTitle">
-							<h1>Identidade Visual</h1>
-						</div>
-						<p>De uma cara nova para sua Marca com nosso serviço de identidade Visual, partindo da Criação do logotipo da marca, 
-							versões adaptadas e aplicações, desenvolvidos com o que seu negócio quer mostrar ao mundo.
-						</p>
+					{isServicesPage ? null : <img alt="Imagem identidade visual" src={imagemIdentidadeVisual}/>}
+					<div className={isServicesPage ? "solutionsContainerText services" : "solutionsContainerText"}>
+						{isServicesPage ?
+							null :
+							<div className="solutionsTitle">
+								<h1>Identidade Visual</h1>
+							</div>
+						}
+						{isServicesPage ?
+							<p className="servicesSolutionText">Transforme a imagem da sua marca com nosso serviço de Identidade Visual
+								completo e personalizado. Nosso processo começa com a criação de um logotipo exclusivo, que captura a essência do seu negócio.
+								Além disso, oferecemos versões adaptadas e aplicações para diferentes contextos, garantindo que sua marca tenha
+								uma presença consistente e impactante em todas as plataformas. Cada detalhe é pensado para comunicar ao mundo os
+								valores, a missão e o propósito da sua empresa. Seja através de materiais impressos ou digitais,
+								sua marca terá uma identidade visual que se destaca e conecta com o público de maneira única e autêntica.
+							</p> :
+							<p>De uma cara nova para sua Marca com nosso serviço de identidade Visual, partindo da Criação do logotipo da marca, 
+								versões adaptadas e aplicações, desenvolvidos com o que seu negócio quer mostrar ao mundo.
+							</p> 
+						}
 						<br/>
 						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
 					</div>
@@ -68,14 +80,28 @@ export const Solutions = () => {
 		if(services == "Consultoria") {
 			return (
 				<>
-					<img alt="Imagem consultoria em TI" src={imagemConsultoria}/>
-					<div className="solutionsContainerText">
-						<div className="solutionsTitle">
-							<h1>Consultoria em TI</h1>
-						</div>
-						<p>Partindo de uma etapa de levantamento de requisitos, elaboramos e desenvolvemos softwares personalizados 
-							para seu negócio evoluir, incluindo aplicações web, desktop e apps.
-						</p>
+					{isServicesPage ? null : <img alt="Imagem consultoria em TI" src={imagemConsultoria}/>}
+					<div className={isServicesPage ? "solutionsContainerText services" : "solutionsContainerText"}>
+						{isServicesPage ?
+							null :
+							<div className="solutionsTitle">
+								<h1>Consultoria em TI</h1>
+							</div>
+						}
+
+						{isServicesPage ?
+							<p className="servicesSolutionText">Começando com uma detalhada etapa de levantamento de requisitos,
+							criamos e desenvolvemos softwares personalizados para impulsionar o
+							crescimento do seu negócio. Nossa equipe especializada trabalha para entregar soluções sob medida,
+							que atendem exatamente às suas necessidades. Desenvolvemos desde aplicações web e desktop até aplicativos
+							móveis, sempre utilizando as melhores práticas e tecnologias de ponta. Cada projeto é pensado para garantir
+							que sua empresa tenha ferramentas eficientes, escaláveis e prontas para apoiar sua evolução no mercado.
+							Confie em nosso expertise para transformar suas ideias em soluções tecnológicas inovadoras e de alto impacto para o seu negócio.
+							</p> :
+							<p>Partindo de uma etapa de levantamento de requisitos, elaboramos e desenvolvemos softwares personalizados 
+						para seu negócio evoluir, incluindo aplicações web, desktop e apps.
+							</p>
+						}
 						<br/>
 						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
 					</div>
@@ -86,14 +112,28 @@ export const Solutions = () => {
 		if(services == "Soluções") {
 			return (
 				<>
-					<img alt="Imagem criação de sites" src={imagemSolucoes}/>
-					<div className="solutionsContainerText">
-						<div className="solutionsTitle">
-							<h1>Desenvolvimento de Site</h1>
-						</div>
-						<p>Consiga mais clientes através de um website moderno, organizado e intuitivo, todo responsivo, com alto desempenho e 
-							otimizado para mecanismos de busca, desenvolvido com as práticas mais modernas de tecnologia.
-						</p>
+					{isServicesPage ? null : <img alt="Imagem criação de sites" src={imagemSolucoes}/>}
+					<div className={isServicesPage ? "solutionsContainerText services" : "solutionsContainerText"}>
+						{isServicesPage ?
+							null :
+							<div className="solutionsTitle">
+								<h1>Desenvolvimento de Site</h1>
+							</div>
+						}
+
+						{isServicesPage ?
+							<p className="servicesSolutionText">Atraia mais clientes com um website moderno, organizado e intuitivo,
+								totalmente responsivo e projetado para oferecer a melhor experiência ao usuário. Desenvolvemos sites com
+								foco em alto desempenho, garantindo rapidez no carregamento e navegação fluida em qualquer dispositivo.
+								Além disso, otimizamos para mecanismos de busca (SEO), aumentando a visibilidade da sua marca online.
+								Utilizamos as práticas mais avançadas e modernas de tecnologia para garantir que seu site se destaque no
+								mercado competitivo, atraindo novos clientes e potencializando os resultados do seu negócio.
+								Conecte-se ao seu público com uma presença digital poderosa e eficaz.
+							</p> :
+							<p>Consiga mais clientes através de um website moderno, organizado e intuitivo, todo responsivo, com alto desempenho e 
+								otimizado para mecanismos de busca, desenvolvido com as práticas mais modernas de tecnologia.
+							</p>
+						}
 						<br/>
 						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
 					</div>
@@ -141,29 +181,31 @@ export const Solutions = () => {
 				</div>
 
 			</div>
-			{/* Container para Desktop  */}
-			<div className={(location.pathname == "/servicos") ? " solutionsContainerButtons flexDirection" : "solutionsContainerButtons"} > 
-				<button
-					style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
-					id="solutionsButtonClicked"
-					onClick={() => activeButton("Soluções")}>
+			<div className={(location.pathname == "/servicos") ? " flex" : "flex flexColumn"} >
+				{/* Container para Desktop  */}
+				<div className={(location.pathname == "/servicos") ? " solutionsContainerButtons flexColumn" : "solutionsContainerButtons"} >
+					<button
+						style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
+						id="solutionsButtonClicked"
+						onClick={() => activeButton("Soluções")}>
 					Criação de Sites
-				</button>
-				<button
-					style={{backgroundColor: buttonIdentidade ? "#8700A9" : "transparent", border: buttonIdentidade ? "none" : "#610C7D 2px solid", color: buttonIdentidade ? "white" : "black"}}
-					id="solutionsButtonClicked"
-					onClick={() => activeButton("Identidade")}>
+					</button>
+					<button
+						style={{backgroundColor: buttonIdentidade ? "#8700A9" : "transparent", border: buttonIdentidade ? "none" : "#610C7D 2px solid", color: buttonIdentidade ? "white" : "black"}}
+						id="solutionsButtonClicked"
+						onClick={() => activeButton("Identidade")}>
 					Identidade Visual
-				</button>
-				<button
-					style={{backgroundColor: buttonconsultoria ? "#8700A9" : "transparent", border: buttonconsultoria ? "none" : "#610C7D 2px solid", color: buttonconsultoria ? "white" : "black"}}
-					id="solutionsButtonClicked"
-					onClick={() => activeButton("Consultoria")}>
+					</button>
+					<button
+						style={{backgroundColor: buttonconsultoria ? "#8700A9" : "transparent", border: buttonconsultoria ? "none" : "#610C7D 2px solid", color: buttonconsultoria ? "white" : "black"}}
+						id="solutionsButtonClicked"
+						onClick={() => activeButton("Consultoria")}>
 					Consultoria em TI
-				</button>
-			</div>                
-			<div className="solutionsChangeContent">
-				{changeContent()}
+					</button>
+				</div>                
+				<div className="solutionsChangeContent">
+					{changeContent(location.pathname == "/servicos")}
+				</div>
 			</div>
 		</div>
 	);

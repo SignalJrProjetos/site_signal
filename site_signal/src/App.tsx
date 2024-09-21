@@ -11,7 +11,7 @@ export const App = () =>{
 	return (
 		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Routes>
-				<Route path="/" element={<Services/>}/>
+				<Route path="/" element={<Home/>}/>
 				{/* <Route path="/" element={<Home/>}/> */}
 				<Route path="/equipe" element={<Team/>}/>
 				<Route path="/servicos" element={<Services/>}/>

@@ -14,8 +14,9 @@ export const Services = () => {
 			<ParticlesContainer/>
 			<Navbar/>
 			<Header 
-				title="Descubra como podemos alavancar seu negócio"
-				text="Conheça nossos principais serviços e nossas etapas de projeto para entregarmos a nossa solução até suas mãos"/>
+				title="Descubra como podemos <br/> alavancar seu negócio"
+				text="Conheça nossos principais serviços e nossas etapas de projeto para entregarmos a nossa<br/> solução até suas mãos"
+				isSocialMedia={false}/>
 			<Solutions />
 			<Portfolio/>
 			<Contact

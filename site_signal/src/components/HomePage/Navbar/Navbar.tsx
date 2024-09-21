@@ -17,6 +17,7 @@ export const Navbar = () => {
 				<a href={process.env.PUBLIC_URL + "/"}><img alt="Logo SignalJR" id="navbarLogo" src={logo}/></a>
 			</>
 			<div id="navbarMenu" style={{"display": "flex", "alignItems": "center"}}> 
+				<a href={process.env.PUBLIC_URL + "/"} >Início</a>
 				<a href={process.env.PUBLIC_URL + "/servicos"} >Serviços</a>
 				<a href={process.env.PUBLIC_URL + "/equipe"} >Equipe</a>
 				<a className="buttonWhite" href="#contactContainer">Contato</a>

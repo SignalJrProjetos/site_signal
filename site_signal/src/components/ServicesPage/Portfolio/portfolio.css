@@ -31,8 +31,19 @@
     text-align: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: rgba(135, 0, 169, 0.6);
+    transition: .2s linear;
     color: white;
+    animation: cardHovering .2s;
+    background-color: rgba(135, 0, 169, 0.6);
+}
+
+@keyframes cardHovering {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: rgba(135, 0, 169, 0.6);
+    }
 }
 
 .portfolioCardContent h2{
