@@ -16,7 +16,7 @@ export const Team = () =>{
 			<ParticlesContainer/>
 			<Navbar/>
 			<Header 
-				title="Bem-vindo à Signal Júnior Signal Jr. e quem está pronto para ajudá-lo a dar o próximo passo em seu negócio."
+				title="Bem-vindo à Signal Júnior. Estamos pronto para ajudá-lo a dar o próximo passo em seu negócio."
 				text="Impulsionando seu sucesso com a tecnologia com processos sejam eficientes, maduros e alinhados aos padrões de excelência que você merece."
 			/>
 			<AboutUs/>
