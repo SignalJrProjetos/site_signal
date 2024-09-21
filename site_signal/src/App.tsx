@@ -10,7 +10,7 @@ export const App = () =>{
 		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Routes>
 				<Route path="/" element={<Home/>}/>
-				<Route path="/time" element={<Team/>}/>
+				<Route path="/equipe" element={<Team/>}/>
 				<Route path="/developing" element={<Developing/>}/>
 			</Routes>
 		</BrowserRouter>

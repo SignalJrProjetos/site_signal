@@ -57,7 +57,6 @@
     .subtitle {
         font-size: 26px;
     }
-    padding: 0 5% 0 5%;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -119,7 +118,7 @@
     padding: 4px 40px 4px 40px;
     z-index: 2;
     font-family: "Saira";
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .buttonPurple:hover {
@@ -136,7 +135,7 @@
     padding: 8px 40px 8px 40px;
     z-index: 2;
     font-family: "Saira";
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .buttonPurple2:hover {
@@ -158,7 +157,7 @@
     z-index: 2;
     background: none;
     font-family: "Saira";
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .buttonWhite img {
@@ -193,7 +192,7 @@
 
 .cardMobile {
     box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.4);
-    height: 336px;
+    height: 360px;
     background-color: white;
     border-radius: 30px;
     text-align: left;
@@ -213,7 +212,6 @@
 
 .cardMobile p {
     font-size: 18px;
-    text-align: justify;
 }
 
 .cardMobile img {
@@ -226,6 +224,13 @@
     margin-left: 25%;
     z-index: 0;
     opacity: 0.2;
+}
+
+@media screen and (min-width: 320px) and (max-width: 380px) {
+
+    .cardMobile {
+        height: 420px;
+    }
 }
 
 /* Text Input */

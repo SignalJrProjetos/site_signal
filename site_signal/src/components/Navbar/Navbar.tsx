@@ -14,11 +14,11 @@ export const Navbar = () => {
 	return (
 		<nav role="navigation" className="navbarContainer">
 			<>
-				<a href=""><img alt="Logo SignalJR" id="navbarLogo" src={logo}/></a>
+				<a href={process.env.PUBLIC_URL + "/"}><img alt="Logo SignalJR" id="navbarLogo" src={logo}/></a>
 			</>
 			<div id="navbarMenu" style={{"display": "flex", "alignItems": "center"}}> 
 				<a href={process.env.PUBLIC_URL + "/developing"} >Serviços</a>
-				<a href={process.env.PUBLIC_URL + "/developing"} >Equipe</a>
+				<a href={process.env.PUBLIC_URL + "/equipe"} >Equipe</a>
 				<a className="buttonWhite" href="#contactContainer">Contato</a>
 			</div>
 
@@ -30,9 +30,9 @@ export const Navbar = () => {
 				<div id="menu">
 					<img alt="Imagem para abrir o menu mobile" id="navLogoMobile" src={logoMobile} />
 					<ul>
-						<li><a href=""> <img alt="Icone inicio" src={homeIco}/> Início <img alt="Icone seta" src={arrowIco}/> </a></li>
+						<li><a href={process.env.PUBLIC_URL + "/"}> <img alt="Icone inicio" src={homeIco}/> Início <img alt="Icone seta" src={arrowIco}/> </a></li>
 						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img alt="Icone serviços" src={servicesIco}/> Serviços <img alt="Icone seta" src={arrowIco}/> </a></li>
-						<li><a href={process.env.PUBLIC_URL + "/developing"}> <img alt="Icone equipe" src={teamIco}/> Equipe <img alt="Icone seta" src={arrowIco}/></a></li>
+						<li><a href={process.env.PUBLIC_URL + "/equipe"}> <img alt="Icone equipe" src={teamIco}/> Equipe <img alt="Icone seta" src={arrowIco}/></a></li>
 					</ul>
 					<h3>Vamos Conversar!</h3>
 					<div className="socialMedia">

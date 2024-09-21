@@ -11,7 +11,7 @@ import Border from "../../assets/svg/footer.border.svg";
 export const Footer = () => {
 	return(
 		<footer>
-			<img alt="Bordar arredondada do rodapé" className="footerBorder" src={Border} />
+			<img alt="Borda arredondada do rodapé" className="footerBorder" src={Border} />
 			<div className="footerContainer">
 				<div className="footerInfo">
 					<img alt="Logo SignalJr" className="footerLogo" src={Logo} />
