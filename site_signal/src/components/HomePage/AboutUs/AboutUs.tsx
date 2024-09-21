@@ -1,6 +1,6 @@
 import React from "react";
 import "./aboutUs.css";
-import aboutLogo from "../../assets/svg/logo.SignalSymbolBg.svg";
+import aboutLogo from "../../../assets/svg/logo.SignalSymbolBg.svg";
 
 
 export const AboutUs = () => {

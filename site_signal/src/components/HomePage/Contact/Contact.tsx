@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import "../../assets/styles/global.css";
+import "../../../assets/styles/global.css";
 import "./contact.css"; 
 import emailjs from "@emailjs/browser";
-import imagemContact from "../../assets/svg/img.contact.svg";
-import inputUserIco from "../../assets/svg/icon.input.user.svg";
+import imagemContact from "../../../assets/svg/img.contact.svg";
+import inputUserIco from "../../../assets/svg/icon.input.user.svg";
 
 // Tipando o objeto messagem que será enviado para o email da signal
 interface Message{
@@ -12,9 +12,12 @@ interface Message{
 		email: string,
 		message: string,
 }
-		
+interface props {
+	imagem: string;
+	style?: React.CSSProperties; 
+}	
 // Criando o componente Contato
-export const Contact = () => {
+export const Contact = (props:any) => {
 
 	// Objeto messagem
 	const [message, setMessage] = useState<Message>({
@@ -64,9 +67,9 @@ export const Contact = () => {
 	}
 	// Retornando os elementos do componente
 	return (
-		<div id="contactContainer" className="contactContainer">
+		<div id="contactContainer" className="contactContainer" style={props.style}>
 			{/* <div className="contactContainer"></div> */}
-			<img alt="Imagem ilustrativa de contato com o cliente" id="contactImg" src={imagemContact}/>
+			<img alt="Imagem ilustrativa de contato com o cliente" id="contactImg" src={ props.imagem }/>
 			<div className="contactForm">
 				<h1>Contato</h1>
 				<p>Dúvidas? Propostas? Mande sua mensagem e em breve retornamos.</p>

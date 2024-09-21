@@ -6,7 +6,7 @@
 }
 
 .hdrTextContainer {
-    margin: 0 5% 0 5%;
+    margin: 0 auto;
     color: white;
     text-align: center;
 }
@@ -57,6 +57,18 @@
     transform: scaleX(-1);
 }  
 
+#serviceInfoHeader {
+    display: none;
+}
+
+#serviceInfoHeaderContainer {
+    justify-content: center;
+}
+
+#serviceInfoHeaderP {
+    text-align: center;
+}
+
 /* Responsividade */
 
 /** Mobile **/
@@ -64,6 +76,10 @@
 
     .hdrContainer {
         height: 460px;
+    }
+
+    #serviceInfoHeaderContainer{
+        height: 340px;
     }
 
     .hdrTextContainer {
@@ -93,6 +109,10 @@
         height: 600px;
     }
 
+    #serviceInfoHeaderContainer{
+        height: 480px;
+    }
+
     .hdrTextContainer h1 {
         text-align: left;
         padding-top: 108px;
@@ -115,6 +135,10 @@
 
     .hdrContainer {
         height: 700px;
+    }
+
+    #serviceInfoHeaderContainer{
+        height: 580px;
     }
 
     .hdrTextContainer {
@@ -141,6 +165,10 @@
         height: 720px;
     }
 
+    #serviceInfoHeaderContainer{
+        height: 600px;
+    }
+
     .hdrTextContainer {
         margin: 0 5%;
     }
@@ -148,11 +176,5 @@
     .hdrSocialMediaContainer {
         padding-top: 5%;
     }
-
-}
-
-/** Desktop: Extra Large Screen **/
-
-@media screen and (min-width: 1921px) {
 
 }

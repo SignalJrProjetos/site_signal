@@ -1,19 +1,19 @@
 import React from "react";
 import "../assets/styles/global.css";
 import "../screens/css/home.css";
-import { ParticlesContainer } from "../components/ParticlesContainer";
-import { Navbar } from "../components/Navbar/Navbar";
-import { HomeHeader } from "../components/HomeHeader/HomeHeader";
-import { Solutions } from "../components/Solutions/Solutions";
-import { AboutUs } from "../components/AboutUs/AboutUs";
-import { Contact } from "../components/Contact/Contact";
-import { Testimonial } from "../components/Testimonial/Testimonial";
-import { Partners } from "../components/Partners/Partners";
-import { Footer } from "../components/Footer/Footer";
+import { ParticlesContainer } from "../components/HomePage/ParticlesContainer";
+import { Navbar } from "../components/HomePage/Navbar/Navbar";
+import { HomeHeader } from "../components/HomePage/HomeHeader/HomeHeader";
+import { Solutions } from "../components/HomePage/Solutions/Solutions";
+import { AboutUs } from "../components/HomePage/AboutUs/AboutUs";
+import { Contact } from "../components/HomePage/Contact/Contact";
+import { Testimonial } from "../components/HomePage/Testimonial/Testimonial";
+import { Partners } from "../components/HomePage/Partners/Partners";
+import { Footer } from "../components/HomePage/Footer/Footer";
 import Carousel  from "react-bootstrap/Carousel";
 import engealiLogo from "../assets/imgs/logo.engeali.png";
 import cantoGeralLogo from "../assets/imgs/logo.cantogeral.png";
-
+import contactImage from "../assets/svg/img.contact.svg";
 
 export const Home = () =>{
 
@@ -24,7 +24,7 @@ export const Home = () =>{
 			<HomeHeader/>
 			<Solutions/>
 			<AboutUs/>
-			<Contact/>
+			<Contact imagem= {contactImage} />
 
 			{/* Depoimentos */}
 			<div className="testimonialsContainer">

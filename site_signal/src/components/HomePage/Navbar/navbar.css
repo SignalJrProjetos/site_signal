@@ -144,6 +144,10 @@
     padding-top: 18px;
 }
 
+#menuOptionsLink:hover{
+    color: white;
+}
+
 .socialMedia {
     display: flex;
     justify-content: center;

@@ -1,14 +1,15 @@
 import React from "react";
 import "./footer.css";
-import Logo from "../../assets/imgs/logo.SignalCompactaBranca.png";
-import LocationIcon from "../../assets/svg/icon.location.svg";
-import EmailIcon from "../../assets/svg/icon.email.svg";
-import FacebookIcon from "../../assets/svg/icon.facebook.svg";
-import InstagramIcon from "../../assets/svg/icon.instagram.svg";
-import LinkedInIcon from "../../assets/svg/icon.linkedin.svg";
-import Border from "../../assets/svg/footer.border.svg";
+import Logo from "../../../assets/imgs/logo.SignalCompactaBranca.png";
+import LocationIcon from "../../../assets/svg/icon.location.svg";
+import EmailIcon from "../../../assets/svg/icon.email.svg";
+import FacebookIcon from "../../../assets/svg/icon.facebook.svg";
+import InstagramIcon from "../../../assets/svg/icon.instagram.svg";
+import LinkedInIcon from "../../../assets/svg/icon.linkedin.svg";
+import Border from "../../../assets/svg/footer.border.svg";
 
 export const Footer = () => {
+	const year = new Date().getFullYear();
 	return(
 		<footer>
 			<img alt="Borda arredondada do rodapé" className="footerBorder" src={Border} />
@@ -42,7 +43,7 @@ export const Footer = () => {
 					</div>
 				</div>
 				<div id="copyright">
-					<p><b>©Signal Jr</b> 2022. Todos os direitos reservados.</p>
+					<p><b>©Signal Jr</b> {year}. Todos os direitos reservados.</p>
 				</div>
 			</div>
 		</footer>
