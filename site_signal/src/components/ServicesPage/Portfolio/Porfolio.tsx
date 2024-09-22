@@ -106,11 +106,13 @@ export const Portfolio = () => {
 									isHovering= {true}
 									link={portfolioM.link}
 								/>
-								<h2>{portfolioM.projectName}</h2>
-								<h3>{portfolioM.serviceType}</h3>
-								<div className="portfolioLink">
+								<a href={portfolioM.link} target="_blank" rel="noreferrer">
+									<h2>{portfolioM.projectName}</h2>
+									<h3>{portfolioM.serviceType}</h3>
+								</a>
+								{/* <div className="portfolioLink">
 									<a  href={`/servicos/projetos/${portfolioM.slug}`} className="buttonPurple2">Saiba mais <img src={arrowIco} /></a>
-								</div>
+								</div> */}
 							</Carousel.Item>
 						);
 					})}
