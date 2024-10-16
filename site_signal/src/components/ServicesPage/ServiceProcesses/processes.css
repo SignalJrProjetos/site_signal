@@ -1,0 +1,278 @@
+.processContainer {
+    position: relative;
+    margin-top: 48px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+}
+
+.processesBackground {
+    position: absolute;
+    z-index: -2;
+    scale: 0.35;
+    margin-top: -40%;
+    margin-left: -35%;
+    opacity: 20%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px;
+    width: 70%;
+    background-color: #8700A9;
+    margin: 200px auto;
+}
+
+.processPoint {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #8700A9;
+    border-radius: 50%;
+}
+
+/*.processPoint:hover {
+    background-color: #980089;
+    transition: background-color .5s;
+}*/
+
+/* Botões */
+.buttonContainer {
+    display: flex;
+    position: absolute;
+    align-items: center;
+}
+
+.buttonContainer--last {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    align-items: center;
+    right: 15%;
+}
+
+.buttonContainer span {
+    color: #8700A9;
+    font-family: 'Scada';
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.processButton {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border: 10px solid #8700A9;
+    border-radius: 50%;
+    color: #8700A9;
+    font-size: 64px;
+    font-family: 'Saira';
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 0 24px;
+}
+
+.processButton:hover{
+    border-color: #980089;
+    color: #980089;
+    transition: border-color .5s, color .5s;
+}
+
+.processButtonActive {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border: 10px solid #980089;
+    border-radius: 50%;
+    color: #980089;
+    font-size: 64px;
+    font-family: 'Saira';
+    font-weight: bold;
+    margin: 0 24px;
+}
+
+/* -- Pseudo-elemento para a borda em formato de seta -- */
+.processButton::before {
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: 40%;
+    width: 70px;
+    height: 70px;
+    background-color: #8700A9;
+    border: 10px solid #8700A9;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.processButton:hover::before{
+    background-color: #980089;
+    border-color: #980089;
+    transition: background-color .5s, border-color .5s;
+}
+
+.processButtonActive::before {
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: 40%;
+    width: 70px;
+    height: 70px;
+    background-color: #980089;
+    border: 10px solid #980089;
+    border-radius: 10px;
+    z-index: -1;
+}
+/* -- Posicionamento dos botões com índice ímpar acima da timeline -- */
+.processButton--above {
+    margin-left: -8%;
+    margin-top: -124px;
+}
+
+/* -- Posicionamento dos botões com índice par abaixo da timeline -- */
+.processButton--below {
+    margin-left: -8%;
+    margin-top: 40px;
+}
+
+/* -- Ajuste do posicionamento da borda do pseudo-elementpo para botões abaixo da timeline -- */
+.processButton--below .processButton::before{
+    transform: translateY(-50px);
+}
+
+.processButton--below .processButtonActive::before{
+    transform: translateY(-50px);
+}
+
+/** Versão Mobile **/
+.timelineMobile {
+    display: none;
+}
+
+.processLine {
+    overflow: auto;
+    width: 1px;
+    border: 1px dashed #9C9C9C;
+    margin-left: 7%;
+}
+
+.processLine::after {
+    position: absolute;
+    content: "";
+    left: 4.5%;
+    border: 12px solid #8700A9;
+    outline: 1px dashed #9C9C9C;
+    outline-offset: 12px;
+    border-radius: 50%;
+}
+
+/* Detalhamento dos Processos */
+.processInfoContainer {
+    margin: 24px 10%;
+}
+
+.processInfoContainer h1 {
+    text-align: center;
+    color: #8700A9;
+    font-family: "Scada";
+    font-size: 48px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+.processInfoContainer p {
+    text-align: justify;
+    font-weight: lighter;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .processContainer {
+        margin-top: 96px;
+        margin-bottom: -240px;
+    }
+    
+    .timelineContainer {
+        display: none
+    }
+
+    .processContainer > h1:first-of-type {
+        display: none;
+    }
+
+    .processContainer > h2:first-of-type {
+        margin-bottom: 24px;
+    }
+
+    .timelineMobile {
+        display: block;
+    }
+
+    .background {
+        display: none;
+    }
+
+    .processInfoContainer {
+        margin: 0 10%;
+    }
+
+    .processInfoContainer h1 {
+        text-align: left;
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    .processInfoContainer p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .processContainer {
+        margin-top: 96px;
+        margin-bottom: -240px;
+    }
+
+    .timelineContainer {
+        display: none
+    }
+
+    .timelineMobile {
+        display: block;
+    }
+
+    .processInfoContainer h1 {
+        text-align: left;
+        font-size: 32px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .processContainer {
+        margin-top: 96px;
+        margin-bottom: -180px;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+
+    .processContainer {
+        margin-top: 96px;
+        margin-bottom: -144px;
+    }
+
+}
