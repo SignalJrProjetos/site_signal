@@ -3,7 +3,7 @@
     margin-top: 48px;
     background-repeat: no-repeat;
     background-size: 50%;
-
+    
 }
 
 .processesBackground {
@@ -20,7 +20,7 @@
     user-select: none;
 }
 
-/* Timeline */
+/* Timeline: */
 .timeline {
     display: flex;
     justify-content: space-between;
@@ -31,6 +31,7 @@
     margin: 200px auto;
 }
 
+/* pontinhos da timeline */
 .processPoint {
     position: relative;
     width: 30px;
@@ -44,13 +45,14 @@
     transition: background-color .5s;
 }*/
 
-/* Botões */
+/* Botões: */
 .buttonContainer {
     display: flex;
     position: absolute;
     align-items: center;
 }
 
+/* ultimo botão */
 .buttonContainer--last {
     display: flex;
     flex-direction: row-reverse;
@@ -59,6 +61,7 @@
     right: 15%;
 }
 
+/* texto dos botões */
 .buttonContainer span {
     color: #8700A9;
     font-family: 'Scada';
@@ -101,7 +104,7 @@
     margin: 0 24px;
 }
 
-/* -- Pseudo-elemento para a borda em formato de seta -- */
+/* -- Nos botões: o pseudo-elemento para a borda em formato de seta -- */
 .processButton::before {
     position: absolute;
     content: "";
@@ -112,7 +115,7 @@
     background-color: #8700A9;
     border: 10px solid #8700A9;
     border-radius: 10px;
-    z-index: -1;
+    z-index: -2; /* O pseudo-elemento deve ficar atrás do seu 'after'. Ele já está atrás do text 'nº indíce' */
 }
 
 .processButton:hover::before{
@@ -121,6 +124,7 @@
     transition: background-color .5s, border-color .5s;
 }
 
+/* -- o de cima para quando o botão ativo, o pseudo-elemento1 para a borda em formato de seta -- */
 .processButtonActive::before {
     position: absolute;
     content: "";
@@ -131,7 +135,7 @@
     background-color: #980089;
     border: 10px solid #980089;
     border-radius: 10px;
-    z-index: -1;
+    z-index: -2; 
 }
 /* -- Posicionamento dos botões com índice ímpar acima da timeline -- */
 .processButton--above {
@@ -154,9 +158,37 @@
     transform: translateY(-50px);
 }
 
+/* Ajuste da parte de cima da seta (círculo cortado) */
+.processButton::after {
+    position: absolute;
+    content: "";
+    /*Centralizado*/
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px; 
+    background-color: #ffffff; /* Cor do círculo */
+    border-radius: 50%; /* Círculo */
+    z-index: -1; /* Coloca atrás do texto do botão. Mas na frente do pseudo1 (quadrado) */
+}
+
+/* Ajuste igual ao de cima: da parte de cima da seta (círculo cortado) para o botão ativo */
+.processButtonActive::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px; 
+    width: 100px;
+    height: 100px; 
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
 /** Versão Mobile **/
 .timelineMobile {
     display: none;
+    margin-bottom: 250px;  /* Adicione espaço abaixo do componente */
 }
 
 .processLine {
@@ -179,6 +211,7 @@
 /* Detalhamento dos Processos */
 .processInfoContainer {
     margin: 24px 10%;
+    padding-bottom: 90px; /* Adicione espaço para o conteúdo não entrar em outro componente */
 }
 
 .processInfoContainer h1 {
@@ -273,6 +306,10 @@
     .processContainer {
         margin-top: 96px;
         margin-bottom: -144px;
+    }
+
+    .processInfoContainer {
+        padding-bottom: 90px; /* Adicione espaço para o conteúdo não entrar em outro componente */
     }
 
 }
