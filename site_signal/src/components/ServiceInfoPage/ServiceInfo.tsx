@@ -128,6 +128,7 @@ export const ServiceInfo = () => {
 	});
 
 	const { portfolio } = data || {}; // Pegando o objeto porfolio e atribuindo a uma constante 
+	console.log(portfolio);
 
 	const images: Image[] = [ 	// Criando array com objetos do tipo  Image
 		{ url: portfolio?.projectThumb.url || "" },
@@ -135,7 +136,7 @@ export const ServiceInfo = () => {
 		{ url: portfolio?.projectImage2?.url || "" }
 	];
 
-	const serviceHeaderStyle: string[] = ["serviceInfoHeader","serviceInfoHeaderContainer","serviceInfoHeaderP"];
+	const serviceHeaderStyle: string[] = ["serviceInfoHeader","serviceInfoHeaderContainer","serviceInfoHeaderP", "serviceInfoHeaderP2", "serviceInfoHeaderDate"];
 
 	return (
 		<>
@@ -146,6 +147,7 @@ export const ServiceInfo = () => {
 				text={portfolio?.serviceType}
 				date={portfolio?.date}
 				style={serviceHeaderStyle}
+				showBorder={false}
 			/>
 			<div className="serviceInfoContainer">
 				<div className="projectImagesMobile">

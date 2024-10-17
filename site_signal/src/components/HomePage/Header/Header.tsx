@@ -13,19 +13,22 @@ interface Props{
 	date?: string;
 	style?: string[];
 	isSocialMedia?: boolean;
+	showBorder?: boolean;
 }
 
 
 
-export const Header:React.FC<Props> = ({ title, text, date, style, isSocialMedia }) => {
+export const Header:React.FC<Props> = ({ title, text, date, style, isSocialMedia, showBorder}) => {
 
 	return(
 		<>
 			<div id={style?.[1]} className="hdrContainer">
-				<div className="hdrTextContainer">
+				<div  id={style?.[2]} className="hdrTextContainer">
 					<h1 dangerouslySetInnerHTML={{__html: title ? title : ""}}></h1>
-					<p id={style?.[2]} dangerouslySetInnerHTML={{__html: text ? text : ""}}></p>
-					{date ? <p id={style?.[2]}>Data: {date}</p> : <></>}
+					<p id={style?.[3]} dangerouslySetInnerHTML={{__html: text ? text : ""}}></p>
+				</div>
+				<div  id={style?.[4]} className="hdrTextContainer">
+					{date ? <p id={style?.[3]}>Data: {date}</p> : <></>}
 				</div>
 				{isSocialMedia && <div id={style?.[0]} className="hdrSocialMediaContainer">
 					<p>SIGA-NOS</p>
@@ -38,7 +41,7 @@ export const Header:React.FC<Props> = ({ title, text, date, style, isSocialMedia
 					<a href=""><img src={linkedinIco}/></a>
 				</div>}
 			</div>
-			<img className="hdrBorder" src={border}/>
+			{showBorder && <img className="hdrBorder" src={border} />} {/* Controla a exibição da imagem */}
 		</>
 
 	);
