@@ -24,7 +24,7 @@ export const Header:React.FC<Props> = ({ title, text, date, style, isSocialMedia
 		<>
 			<div id={style?.[1]} className="hdrContainer">
 				<div  id={style?.[2]} className="hdrTextContainer">
-					<h1 dangerouslySetInnerHTML={{__html: title ? title : ""}}></h1>
+					<h1 id={style?.[5]} dangerouslySetInnerHTML={{__html: title ? title : ""}}></h1>
 					<p id={style?.[3]} dangerouslySetInnerHTML={{__html: text ? text : ""}}></p>
 				</div>
 				<div  id={style?.[4]} className="hdrTextContainer">

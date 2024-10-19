@@ -136,7 +136,7 @@ export const ServiceInfo = () => {
 		{ url: portfolio?.projectImage2?.url || "" }
 	];
 
-	const serviceHeaderStyle: string[] = ["serviceInfoHeader","serviceInfoHeaderContainer","serviceInfoHeaderP", "serviceInfoHeaderP2", "serviceInfoHeaderDate"];
+	const serviceHeaderStyle: string[] = ["serviceInfoHeader","serviceInfoHeaderContainer","serviceInfoHeaderP", "serviceInfoHeaderP2", "serviceInfoHeaderDate", "serviceInfoHeaderH1"];
 
 	return (
 		<>
@@ -158,9 +158,12 @@ export const ServiceInfo = () => {
 					<p className="content">{portfolio?.client.clientDescription}</p>
 					<h2 className="subtitle" style={{paddingLeft:"0px"}}>Sobre o Projeto</h2>
 					<p className="content">{portfolio?.projectDescription}</p>
-					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link}>Versão ao Vivo &gt;</a>
+					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link}>Versão ao Vivo</a>
 				</div>
 				<div className="projectImagesDiv">
+					<div className="mobileOnly testimonialTitle">
+						<h2 className="testimonialTitleDep">Depoimento</h2>
+					</div>
 					<div className="projectImagesDesktop">
 						<ProjectImages images={images}/>
 					</div>

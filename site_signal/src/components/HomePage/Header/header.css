@@ -65,11 +65,13 @@
 #serviceInfoHeaderContainer {
     display: flex;
     flex-direction: column;
-    height: 350px !important;
+    height: 290px !important;
 }
 
 #serviceInfoHeaderP {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #serviceInfoHeaderP2 {
@@ -83,6 +85,11 @@
     padding-left: 3%;
 }
 
+#serviceInfoHeaderH1 {
+    padding-top: 120px;
+    text-align: center;
+}
+
 /* Responsividade */
 
 /** Mobile **/
@@ -93,7 +100,16 @@
     }
 
     #serviceInfoHeaderContainer {
-        height: 340px;
+        height: 250px !important;
+    }
+
+    #serviceInfoHeaderH1 {
+        font-size: 32px;
+    }
+
+    #serviceInfoHeaderP2 {
+        font-size: 15px;
+        margin-bottom: 15px !important;
     }
 
     .hdrTextContainer {
