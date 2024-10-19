@@ -16,7 +16,8 @@ export const Services = () => {
 			<Header 
 				title="Descubra como podemos <br/> alavancar seu negócio"
 				text="Conheça nossos principais serviços e nossas etapas de projeto para entregarmos a nossa<br/> solução até suas mãos"
-				isSocialMedia={false}/>
+				isSocialMedia={false}
+				showBorder={true}/>
 			<Solutions />
 			<Portfolio/>
 			<Contact

@@ -18,6 +18,7 @@ export const Team = () =>{
 			<Header 
 				title="Bem-vindo à Signal Júnior. Estamos prontos para ajudá-lo a dar o próximo passo em seu negócio."
 				text="Impulsionando seu sucesso com a tecnologia com processos sejam eficientes, maduros e alinhados aos padrões de excelência que você merece."
+				showBorder={true}
 			/>
 			<AboutUs/>
 			<Status/>

@@ -22,8 +22,8 @@ const GET_PORTFOLIO_QUERY = gql` #Query para recuperar dados dos projetos da API
 interface GetPortfolioQueryResponse {
     id: string;
     projectName: string;
-	serviceType: string;
-	link: string
+		serviceType: string;
+		link: string
     slug: string;
     projectThumb: {
         url: string;
@@ -85,7 +85,7 @@ export const Portfolio = () => {
 							slug={portfolio.slug}
 							image={portfolio.projectThumb.url}
 							isHovering= {true}
-							link={portfolio.link}
+							link={`/servicos/projetos/${portfolio.slug}`}
 						/>
 					);
 				})}
@@ -110,9 +110,9 @@ export const Portfolio = () => {
 									<h2>{portfolioM.projectName}</h2>
 									<h3>{portfolioM.serviceType}</h3>
 								</a>
-								{/* <div className="portfolioLink">
+								<div className="portfolioLink">
 									<a  href={`/servicos/projetos/${portfolioM.slug}`} className="buttonPurple2">Saiba mais <img src={arrowIco} /></a>
-								</div> */}
+								</div> 
 							</Carousel.Item>
 						);
 					})}
