@@ -158,7 +158,7 @@ export const ServiceInfo = () => {
 					<p className="content">{portfolio?.client.clientDescription}</p>
 					<h2 className="subtitle" style={{paddingLeft:"0px"}}>Sobre o Projeto</h2>
 					<p className="content">{portfolio?.projectDescription}</p>
-					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link}>Versão ao Vivo</a>
+					<a className="buttonPurple2" id="serviceButtonPurple2" href={portfolio?.link} target="_blank" rel="noopener noreferrer">Versão ao Vivo</a>
 				</div>
 				<div className="projectImagesDiv">
 					<div className="mobileOnly testimonialTitle">

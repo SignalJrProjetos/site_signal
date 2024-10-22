@@ -54,7 +54,7 @@ const Card: React.FC<CardProps> = ({ id, projectName, serviceType, slug, image, 
 	};
 	return (
 		<div className="portfolioCard" key={id} style={{backgroundImage: `url(${image})`}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-			<a href={link} target="_blank" rel="noreferrer">
+			<a href={link} target="_self" rel="noreferrer">
 				{hovering &&
 				<div className="portfolioCardContent">
 					<h2>{projectName}</h2>
