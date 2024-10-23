@@ -3,6 +3,7 @@
     height: 720px;
     z-index: -2;
     display: flex;
+    flex-direction: column;
 }
 
 .hdrTextContainer {
@@ -13,7 +14,7 @@
 
 .hdrTextContainer h1 {
     font-family: "Scada";
-    font-size: 56px; 
+    font-size: 56px;
     font-weight: bold;
     padding-top: 156px;
 }
@@ -26,14 +27,14 @@
 
 .hdrSocialMediaContainer {
     margin: 7.5% 5% 0 0;
-    text-align: center;   
+    text-align: center;
 }
 
 .hdrSocialMediaContainer p {
-    font-family: "Saira"; 
+    font-family: "Saira";
     font-size: 26px;
     font-weight: bold;
-    writing-mode:vertical-rl;
+    writing-mode: vertical-rl;
     color: white;
     margin-bottom: 90%;
 }
@@ -44,28 +45,48 @@
 }
 
 .hdrBorder {
-    width: 100%; 
+    width: 100%;
     position: relative;
     margin-top: -25.6%;
     z-index: 0;
-    -webkit-user-drag: none;  
+    -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-}  
+}
 
 #serviceInfoHeader {
     display: none;
 }
 
 #serviceInfoHeaderContainer {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 290px !important;
 }
 
 #serviceInfoHeaderP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#serviceInfoHeaderP2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+#serviceInfoHeaderDate {
+    text-align: left;
+    margin: 0;
+    padding-left: 3%;
+}
+
+#serviceInfoHeaderH1 {
+    padding-top: 120px;
     text-align: center;
 }
 
@@ -78,8 +99,17 @@
         height: 460px;
     }
 
-    #serviceInfoHeaderContainer{
-        height: 340px;
+    #serviceInfoHeaderContainer {
+        height: 250px !important;
+    }
+
+    #serviceInfoHeaderH1 {
+        font-size: 32px;
+    }
+
+    #serviceInfoHeaderP2 {
+        font-size: 15px;
+        margin-bottom: 15px !important;
     }
 
     .hdrTextContainer {
@@ -109,7 +139,7 @@
         height: 600px;
     }
 
-    #serviceInfoHeaderContainer{
+    #serviceInfoHeaderContainer {
         height: 480px;
     }
 
@@ -137,7 +167,7 @@
         height: 700px;
     }
 
-    #serviceInfoHeaderContainer{
+    #serviceInfoHeaderContainer {
         height: 580px;
     }
 
@@ -165,7 +195,7 @@
         height: 720px;
     }
 
-    #serviceInfoHeaderContainer{
+    #serviceInfoHeaderContainer {
         height: 600px;
     }
 
