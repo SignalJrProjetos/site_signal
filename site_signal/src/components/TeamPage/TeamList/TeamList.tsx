@@ -48,7 +48,6 @@ export const TeamList = () => {
 
 	{/*Função para utilizar os dados vindos da API */}
 	const { data } = useQuery<{ teamMembers: GetTeamQueryResponse[] }>(GET_MEMBERS_QUERY);
-	console.log(data);
 	return (
 
 		<div className="teamListContainer" style={{"backgroundImage":`url(${teamBackground})`}}>
