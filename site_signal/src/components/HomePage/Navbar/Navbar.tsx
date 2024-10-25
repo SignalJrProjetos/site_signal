@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import React ,{ useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../../assets/imgs/logo.SignalExtensaBranca.png";
 import logoMobile from "../../../assets/imgs/logo.SignalCompactaBranca.png";
@@ -11,6 +12,28 @@ import instagramIco from "../../../assets/svg/icon.instagram.svg";
 import linkedinIco from "../../../assets/svg/icon.linkedin.svg";
 
 export const Navbar = () => {
+
+	const navigate = useNavigate();
+	const location = useLocation();
+	
+	const handleContactClick = () => {
+		if (location.pathname !== "/") {
+			// Se não estiver na página inicial, navega para o início
+			navigate("/", { state: { scrollToContact: true } });
+		} else {
+			document.getElementById("contactContainer")?.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+		
+	// Detecta navegação e rola para o contato se necessário
+	useEffect(() => {
+		if (location.state?.scrollToContact) {
+			document.getElementById("contactContainer")?.scrollIntoView({ behavior: "smooth" });
+			// Limpa o estado scrollToContact para evitar o scroll automático novamente
+			window.history.replaceState({}, document.title);
+		}
+	}, [location]);
+
 	return (
 		<nav role="navigation" className="navbarContainer">
 			<>
@@ -20,7 +43,7 @@ export const Navbar = () => {
 				<a href={process.env.PUBLIC_URL + "/"} >Início</a>
 				<a href={process.env.PUBLIC_URL + "/servicos"} >Serviços</a>
 				<a href={process.env.PUBLIC_URL + "/equipe"} >Equipe</a>
-				<a className="buttonWhite" href="#contactContainer">Contato</a>
+				<a className="buttonWhite" onClick={handleContactClick}>Contato</a>
 			</div>
 
 			<div id="menuToggle">

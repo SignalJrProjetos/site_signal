@@ -128,7 +128,6 @@ export const ServiceInfo = () => {
 	});
 
 	const { portfolio } = data || {}; // Pegando o objeto porfolio e atribuindo a uma constante 
-	console.log(portfolio);
 
 	const images: Image[] = [ 	// Criando array com objetos do tipo  Image
 		{ url: portfolio?.projectThumb.url || "" },
