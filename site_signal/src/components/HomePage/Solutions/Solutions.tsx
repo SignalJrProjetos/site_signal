@@ -1,212 +1,216 @@
-import React, {useState} from "react";
-import { useLocation } from "react-router-dom";
-import imagemSolucoes from "../../../assets/svg/img.solutionsSolucoesTI.svg";
-import imagemIdentidadeVisual from "../../../assets/svg/img.solutionsIdVisual.svg";
-import imagemConsultoria from "../../../assets/svg/img.solutionsConsultoria.svg";
-import solucoesMobile from "../../../assets/svg/icon.solutionsSolucoesTI.svg";
-import identidadeVisualMobile from "../../../assets/svg/icon.solutionsIdVisual.svg";
-import consultoriaMobile from "../../../assets/svg/icon.solutionsConsultoria.svg";
-
+import React, { useEffect, useState } from "react";
+import { gql, useQuery } from "@apollo/client";
 import "./solutions.css";
+import { useLocation } from "react-router-dom";
+import { Processes } from "../../ServicesPage/ServiceProcesses/Processes";
+import solutionsBg from "../../../assets/imgs/solucoesBackground.png";
 
-// Botar imagem de fundo
+const GET_SOLUTIONS_QUERY = gql`
+    query Solutions {
+        solutions {
+            id
+            solutionName
+            solutionTag
+            solutionSummary
+            solutionDescription
+            solutionSteps
+			solutionIcon {
+      			url
+			}
+			solutionImage {
+      			url
+   			}
+        }
+    }
+`;
 
-// Criando o componente Contato
+interface GetSolutionsQueryResponse {
+    id: string;
+    solutionName: string;
+    solutionTag: string;
+    solutionSummary: string;
+    solutionDescription: string;
+    solutionSteps: string[];
+	solutionIcon: {
+		url: string;
+	}
+	solutionImage: {
+		url: string;
+	}
+}
+
 export const Solutions = () => {
-	//Saber qual a rota estamos usando no react-router
-	//Dependendo da rota o flexDirection das soluções muda
-	const location = useLocation();
 
-	// O botão ativado por padrão é o Soluções
-	const [services, setServices] = useState<string>("Soluções");
-	const [buttonSolucoes, setButtonSolucoes] = useState<boolean>(true);
-	const [buttonIdentidade, setButtonIdentidade] = useState<boolean>(false);
-	const [buttonconsultoria, setButtonconsultoria] = useState<boolean>(false);
+	const { data } = useQuery<{ solutions: GetSolutionsQueryResponse[] }>(GET_SOLUTIONS_QUERY);
 
-	function activeButton(button: string) {	
-		switch (button) {
-		case "Soluções":
-			setButtonSolucoes(true);
-			setButtonIdentidade(false);
-			setButtonconsultoria(false);
-			setServices("Soluções");
-			break;
-		case "Identidade":
-			setButtonIdentidade(true);
-			setButtonSolucoes(false);
-			setButtonconsultoria(false);
-			setServices("Identidade");
-			break;
-		case "Consultoria":
-			setButtonconsultoria(true);
-			setButtonIdentidade(false);
-			setButtonSolucoes(false);
-			setServices("Consultoria");
-			break;
+	const[service, setService] = useState<string | undefined>("");
+	const[summary, setSummary] = useState<string | undefined>("");
+	const[description, setDescription] = useState<string | undefined>("");
+	const[image, setImage] = useState<string | undefined>("");
+	const[steps, setSteps] = useState<string[] | undefined>([""]);
+	const[tag, setTag] = useState<string>("");
+	const[showText, setShowText] = useState<boolean>(true);
+
+	const { pathname } = useLocation();
+
+	//Define os valores default para os estados abaixo com base na requisição
+	useEffect(() => {
+		if (data) {
+			setService(data?.solutions[0].solutionName);
+			setSummary(data?.solutions[0].solutionSummary);
+			setDescription(data?.solutions[0].solutionDescription);
+			setImage(data?.solutions[0].solutionImage.url);
+			setSteps(data?.solutions[0].solutionSteps);
+			setTag(data?.solutions[0].solutionTag);
 		}
+	}, [data]);
+
+	useEffect(() => {
+		if (showText) {
+			setTimeout(() => setShowText(false), 1000);
+		}
+	}, [service]);
+
+	function activeButton(serviceType: string) {
+
+		//Procura no array de objetos (find) qual solutionTag é igual ao parâmetro enviado no clique do botão
+		const info = data?.solutions.find(solutions => solutions.solutionTag === serviceType);
+
+		//Se info tiver algum dado (true)
+		if (info) {
+			setService(info?.solutionName); //Atualiza o valor de service
+			setSummary(info?.solutionSummary); //Atualiza o valor de summary (resumo do serviço)
+			setDescription(info?.solutionDescription); //Atualiza o valor de description (descrição do serviço)
+			setImage(info?.solutionImage.url); //Atualiza o valor de image (imagem associada ao serviço)
+			setSteps(info?.solutionSteps); //Atualiza o valor de steps (array de strings das etapas do serviço)
+			setTag(serviceType); //Atualiza o valor de serviceType (tag de identificação do serviço)
+			setShowText(true);
+		
+		} else {
+			setService("Não foi possível atualizar o conteúdo");
+		}
+	
 	}
 
-	function changeContent(isServicesPage: boolean) {
-		if(services == "Identidade") {
-			return (
-				<>
-					{isServicesPage ? null : <img alt="Imagem identidade visual" src={imagemIdentidadeVisual}/>}
-					<div className={isServicesPage ? "solutionsContainerText services" : "solutionsContainerText"}>
-						{isServicesPage ?
-							null :
-							<div className="solutionsTitle">
-								<h1>Identidade Visual</h1>
-							</div>
-						}
-						{isServicesPage ?
-							<p className="servicesSolutionText">Transforme a imagem da sua marca com nosso serviço de Identidade Visual
-								completo e personalizado. Nosso processo começa com a criação de um logotipo exclusivo, que captura a essência do seu negócio.
-								Além disso, oferecemos versões adaptadas e aplicações para diferentes contextos, garantindo que sua marca tenha
-								uma presença consistente e impactante em todas as plataformas. Cada detalhe é pensado para comunicar ao mundo os
-								valores, a missão e o propósito da sua empresa. Seja através de materiais impressos ou digitais,
-								sua marca terá uma identidade visual que se destaca e conecta com o público de maneira única e autêntica.
-							</p> :
-							<p>De uma cara nova para sua Marca com nosso serviço de identidade Visual, partindo da Criação do logotipo da marca, 
-								versões adaptadas e aplicações, desenvolvidos com o que seu negócio quer mostrar ao mundo.
-							</p> 
-						}
-						<br/>
-						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
-					</div>
-				</>
-			);
-		}
-    
-		if(services == "Consultoria") {
-			return (
-				<>
-					{isServicesPage ? null : <img alt="Imagem consultoria em TI" src={imagemConsultoria}/>}
-					<div className={isServicesPage ? "solutionsContainerText services" : "solutionsContainerText"}>
-						{isServicesPage ?
-							null :
-							<div className="solutionsTitle">
-								<h1>Consultoria em TI</h1>
-							</div>
-						}
-
-						{isServicesPage ?
-							<p className="servicesSolutionText">Começando com uma detalhada etapa de levantamento de requisitos,
-							criamos e desenvolvemos softwares personalizados para impulsionar o
-							crescimento do seu negócio. Nossa equipe especializada trabalha para entregar soluções sob medida,
-							que atendem exatamente às suas necessidades. Desenvolvemos desde aplicações web e desktop até aplicativos
-							móveis, sempre utilizando as melhores práticas e tecnologias de ponta. Cada projeto é pensado para garantir
-							que sua empresa tenha ferramentas eficientes, escaláveis e prontas para apoiar sua evolução no mercado.
-							Confie em nosso expertise para transformar suas ideias em soluções tecnológicas inovadoras e de alto impacto para o seu negócio.
-							</p> :
-							<p>Partindo de uma etapa de levantamento de requisitos, elaboramos e desenvolvemos softwares personalizados 
-						para seu negócio evoluir, incluindo aplicações web, desktop e apps.
-							</p>
-						}
-						<br/>
-						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
-					</div>
-				</>
-			);
-		}
-
-		if(services == "Soluções") {
-			return (
-				<>
-					{isServicesPage ? null : <img alt="Imagem criação de sites" src={imagemSolucoes}/>}
-					<div className={isServicesPage ? "solutionsContainerText services" : "solutionsContainerText"}>
-						{isServicesPage ?
-							null :
-							<div className="solutionsTitle">
-								<h1>Desenvolvimento de Site</h1>
-							</div>
-						}
-
-						{isServicesPage ?
-							<p className="servicesSolutionText">Atraia mais clientes com um website moderno, organizado e intuitivo,
-								totalmente responsivo e projetado para oferecer a melhor experiência ao usuário. Desenvolvemos sites com
-								foco em alto desempenho, garantindo rapidez no carregamento e navegação fluida em qualquer dispositivo.
-								Além disso, otimizamos para mecanismos de busca (SEO), aumentando a visibilidade da sua marca online.
-								Utilizamos as práticas mais avançadas e modernas de tecnologia para garantir que seu site se destaque no
-								mercado competitivo, atraindo novos clientes e potencializando os resultados do seu negócio.
-								Conecte-se ao seu público com uma presença digital poderosa e eficaz.
-							</p> :
-							<p>Consiga mais clientes através de um website moderno, organizado e intuitivo, todo responsivo, com alto desempenho e 
-								otimizado para mecanismos de busca, desenvolvido com as práticas mais modernas de tecnologia.
-							</p>
-						}
-						<br/>
-						{/* Botão a ser ativado posteriormente <button className="buttonPurple2">Saiba mais</button> */}
-					</div>
-				</>
-			);
-		}
-	}
 	return (
-		<div className="solutionsContainer">
-			<h2 className="subtitle" style={{"textAlign":"center"}}>O que nós fazemos</h2>
-			<h1 className="title" style={{"textAlign":"center"}}>Nossas soluções para o seu negócio</h1>
+		<>
+			{/** 
+			 * Este componente é utilizado nas páginas Home e Services somente.
+			 * Baseado no path, muda a estilização do componente exibida.
+			**/}
+
+			{pathname == "/" ? 
+				
+				<div className="solutionsContainer">
+					<img className="solutionsBackground" src={solutionsBg}></img>
+					<h2 className="subtitle" style={{textAlign:"center"}}>O que nós fazemos</h2>
+					<h1 className="title" style={{textAlign:"center"}}>Nossas soluções para o seu negócio</h1>
+
+					{/* Versão Destkop */}
+					<div className="solutionsContentContainer">
+
+						<div className="solutionsButtonsContainer">
+							{data?.solutions.map(solutions => {
+								return(
+									<button 
+										className={ solutions?.solutionTag == tag ? "buttonPurple2" : "buttonPurple"}
+										style={{"margin":"24px 24px", "width": "300px", "padding": "18px 0", "borderRadius":"48px"}}
+										key={solutions.id}
+										onClick={() => activeButton(solutions.solutionTag)}> {/*Ao clicar, envia o valor do parâmetro solutionTag para a função activeButton */}
+										{solutions.solutionName}
+									</button>
+								);
+							})}
+						</div>
+
+						<div style={{"display":"flex"}}>
+							<div>
+								<img className={`solutionImage ${showText ? "textFadeIn" : ""}`} src={image}/>
+							</div>
+
+							<div className="solutionsTextContainer">
+								<h1 className={showText ? "textFadeIn" : ""}>{service}</h1>
+								<p className={`content ${showText ? "textFadeIn" : ""}`}>{summary}</p>
+								<a className={`buttonGradient ${showText ? "textFadeIn" : ""}`} href={process.env.PUBLIC_URL + "/services"}>Saiba Mais</a>
+							</div>
+						</div>
+
+					</div>
+
+					{/* Versão Mobile */}
+					<div className="solutionsCardContainer">
+						{data?.solutions.map(solutions => {
+							return(
+								<div key={solutions.id} className={`cardMobile ${solutions.solutionTag === tag ? "active" : ""}`} onClick={() => activeButton(solutions.solutionTag)}>
+									<div>
+										<img src={solutions.solutionIcon.url}></img>
+										<h1>{solutions.solutionName}</h1>
+									</div>
+									<p>{solutions.solutionSummary}</p>
+									<br></br>
+									<a className={`buttonGradient2 ${solutions.solutionTag === tag ? "active" : ""}`} style={{"fontSize":"18px"}} href={process.env.PUBLIC_URL + "/services"}>Saiba Mais</a>
+									<img className="solutionBackground" src={solutions.solutionImage.url}></img>
+								</div>
+							);
+						})}
+					</div>
+
+				</div>
+
+				:
+
+				<>
+					<div className="solutionsAltContainer">
+						<h2 className="subtitle">O que nós fazemos</h2>
+						<h1 className="title">Nossas soluções para o seu negócio</h1>
+
+						{/* Versão Mobile */}
+						<div className="solutionsServicesMobile">
+							<div style={{display:"flex", justifyContent:"center", marginBottom: "32px"}}>
+								{data?.solutions.map(solutions => {
+									return(
+										<button 
+											className={`solutionButton ${solutions.solutionTag === tag ? "active" : ""}`}
+											key={solutions.id}
+											onClick={() => activeButton(solutions.solutionTag)}>
+											<img src={solutions.solutionIcon.url}></img>
+											{solutions.solutionName}
+										</button>
+									);
+								})}
+							</div>
+							<p className="content">{description}</p>
+						</div>
+
+						{/* Versão Desktop */}
+						<div className="solutionsContentAltContainer">	
+
+							<div className="solutionsButtonsAltContainer">
+								{data?.solutions.map(solutions => {
+									return(
+										<button 
+											className={ solutions?.solutionTag == tag ? "buttonPurple2" : "buttonPurple"}
+											key={solutions.id}
+											onClick={() => activeButton(solutions.solutionTag)}> {/*Ao clicar, envia o valor do parâmetro solutionTag para a função activeButton */}
+											{solutions.solutionName}
+										</button>
+									);
+								})}
+							</div>
 			
-			{/* Container para responsividade  */}
-			<div className="solutionsContainerMobile">
+							<div className="solutionsTextContainer">
+								<h1 className={showText ? "textFadeIn" : ""}>{service}</h1>
+								<p className={`content ${showText ? "textFadeIn" : ""}`} >{description}</p>
+							</div>
+						</div>
+						<div className={showText ? "textFadeIn" : ""}>
+							<img className="solutionBackground" src={image}></img>
+						</div>
+					</div>
+					<Processes stepByStep={steps}/>
 
-				<div id="solutionsSolucoes" className="solutionsCardMobile">
-					<img alt="Imagem mobile criação de sites" src={solucoesMobile}/>
-					<img alt="Imagem background criação de sites" src={imagemSolucoes} />
-					<div className="solutionsTitleMobile"><h1>Criação de sites</h1></div>
-					<p>
-						Consiga mais clientes através de um website moderno, organizado e intuitivo, todo responsivo, com alto desempenho e 
-						otimizado para mecanismos de busca, desenvolvido com as práticas mais modernas de tecnologia.
-					</p>
-				</div>
-
-			
-				<div id="solutionsIdentidadeMobile" className="solutionsCardMobile">
-					<img alt="Imagem mobile identidade visual" src={identidadeVisualMobile}/>
-					<img alt="Imagem background criação de sites" src={imagemIdentidadeVisual} />
-					<div className="solutionsTitleMobile"><h1>Identidade Visual</h1></div>
-					<p >
-						De uma cara nova para sua Marca com nosso serviço de identidade Visual, partindo da Criação do logotipo da marca, 
-						versões adaptadas e aplicações, desenvolvidos com o que seu negócio quer mostrar ao mundo.
-					</p>
-				</div>
-
-				<div id="solutionsConsultoriaMobile" className="solutionsCardMobile">
-					<img alt="Imagem mobile consultoria em TI" src={consultoriaMobile}/>
-					<img alt="Imagem background consultoria em TI" src={imagemConsultoria} />
-					<div className="solutionsTitleMobile"><h1>Consultoria</h1></div>
-					<p>
-						Partindo de uma etapa de levantamento de requisitos, elaboramos e desenvolvemos softwares personalizados para seu negócio 
-						evoluir, incluindo aplicações web, desktop e apps.
-					</p>
-				</div>
-
-			</div>
-			<div className={(location.pathname == "/servicos") ? " flex" : "flex flexColumn"} >
-				{/* Container para Desktop  */}
-				<div className={(location.pathname == "/servicos") ? " solutionsContainerButtons flexColumn" : "solutionsContainerButtons"} >
-					<button
-						style={{backgroundColor: buttonSolucoes ? "#8700A9" : "transparent", border: buttonSolucoes ? "none" : "#610C7D 2px solid", color: buttonSolucoes ? "white" : "black"}}
-						id="solutionsButtonClicked"
-						onClick={() => activeButton("Soluções")}>
-					Criação de Sites
-					</button>
-					<button
-						style={{backgroundColor: buttonIdentidade ? "#8700A9" : "transparent", border: buttonIdentidade ? "none" : "#610C7D 2px solid", color: buttonIdentidade ? "white" : "black"}}
-						id="solutionsButtonClicked"
-						onClick={() => activeButton("Identidade")}>
-					Identidade Visual
-					</button>
-					<button
-						style={{backgroundColor: buttonconsultoria ? "#8700A9" : "transparent", border: buttonconsultoria ? "none" : "#610C7D 2px solid", color: buttonconsultoria ? "white" : "black"}}
-						id="solutionsButtonClicked"
-						onClick={() => activeButton("Consultoria")}>
-					Consultoria em TI
-					</button>
-				</div>                
-				<div className="solutionsChangeContent">
-					{changeContent(location.pathname == "/servicos")}
-				</div>
-			</div>
-		</div>
+				</>	
+			};
+		</>
 	);
 };
