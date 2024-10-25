@@ -33,7 +33,7 @@ export const Footer = () => {
 						</div>
 						<div>
 							<img alt="Icone E-mail" src={EmailIcon} />
-							<a href="mailto:marketing@signaljr.com.br">marketing@signaljr.com.br</a>
+							<a href="mailto:comercial@signaljr.com.br">comercial@signaljr.com.br</a>
 						</div>
 						<div>
 							<a href="https://www.facebook.com/Signal.Jr.ufrrj"><img alt="Icone Facebook" src={FacebookIcon}/></a>
