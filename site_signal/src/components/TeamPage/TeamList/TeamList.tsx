@@ -143,9 +143,11 @@ export const TeamList = () => {
 					);
 				})}
 			</div>
+			{/*
 			<div id="subscription">
 				<a href="" className="buttonPurple2">Se Inscrever <img src={arrowIco} /></a>
 			</div>
+			*/}
 		</div>
 	);
 };
