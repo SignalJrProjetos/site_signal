@@ -46,7 +46,7 @@
 }
 
 .contactForm input::placeholder {
-    color: #BABABA;
+    color: #8f8f8f;
     font-size: 20px;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .contactForm textarea::placeholder {
-    color: #BABABA;
+    color: #8f8f8f;
     font-size: 20px;
 }
 
@@ -76,6 +76,12 @@
 #contactInputMessage {
 	    height: 90px;
 }
+
+.submitButton {
+    margin-top: 40px; /* Ajuste o valor conforme necessário */
+}
+
+
 
 /* Responsividade */
 
@@ -94,6 +100,7 @@
     }
     .buttonWhite{
         font-size: 20px;
+        margin-top: 40px;
     }
 }
 
