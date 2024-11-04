@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./processes.css";
 import processesBg from "../../../assets/svg/bg.process-animate.svg";
 
-export const Processes = (props: any) => {
+interface ProcessesProps {
+	stepByStep?: string[];
+}
+
+export const Processes = (props: ProcessesProps) => {
 
 	const[title, setTitle] = useState<string>("");
 	const[text, setText] = useState<string>("");
@@ -15,7 +19,7 @@ export const Processes = (props: any) => {
 
 	//Define os valores default para os estados abaixo com base na requisição
 	useEffect(() => {
-		if (props) {
+		if (props.stepByStep) {
 			setTitle(props.stepByStep[0].substring(0, props.stepByStep[0].indexOf(":")));
 			setText(props.stepByStep[0].substring(props.stepByStep[0].indexOf(":") + 1, props.stepByStep[0].length));
 			setActive(0);
@@ -51,7 +55,7 @@ export const Processes = (props: any) => {
 				<div className="timeline">
 
 					{/** Mapeia o array de objetos vindo da prop stepByStep, tanto o índice quanto string **/}
-					{props.stepByStep.map((step: string, index: number) => (
+					{props.stepByStep?.map((step: string, index: number) => (
 
 						<div key={index}>
 
@@ -61,7 +65,7 @@ export const Processes = (props: any) => {
 						 * Se for o último índice, aplica uma estilização única.
 						 **/}
 
-							<div className={`buttonContainer ${index % 2 === 0 ? "processButton--above" : "processButton--below"} ${index === props.stepByStep.length - 1 ? "buttonContainer--last" : ""}`}>
+							<div className={`buttonContainer ${index % 2 === 0 ? "processButton--above" : "processButton--below"} ${(props.stepByStep && index === props.stepByStep.length - 1) ? "buttonContainer--last" : ""}`}>
 								<button
 									className={index == active ? "processButtonActive" : "processButton"}
 									onClick={() => changeText(step, index)}>
@@ -85,7 +89,7 @@ export const Processes = (props: any) => {
 
 			{/* Versão Mobile */}
 			<div className="timelineMobile">
-				{props.stepByStep.map((step: string) => (
+				{props.stepByStep?.map((step: string) => (
 					// eslint-disable-next-line react/jsx-key
 					<div style={{display:"flex", marginBottom: "12px"}}>
 
