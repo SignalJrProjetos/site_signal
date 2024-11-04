@@ -41,7 +41,7 @@ interface CardProps {
 }
 
 
-const Card: React.FC<CardProps> = ({ id, projectName, serviceType, slug, image, link}) => {
+const Card: React.FC<CardProps> = ({ id, projectName, serviceType, image, link}) => {
 
 	const [hovering, setHovering] = useState(false);
 

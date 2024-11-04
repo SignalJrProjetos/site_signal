@@ -2,8 +2,6 @@ import React, {useState} from "react";
 import "../../../assets/styles/global.css";
 import "./contact.css"; 
 import emailjs from "@emailjs/browser";
-import imagemContact from "../../../assets/svg/img.contact.svg";
-import inputUserIco from "../../../assets/svg/icon.input.user.svg";
 
 // Tipando o objeto messagem que será enviado para o email da signal
 interface Message{
@@ -12,12 +10,12 @@ interface Message{
 		email: string,
 		message: string,
 }
-interface props {
+interface ContactProps {
 	imagem: string;
 	style?: React.CSSProperties; 
 }	
 // Criando o componente Contato
-export const Contact = (props:any) => {
+export const Contact = (props: ContactProps) => {
 
 	// Objeto messagem
 	const [message, setMessage] = useState<Message>({
@@ -28,7 +26,7 @@ export const Contact = (props:any) => {
 	});
 
 	// Função para ir alterando o objeto messagem cada vez que algo for inserido nos inputs
-	function handleMessage(event: any, paramName: string) {
+	function handleMessage(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, paramName: string) {
 		const value = event.target.value;
 		const object = Object.assign({}, message);
 		object[paramName as keyof Message] = value;
