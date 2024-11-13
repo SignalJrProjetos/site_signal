@@ -21,6 +21,7 @@
     "react-particles": "^2.3.3",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
+    "site_signal": "file:",
     "styled-components": "^5.3.6",
     "tsparticles": "^2.3.4",
     "tsparticles-engine": "^2.3.3",

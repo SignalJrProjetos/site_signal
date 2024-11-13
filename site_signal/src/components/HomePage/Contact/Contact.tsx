@@ -37,6 +37,7 @@ export const Contact = (props:any) => {
 
 	// Função para enviar o email
 	function sendEmail(){
+
 		// Verificação básica para ver se os campos não estão vazios
 		if (message?.name == "" || message?.number == "" || message?.email == "" || message?.message == "" ) {
 			alert("Por favor preencha todos os campos"); // Futuramente colocar algum elemento na tela ao inves de um alert
@@ -49,7 +50,7 @@ export const Contact = (props:any) => {
 			};
 		
 			// Passamos 4 parametros no metodo send (service_id, template_id, parametros da mensagem que foi configurada no template, public_key)
-			emailjs.send("service_4jw04wx", "template_bgrfwqa", templateParms , "7uN9BAm-ze4ihfO32")
+			emailjs.send(`${process.env.REACT_APP_EMAIL_SERVICE_ID}`,`${process.env.REACT_APP_EMAIL_TEMPLATE_ID}`, templateParms , `${process.env.REACT_APP_EMAIL_PUBLICKEY}`)
 				.then((response) => {
 					alert("Email enviado");
 					console.log("Email enviado", response.status, response.text);
@@ -77,9 +78,7 @@ export const Contact = (props:any) => {
 				<input value={message?.number} placeholder="Telefone" type="number" onChange={event => {handleMessage(event,"number");}}/>
 				<input value={message?.email} placeholder="Email" type="text" onChange={event => {handleMessage(event,"email");}}/>
 				<textarea value={message?.message} placeholder="Mensagem" onChange={event => {handleMessage(event,"message");}}/>
-				<br/>
-				<br/>
-				<button className="buttonWhite" onClick={sendEmail}>Submeter</button> 
+				<button className="buttonWhite submitButton" onClick={sendEmail}>Submeter</button> 
 			</div>
 		</div>
 	);
