@@ -18,7 +18,6 @@
 
 /* HomePage */
 .solutionsContainer {
-    margin-top: -172px;
     position: relative;
     
  }
@@ -166,7 +165,7 @@ p.content {
     position: absolute;
     width: 100%;
     z-index: -1;
-    top: -25%;
+
     left: 50%;
     margin-left: -40%;
 }
